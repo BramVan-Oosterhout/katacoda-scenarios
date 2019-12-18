@@ -1,8 +1,8 @@
 {
-  "title": "Test Ubuntu",
-  "description": "Hello world",
+  "title": "Test Apache Install",
+  "description": "Installation and configuration",
   "difficulty": "beginner",
-  "time": "2 minutes",
+  "time": "20 minutes",
   "details": {
     "steps": [{
       "title": "Step 1 - Run Command",
