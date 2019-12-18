@@ -14,4 +14,8 @@ Update the apt cache  and install the appropriate apache package
 
 `apt-get update`{{execute}}
 
-`apt-get install apache`{{execute}}
+`apt-get install apache2`{{execute}}
+
+The apache server is now installed and running. Verify this with:
+
+`ps ax | grep apache`{{execute}}

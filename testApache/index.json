@@ -7,6 +7,9 @@
     "steps": [{
       "title": "Step 1 - Install Apache",
       "text": "step1.md"
+    },{
+      "title": "Step 2 - Verify installation",
+      "text": "step2.md"
     }],
     "intro": {
       "text": "intro.md",
