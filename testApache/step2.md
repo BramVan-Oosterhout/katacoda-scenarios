@@ -1,23 +1,33 @@
-Download the package and install
+Verify the installation.
 
 ## Task
 
-Check the environment works and determine your IP address.
+You can check that the apache server is operational by retrieving the default apache page from _localhost_:
 
-The following **curl command** will show the IP address of the environment.
+`curl localhost`{{execute}}
+
+## Task
+
+You can find the IP address of your server using:
 
 `curl http://whatismyip.akamai.com`{{execute}}
 
 ## Task
 
-Update the apt cache  and install the appropriate apache package
+The IP address is not accessible from the outside. If you try
 
-`apt-get update`{{execute}}
+http://<IP address of your server>
 
-`apt-get install apache2`{{execute}}
+you get a message: _No domain provided_
 
-The installation calculates how much disk space will be required and ask you wether you want to proceed. Hit _return_ to continue.
+This url may do it for you: https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
 
-The apache server is now installed and running. Verify this with:
+The url uses: HOST_SUBDOMAIN = [[HOST_SUBDOMAIN]]
 
-`ps ax | grep apache`{{execute}}
+and KATACODA_HOST = [[KATACODA_HOST]]
+
+
+
+
+
+
