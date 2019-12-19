@@ -16,6 +16,8 @@ Update the apt cache  and install the appropriate apache package
 
 `apt-get install apache2`{{execute}}
 
+The installation calculates how much disk space will be required and ask you wether you want to proceed. Hit _return_ to continue.
+
 The apache server is now installed and running. Verify this with:
 
 `ps ax | grep apache`{{execute}}
