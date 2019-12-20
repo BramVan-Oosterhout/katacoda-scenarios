@@ -15,11 +15,17 @@ the line `Include ports.conf` includes the file /etc/apache2/ports.conf:
 
 `less /etc/apache2/ports.conf`{{execute}}
 
+The `Listen` directive makes shure apache2 listens on port 80 for requests.
 
+The directives within an `IfModule test` directive is conditional on the test being satisfied.
+Apache2 can be extended with many modules that are defined in /etc/apache2/mods-available.
+Activated modules are linked in /etc/apache2/mods-enabled.
 
+`ls -o -g /etc/apache2/mods-enabled`{{execute}}`
 
+As you can see, there is no obvious ssl_module activated. So by default apache2 will not accept requests on port 443.
 
-## Task
+The next step will activate ssl
 
 
 
