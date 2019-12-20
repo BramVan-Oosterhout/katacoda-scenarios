@@ -10,6 +10,9 @@
     },{
       "title": "Step 2 - Verify installation",
       "text": "step2.md"
+    },{
+      "title": "Step 3 - The configuration file",
+      "text": "step3.md"
     }],
     "intro": {
       "text": "intro.md",
