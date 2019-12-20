@@ -1,6 +1,6 @@
 The apache2 configuration file
 
-All configuration is accessed through /etc/apache2/apache2.conf.
+All configuration is accessed on start-up through /etc/apache2/apache2.conf.
 There is extensive documentation in the file. For an overview of the content, show it without comments or blank lines:
 
 `grep -v '#' /etc/apache2/apache2.conf | grep -v '^$' | less`{{execute}}
@@ -8,7 +8,7 @@ There is extensive documentation in the file. For an overview of the content, sh
 There are few environment variables used that are defined at startup through /etc/apache2/envvars.
 The documentation is in the file.  Here is a list of the exported environment variables:
 
-`grep export /etc/apache2/envvars | grep -v '#'{{execute}}
+`grep export /etc/apache2/envvars | grep -v '#'`{{execute}}
 
 Further configuration is included in apache2.conf through `Include` and `IncludeOptional` directives. For instance,
 the line `Include ports.conf` includes the file /etc/apache2/ports.conf:
@@ -24,8 +24,9 @@ Activated modules are linked in /etc/apache2/mods-enabled.
 `ls -o -g /etc/apache2/mods-enabled`{{execute}}`
 
 As you can see, there is no obvious ssl_module activated. So by default apache2 will not accept requests on port 443.
+This is demonstrated using `curl http://localhost`{{execute}}
 
-The next step will activate ssl
+The next step will activate ssl.
 
 
 

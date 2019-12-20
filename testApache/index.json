@@ -13,6 +13,9 @@
     },{
       "title": "Step 3 - The configuration file",
       "text": "step3.md"
+    },{
+      "title": "Step 4 - Configuring ssl",
+      "text": "step4.md"
     }],
     "intro": {
       "text": "intro.md",
