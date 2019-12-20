@@ -1,4 +1,5 @@
 Verify the installation.
+{:toc}
 
 ## Task
 
