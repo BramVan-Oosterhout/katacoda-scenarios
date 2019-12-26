@@ -23,8 +23,12 @@ You need to provide the following information. I show my entries in braces.
     Common Name (eg, server FQDN or YOUR name) []:{host01}
     Email Address []:{webmaster@domain.org}
 
+Update the apache2 configuration file with the new certificate details:
+`perl -npe 's!^([ \t]*SSLCertificateFile)[^\n]*$!$1 /etc/apache2/ssl/server.crt!' /etc/apache2/sites-enabled/default-ssl.conf`{{execute}}{{execute}}
+`perl -npe 's!^([ \t]*SSLCertificateKeyFile)[^\n]*$!$1 /etc/apache2/ssl/server.key!' /etc/apache2/sites-enabled/default-ssl.conf`{{execute}}{
 
-Configure the certificate with: `a2ensite default-ssl`{{execute}} and reload the server `service apache2 reload`{{execute}}
+Configure the certificate and reload the server with:
+`a2ensite default-ssl;service apache2 reload`{{execute}}  
 
 You can now retrieve the page with: `curl https://host01`{{execute}} but not with `curl https://localhost`{{execute}},
 because the certificate is generated for =host01=.

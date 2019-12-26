@@ -16,6 +16,9 @@
     },{
       "title": "Step 4 - Configuring ssl",
       "text": "step4.md"
+    },{
+      "title": "Step 5 - Apache virtual Hosts",
+      "text": "step5.md"
     }],
     "intro": {
       "text": "intro.md",
