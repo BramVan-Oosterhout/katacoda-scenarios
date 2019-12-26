@@ -1,7 +1,3 @@
-The apache2 configuration file
-
-[DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-configure-the-apache-web-server-on-an-ubuntu-or-debian-vps)
-presents a nice explanetion of the apache2 configuration.
 
 All configuration is accessed on start-up through /etc/apache2/apache2.conf.
 There is extensive documentation in the file. For an overview of the content, show it without comments or blank lines:
@@ -27,9 +23,12 @@ Activated modules are linked in /etc/apache2/mods-enabled.
 `ls -o -g /etc/apache2/mods-enabled`{{execute}}`
 
 As you can see, there is no obvious ssl_module activated. So by default apache2 will not accept requests on port 443.
-This is demonstrated using `curl https://localhost`{{execute}}
+This is demonstrated using `curl https://host01`{{execute}}
 
 The next step will activate ssl.
+
+[DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-configure-the-apache-web-server-on-an-ubuntu-or-debian-vps)
+presents a nice explanetion of the apache2 configuration.
 
 
 

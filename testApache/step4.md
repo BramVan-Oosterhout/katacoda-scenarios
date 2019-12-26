@@ -1,5 +1,3 @@
-This step is modeled on the instructions by [Charles Hallard](https://hallard.me/enable-ssl-for-apache-server-in-5-minutes/)
-
 The ssl configuration is defined is several files: `find /etc/apache2 -name "*ssl*conf"`{{execute}}
 
 First we need to enable ssl.mod, so the server knows to listen to port 443.
@@ -18,7 +16,13 @@ Generate the certificates and place them in the directory:
 
 Configure the certificate with: `a2ensite default-ssl`{{execute}} and reload the server `service apache2 reload`{{execute}}
 
-You can now retrieve the page with: `curl https://host01`{{execute}}
+You can now retrieve the page with: `curl https://host01`{{execute}} but not with `curl https://localhost`{{execute}},
+because the certificate is generated for =host01=.
+
+---
+
+This step is modeled on the instructions by [Charles Hallard](https://hallard.me/enable-ssl-for-apache-server-in-5-minutes/)
+
 
 
 
