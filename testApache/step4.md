@@ -13,6 +13,16 @@ Create the directory: `mkdir /etc/apache2/ssl`{{execute}}
 
 Generate the certificates and place them in the directory:
 `openssl req -x509 -nodes -days 1095 -newkey rsa:2048 -out /etc/apache2/ssl/server.crt -keyout /etc/apache2/ssl/server.key`{{execute}}
+You need to provide the following information. I show my entries in braces.
+
+    Country Name (2 letter code) [AU]:{AU}
+    State or Province Name (full name) [Some-state]:{Australian Capital Territory}
+    Locality Name (eg, city) []:{Canberra}
+    Organization Name (eg, company) [Internet Widgets Pty Ltd]:{Bram van Oosterhout}
+    Organizational Unit Name(eg, section) []:{}
+    Common Name (eg, server FQDN or YOUR name) []:{host01}
+    Email Address []:{webmaster@domain.org}
+
 
 Configure the certificate with: `a2ensite default-ssl`{{execute}} and reload the server `service apache2 reload`{{execute}}
 
