@@ -1,21 +1,17 @@
-Download the package and install
+## Check the environment.
 
-## Task
+What is the host name? `hostname`{{execute}}
 
-Check the environment works and determine your IP address.
+Is the apache server running? `ps -C apache2`{{execute}}
 
-The following **curl command** will show the IP address of the environment.
+Does it serve the default page? `curls http://host01`{{execute}}
 
-`curl http://whatismyip.akamai.com`{{execute}}
+## Download the software and install.
 
-## Task
+Download the current release from github.
 
-Update the apt cache  and install the appropriate apache package
+`curl -L -o /tmp/foswiki.tgz https://github.com/foswiki/distro/releases/download/FoswikiRelease02x01x06/Foswiki-2.1.6.tgz`{{execute}}
 
-`apt-get update`{{execute}}
+Install foswiki in /var/www
 
-`apt-get install apache2`{{execute}}
-
-The installation calculates how much disk space will be required and ask you wether you want to proceed. Hit _return_ to continue.
-
-The apache server is now installed and running. 
+tar -C /var/www/foswiki -xf /tmp/foswiki.tgz
