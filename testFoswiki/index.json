@@ -10,7 +10,7 @@
     },{
       "title": "Step 2 - Configure Apache to serve Foswiki",
       "text": "step2.md"
-    },],
+    }],
     "intro": {
       "text": "intro.md",
       "courseData": "setup.sh",
