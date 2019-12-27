@@ -4,6 +4,8 @@ What is the host name? `hostname`{{execute}}
 
 Is the apache server running? `ps -C apache2`{{execute}}
 
+Which Apache version is installed? `/usr/bin/apache2 -v`{{execute}}
+
 Does it serve the default page? `curls http://host01`{{execute}}
 
 ## Download the software and install.
