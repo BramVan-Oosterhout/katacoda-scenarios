@@ -10,8 +10,16 @@ Does it serve the default page? `curls http://host01`{{execute}}
 
 Download the current release from github.
 
-`curl -L -o /tmp/foswiki.tgz https://github.com/foswiki/distro/releases/download/FoswikiRelease02x01x06/Foswiki-2.1.6.tgz`{{execute}}
+`curl -L -o /tmp/Foswiki-2.1.6.tgz https://github.com/foswiki/distro/releases/download/FoswikiRelease02x01x06/Foswiki-2.1.6.tgz`{{execute}}
 
 Install foswiki in /var/www
 
-tar -C /var/www/foswiki -xf /tmp/foswiki.tgz
+`tar -C /var/www -xf /tmp/Foswiki-2.1.6.tgz`{{execute}}
+
+### Inspect what is installed
+You installed all Foswiki software under /var/www in a directory Foswiki-2.1.6. `tree -d -u -p -L 3 /var/www/`{{execute}}
+Foswiki has a very extensive directory structure. The top levels are important for the administrator to recognise.
+Notice that the tree is owned by root. World access is limited to read only.
+Apache will only write files that are owned by www-data or in group www-data.
+
+We will configure Foswiki for Apache access in the next step.
