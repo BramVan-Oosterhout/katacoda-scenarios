@@ -2,6 +2,7 @@ Foswiki requires some prerequisites for Ubuntu, Apache andperl.
 A complete list is provided in the  [Installation guide (system requirements)](https://foswiki.org/System/InstallationGuide#SystemRequirements)
 
 For Ubuntu there is a collection of libraries required. You can install each with the following commands:
+*   `apt-get update`{{execute}}
 *   `apt-get install libalgorithm-diff-perl`{{execute}}
 *   `apt-get install libarchive-tar-perl`{{execute}}
 *   `apt-get install libauthen-sasl-perl`{{execute}}
@@ -28,8 +29,8 @@ For Ubuntu there is a collection of libraries required. You can install each wit
 *   `apt-get install libversion-perl`{{execute}}
 Some are already installed and up to date, some are new and require prerequisites as well.
 
-You can install all of them in one commands with:
-`apt-get -y install libalgorithm-diff-perl libarchive-tar-perl libauthen-sasl-perl libcgi-pm-perl libcgi-session-perl libcrypt-passwdmd5-perl libdigest-sha-perl libemail-address-perl libemail-mime-perl libencode-perl liberror-perl libfile-copy-recursive-perl libhtml-parser-perl libhtml-tree-perl libio-socket-ip-perl libio-socket-ssl-perl libjson-perl liblocale-maketext-perl liblocale-maketext-lexicon-perl liblocale-msgfmt-perl libwww-perl liblwp-protocol-https-perl liburi-perl libversion-perl`{{execute}}
+You can install all of them in one command with:
+`apt-get update; apt-get -y install libalgorithm-diff-perl libarchive-tar-perl libauthen-sasl-perl libcgi-pm-perl libcgi-session-perl libcrypt-passwdmd5-perl libdigest-sha-perl libemail-address-perl libemail-mime-perl libencode-perl liberror-perl libfile-copy-recursive-perl libhtml-parser-perl libhtml-tree-perl libio-socket-ip-perl libio-socket-ssl-perl libjson-perl liblocale-maketext-perl liblocale-maketext-lexicon-perl liblocale-msgfmt-perl libwww-perl liblwp-protocol-https-perl liburi-perl libversion-perl`{{execute}}
 
 The required apache prerequisites are installed with:
 *   `a2enmod rewrite`{{execute}}
@@ -37,7 +38,7 @@ The required apache prerequisites are installed with:
 *   `a2enmod access_compat`{{execute}}
 
 And the cpan prerequisites are installed with:
-*   `cpan install Algorith::Diff`{{execute}}
+*   `cpan install Algorithm::Diff`{{execute}}
 *   `cpan install Archive::Tar`{{execute}}
 *   `cpan install Authen::SASL`{{execute}}
 *   `cpan install CGI`{{execute}}
@@ -59,6 +60,9 @@ And the cpan prerequisites are installed with:
 *   `cpan install LWP::Protocol::https`{{execute}}
 *   `cpan install URI`{{execute}}
 *   `cpan install version`{{execute}}
+
+You can install all of them in one command with:
+`cpan install Algorith::Diff Archive::Tar Authen::SASL CGI CGI::Session Digest::SHA Email::Address Email::MIME Encode Error File::Copy::Recursive HTML::Parser HTML::Tree IO::Socket::IP IO::Socket::SSL Locale::Maketext Locale::Maketext::Lexicon Locale::Msgfmt LWP LWP::Protocol::https URI version`{{execute}}
 
 
 Create a non version specific access point: `ln -s /var/www/Foswiki-2.1.6 /var/www/foswiki`{{execute}}
