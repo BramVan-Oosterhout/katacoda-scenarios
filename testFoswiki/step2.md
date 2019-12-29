@@ -1,4 +1,5 @@
 Foswiki requires some prerequisites for Ubuntu, Apache andperl.
+
 A complete list is provided in the  [Installation guide (system requirements)](https://foswiki.org/System/InstallationGuide#SystemRequirements)
 
 For Ubuntu there is a collection of libraries required. You can install each with the following commands:
@@ -62,6 +63,10 @@ And the cpan prerequisites are installed with:
 *   `cpan install version`{{execute}}
 
 You can install all of them in one command with:
-`cpan install Algorithm::Diff Archive::Tar Authen::SASL CGI CGI::Session Digest::SHA Email::Address Email::MIME Encode Error File::Copy::Recursive HTML::Parser HTML::Tree IO::Socket::IP IO::Socket::SSL Locale::Maketext Locale::Maketext::Lexicon Locale::Msgfmt LWP LWP::Protocol::https URI version`{{execute}}
+`export PERL_MM_USE_DEFAULT=1; cpan notest install Algorithm::Diff Archive::Tar Authen::SASL CGI CGI::Session Digest::SHA Email::Address Email::MIME Encode Error File::Copy::Recursive HTML::Parser HTML::Tree IO::Socket::IP IO::Socket::SSL Locale::Maketext Locale::Maketext::Lexicon Locale::Msgfmt LWP LWP::Protocol::https URI version`{{execute}}
 
+## E-mail support
+Foswiki can send email to various destination when configured, if that is supported by the environment.
+
+The Katacoda environment does not readily support mailing to an external address, so we will not configure E-mail support.
 

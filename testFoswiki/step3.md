@@ -19,7 +19,7 @@ You can see what is configured using:
 `grep -v '#' /etc/apache2/conf-available/foswiki.conf | grep -v '^$' | less`{{execute}}
 Note that there is no Virtual host. Foswiki is available on ort 80 in directory foswiki.
 Enable the configuration with `a2enconf foswiki`{{execute}} and start apache with
-`service apache2 start`{{execute}}.
+`service apache2 restart`{{execute}}.
 
 The Foswiki bootstrap page is now available at
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki
