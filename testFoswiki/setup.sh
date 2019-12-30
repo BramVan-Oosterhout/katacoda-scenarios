@@ -1,7 +1,7 @@
 #!/bin/bash
 apt-get update
 apt-get -y install apache2
-
+#
 ######## Remove on completion of scenario
 ##
 ## prerequisites
@@ -12,5 +12,5 @@ a2enmod access_compat
 export PERL_MM_USE_DEFAULT=1; cpan -T install Algorithm::Diff Archive::Tar Authen::SASL CGI CGI::Session Digest::SHA Email::Address Email::MIME Encode Error File::Copy::Recursive HTML::Parser HTML::Tree IO::Socket::IP IO::Socket::SSL Locale::Maketext Locale::Maketext::Lexicon Locale::Msgfmt LWP LWP::Protocol::https URI version
 curl -L -o /tmp/Foswiki-2.1.6.tgz https://github.com/foswiki/distro/releases/download/FoswikiRelease02x01x06/Foswiki-2.1.6.tgz
 tar -C /var/www -xf /tmp/Foswiki-2.1.6.tgz
-mv/var/www/Foswiki-2.1.6 /var/www/foswiki
+mv /var/www/Foswiki-2.1.6 /var/www/foswiki
 chown -H -R www-data:www-data /var/www/foswiki
