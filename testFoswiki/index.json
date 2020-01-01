@@ -20,10 +20,10 @@
       "credits": ""
     },
     "assets": {
-      "host01": [{
+      "host01": {
         "file": "foswiki.conf",
         "target": "~/"
-      }]
+      }
     },
     "finish": {
       "text": "finish.md"
