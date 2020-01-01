@@ -10,3 +10,6 @@ curl -L -o /tmp/Foswiki-2.1.6.tgz https://github.com/foswiki/distro/releases/dow
 tar -C /var/www -xf /tmp/Foswiki-2.1.6.tgz
 mv /var/www/Foswiki-2.1.6 /var/www/foswiki
 chown -H -R www-data:www-data /var/www/foswiki
+mv ~/foswiki.conf /etc/apache2/conf-available/.
+a2enconf foswiki
+service apache2 restart
