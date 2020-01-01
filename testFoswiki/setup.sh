@@ -1,10 +1,6 @@
 #!/bin/bash
 apt-get update
 apt-get -y install apache2
-#
-######## Remove on completion of scenario
-##
-## prerequisites
 apt-get update; apt-get -y install libalgorithm-diff-perl libarchive-tar-perl libauthen-sasl-perl libcgi-pm-perl libcgi-session-perl libcrypt-passwdmd5-perl libdigest-sha-perl libemail-address-perl libemail-mime-perl libencode-perl liberror-perl libfile-copy-recursive-perl libhtml-parser-perl libhtml-tree-perl libio-socket-ip-perl libio-socket-ssl-perl libjson-perl liblocale-maketext-perl liblocale-maketext-lexicon-perl liblocale-msgfmt-perl libwww-perl liblwp-protocol-https-perl liburi-perl libversion-perl
 a2enmod rewrite
 a2enmod cgi
