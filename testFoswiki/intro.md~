@@ -1,6 +1,6 @@
-Welcome to your Katacoda Foswiki environment!
+Welcome to your Katacoda Docker environment!
 
-In this scenario we will set up an operational Foswiki server on a site suporting Apache.
+In this scenario we will set up an operational Foswiki server on a site suporting Apache using a dockr image.
 
 The Katacoda training environment is somewhat out of the ordinary. This setup installs Foswiki, listening at port 80 for the http protocol.
 Access is through the katacoda-services host, which is accessible with the https protocol.
@@ -37,5 +37,4 @@ If you are not a user with root privileges, some commands will need to be `sudo'
 
 
 
-
-Last update: Saturday 11 January  17:38:25 AEDT 2020
+Last update: Wednesday 1 January  13:28:20 AEDT 2020
