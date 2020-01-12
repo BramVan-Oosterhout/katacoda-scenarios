@@ -10,6 +10,11 @@ You need to configure the password for the admin user. We'll do that from the co
 
 In the Katacoda environment we also tell Foswiki NOT to use session IP matching.
 
-`tools/configure -save -set {Sessions}{UseIPMatching}='0'`{{execute}} 
+`tools/configure -save -set {Sessions}{UseIPMatching}='0'`{{execute}}
+
+And we need to allow redirection to the katacoda url
+
+`tools/configure -save -set {PermittedRedirectHostUrls}='https://[[HOST_SUBDOMAIN]]-[[KATACODA_HOST]].environments.katacoda.com/'`{{execute}}
+
 
 
