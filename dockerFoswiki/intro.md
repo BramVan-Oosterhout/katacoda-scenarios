@@ -2,6 +2,10 @@ Welcome to your Katacoda Docker environment!
 
 In this scenario we will set up an operational Foswiki server on a site suporting Apache using a dockr image.
 
+The docker image used is developed by Tim Legge and available on
+[docker hub](https://hub.docker.com/r/timlegge/docker-foswiki)
+with extensive documentation.
+
 The Katacoda training environment is somewhat out of the ordinary. This setup installs Foswiki, listening at port 80 for the http protocol.
 Access is through the katacoda-services host, which is accessible with the https protocol.
 This leads to a mixed access scenario, which is by default not allowed in modern browserd.
