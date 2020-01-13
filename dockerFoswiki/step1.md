@@ -12,9 +12,14 @@ In the Katacoda environment we also tell Foswiki NOT to use session IP matching.
 
 `tools/configure -save -set {Sessions}{UseIPMatching}='0'`{{execute}}
 
-And we need to allow redirection to the katacoda url
+And we need to allow redirection to the katacoda url. Note that port 80 is explicit.
 
-`tools/configure -save -set {PermittedRedirectHostUrls}='https://[[HOST_SUBDOMAIN]]-[[KATACODA_HOST]].environments.katacoda.com/'`{{execute}}
+`tools/configure -save -set {PermittedRedirectHostUrls}='http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/'`{{execute}}
+
+Error: User registration has issues...
+Captcha plugin to be disabled
+
+`tools/configure -save -set {Plugins}{CaptchaPlugin}{Enabled}='0'`{{execute}}
 
 
 

@@ -1,0 +1,32 @@
+{
+    "title": "Sandbox",
+    "description": "Unrelated experimets to practice",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "course_id": "hello-world",
+        "title": "Hello world",
+        "description": "Just a test to get my feet wet"
+      },
+      {
+        "course_id": "test-scenario",
+        "title": "Test scenario",
+        "description": "A test to see how scenarios hang together"
+      },
+      {
+        "course_id": "test-ubuntu",
+        "title": "Ubuntu",
+        "description": "Establishing a Ubuntu enviroment"
+      },
+      {
+        "course_id": "test-apache",
+        "title": "Apache",
+        "description": "Setting up apache"
+      },
+      {
+        "course_id": "testApache",
+        "title": "Apache",
+        "description": "Setting up apache 2"
+      }
+     ]
+  }
