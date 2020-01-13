@@ -1,6 +1,6 @@
 ## Provide access to Foswiki for www-data (Apache).
 
-Create a non version specific access point: `ln -s /var/www/Foswiki-2.1.6 /var/www/foswiki`{{execute}}
+Create a non version specific access point: `ln -s /var/www/Foswiki-2.1.6 /var/www/foswiki`{{execute}} !!! consider mv!!!
 
 And change the file owner and group `chown -H -R www-data:www-data /var/www/foswiki`{{execute}}
 
@@ -17,7 +17,7 @@ Finish with a CTL-D
 
 You can see what is configured using:
 `grep -v '#' /etc/apache2/conf-available/foswiki.conf | grep -v '^$' | less`{{execute}}
-Note that there is no Virtual host. Foswiki is available on ort 80 in directory foswiki.
+Note that there is no Virtual host. Foswiki is available on port 80 in directory foswiki.
 Enable the configuration with `a2enconf foswiki`{{execute}} and start apache with
 `service apache2 restart`{{execute}}.
 

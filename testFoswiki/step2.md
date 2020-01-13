@@ -1,4 +1,4 @@
-Foswiki requires some prerequisites for Ubuntu, Apache andperl.
+Foswiki requires some prerequisites for Ubuntu, Apache and perl.
 
 A complete list is provided in the  [Installation guide (system requirements)](https://foswiki.org/System/InstallationGuide#SystemRequirements)
 

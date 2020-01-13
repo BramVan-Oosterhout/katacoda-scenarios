@@ -4,7 +4,7 @@ First we need to enable ssl.mod, so the server knows to listen to port 443.
 
 We can do this by creating a symlink `ln -s /etc/apache2/mods-avalable/ssl.conf /etc/apache2/mods-enabled/ssl.conf`
 But apache2 provides a command for enabling modules that also takes care of dependencies between modules.
-Use `a2enmod ssl`{{execute}}. The output reminds you to restart the server to include the change `service apache2 reload`{{execute}}
+Use `a2enmod ssl`{{execute}}. The output reminds you to restart the server to include the change `service apache2 restart`{{execute}}
 
 When you try to access the default page with ssl `curl https://host01`{{execute}} you can see a response
 but it is not successful. To use ssl, your apache server requires a security certificate. The certicate is stored in /etc/apache2/ssl.
@@ -24,7 +24,7 @@ You need to provide the following information. I show my entries in braces.
     Email Address []:{webmaster@domain.org}
 
 Update the apache2 configuration file with the new certificate details:
-`perl -npe 's!^([ \t]*SSLCertificateFile)[^\n]*$!$1 /etc/apache2/ssl/server.crt!' /etc/apache2/sites-enabled/default-ssl.conf`{{execute}}{{execute}}
+`perl -npe 's!^([ \t]*SSLCertificateFile)[^\n]*$!$1 /etc/apache2/ssl/server.crt!' /etc/apache2/sites-enabled/default-ssl.conf`{{execute}}
 `perl -npe 's!^([ \t]*SSLCertificateKeyFile)[^\n]*$!$1 /etc/apache2/ssl/server.key!' /etc/apache2/sites-enabled/default-ssl.conf`{{execute}}{
 
 Configure the certificate and reload the server with:

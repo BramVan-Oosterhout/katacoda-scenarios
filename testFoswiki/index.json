@@ -19,6 +19,9 @@
     },{
       "title": "Step 3 - Configure Apache to serve Foswiki",
       "text": "step3.md"
+    },{
+      "title": "Step 4 - Bootstrap Foswiki configuration",
+      "text": "step4.md"
     }],
     "intro": {
       "text": "intro.md",
