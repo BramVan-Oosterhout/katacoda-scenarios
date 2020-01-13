@@ -1,6 +1,6 @@
 ## Provide access to Foswiki for www-data (Apache).
 
-Create a non version specific access point: `ln -s /var/www/Foswiki-2.1.6 /var/www/foswiki`{{execute}} !!! consider mv!!!
+Create a non version specific access point: `ln /var/www/Foswiki-2.1.6 /var/www/foswiki`{{execute}} !!! consider mv!!!
 
 And change the file owner and group `chown -H -R www-data:www-data /var/www/foswiki`{{execute}}
 

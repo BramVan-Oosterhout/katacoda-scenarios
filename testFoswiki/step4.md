@@ -46,10 +46,12 @@ and start over.
 The  configuration settings above can be set from the command line with:
 *   `cd /var/www/foswiki`{{execute}}
 *   `tools/configure -save -noprompt`{{execute}}
-*   `tools/configure -save -set {DefaultUrlHost}='https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com'`{{execute}}
+*   `tools/configure -save -set {DefaultUrlHost}='http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com'`{{execute}}
 *   `tools/configure -save -set {Password}='password'`{{execute}}
 *   `tools/configure -save -set {Sessions}{UseIPMatching}='0'`{{execute}}
-*   `chown www-data:www-data lib/LocalSite.cfg working/logs/configure.log`{{execute}}
-Now you can verify the basic operation as described in the section above.
+*   `touch /var/www/foswiki/data/.htpasswd`{{execute}}
+*   `chown www-data:www-data lib/LocalSite.cfg working/logs/configure.log /var/www/foswiki/data/.htpasswd`{{execute}}
+Now you can verify the basic operation as described in the section above
+starting with https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki.
 
 
