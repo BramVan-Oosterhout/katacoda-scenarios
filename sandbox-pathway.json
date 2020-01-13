@@ -4,31 +4,26 @@
     "icon": "fa-katacoda",
     "courses": [
       {
-        "pathway-id": "..",
         "course_id": "hello-world",
         "title": "Hello world",
         "description": "Just a test to get my feet wet"
       },
       {
-        "pathway-id": "..",
         "course_id": "test-scenario",
         "title": "Test scenario",
         "description": "A test to see how scenarios hang together"
       },
       {
-        "pathway-id": "..",
         "course_id": "test-ubuntu",
         "title": "Ubuntu",
         "description": "Establishing a Ubuntu enviroment"
       },
       {
-        "pathway-id": "..",
         "course_id": "test-apache",
         "title": "Apache",
         "description": "Setting up apache"
       },
       {
-        "pathway-id": "..",
         "course_id": "testApache",
         "title": "Apache",
         "description": "Setting up apache 2"
