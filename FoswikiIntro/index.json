@@ -1,6 +1,6 @@
 {
-  "title": "Foswiki Install",
-  "description": "Installation and configuration of a functional Foswiki environment (no email)",
+  "title": "Introduction to Foswiki",
+  "description": "Foswiki features: Webs, Macros, Forms, Templates and Extensions",
   "difficulty": "beginner",
   "time": "20 minutes",
   "details": {
@@ -11,20 +11,8 @@
       }]
     },
     "steps": [{
-      "title": "Step 1 - Install Foswiki",
+      "title": "Step 1 - Introduction",
       "text": "step1.md"
-    },{
-      "title": "Step 2 - Install Foswiki prerequisites",
-      "text": "step2.md"
-    },{
-      "title": "Step 3 - Configure Apache to serve Foswiki",
-      "text": "step3.md"
-    },{
-      "title": "Step 4 - Bootstrap Foswiki configuration",
-      "text": "step4.md"
-    },{
-      "title": "Step 5 - Completing the Foswiki configuration",
-      "text": "step5.md"
     }],
     "intro": {
       "text": "intro.md",
