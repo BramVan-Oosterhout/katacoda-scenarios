@@ -1,1 +1,0 @@
-Your Katacoda Ubuntu environment has been removed!
