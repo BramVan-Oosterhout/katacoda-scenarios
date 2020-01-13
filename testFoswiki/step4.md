@@ -43,10 +43,13 @@ We'll do some more configuration in the next step.
 Delete the defined configuration: `rm /var/www/foswiki/lib/LocalSite.cfg`{{execute}}
 and start over.
 
-The two configuration settings above can be set from the command line with:
+The  configuration settings above can be set from the command line with:
 *   `cd /var/www/foswiki`{{execute}}
 *   `tools/configure -save -noprompt`{{execute}}
+*   `tools/configure -save -set {DefaultUrlHost}='https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com'`{{execute}}
 *   `tools/configure -save -set {Password}='password'`{{execute}}
 *   `tools/configure -save -set {Sessions}{UseIPMatching}='0'`{{execute}}
+*   `chown www-data:www-data lib/LocalSite.cfg working/logs/configure.log`{{execute}}
+Now you can verify the basic operation as described in the section above.
 
 

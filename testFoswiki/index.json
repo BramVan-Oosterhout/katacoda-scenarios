@@ -22,6 +22,9 @@
     },{
       "title": "Step 4 - Bootstrap Foswiki configuration",
       "text": "step4.md"
+    },{
+      "title": "Step 5 - Completing the Foswiki configuration",
+      "text": "step5.md"
     }],
     "intro": {
       "text": "intro.md",
