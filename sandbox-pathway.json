@@ -19,11 +19,6 @@
         "description": "Establishing a Ubuntu enviroment"
       },
       {
-        "course_id": "test-apache",
-        "title": "Apache",
-        "description": "Setting up apache"
-      },
-      {
         "course_id": "testApache",
         "title": "Apache",
         "description": "Setting up apache 2"
