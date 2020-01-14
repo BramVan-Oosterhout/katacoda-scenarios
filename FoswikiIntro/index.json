@@ -14,7 +14,13 @@
       "title": "Step 1 - Introduction",
       "text": "step1.md"
     },{
-      "title": "Step 2 - Jump and Search",
+      "title": "Step 2 - Topic, Jump, Search and Breadcrumb",
+      "text": "step2.md"
+    },{
+      "title": "Step 3 - Toolbox",
+      "text": "step3.md"
+    },{
+      "title": "Step 4 - Bottom navigation bar",
       "text": "step2.md"
     }],
     "intro": {
