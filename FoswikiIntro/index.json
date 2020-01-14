@@ -13,6 +13,9 @@
     "steps": [{
       "title": "Step 1 - Introduction",
       "text": "step1.md"
+    },{
+      "title": "Step 2 - Jump and Search",
+      "text": "step2.md"
     }],
     "intro": {
       "text": "intro.md",
