@@ -5,12 +5,12 @@ If that topic does not exist, the hyperlink will be coloured differently and wil
 
 ## The Jump box
 The Jump box provides a fast way to navigate between topics if you know the topic name.
-You have to know the exact spelling of the topic name, including case. All other entries will lead to a _Page not found_ response.
+You have to know the exact spelling of the topic name, including case. All other entries will lead to a _Topic "blah..." does not exist_ response.
 So you can jump to WebTopicList, but not to webtopiclist
 
 ### The Search box
 The search box provides a way to navigate to a topic  about which something is known.
-You may search for !WebTopicList and get all pages referring to !WebTopicList as well as !WebTopicList itself.
+You may search for WebTopicList and get all pages referring to WebTopicList as well as WebTopicList itself.
 The search is not case sensitive. Searching for webtopiclist gives the same result.
 Searching for web topic list (three words) produces a different result.
 That search returms all topics containing the word web, or topic, or list or a combination of these words.
@@ -26,4 +26,8 @@ And each of the _web_ directories can contain one or more _sub-webs_. Topics are
 Each topic has at most one parent.
 The breadcrumb presents the hierarchy from the Foswiki top, through the _web_, _sub-web_ directories,
 through the paren child relationships to the topic being viewed.
+
+You can inspect the directory structure in the terminal tab.
+*   Try `tree -L 1 /var/www/foswiki`{{execute}}
+*   And `tree -L 1 /var/www/foswiki/data`{{execute}}
 
