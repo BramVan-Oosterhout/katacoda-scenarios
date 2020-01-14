@@ -18,3 +18,5 @@ There are some basic features to note:
    *   And between those two is the topic body, a collection of text and hyperlinks.
    
 Each of those artefacts is decribed in the following steps.
+
+Feel free to navigate the links as they are described. The environment is robust enough to support experimentation!
