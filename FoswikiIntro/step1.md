@@ -1,4 +1,7 @@
 ## First encounter
+
+Start foswiki: https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki
+
 When you access your Foswiki installation for the first time you will land on a page that looks like the page in figure 1. There are some basic features to note:
 *   There is a banner at the top with a Jump and a Search box
 *   There is a bar on the right with a dozen navigation links 
