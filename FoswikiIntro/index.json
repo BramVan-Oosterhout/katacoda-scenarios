@@ -24,7 +24,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-dashboard",
+    "uilayout": "terminal-iframe",
     "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r\nRun your own commands here\u001b[m\r\n"
   },
   "backend": {
