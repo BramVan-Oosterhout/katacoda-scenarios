@@ -9,6 +9,10 @@
                  {
                    "file": "foswiki.conf",
                    "target": "~/"
+                 },
+                 {
+                   "file": "Sample1.tgz",
+                   "target": "~/"
                  }
               ]
     },
