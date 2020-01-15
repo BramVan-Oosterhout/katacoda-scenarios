@@ -7,7 +7,6 @@
     "assets": {
       "host01": [{
         "file": "foswiki.conf", "target": "~/"
-      },{"file": "Sample1.tgz", "target": "~/"
       }]
     },
     "steps": [{
