@@ -1,7 +1,7 @@
 ## What are webs
 The out of the box Foswiki installation implements all Foswiki components as a single directory tree.
 You can display the directory structure in the Terminal using: `tree -L 2 -d /var/www`{{execute}}.
-They are devoted to the operation of Foswiki: *Technical directories*
+They are devoted to the operation of Foswiki: **Technical directories**
 
 *   _bin_ - contains the entry point executable. Like: _edit_, _attach_, _view_, etc.
 *   _lib_ - contains the implementations of the functionality as perl modules. Like: _Foswiki.pm_. 
@@ -10,7 +10,7 @@ They are devoted to the operation of Foswiki: *Technical directories*
 *   _tools_ - contains a variety of command line perl scripts to support implementation. Like: _bulk_copy.pl_, dependencies, etc.
 *   _working_ - contains data supporting the operation of Foswiki. Like: logs (_error.log_, _events.log_, _configure.log_)
 
-or to the storage of web content: *Content directories*
+or to the storage of web content: **Content directories**
 *   _data_ - top directory for storage of topic data. Contains a directory for each web (like: _Main_, _Sandbox_), which in turn can contain directories for sub-webs
    *   For each topic there is a _topic.txt_ file and a _topic,pfv_ directory. Note the comma in topic&lt;comma&gt;pfv
    *   The _topic,pfv_ directory contains the history of the topic as files 1, 2, 3 and so on. Where the highest number is the current revision of the topic
