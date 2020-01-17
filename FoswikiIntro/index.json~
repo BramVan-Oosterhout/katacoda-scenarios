@@ -9,11 +9,11 @@
                  {
                    "file": "foswiki.conf",
                    "target": "~/"
-                 },
-                 {
-                   "file": "Sample1.tgz",
+                },
+                {
+                   "file": "sample1.tgz",
                    "target": "~/"
-                 }
+                }
               ]
     },
     "steps": [{
