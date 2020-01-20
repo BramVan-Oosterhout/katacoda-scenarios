@@ -2,7 +2,7 @@
 The toolbox provides access to create and maintain the topics.
 
 ### Create a new topic
-The _Create a new topic_ link will present a page to enter the new topic name and then proceed to create that topic.
+The _Create new topic_ link will present a page to enter the new topic name and then proceed to create that topic.
 You can define a _parent topic_ for the new topic and you can select a template. Templates are used to define the presentation of a topic.
 Selecting _Default_ presents an empty topic and you can type the text as required. Foswiki has several editors.
 Out of the box you will find the WYSIWYG editor which is excellent for writing and formatting text.
@@ -28,8 +28,6 @@ The default _keyword_ option does a string match, supports minus (as in -string)
 So _in_ as a keyword matches _string_, but as a word it does not. _literal_ matches the whole search entry,
 including white space and ignores special characters like minus. Other options, like _regex_ and _query_ will be discussed later.
 
-%RED% *TODO* %ENDCOLOR%
-
 ### The Changes
 The _Changes_ link navigates to  the WebChanges topic. The topic presents the 50 most recently changed topics.
 
@@ -42,8 +40,7 @@ That name is a wiki word. Like: BramVanOosterhout.
 ### The RSS feed
 The _RSS feed_ link navigates to the WebRss topic where you can subscribe to the feed.
 %RED% I don't know how this works/what it does. %ENDCOLOR% The topic is presented differently, because....???
-
-%RED% *TODO* %ENDCOLOR%
+%ENDCOLOR%
 
 ### The Preferences
 The _Preferences_ link navigates to the WebPreferences topic.

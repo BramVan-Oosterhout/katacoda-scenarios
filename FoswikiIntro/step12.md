@@ -1,3 +1,6 @@
-## References
-*   [Managing webs](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/System/ManagingWebs) for a description of webs and to create new webs.
-*   [Site map](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/System/SiteMap) for a list of webs in this wiki.
+## Exercise
+Create a subweb  of the Sandbox web called: Exercise1
+
+In Sanbox/Exercise1: create 2 topics (TopicA and TopicB). TopicA contains a link to TopicB. And TopicB contains a link to TopicA
+
+Inspect the directory structure with: `tree /var/www/foswiki/data/Sandbox`{{execute}}

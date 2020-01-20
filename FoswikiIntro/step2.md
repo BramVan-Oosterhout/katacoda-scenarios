@@ -29,6 +29,6 @@ The breadcrumb presents the hierarchy from the Foswiki top, through the _web_, _
 through the paren child relationships to the topic being viewed.
 
 You can inspect the directory structure in the terminal tab.
-*   Try `tree -L 1 /var/www/foswiki`{{execute}}
-*   And `tree -L 1 /var/www/foswiki/data`{{execute}}
+*   Try `tree -L 1 /var/www/foswiki | less`{{execute}}
+*   And `tree -L 1 /var/www/foswiki/data | less`{{execute}}
 

@@ -1,11 +1,14 @@
 ## Maintaining webs
-Webs are maintained by the wiki administrator. The wiki administrator has access rights to the form !ManagingWebs topic in the System web. The form accepts the following details for the creation of the web:
+Webs are maintained by the wiki administrator. The wiki administrator has access rights to the form ManagingWebs topic in the System web.
+The form accepts the following details for the creation of the web:
 *   Name of the new web - web names start with a capital and are preferably not wiki words.
-*   Summary - summary of the purpose of the web. Foswiki displays this summary on the !SiteMap in the System web.
+*   Summary - summary of the purpose of the web. Foswiki displays this summary on the SiteMap in the System web.
 *   Template web - an existing web, that serves as the template for the new web.
-*   List on !SiteMap page - select to show or hide this web on the !SiteMap page
-*   Include in global search and WEBLIST - include this web when search all webs is requested.WEBLIST is a variable that contains a list of selected webs in this wiki.
+*   List on SiteMap page - select to show or hide this web on the !SiteMap page
+*   Include in global search and WEBLIST - include this web when search all webs is requested.
+    WEBLIST is a variable that contains a list of selected webs in this wiki.
 *   Web color - select a colour used as background for the web name.
+
 When you click _Create web_  the new web is created in the _data_ directory.
 The new web is populated with the standard Foswiki topics, used to manage the web.
 The equivalent directory in the _pub_ directory is not created at this time. That happens when the first attachment is stored.

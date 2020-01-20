@@ -17,41 +17,12 @@ or to the storage of web content: **Content directories**
 *   _pub_ - top directory for the storage of attachments. Mirrors the directory structure of the data directory for each web. 
    *   Inside the web is a directory for each topic that has one or more attachments. Each topic attachment directory contains the attachments for the topic
 
-*   *data*
-   *   System
-      *   ...
-   *   Main
-      *   TopicA
-      *   TopicA,pfv
-         *   1.m
-         *   2.m
-      *   TopicB,pfv
-         *   1.m
-         *   2.m
-   *   Sandbox
-      *   ...
-   *   Trash
-      *   ...
-
-*   *pub*
-   *   System
-      *   ...
-   *   Main
-      *   TopicA
-         *   AttachmentX.tgz
-         *   AttachmentY.jpeg
-      *   TopicB
-         *   AttachmentP.txt
-         *   AttachmentQ.mpeg
-   *   Sandbox
-      *   ...
-   *   Trash
-      *   ...
+`cd /var/www/foswiki; tree -L 2 data/Main pub/Main | less`{{execute}}
 
 The directories under the _data_ and _pub_ directories that contain the current versions of topics or attachments
 are the implementations of Foswiki *webs*. Webs are entities within the larger Foswiki data structure.
 Within a web, topics are hyperlinked with the topic name only.
-To hyperlink to a topic in another web, the topicname is qualified with the web name. Like Main.TopicA instead of TopicA.
+To hyperlink to a topic in another web, the topicname is qualified with the web name. Like _Main.TopicA_ instead of _TopicA_.
 Searches are restricted to a single web, unless specifically asked to cover multiple webs.
 
 Webs can have sub-webs, which in turn can have further sub-webs. Each of the sub-webs is a sub-directory in the parent web and follows the same rules.
@@ -61,5 +32,4 @@ If the _Main_ web is subdivided in two webs: _Myweb_ and _Yourweb_ with topics a
 then a reference from TopicA to TopicZ will require the following entry in TopicA: _Main/Yourweb.TopicZ_.
 A reference to TopicS in the _Support_ sub-web in _Yourweb_ would be made with: _Main/Yourweb/Support.TopicS_.
 
-%RED% *TODO: add picture.* %ENDCOLOR%
 
