@@ -1,5 +1,6 @@
 ## Preferences
 Preferences are variables with a broader scope. Preferences are variables defined in a limited set of pre-specified topics:
+
 | *Topic* | *Scope* |
 |[[System.DefaultPreferences][System.DefaultPreferences]] |All topics in all webs can see the definitions provided in this topic. <br />This topic defines variables like: ATTACHFILESIZELIMIT, WIKILOGOALT, WEBCOPYRIGHT and many others.  This topic is recreated each time Foswiki is installed or upgraded. It defines all preferences necessary to make the installation fully functional out-of-the-box. User edits in this topic will be lost at the next upgrade. |
 |[[Main.SitePreferences][Main.SitePreferences]] |All topics in all webs can see the definitions provided in this topic. <br />On installation this topic defines a few variables relating to appearance, like: WIKITOOLNAME. And it _finalises_ some variables defined in System.DefaultPreferences, like : ATTACHFILESIZELIMIT. Finalisation makes the variable immutable in other topics. |

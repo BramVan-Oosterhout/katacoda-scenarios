@@ -8,7 +8,7 @@ variables, preferences or macros.
 ## Variables
 Variables are defined by placing the following text in a topic:
 _(three spaces) * (one space) Set (variable name) = the value allocated to the variable_.
-The value of the variable can include TML including other macros as well as HTML. For example:
+The value of the variable can include TML, including other macros as well as HTML. For example:
 <verbatim>
    * Set BRAMVANOOSTERHOUT = [[Main.BramVanOosterhout][Bram van Oosterhout]] (administrator)
 </verbatim>
