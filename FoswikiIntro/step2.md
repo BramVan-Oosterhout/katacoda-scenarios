@@ -1,9 +1,10 @@
-## The topic body
+## Topic, Jump, Search and Breadcrumb
+### The topic body
 The topic body contains a bulleted list of hyperlinks with link titles that are spelled in camel case like: WebTopicList.
 Words spelled that way are referred to as wiki words and are automatically hyperlinked to the topic of that name.
 If that topic does not exist, the hyperlink will be coloured differently and will *create* a topic of that name for the user to edit.
 
-## The Jump box
+### The Jump box
 The Jump box provides a fast way to navigate between topics if you know the topic name.
 You have to know the exact spelling of the topic name, including case. All other entries will lead to a _Topic "blah..." does not exist_ response.
 So you can jump to WebTopicList, but not to webtopiclist

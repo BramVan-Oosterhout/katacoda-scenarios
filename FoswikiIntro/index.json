@@ -13,28 +13,28 @@
               ]
     },
     "steps": [{
-      "title": "Step 1 - Introduction",
+      "title": "Introduction",
       "text": "step1.md"
     },{
-      "title": "Step 2 - Topic, Jump, Search and Breadcrumb",
+      "title": "Introduction (Cont...)",
       "text": "step2.md"
     },{
-      "title": "Step 3 - Toolbox",
+      "title": "Introduction (Cont...)",
       "text": "step3.md"
     },{
-      "title": "Step 4 - Bottom navigation bar",
+      "title": "Introduction (Cont...)",
       "text": "step4.md"
     },{
-      "title": "Step 5 - References",
+      "title": "Introduction (Cont...)",
       "text": "step5.md"
     },{
-      "title": "Step 10 - Webs",
+      "title": "Webs",
       "text": "step10.md"
     },{
-      "title": "Step 11 - Webs (Cont...)",
+      "title": "Webs (Cont...)",
       "text": "step11.md"
     },{
-      "title": "Step 12 - Webs (Cont...)",
+      "title": "Webs (Cont...)",
       "text": "step12.md"
     }],
     "intro": {

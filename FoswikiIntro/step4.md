@@ -1,3 +1,4 @@
+## Bottom navigation bar
 The bottom navigation bar contains hyperlinks to functions that maintain and present topics. Below is a short description of each link.
 
 ### Edit 
