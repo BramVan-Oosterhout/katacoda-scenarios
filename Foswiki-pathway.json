@@ -1,0 +1,27 @@
+{
+    "title": "Foswiki",
+    "description": "An introduction",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "course_id": "introduction",
+        "title": "Introduction",
+        "description": "First encounter, Headers, Footers, Sidebars and Text."
+      },
+      {
+        "course_id": "webs",
+        "title": "Webs",
+        "description": "What is a web. Managing webs"
+      },
+      {
+        "course_id": "macros",
+        "title": "Macros",
+        "description": "Variables, Preferences and Macros"
+      },
+      {
+        "course_id": "forms",
+        "title": "Forms",
+        "description": "Structured data in Forms"
+      }
+     ]
+  }
