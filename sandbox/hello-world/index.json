@@ -4,7 +4,7 @@
   "difficulty": "beginner",
   "time": "2 minutes",
   "details": {
-    "assets": {"host01": [{"file": "*", "target": "~/"}]},
+    "assets": {"host01": [{"file": "asset2.txt assets.tar", "target": "~/"}]},
     "steps": [{
       "title": "Step 1 - Run Command",
       "text": "step1.md"
