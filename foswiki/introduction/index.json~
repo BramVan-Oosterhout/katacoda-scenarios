@@ -7,7 +7,7 @@
     "assets": {
       "host01": [
                 {
-                   "file": "*",
+                   "file": "foswiki.conf",
                    "target": "~/"
                 }
               ]
