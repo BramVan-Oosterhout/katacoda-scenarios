@@ -6,10 +6,8 @@
   "details": {
     "assets": {
       "host01": [
-                {
-                   "file": "*",
-                   "target": "/root"
-                }
+                { "file": "foswiki.conf", "target": "/root" },
+                { "file": "Solution1.sh", "target": "/root" }
               ]
     },
     "steps": [{
@@ -21,7 +19,8 @@
     },{
       "title": "Webs (Cont...)",
       "text": "step3.md",
-      "answer": "step3-answer.md"
+      "answer": "step3-answer.md",
+      "data": "Solution1.sh"
     },{
       "title": "Webs (Cont...)",
       "text": "step4.md"
