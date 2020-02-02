@@ -12,6 +12,7 @@ ln -s /var/www/Foswiki-2.1.6 /var/www/foswiki
 chown -H -R www-data:www-data /var/www/foswiki
 mv ~/foswiki.conf /etc/apache2/conf-available/.
 a2enconf foswiki
+sed -i 's/DocumentRoot.*$/DocumentRoot \/var\/www\/foswiki\/bin\/view\//' /etc/apache2/sites-enabled/000-default.conf
 service apache2 restart
 cd /var/www/foswiki
 tools/configure -save -noprompt
@@ -20,4 +21,3 @@ tools/configure -save -set {Password}='password'
 tools/configure -save -set {Sessions}{UseIPMatching}='0'
 touch data/.htpasswd
 chown www-data:www-data lib/LocalSite.cfg working/logs/configure.log data/.htpasswd
-sed -i 's/DocumentRoot.*$/DocumentRoot \/var\/www\/foswiki\/bin\/view\//' /etc/apache2/sites-enabled/000-default.conf

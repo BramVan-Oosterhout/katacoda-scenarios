@@ -14,5 +14,7 @@ Navigate to Sandbox/Exercise1/Subweb2 and use _Create new topic_ to create Topic
 
 In TopicSW2 create a linkf to Sandbox/Example1/TopicA
 
-To see the solution expand the archive:
-`cd /var/www/foswiki/data/Sandbox; tar xvf /root/Solution1.tar; chown -R www-data:www-data Solution1`{{execute}} 
+To see the solution run the following command and refresh the browser:
+`./Solution1.sh`{{execute}}
+
+You find the Solution1 sub-web in the Sandbox.

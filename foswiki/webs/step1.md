@@ -7,7 +7,7 @@ They are devoted to the operation of Foswiki: **Technical directories**
 *   _lib_ - contains the implementations of the functionality as perl modules. Like: _Foswiki.pm_. 
 *   _locale_ - contains the portable object files for translation
 *   _templates_ - contains the root of the template system, used to define the browser presentation of the topics.
-*   _tools_ - contains a variety of command line perl scripts to support implementation. Like: _bulk_copy.pl_, dependencies, etc.
+*   _tools_ - contains a variety of command line perl scripts to support implementation. Like: _bulk%95%copy.pl_, dependencies, etc.
 *   _working_ - contains data supporting the operation of Foswiki. Like: logs (_error.log_, _events.log_, _configure.log_)
 
 or to the storage of web content: **Content directories**
@@ -15,7 +15,7 @@ or to the storage of web content: **Content directories**
    *   For each topic there is a _topic.txt_ file and a _topic,pfv_ directory. Note the comma in topic&lt;comma&gt;pfv
    *   The _topic,pfv_ directory contains the history of the topic as files 1, 2, 3 and so on. Where the highest number is the current revision of the topic
 *   _pub_ - top directory for the storage of attachments. Mirrors the directory structure of the data directory for each web. 
-   *   Inside the web is a directory for each topic that has one or more attachments. Each topic attachment directory contains the attachments for the topic
+   *   Inside the directory for the web is a directory for each topic that has one or more attachments. Each topic attachment directory contains the attachments for the topic
 
 `cd /var/www/foswiki; tree -L 2 data/Main pub/Main | less`{{execute}}
 
@@ -27,9 +27,5 @@ Searches are restricted to a single web, unless specifically asked to cover mult
 
 Webs can have sub-webs, which in turn can have further sub-webs. Each of the sub-webs is a sub-directory in the parent web and follows the same rules.
 Refererences from webs to subwebs and vice versa must be fully qualified.
-The qualification is a full pathname followed by a dot, followed by a topic name.For instance:<br />
-If the _Main_ web is subdivided in two webs: _Myweb_ and _Yourweb_ with topics as shown below,
-then a reference from TopicA to TopicZ will require the following entry in TopicA: _Main/Yourweb.TopicZ_.
-A reference to TopicS in the _Support_ sub-web in _Yourweb_ would be made with: _Main/Yourweb/Support.TopicS_.
-
+The qualification is a full pathname followed by a dot, followed by a topic name.
 
