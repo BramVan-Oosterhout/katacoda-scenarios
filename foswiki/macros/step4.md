@@ -52,7 +52,7 @@ Insert this text and expand the macro 02 Mar 2016 - 05:33.
 )
 ...
 ```
-The new line after the *(* shows as a space in the rendered page.
+The new line after the **(** shows as a space in the rendered page.
 
 INCLUDE recognises multiple parts in a topic called sections.
 Sections are marked in the topic to be included with _%STARTSECTION{ "sectionname" }%_ and _%ENDSECTION{ "sectionname" }%_.
@@ -64,6 +64,7 @@ Paste the following in the Sandbox.TestMacros topic.
 %INCLUDE{ "%TOPIC%" section="ex1"}%
 <verbatim>
 %STARTSECTION{ "ex1" }%
+---+++% The ICON macro
 *A list of the documented parameters for the ICON macro with an example*.
    | *Parameter* | *Description* | *Default* |
    | ="filename or icon name"= | requested icon | =else= |
@@ -74,7 +75,7 @@ Paste the following in the Sandbox.TestMacros topic.
    * =%<nop>ICON{"flag-gray"}%= displays as %ICON{"flag-gray"}%
 %ENDSECTION{ "ex1" }%
 %STARTSECTION{ "ex2" }%
-%DISPLAYTIME%
+---+++ The time is now %DISPLAYTIME%
 %STARTSECTION{ "ex2" }%
 </verbatim>
 ```
@@ -84,55 +85,12 @@ Where those parameters occur as variables in the included text, they are expande
 Paste the following in the Sandbox.TestMacros topic:
 
 ```
-%INCLUDE{ "%TOPIC%" section="ex3" theText="birthday" theName="Main.%<nop>USERNAME%" theDate="7 December"  }%
+---+++ INCLUDE with user defined parameters
+%INCLUDE{ "%TOPIC%" section="ex3" theText="birthday" theName="Main.%USERNAME%" theDate="7 December"  }%
 ---
 <verbatim>
 %STARTSECTION{ "ex3" }%
-The %theTEXT% of %theNAME% is %theDATE%.
+The %theText% of %theName% is %theDate%.
 %ENDSECTION{ "ex3" }%
 </verbatim>
-
-
-
-
----+++ _IF_
-When rendering a page it is common that the rendering varies depending on the exact content of the page or the context in which the page is rendered. The IF macro can do this. The syntax is: =%<nop>IF{ "condition" then="then text" else="else text" }%=.  =Condition= can have many forms. Refer to the example3 section below for some.
-<verbatim>
-%STARTSECTION{ "example3" }%
-%IF{ "$theTEXT='birthday'" then="%RED%" }%
-The %IF{ "defined theTEXT"
-         then="%theTEXT%"
-         else="holiday" }% of %theNAME% is %IF{ "$theTEXT='birthday'" 
-                                                then="%theDATE%"
-                                                else="anytime" }%.
-%IF{ "$theTEXT='birthday'" then="%ENDCOLOR%" }%
-%ENDSECTION{ "example3" }%
-</verbatim>
-
-<verbatim>%INCLUDE{ "%TOPIC%" 
-              section="example3" 
-              theTEXT="birthday" 
-              theNAME="Main.%USERNAME%" 
-              theDATE="7 December" }%</verbatim>
-is expanded to<br />
-%INCLUDE{ "%TOPIC%" 
-              section="example3" 
-              theTEXT="birthday" 
-              theNAME="Main.%USERNAME%" 
-              theDATE="7 December" }%
-
-Whereas this:<br />
-<verbatim>%INCLUDE{ "%TOPIC%" 
-             section="example3" 
-             theNAME="Main.%USERNAME%" 
-             theDATE="7 December" 
-}%</verbatim>
-becomes<br />
-%INCLUDE{ "%TOPIC%" 
-            section="example3" 
-            theNAME="Main.%USERNAME%" 
-            theDATE="7 December" }%
-
-The syntax of the =condition= in the IF macro is unusual in that it uses (dollar) $variablename to refer to the macro value, rather than the usual %<nop>variablename%. Also note the use of single quotes around the comparison value.
-
-Example 3 also demonstrates a convenient feature of the macro specification. All text from =%MACRO{= to =}%= is replaced by the substitution result. There is no need to put all information on the one line. As a consequence, the parameter list of the macro can be formatted for readability.
+```
