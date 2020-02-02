@@ -7,7 +7,7 @@ They are devoted to the operation of Foswiki: **Technical directories**
 *   _lib_ - contains the implementations of the functionality as perl modules. Like: _Foswiki.pm_. 
 *   _locale_ - contains the portable object files for translation
 *   _templates_ - contains the root of the template system, used to define the browser presentation of the topics.
-*   _tools_ - contains a variety of command line perl scripts to support implementation. Like: _bulk%95%copy.pl_, dependencies, etc.
+*   _tools_ - contains a variety of command line perl scripts to support implementation. Like: _bulk&#95copy.pl_, dependencies, etc.
 *   _working_ - contains data supporting the operation of Foswiki. Like: logs (_error.log_, _events.log_, _configure.log_)
 
 or to the storage of web content: **Content directories**
