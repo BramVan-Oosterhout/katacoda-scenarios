@@ -5,7 +5,7 @@ For instance %TOPIC% is translated into the topic name. All Foswiki translation 
 Collectively these constructs are referred to as macros, but there are some semantic constructs that distinguish them as
 variables, preferences or macros.
 
-Create a topic like: TestMacros in the sandbox and experiment along with the text.
+Create a topic like: TestMacros in the Sandbox and experiment along with the text.
 
 ## Variables
 Variables are defined by placing the following text in a topic:

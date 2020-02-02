@@ -39,7 +39,7 @@ Insert this text and expand the macro %DATE%.
 Notice that the markers _STARTINCLUDE_ and _STOPINCLUDE_ are removed.
 *BUT* the new line following the STARTINCLUDE and preceeding the STOPINCLUDE are visible in the rendered page.
 When you inspect the html source of the rendered page you see:
-...```
+```
 (
 Insert this text and expand the macro 02 Mar 2016.
 )
