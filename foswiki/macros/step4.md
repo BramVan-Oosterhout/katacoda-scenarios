@@ -10,13 +10,18 @@ Below are some brief examples to demonstrate their power.
 ### _SHOWPREFERENCE_
 _%SHOWPREFERENCE%_ will list all defined preferences __and where they are defined__. You can try this in the Sandbox.TestMacros topic.
 The macro takes one or more comma separated variable names to show. Try:
-_%SHOWPREFERENCE{ "ATTACHFILESIZELIMIT,SKIN,UNDEFINED" }%_ 
+```
+%SHOWPREFERENCE{ "ATTACHFILESIZELIMIT,SKIN,UNDEFINED" }%
+```
 
 ### _DISPLAYTIME_
 _%DISPLAYTIME{ "format specification" }%_ presents the current time in a requested format.
 The default (_%DISPLAYTIME%_) expands to the current date and time.
 The format can be changed using format qualifiers like: =$day, $year, $minute=.
-Try: _%DISPLAYTIME{ "$year$mo$day$hour$minute: The $day'st day of $month in the year $year" }%_ expands to:
+Try:
+```
+%DISPLAYTIME{ "$year$mo$day$hour$minute: The $day'st day of $month in the year $year" }%
+```
 
 The _$formatqualifier_ token format is commonly used in macros to format the output.
 The tokens available are provided in the documentation of the macro. Jump to Main.VarDISPLAYTIME.
@@ -35,21 +40,24 @@ Paste the following code into the Sandbox.TestMacros topic:
 Insert this text and expand the macro %DATE%.
 %STOPINCLUDE%
 </verbatim> 
+```
 
 Notice that the markers _STARTINCLUDE_ and _STOPINCLUDE_ are removed.
 *BUT* the new line following the STARTINCLUDE and preceeding the STOPINCLUDE are visible in the rendered page.
 When you inspect the html source of the rendered page you see:
+
 ```
 (
-Insert this text and expand the macro 02 Mar 2016.
+Insert this text and expand the macro 02 Mar 2016 - 05:33.
 )
 ...
 ```
-The new line after the ( shows as a space in the rendered page.
+The new line after the *(* shows as a space in the rendered page.
 
 INCLUDE recognises multiple parts in a topic called sections.
 Sections are marked in the topic to be included with _%STARTSECTION{ "sectionname" }%_ and _%ENDSECTION{ "sectionname" }%_.
 Paste the following in the Sandbox.TestMacros topic.
+
 ```
 %INCLUDE{ "%TOPIC%" section="ex2"}%
 ---
@@ -71,14 +79,18 @@ Paste the following in the Sandbox.TestMacros topic.
 </verbatim>
 ```
 
-INCLUDE takes user defined parameters. Where those parameters occur as variables in the included text, they are expanded to the value provided. The example uses =%<nop>INCLUDE{ "%TOPIC%" section="example2" theTEXT="birthday" theNAME="Main.%<nop>USERNAME%" theDATE="7 December"  }%= to include the the text between the markers with the name: =example2=.
+INCLUDE takes user defined parameters.
+Where those parameters occur as variables in the included text, they are expanded to the value provided.
+Paste the following in the Sandbox.TestMacros topic:
 
+```
+%INCLUDE{ "%TOPIC%" section="ex3" theText="birthday" theName="Main.%<nop>USERNAME%" theDate="7 December"  }%
+---
 <verbatim>
-%STARTSECTION{ "example2" }%
+%STARTSECTION{ "ex3" }%
 The %theTEXT% of %theNAME% is %theDATE%.
-%ENDSECTION{ "example2" }%
+%ENDSECTION{ "ex3" }%
 </verbatim>
-%INCLUDE{ "%TOPIC%" section="example2" theTEXT="birthday" theNAME="Main.%USERNAME%" theDATE="7 December" }%
 
 
 

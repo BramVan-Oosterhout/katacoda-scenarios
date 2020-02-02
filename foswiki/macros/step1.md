@@ -12,10 +12,10 @@ Variables are defined by placing the following text in a topic:
 _(three spaces) * (one space) Set (variable name) = the value allocated to the variable_.
 The value of the variable can include TML, including other macros as well as HTML. For example:
 ```
-   * Set BRAMVANOOSTERHOUT = [[Main.BramVanOosterhout][Bram van Oosterhout]] (administrator)
+   * Set JoeBlog = [[Main.JoeBlog][Joe Blog]] (administrator)
 ```
-defines the variable BRAMVANOOSTERHOUT and when you write (%BRAMVANOOSTERHOUT%) in the topic,
-the text will translate to (Bram van Oosterhout (administrator)).
+defines the variable JoeBlog and when you write (%JoeBlog%) in the topic,
+the text will translate to (Joe Blog (administrator)).
 Variables can take any amount of content, like the results of a search.
 But variables are limited in scope to the topic where they are defined.
 Note that the variable definition is active, even in &lt;verbatim> ... &lt;/verbatim> tags.
