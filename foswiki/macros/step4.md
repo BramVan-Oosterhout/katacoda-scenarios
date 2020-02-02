@@ -1,49 +1,61 @@
 ## Macros
 Macros are the core of Foswiki's functionality and extensibility.
-They are syntactically like variables with parameters: =%<nop>MACRO{ parameter="value" ... }%=.
+They are syntactically like variables with parameters: _%<nop>MACRO{ parameter="value" ... }%_.
 The MACRO name can be all capitals (common for Foswiki defined macros) or mixed case if you choose to define your own.
 Their semantics are usually implemented in the internals of Foswiki or as extensions.
 There are hundreds of macros available in Foswiki and this course will cover a variety of them.
-The Foswiki documentation provides a full list in [[System.MacrosQuickReference][System.MacrosQuickReference]].
+The Foswiki documentation provides a full list in System.MacrosQuickReference.
 Below are some brief examples to demonstrate their power.
 
 ### _SHOWPREFERENCE_
-_%SHOWPREFERENCE%_ will list all defined preferences __and where they are defined__.
-The macro takes one or more comma separated variable names to show. So:
-_%SHOWPREFERENCE{ "ATTACHFILESIZELIMIT,SKIN,UNDEFINED" }%_ returns the following:
-
-%SHOWPREFERENCE{ "ATTACHFILESIZELIMIT, SKIN, UNDEFINED" }%
+_%SHOWPREFERENCE%_ will list all defined preferences __and where they are defined__. You can try this in the Sandbox.TestMacros topic.
+The macro takes one or more comma separated variable names to show. Try:
+_%SHOWPREFERENCE{ "ATTACHFILESIZELIMIT,SKIN,UNDEFINED" }%_ 
 
 ### _DISPLAYTIME_
-=%<nop>DISPLAYTIME{ "format specification" }%= presents the current time in a requested format. The default (=%<nop>DISPLAYTIME%=) expands to (%DISPLAYTIME%). The format can be changed using format qualifiers like: =$day, $year, $minute=. For example: =%<nop>DISPLAYTIME{ "$year$mo$day$hour$minute: The $day'st day of $month in the year $year" }%= expands to:
+_%DISPLAYTIME{ "format specification" }%_ presents the current time in a requested format.
+The default (_%DISPLAYTIME%_) expands to the current date and time.
+The format can be changed using format qualifiers like: =$day, $year, $minute=.
+Try: _%DISPLAYTIME{ "$year$mo$day$hour$minute: The $day'st day of $month in the year $year" }%_ expands to:
 
-%DISPLAYTIME{ "$year$mo$day$hour$minute: The $day'st day of $month in the year $year at $hour:$minute" }%.
+The _$formatqualifier_ token format is commonly used in macros to format the output.
+The tokens available are provided in the documentation of the macro. Jump to Main.VarDISPLAYTIME.
 
-The =$formatqualifier= token format is commonly used in macros to format the output. The tokens available are provided in the documentation of the macro.
-
----+++ _INCLUDE_
-The =INCLUDE= macro includes (part of) a given topic in the current topic. The simplest form includes one topic in another: =%<nop>INCLUDE{ "targettopicname" }%=. It is made more functional by selecting part of a targettopic by using the =%<nop>STARTINCLUDE%= and =%<nop>STOPINCLUDE%= macros as markers in the targettopic. The example below uses =(%<nop>INCLUDE{ "%<nop>TOPIC%" }%)= to include the section between =STARTINCLUDE= and =STOPINCLUDE=  into this topic.
+### _INCLUDE_
+The _INCLUDE_ macro includes (part of) a given topic in the current topic.
+The simplest form includes one topic in another: _%INCLUDE{ "targettopicname" }%_.
+It is made more functional by selecting part of a targettopic by using the =%<nop>STARTINCLUDE%= and =%<nop>STOPINCLUDE%= macros as markers
+in the targettopic.
+Paste the following code into the Sandbox.TestMacros topic:
+```
+(%INCLUDE{ "%TOPIC%" }%)
+---
 <verbatim>
 %STARTINCLUDE%
 Insert this text and expand the macro %DATE%.
 %STOPINCLUDE%
 </verbatim> 
-(%INCLUDE{ "%TOPIC%" }%)
 
-Notice that the markers =STARTINCLUDE= and =STOPINCLUDE= are removed. *BUT* the new line following the =STARTINCLUDE= and preceeding the =STOPINCLUDE= are visible in the rendered page. When you inspect the html source of the rendered page you see:
-<verbatim>
-...
+Notice that the markers _STARTINCLUDE_ and _STOPINCLUDE_ are removed.
+*BUT* the new line following the STARTINCLUDE and preceeding the STOPINCLUDE are visible in the rendered page.
+When you inspect the html source of the rendered page you see:
+...```
 (
 Insert this text and expand the macro 02 Mar 2016.
 )
 ...
-</verbatim>
+```
 The new line after the ( shows as a space in the rendered page.
 
-INCLUDE recognises multiple parts in a topic called sections. Sections are marked in the topic to be included with =%<nop>STARTSECTION{ "sectionname" }%= and =<nop>%ENDSECTION{ "sectionname" }%=.  The example below uses <code>%<nop>INCLUDE{ "%TOPIC%" section="example1" }%</code> to include the the text between the markers with the name: =example1=.
-
+INCLUDE recognises multiple parts in a topic called sections.
+Sections are marked in the topic to be included with _%STARTSECTION{ "sectionname" }%_ and _%ENDSECTION{ "sectionname" }%_.
+Paste the following in the Sandbox.TestMacros topic.
+```
+%INCLUDE{ "%TOPIC%" section="ex2"}%
+---
+%INCLUDE{ "%TOPIC%" section="ex1"}%
 <verbatim>
-%STARTSECTION{ "example1" }%
+%STARTSECTION{ "ex1" }%
 *A list of the documented parameters for the ICON macro with an example*.
    | *Parameter* | *Description* | *Default* |
    | ="filename or icon name"= | requested icon | =else= |
@@ -52,9 +64,12 @@ INCLUDE recognises multiple parts in a topic called sections. Sections are marke
    | =quote= | allows you to control the quote used in the generated HTML | ="= |
 
    * =%<nop>ICON{"flag-gray"}%= displays as %ICON{"flag-gray"}%
-%ENDSECTION{ "example1" }%
+%ENDSECTION{ "ex1" }%
+%STARTSECTION{ "ex2" }%
+%DISPLAYTIME%
+%STARTSECTION{ "ex2" }%
 </verbatim>
-%INCLUDE{ "%TOPIC%" section="example1" }%
+```
 
 INCLUDE takes user defined parameters. Where those parameters occur as variables in the included text, they are expanded to the value provided. The example uses =%<nop>INCLUDE{ "%TOPIC%" section="example2" theTEXT="birthday" theNAME="Main.%<nop>USERNAME%" theDATE="7 December"  }%= to include the the text between the markers with the name: =example2=.
 
