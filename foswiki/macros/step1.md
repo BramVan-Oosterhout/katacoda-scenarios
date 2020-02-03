@@ -10,7 +10,7 @@ Create a topic like: TestMacros in the Sandbox and experiment along with the tex
 ## Variables
 Variables are defined by placing the following text in a topic:
 _(three spaces) * (one space) Set (variable name) = the value allocated to the variable_.
-The value of the variable can include TML, including other macros as well as HTML. For example:
+The value of the variable can include TML, including other macros, as well as HTML. For example:
 ```
    * Set JoeBlog = [[Main.JoeBlog][Joe Blog]] (administrator)
 ```
