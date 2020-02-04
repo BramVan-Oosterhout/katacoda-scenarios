@@ -4,11 +4,11 @@ Meta data is usually displayed in a form format and can be edited in that same f
 The meta data for each topic (like Creation date, Author and so on) is collected in the topic _.txt_ file.
 You can see this by opening a topic with the _?raw=debug_ parameter, which displays the TML and meta data for the topic in a Foswiki formatted page.
 Try the following TML in your Sandbox topic:
-{{copy}}```[[%SCRIPTURLPATH{"view"}%/%WEB%/%TOPIC%?raw=debug]]```
+```[[%SCRIPTURLPATH{"view"}%/%WEB%/%TOPIC%?raw=debug]]```{{copy}}
 
 Or use the _?raw=all_ url parameter to see the raw text of the topic in the browser window.
 Try the following TML in Sandbox your topic:
-```[[%SCRIPTURLPATH{"view"}%/%WEB%/%TOPIC%?raw=all]]`</verbatim>```{{copy}}
+```[[%SCRIPTURLPATH{"view"}%/%WEB%/%TOPIC%?raw=all]]```{{copy}}
 
 When you inspect the topic with either url parameter, you will see two extra lines at the top. They are the meta data associated with this topic:
 ```
