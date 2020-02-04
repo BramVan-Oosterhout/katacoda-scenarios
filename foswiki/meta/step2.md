@@ -1,5 +1,6 @@
-### _Forms and Fields
+### _Forms and Fields_
 There are two additional meta properties that are related to user data. They are referred to as the form and the fields:
+
 | *meta data* | *added when:* |
 |-------------|---------------|
 | META:FORM |Specifies the topic that defines the fields and properties. Forms can be added to a topic through the user interface, _if_ the form topic is listed in the WEBFORMS preference for the web.   |
@@ -14,6 +15,7 @@ If the form topic is located in a different web from the topics supported by the
 Like: _Web/Subweb.TopicForm_.
 
 The content of the form topic _must_ contain a table that defines the fields of the form. The table format is:
+
 | *Name*  | *Type* | *Size* | *Values* | *Description* | *Attributes* | *Default* |
 |---------|--------|--------|----------|---------------|--------------|-----------|
 |the name of the field\
@@ -25,6 +27,7 @@ The content of the form topic _must_ contain a table that defines the fields of 
  |Value assigned on creation of the field |
 
 A simple form definition in the topic [[Applications/BookApp.BookPartFor][Applications/BookApp.BookPartForm]] looks like:
+
 | *Name*| *Type* | *Size* | *Values* | *Description* | *Attributes* | *Default* |
 |-------|--------|--------|----------|---------------|--------------|-----------|
 | TopicType | label | 1 | BookPartTopic, WikiTopic | topic type  | | |
