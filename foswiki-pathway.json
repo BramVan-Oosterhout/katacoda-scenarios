@@ -19,8 +19,8 @@
         "description": "Variables, Preferences and Macros"
       }, 
       {
-        "course_id": "forms",
-        "title": "Forms",
+        "course_id": "meta",
+        "title": "Meta data",
         "description": "Structured data in Forms"
       }
      ]
