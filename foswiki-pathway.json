@@ -22,6 +22,11 @@
         "course_id": "meta",
         "title": "Meta data",
         "description": "Structured data in Forms"
+      }, 
+      {
+        "course_id": "templates",
+        "title": "Templates",
+        "description": "Creating and using templates"
       }
      ]
   }

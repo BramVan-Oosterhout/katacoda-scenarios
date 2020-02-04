@@ -12,7 +12,7 @@ For instance: PackageForm defines the fields displayed at the end of a topic des
    * Display the !PreferencesPlugin page: [[%SCRIPTURLPATH{"view"}%/System/PreferencesPlugin]]
    * Display its text and metadata definitions: [[%SCRIPTURLPATH{"view"}%/System/PreferencesPlugin?raw=debug]]
    * Display the form definition: [[%SCRIPTURLPATH{"view"}%/System/PackageForm?raw=debug]]
-   * Edit the form definition: [[%SCRIPTURLPATH{"edit"}%/System/PreferencesPlugin?action=form]]
+   * Edit the form content: [[%SCRIPTURLPATH{"edit"}%/System/PreferencesPlugin?action=form]]
 ```{{copy}}
 to display the content of a plugin description, the associated for definition and the editable form. 
 

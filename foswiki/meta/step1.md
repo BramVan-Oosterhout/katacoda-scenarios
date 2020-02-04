@@ -13,7 +13,7 @@ Try the following TML in Sandbox your topic:
 When you inspect the topic with either url parameter, you will see two extra lines at the top. They are the meta data associated with this topic:
 ```
   %META:TOPICINFO{author="JoeBlog" comment="" date="1456896969" format="1.1" reprev="1" version="1"}%
-  %META:TOPICPARENT{name="BookPartTopic"}%
+  %META:TOPICPARENT{name="WebHome"}%
 ```
 Meta data is recorded using the same syntax as a macro.
 The macro starts with _%META:_ followed by the meta data name (like: _TOPICINFO_),
