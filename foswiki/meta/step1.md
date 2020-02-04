@@ -1,0 +1,36 @@
+---+ Meta data
+Meta data is an integral part of the Foswiki data structure. There is some meta data associated with every topic.
+Meta data is usually displayed in a form format and can be edited in that same format.
+The meta data for each topic (like Creation date, Author and so on) is collected in the topic.
+You can see this by opening a topic with the _?raw=debug_ parameter, which displays the TML and meta data for the topic in a Foswiki formatted page.
+Try the following TML in your Sandbox topic:
+{copy}}```[[%SCRIPTURLPATH{"view"}%/%WEB%/%TOPIC%?raw=debug]]```
+
+Or use the _?raw=all_ url parameter to see the raw text of the topic in the browser window.
+Try the following TML in Sandbox your topic:
+```[[%SCRIPTURLPATH{"view"}%/%WEB%/%TOPIC%?raw=all]]`</verbatim>```{{code}}
+
+When you inspect the topic with either url parameter, you will see two extra lines at the top. They are the meta data associated with this topic:
+```
+  %META:TOPICINFO{author="JoeBlog" comment="" date="1456896969" format="1.1" reprev="1" version="1"}%
+  %META:TOPICPARENT{name="BookPartTopic"}%
+```
+Meta data is recorded using the same syntax as a macro.
+The macro starts with _%META:_ followed by the meta data name (like: _TOPICINFO_),
+followed by the value(s) recorded with that item as _name="value"_ pairs.
+
+The following is standard meta data added in the life cycle of a Foswiki topic:
+| *meta data* | *added when:* |
+|-------------|---------------|
+| META:TOPICINFO |the topic is created. The topic info is maintained as the topic is updated |
+| META:TOPICPARENT |the parent is changed using: =More topic actions > Set new topic parent= |
+| META:TOPICMOVED |the topic is moved using =More topic actions > Rename or move topic= |
+| META:FILEATTACHMENT |a file is attached to the topic |
+| META:PREFERENCE |using =More topic actions > Edit topic preference settings= |
+
+The table above presents the circumstances when the meta data is created by Foswiki as part of actions in the user interface.
+You can add meta data to a topic by typing the correct entry directly into the editor.
+The percent (in _%META_) must be in column 1 for the meta data to be recognised.
+This technique can be used in a template topic (a topic which name ends in Template, like !BookPartTemplate).
+
+
