@@ -4,11 +4,10 @@ Meta data is usually displayed in a form format and can be edited in that same f
 The meta data for each topic (like Creation date, Author and so on) is collected in the topic _.txt_ file.
 You can see this by opening a topic with the _?raw=debug_ parameter, which displays the TML and meta data for the topic in a Foswiki formatted page.
 
-You find an example in Sandbox.MetaDataStep1
+You find an example in [Sandbox.MetaDataStep1](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/Sandbox/MetaDataStep1)
 
-Instead of _?raw=debub_ you can use _?raw=all_ url parameter to see the raw text of the topic in the browser window
+Instead of _?raw=debug_ you can use _?raw=all_ url parameter to see the raw text of the topic in the browser window
 instead of inside a Foswiki formatted page..
-Try the following TML in Sandbox your topic:
 
 When you inspect the topic with either url parameter, you will see two extra lines at the top. They are the meta data associated with this topic:
 ```
