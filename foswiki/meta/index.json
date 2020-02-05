@@ -12,12 +12,10 @@
     },
     "steps": [{
       "title": "Meta data and forms",
-      "text": "step1.md",
-      "courseData": "cdStep1.sh"
+      "text": "step1.md"
     },{
       "title": "Meta data and forms (Cont...)",
-      "text": "step2.md",
-      "courseData": "cdStep2.sh"
+      "text": "step2.md"
     },{
       "title": "Meta data and forms (Cont...)",
       "text": "step3.md"
