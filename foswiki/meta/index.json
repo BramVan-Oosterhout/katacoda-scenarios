@@ -14,7 +14,8 @@
     },
     "steps": [{
       "title": "Meta data and forms",
-      "text": "step1.md"
+      "text": "step1.md",
+      "courseData": "cdStep1.sh"
     },{
       "title": "Meta data and forms (Cont...)",
       "text": "step2.md"
