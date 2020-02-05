@@ -9,15 +9,17 @@
                 { "file": "foswiki.conf", "target": "~/" },
                 { "file": "MetaData.tgz", "target": "~/" },
                 { "file": "cdStep1.sh", "target": "bramvanoosterhout/foswiki/meta/", "chmod": "+x" },
-                { "file": "cdStep2.sh", "target": "~/", "chmod": "+x" }
+                { "file": "cdStep2.sh", "target": "bramvanoosterhout/foswiki/meta/", "chmod": "+x" }
               ]
     },
     "steps": [{
       "title": "Meta data and forms",
-      "text": "step1.md"
+      "text": "step1.md",
+      "courseData": "cdStep1.sh"
     },{
       "title": "Meta data and forms (Cont...)",
-      "text": "step2.md"
+      "text": "step2.md",
+      "courseData": "cdStep2.sh"
     },{
       "title": "Meta data and forms (Cont...)",
       "text": "step3.md"

@@ -1,2 +1,2 @@
 #!/bin/sh
-tar -C /var/www/foswiki/data/Sandbox -xvzf Metadata.tgz MetaDataStep2.txt
+tar -C /var/www/foswiki/data/Sandbox -xvzf ~/MetaData.tgz MetaDataStep2.txt
