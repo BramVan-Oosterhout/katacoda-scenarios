@@ -3,12 +3,12 @@ Meta data is an integral part of the Foswiki data structure. There is some meta 
 Meta data is usually displayed in a form format and can be edited in that same format.
 The meta data for each topic (like Creation date, Author and so on) is collected in the topic _.txt_ file.
 You can see this by opening a topic with the _?raw=debug_ parameter, which displays the TML and meta data for the topic in a Foswiki formatted page.
-Try the following TML in your Sandbox topic:
-```[[%SCRIPTURLPATH{"view"}%/%WEB%/%TOPIC%?raw=debug]]```{{copy}}
 
-Or use the _?raw=all_ url parameter to see the raw text of the topic in the browser window.
+You find an example in Sandbox.MetaDataStep1
+
+Instead of _?raw=debub_ you can use _?raw=all_ url parameter to see the raw text of the topic in the browser window
+instead of inside a Foswiki formatted page..
 Try the following TML in Sandbox your topic:
-```[[%SCRIPTURLPATH{"view"}%/%WEB%/%TOPIC%?raw=all]]```{{copy}}
 
 When you inspect the topic with either url parameter, you will see two extra lines at the top. They are the meta data associated with this topic:
 ```
@@ -32,6 +32,4 @@ The following is standard meta data added in the life cycle of a Foswiki topic:
 The table above presents the circumstances when the meta data is created by Foswiki as part of actions in the user interface.
 You can add meta data to a topic by typing the correct entry directly into the editor.
 The percent (in _%META_) must be in column 1 for the meta data to be recognised.
-This technique can be used in a template topic (a topic which name ends in Template, like !BookPartTemplate).
-
 
