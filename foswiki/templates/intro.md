@@ -1,6 +1,6 @@
 Welcome to your Katacoda Foswiki environment!
 
-In this scenario we will explore the meta data implementation supported by Foswiki.
+In this scenario we will explore the template mechanism supported by Foswiki.
 
 The Katacoda training environment is somewhat out of the ordinary. This setup installs Foswiki, listening at port 80 for the http protocol.
 Access is through the katacoda-services host, which is accessible with the https protocol.
