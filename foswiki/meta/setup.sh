@@ -22,4 +22,4 @@ touch data/.htpasswd
 chown www-data:www-data lib/LocalSite.cfg working/logs/configure.log data/.htpasswd
 sed -i 's/DocumentRoot.*$/DocumentRoot \/var\/www\/foswiki\/bin\/view\//' /etc/apache2/sites-enabled/000-default.conf
 service apache2 restart
-tar -C /var/www/foswiki/data/Sandbox -xvzf ~/MetaData.tgz *
+tar -C /var/www/foswiki/data/Sandbox -xvzf ~/MetaData.tgz
