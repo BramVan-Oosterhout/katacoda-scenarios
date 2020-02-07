@@ -4,14 +4,7 @@ These files and topics are referred to as template files and template topics, te
 In the context of a template, Foswiki expands a handful of special macros that are similar to meta data.
 These macros are called template directives. Template directives all have the form _%TMPL:directive{"identifier"}%_.
 
-<style>
-pre code {
-			color: yellow;
-			background-color:  blue;
-		}
-</style>
-
-<pre><code>
+<pre><code style="background-color: blue; color: yellow;" >
 A simple test
 </code></pre>
 
