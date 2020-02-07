@@ -11,6 +11,10 @@ pre code {
 		}
 </style>
 
+<pre><code>
+A simple test
+</code></pre>
+
 ### _Template directives_
 There are five template directives:
 
@@ -26,14 +30,12 @@ Template expansion starts from the first _%TMPL:P{...}%_ directive encountered i
 In the default _view_ case that directive is `%TMPL:P{"document"}%` in the included _templates/foswiki.tmpl_.
 Check it out with: `less -N /var/www/foswiki/templates/foswiki.tmpl`{{execute}}
 
-_document_ is defined as:<span class="p3" >
+_document_ is defined as:
 ```
 %TMPL:DEF{"document"}%%TMPL:P{"htmldoctype"}%%TMPL:P{"htmlstart"}%
 %TMPL:P{"head"}%
 %TMPL:P{"bodystart"}%%TMPL:P{"main"}%%TMPL:P{"bodyend"}%%TMPL:P{"htmlend"}%%TMPL:END%
 ```
-</span>
-
 You can see the structure of the html page reflected in the macros that are evaluated. First the _htmldoctype_ is emitted which is defined as:
 ```
 %TMPL:DEF{"htmldoctype"}%<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
