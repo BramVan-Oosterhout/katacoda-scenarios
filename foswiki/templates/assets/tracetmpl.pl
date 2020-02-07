@@ -5,16 +5,14 @@ use strict;
 print "File: $ARGV[0]\n";
 my $template = slurp($ARGV[0]);
 #print "template: --\n$template\n";
-while ( $template =~ m!%TMPL:DEF{"([^"]+)"}%(.*?)%TMPL:END%!gs ) {
-  print "\n---------- $1 ----------\n$2\n---------- $1 END ----------\n";
+while ( $template =~ m!%TMPL:DEF\{"([^"]+)"}%(.*?)%TMPL:END%!gs ) {
+  print "\n---------- $1 --------------\n$2\n---------- $1 END ----------\n";
 }
 
-$template =~ s!%TMPL:DEF{"([^"]+)"}%(.*?)%TMPL:END%!!gs;
-$template =~ s!%{.*?}%!!gs;
+$template =~ s!%TMPL:DEF\{"([^"]+)"}%(.*?)%TMPL:END%!!gs;
+$template =~ s!%\{.*?}%!!gs;
 
-print "\n---------- TEMPLATE ----------\n$template\n";
-
-
+print "\n---------- ACTIONS --------------\n$template\n---------- ACTIONS END ----------\n";
 
 
 sub slurp {

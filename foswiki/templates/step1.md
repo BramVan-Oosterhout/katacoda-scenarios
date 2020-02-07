@@ -3,12 +3,14 @@ The skin is defined through a collection of files and topics that contain a mixt
 These files and topics are referred to as template files and template topics, templates for short.
 In the context of a template, Foswiki expands a handful of special macros that are similar to meta data.
 These macros are called template directives. Template directives all have the form _%TMPL:directive{"identifier"}%_.
+
 <style>
-		#p3 {
+pre + code {
 			color: hsl(240,100%,75%);
 			background-color:  hsla(0,0%,100%,0.2);
 		}
 </style>
+
 ### _Template directives_
 There are five template directives:
 
