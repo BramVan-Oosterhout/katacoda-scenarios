@@ -6,8 +6,8 @@ These macros are called template directives. Template directives all have the fo
 
 <style>
 pre + code {
-			color: hsl(240,100%,75%);
-			background-color:  hsla(0,0%,100%,0.2);
+			color: yellow;
+			background-color:  blue;
 		}
 </style>
 
