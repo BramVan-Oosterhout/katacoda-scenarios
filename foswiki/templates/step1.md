@@ -3,10 +3,17 @@ The skin is defined through a collection of files and topics that contain a mixt
 These files and topics are referred to as template files and template topics, templates for short.
 In the context of a template, Foswiki expands a handful of special macros that are similar to meta data.
 These macros are called template directives. Template directives all have the form _%TMPL:directive{"identifier"}%_.
+<style>
+		#p3 {
+			color: hsl(240,100%,75%);
+			background-color:  hsla(0,0%,100%,0.2);
+		}
+</style>
+### _Template directives_
+There are five template directives:
 
----++ Template directives
-There are five template directive:
 | *Name* | *Purpose* |
+|--------|-----------|
 | _P_      |Places the string associated with the _identifier_ in the output stream. | 
 | _DEF_ |Defines a string of text of any form (html, TML  and text) and associates that string with the _identifier_ .  The string is terminated by  the template macro: _%TMPL:END%_. |
 | _END_ |Terminates the _%TMPL:DEF{ "identifier" }%_ |
@@ -14,15 +21,16 @@ There are five template directive:
 | _&lt;nothing>_ |A special macro that is treated as a comment. All text inside _%{_ and _}%_ is ignored, including new lines |
 
 Template expansion starts from the first _%TMPL:P{...}%_ directive encountered in the templates as they are expanded.
-In the default _view_ case that directive is in the included _templates/foswiki.tmpl_.
+In the default _view_ case that directive is `%TMPL:P{"document"}%` in the included _templates/foswiki.tmpl_.
 Check it out with: `less -N /var/www/foswiki/templates/foswiki.tmpl`{{execute}}
 
-_document_ is defined as:
+_document_ is defined as:<span class="p3" >
 ```
 %TMPL:DEF{"document"}%%TMPL:P{"htmldoctype"}%%TMPL:P{"htmlstart"}%
 %TMPL:P{"head"}%
 %TMPL:P{"bodystart"}%%TMPL:P{"main"}%%TMPL:P{"bodyend"}%%TMPL:P{"htmlend"}%%TMPL:END%
 ```
+</span>
 
 You can see the structure of the html page reflected in the macros that are evaluated. First the _htmldoctype_ is emitted which is defined as:
 ```
@@ -74,5 +82,4 @@ The examples above are taken directly from the _foswiki.tmpl_ file in the _Foswi
 *   Definitions can contain normal macros like: _%GMTIME%, %TOPIC%_ and so on. 
 *   As a guide, the display of content is defined in the _contentwrapper_. 
 
-pansion. At the bottom of the page are tips for developing new templates and an overview of defaults.
-   * %REF{ "Skins" }% for a description how to define and customise a skin.
+
