@@ -1,9 +1,11 @@
 ### _To find a template_ 
 What template is used is in the first instance defined by the skin defined by the _SKIN_ preference.
-There is an extensive naming and location scheme for templates which is roughly (for details see the documentation): 
-1   check whether the template occurs as a file in the _Foswikiroot/templates_ directory (Set in _configure_ through _{TemplatePath}_ 
-1   check whether the template occurs as a topic in the current web 
-1   check whether the template occurs as a topic in the System web 
+There is an extensive naming and location scheme for templates which is roughly (for details see the documentation):
+
+1.   check whether the template occurs as a file in the _Foswikiroot/templates_ directory (Set in _configure_ through _{TemplatePath}_
+1.   check whether the template occurs as a topic in the current web 
+1.   check whether the template occurs as a topic in the System web
+
 The __first__ occurrence of the template is used. 
 
 The name of the template is derived from the context as: 

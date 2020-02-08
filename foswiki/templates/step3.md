@@ -9,16 +9,15 @@ and very few first level active directives. For instance:
 `./tracetmpl.pl /var/www/foswiki/lib/foswiki/templates/edit.tmpl |less`{{execute}}
 shows only one include statement. The rest are definitions.
 ```
----------- ACTIVE ----------
+---------- ACTIONS ----------
 %TMPL:INCLUDE{"foswiki"}%
 ```
 
 A more active version of this mechanism is documented in the _System.SkinTemplates_ topic under Debugging.
-The module handling the template expansion has a trace mode. Change the constant value in _lib/Foswiki/Templates.pm_ line 49 
-```
-     49 use constant TRACE => 0;
-```
-from _0_ to _1_ and the directivename responsible for each part of the generated html will be included in the html as a comment of the form:
+The module handling the template expansion has a trace mode. Change the TRACE constant value in _lib/Foswiki/Templates.pm_  from 0 to 1.
+`less -N -j 10 -p 'TRACE => ' /var/www/foswiki/lib/Foswiki/Templates.pm`{{execute}}
+and the directivename responsible for each part of the generated html will be included in the html.
+Use _View>Source_ in your browser and you will see comments like this in the source:
 ```
 <!--directivename--> emitted html <!--/directivename-->
 ```
