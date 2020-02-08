@@ -6,7 +6,7 @@ The following _perl_ script (_tracetmpl.pl_) can help you to get a summary of a 
 
 Run the script with a template file name as the parameter and you will see that most templates are full of definitions
 and very few first level active directives. For instance:
-`./tracetmpl.pl /var/www/foswiki/lib/foswiki/templates/edit.tmpl |less`{{execute}}
+`./tracetmpl.pl /var/www/foswiki/templates/edit.tmpl |less`{{execute}}
 shows only one include statement. The rest are definitions.
 ```
 ---------- ACTIONS ----------

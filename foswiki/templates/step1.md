@@ -17,57 +17,27 @@ There are five template directives:
 
 Template expansion starts from the first _%TMPL:P{...}%_ directive encountered in the templates as they are expanded.
 In the default _view_ case that directive is `%TMPL:P{"document"}%` in the included _templates/foswiki.tmpl_.
-Check it out with: `less -N /var/www/foswiki/templates/foswiki.tmpl`{{execute}}
+Check it out with:
+`less -N /var/www/foswiki/templates/foswiki.tmpl`{{execute}}
 
-_document_ is defined as: `less -N -j 10 -p 'DEF\{"document"\}' /var/www/foswiki/templates/foswiki.tmpl`{{execute}}
-```
-%TMPL:DEF{"document"}%%TMPL:P{"htmldoctype"}%%TMPL:P{"htmlstart"}%
-%TMPL:P{"head"}%
-%TMPL:P{"bodystart"}%%TMPL:P{"main"}%%TMPL:P{"bodyend"}%%TMPL:P{"htmlend"}%%TMPL:END%
-```
+_document_ is defined as:
+`less -N -j 10 -p 'DEF\{"document"\}' /var/www/foswiki/templates/foswiki.tmpl`{{execute}}
+
 You can see the structure of the html page reflected in the macros that are evaluated. First the _htmldoctype_ is emitted which is defined as:
 `less -N -j 10 -p 'DEF\{"htmldoctype"\}' /var/www/foswiki/templates/foswiki.tmpl`{{execute}}
-```
-%TMPL:DEF{"htmldoctype"}%<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="%LANG%" lang="%LANG%">%TMPL:END%
-```
 
 This is followed by the _htmlstart_, which is not defined in the default set of templates.
 The expansion of undefined templates is quietly skipped.  Then _head_ is emitted, defined as:
 `less -N -j 10 -p 'DEF\{"head"\}' /var/www/foswiki/templates/foswiki.tmpl`{{execute}}
-```
-%TMPL:DEF{"head"}%<head>
-	%TMPL:P{"windowtitle"}%
-        %TMPL:P{context="edit" then="ie8compatibilitymode"}%
-	<meta http-equiv="Content-Type" content="text/html; charset=%CHARSET%" /> <meta name="robots" content="noindex" /> %HTTP_EQUIV_ON_VIEW%
-	<link rel="icon" href="%FAVICON%" type="image/x-icon" /> <link rel="shortcut icon" href="%FAVICON%" type="image/x-icon" />
-	<link rel="alternate" href="%SCRIPTURL{edit}%/%BASEWEB%/%BASETOPIC%?t=%GMTIME{"$epoch"}%" type="application/x-wiki" title="edit %BASETOPIC%" />
-	<meta name="description" content="%TOPIC%" />
-    <base href="%SCRIPTURL{%SCRIPTNAME%}%/%WEB%/%TOPIC%" /><!--[if IE]></base><![endif]-->
-	%TMPL:P{"script"}%
-	%TMPL:P{"defaultstyle"}%
-</head>%TMPL:END%
-```
 
-Next comes _bodystart_,  defined as: `less -N -j 10 -p 'DEF\{"bodystart"\}' /var/www/foswiki/templates/foswiki.tmpl`{{execute}}
-```
-%TMPL:DEF{"bodystart"}%<body class="foswikiNoJs %TMPL:P{"bodyclassname"}%"><div class="foswikiPage">
-#PageTop %TMPL:END%
-```
+Next comes _bodystart_,  defined as:
+`less -N -j 10 -p 'DEF\{"bodystart"\}' /var/www/foswiki/templates/foswiki.tmpl`{{execute}}
 
-Followed by _main_ defined as: `less -N -j 10 -p 'DEF\{"main"\}' /var/www/foswiki/templates/foswiki.tmpl`{{execute}}
-```
-%TMPL:DEF{"main"}%<div class="foswikiMain">%TMPL:P{"simpleheader"}%%{
----------------------------------------------------
-}%%TMPL:P{"pagetitlestylewrapper"}%%TMPL:P{"contentwrapper"}%%{
----------------------------------------------------
-}%%TMPL:P{"standardfooter"}%</div>%TMPL:END%
-```
-then _bodyend_: `less -N -j 10 -p 'DEF\{"bodyend"\}' /var/www/foswiki/templates/foswiki.tmpl`{{execute}}
-```
-%TMPL:DEF{"bodyend"}%</div>
-</body></html>%TMPL:END%
-```
+Followed by _main_ defined as:
+`less -N -j 10 -p 'DEF\{"main"\}' /var/www/foswiki/templates/foswiki.tmpl`{{execute}}
+
+then _bodyend_:
+`less -N -j 10 -p 'DEF\{"bodyend"\}' /var/www/foswiki/templates/foswiki.tmpl`{{execute}}
 
 and finally _htmlend_, which does not have a definition in the default template files.
 

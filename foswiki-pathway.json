@@ -27,6 +27,11 @@
         "course_id": "templates",
         "title": "Templates",
         "description": "Creating and using templates"
+      }, 
+      {
+        "course_id": "extensions",
+        "title": "Extensions",
+        "description": "Plugins and Contributions"
       }
      ]
   }
