@@ -13,6 +13,7 @@ will add the comment as a wiki table entry in the _Sandbox.TestCommentPlugin_ an
 |-------|------------------------|----------|
 | tomorrow | Main.BramVanOosterhout | sydney |
 | next week | Main.BramVanOosterhout | the world |
+
 %COMMENT{type="table" button="Add" target="Sandbox.TestCommentPlugin" }%
 
 The comment plugin uses the _comment.tmpl_ template file, which contains one line:

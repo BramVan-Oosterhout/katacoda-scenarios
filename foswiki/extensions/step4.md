@@ -1,5 +1,7 @@
 ### _Conclusion_
-This summary illustrates how plugins use the standard Foswiki mechanisms to their own ends. They define internally how expansion of variables is arranged, how defaults are defined and handled and what macros are accepted as directives for the plugin behaviour. The summary only scratches the surface and you should carefully read the documentation for each plugin you plan to use. 
+This summary illustrates how plugins use the standard Foswiki mechanisms to their own ends.
+They define internally how expansion of variables is arranged, how defaults are defined and handled and what macros are accepted as directives for the plugin behaviour.
+The summary only scratches the surface and you should carefully read the documentation for each plugin you plan to use. 
 
 Refer to the documentation for details of the operation of the spreadsheet and comment plugin.
 ---
