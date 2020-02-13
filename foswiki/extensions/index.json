@@ -7,12 +7,16 @@
     "assets": {
       "host01": [
                 { "file": "foswiki.conf", "target": "~/" },
-                { "file": "tracetmpl.pl", "target": "~/", "chmod": "+x" }
+                { "file": "tracetmpl.pl", "target": "~/", "chmod": "+x" },
+                { "file": "Step3CommentExample.png", "target": "~/" }
               ]
     },
     "steps": [{
       "title": "Extensions",
       "text": "step1.md"
+    },{
+      "title": "Extensions (Cont...)",
+      "text": "step1a.md"
     },{
       "title": "Extensions (Cont...)",
       "text": "step2.md"
