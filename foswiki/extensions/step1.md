@@ -16,10 +16,11 @@ When the plugin is found, you need to select the plugin and click install.
 Foswiki will check if the plugin has dependencies on other plugins and if so, install those as well.
 Foswiki will warn if there are _cpan_ dependencies, but not install those.
 A record of the installation is kept here: `less -N /var/www/foswiki/working/logs/configure.log`{{execute}}
-These logs include the observed dependency information. Check the logs and install all missing dependencies, before trying to use the plugin.
+
+These logs include the observed dependency information. Check the logs and install all missing dependencies, before you use the plugin.
 
 There are hundreds of plugins provided with Foswiki, and it is worthwhile to cast your eye over the list
-on _foswiki.org_ in the [Extensions](https://foswiki.org/Extensions) web.
+on _foswiki.org_ in the [Extensions](https://foswiki.org/Extensions) web
 as they provide solutions for many common and not so common applications.
 In this section I will touch on a handful of common use plugins to illustrate the diversity and depth of functionality available. 
 

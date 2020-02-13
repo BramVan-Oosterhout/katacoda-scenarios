@@ -35,8 +35,8 @@ The default entries in _CommentPluginTemplate_ are:
 Some observations on the templates:
 *   The _TMPL:DEF_ directives (like: _%TMPL:DEF{PROMPT:table}%_) do not quote the identyfier as in the skin templates we saw previously.
     The quoted syntax (like: _%TMPL:DEF{ "PROMPT:table" }%_ works, and is preferred for consistency.
-*   The _PROMPT_ directive is a html form, presented in a TML table. It has _<label>_ and _<input>_ tags.
-*      The _PROMPT_ directive does not define _<form></form>_ enclosing tags. These are automatically generated around the _PROMPT_.
+*   The _PROMPT_ directive is a html form, presented in a TML table. It has _&lt;label>_ and _&lt;input>_ tags.
+*      The _PROMPT_ directive does not define _&lt;form>&lt;/form>_ enclosing tags. These are automatically generated around the _PROMPT_.
 *   The _DISABLED_ macro will expand to <code>disabled="disabled"</code> in the preview context
 *   Macros are expanded in the _PROMPT_ templates, as they are in skin templates
 *   The parameters are expanded in the template. For instance: <code>button="Add"</code> will expand _%button|Add entry%_ to _Add_

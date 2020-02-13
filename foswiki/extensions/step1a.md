@@ -3,23 +3,9 @@ _FilterPlugin_ provides text manipulation macros across _Foswiki_ topics. The do
 The text manipulation can create lists fron topics with specific formatted output. There are three formatting macros:
 *   _FORMATLIST_ - supports extensive transformation from one format to another
 *   _EXTRACT_ - supports the extraction of a list from a specified text
-*   _SUBST_ -
+*   _SUBST_ - supports substitution is a chunk of text
 
 Use the configure page to install _FilterPlugin_.
-----
-*   Open the _configure_ page from the _System.InstalledPlugins_ topic.
-*   Click the _Update ..._ button
-*   Search for _FilterPlugin_
-*   Select _FilterPlugin_ and click _Install_
-*   Note the _Text::Unidecode_ dependency
-*   Install this from the command line `cpan install Text::Unidecode`{{execute}}
-*   On the configure page, select the Enable or Disable installed extensions
-*   Enable _FilterPlugin_
-*   Click _Save 2 changes_ (at the top right of the _configure_ page)
-
-That completes the installation. 
----
-
 
 ### _The EXTRACT macro_
 The _EXTRACT_ macro can extract text from a given text or topic. In _Sandbox.ExtensionsStep1_ try:
