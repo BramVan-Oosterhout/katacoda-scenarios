@@ -1,4 +1,4 @@
-Copy the answer topic to the Sandbox web: `cp SolutionExtensionsStep4.txt .var/www/foswiki/data/Sandbox/.`{{execute}}
+Copy the answer topic to the Sandbox web: `tar xvzf SolutionExtensions.tgz --wildcards -C /var/www/foswiki/data/Sandbox/ SolutionExtensionsStep4*`{{execute}}
 and inspect solution page:
 
 *   _Sandbox.SolutionExtentensionsStep4_
