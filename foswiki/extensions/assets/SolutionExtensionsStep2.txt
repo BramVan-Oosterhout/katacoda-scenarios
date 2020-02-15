@@ -1,71 +1,22 @@
-%META:TOPICINFO{author="BramVanOosterhout" comment="" date="1581738327" format="1.1" reprev="2" version="2"}%
+%META:TOPICINFO{author="BramVanOosterhout" comment="" date="1581745053" format="1.1" reprev="2" version="2"}%
 %META:TOPICPARENT{name="WebHome"}%
-As is: %INCLUDE{ "%TOPIC%" section="one" }%
-<verbatim>
-%STARTSECTION{ "one" }%
-%CALCULATE{ "$COUNTSTR($SPLIT( $comma, %EXTRACT{ 
-                                          topic="System.WebHome" 
-                                          pattern="(\w+)" 
-                                          format="$1"  
-                                          separator=","
-                                        }%),  )" }%
-or
-%CALCULATE{ "$LENGTH( %EXTRACT{ 
-                                          topic="System.WebHome" 
-                                          pattern="(\w+)" 
-                                          format="A"  
-                      }%)" }%
-%ENDSECTION{ "one" }%
-</verbatim>
+%EXTRACT{
+        text="The quick brown fox jumped over the lazy dog"
+        pattern="(The|the)"
+        format="$1"
+        separator="~~~"
+}%
 
-And without the last comma: %INCLUDE{ "%TOPIC%" section="two" }%
-<verbatim>
-%STARTSECTION{ "two" }%
-%CALCULATE{ "$COUNTSTR($SPLIT( $comma, %EXTRACT{ 
-                                          topic="System.WebHome" 
-                                          pattern="(\w+)" 
-                                          format="$1"  
-                                          separator=","
-                                        }%)  )" }%
-%ENDSECTION{ "two" }%
-</verbatim>
+%EXTRACT{
+        topic="System.WebHome"
+        pattern="([^\n]*)"
+        format="$1"
+        separator="~~~"
+}%
 
-The following examples use a different technique. EXTRACT maps all wanted strings to a single character and CALCULATE returns the length of the string.
----+++ Count all characters
-*   All characters: %INCLUDE{ "%TOPIC%" section="three" }%
-<verbatim>
-%STARTSECTION{ "three" }%
-%CALCULATE{ "$LENGTH( %EXTRACT{ 
-                         topic="System.WebHome" 
-                         pattern="(.)" 
-                         format="A"  
-                      }%)" }%
-%ENDSECTION{ "three" }%
-</verbatim>
+%INCLUDE{ "System.WebHome" }%
 
----+++ Count all non-blank characters
-*   All non blank characters: %INCLUDE{ "%TOPIC%" section="four" }%
-<verbatim>
-%STARTSECTION{ "four" }%
-%CALCULATE{ "$LENGTH( %EXTRACT{ 
-                         topic="System.WebHome" 
-                         pattern="([^\s\n])" 
-                         format="A"  
-                      }%)" }%
-%ENDSECTION{ "four" }%
-</verbatim>
 
----+++ Count all new lines
-*   All new lines: %INCLUDE{ "%TOPIC%" section="five" }%
-<verbatim>
-%STARTSECTION{ "five" }%
-%CALCULATE{ "$LENGTH( %EXTRACT{ 
-                         topic="System.WebHome" 
-                         pattern="(\n)" 
-                         format="A"  
-                      }%)" }%
-%ENDSECTION{ "five" }%
-</verbatim>
----
+
 -- Main.BramVanOosterhout - 13 Feb 2020
-%META:TOPICMOVED{by="BramVanOosterhout" date="1581738327" from="Sandbox.SolutionExamplesStep2" to="Sandbox.SolutionExtensionsStep2"}%
+%META:TOPICMOVED{by="BramVanOosterhout" date="1581745052" from="Sandbox.SolutionExamplesStep1" to="Sandbox.SolutionExtensionsStep2"}%
