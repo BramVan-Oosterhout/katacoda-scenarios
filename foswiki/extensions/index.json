@@ -7,7 +7,9 @@
     "assets": {
       "host01": [
                 { "file": "foswiki.conf", "target": "~/" },
-                { "file": "SolutionExtensionsStep2.txt", "target": "~/" }
+                { "file": "SolutionExtensionsStep2.txt", "target": "~/" },
+                { "file": "SolutionExtensionsStep3.txt", "target": "~/" },
+                { "file": "SolutionExtensionsStep4.txt", "target": "~/" }
               ]
     },
     "steps": [{
