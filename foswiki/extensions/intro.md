@@ -1,4 +1,4 @@
-## Extensions
+# Extensions
 
 Welcome to your Katacoda Foswiki environment!
 
@@ -19,67 +19,3 @@ For Firefox  you need to turn off all mixed content checking in
 **Please note** that you are `root`on the server in the training scenarios.
 If you are not a user with root privileges on your own system, some commands will need to be `sudo'ed`.
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Last update: Tuesday 21 January  11:22:38 AEDT 2020

@@ -1,52 +1,37 @@
-### _SpreadsheetPlugin_
-The Spreadsheet plugin provides the ability to perform arithmatic and some list manipulation in Foswiki.
-The manipulation can be performed within a table, thereby providing spreadsheet functionality.
-That can be useful in some applications. The plugin also provides for simple calculations through the _%CALCULATE{ ... }%_ macro.
-For example, the following construct returns a very crude wordcount for the WebHome topic. In the _Sandbox.ExtensionsStep2_ topic try:
+### _FilterPlugin_
+_FilterPlugin_ provides text manipulation macros across _Foswiki_ topics. The documentation is at _System.FilterPlugin_
+The text manipulation can create lists fron topics with specific formatted output. There are three formatting macros:
+*   _FORMATLIST_ - supports extensive transformation from one format to another
+*   _EXTRACT_ - supports the extraction of a list from a specified text
+*   _SUBST_ - supports substitution is a chunk of text
 
+Use the configure page to install _FilterPlugin_ if you have not already done so..
+
+### _The EXTRACT macro_
+The _EXTRACT_ macro can extract text from a given text or topic. In _Sandbox.ExtensionsStep2_ try:
 ```
-%CALCULATE{ "$COUNTSTR($SPLIT( $comma, %EXTRACT{ 
-                                          topic="System.WebHome" 
-                                          pattern="(\w+)" 
-                                          format="$1"  
-                                          separator=","
-                                        }%),  )" }%
+%EXTRACT{
+        text="The quick brown fox jumped over the lazy dog"
+        pattern="(The|the)"
+        format="$1"
+        separator="~~~"
+}%
+```{{copy}}
+This example selects the stings _The_ or _the_ from the text and formats the output as a list  separated by three _~_.
+
+Or a more realistic example:
+```
+%EXTRACT{
+        topic="System.WebHome"
+        pattern="([^\n]*)"
+        format="$1"
+        separator="~~~"
+}%
 ```{{copy}}
 
-This example also illustrates how nested macros are evaluated: Left to right, inside out. 
-1.   As Foswiki scans the statement it first evaluates _%EXTRACT{ ... }%_.
-     The _%EXTRACT{ ... }%_ will be replaced by the text of the _WebHome_ topicsplit into words by the _(\w+)_ pattern.
-2.   Next Foswiki finds the _}%_ associated with the _%CALCULATE{_ macro and passes the parameters
-     _$COUNTSTR($SPLIT( $comma, WebHome&#95;word&#95;list),  )_ to the spreadsheet plugin
-3.   The spreadsheet plugin parses the parameters and completes the _SPLIT_ of the WebHome&#95;topic&#95;text into individual list items separated by a comma.
-     The _SPLIT_ is done using a comma ($comma) as the boundary between items.
-4.   The resulting list is passed to _COUNTSTR_, which counts the items in the list since the last parameter (the string text to count) is not specified
+This example selects each line from _System.WebHome_ (all text except the new line) and formats the text as each line separated by three _~_.
 
-A word of warning. Although this looks very much like a programming example, Foswiki is essentially a text processor.
-If you omit the comma after _}%)_ the last parameter of COUNTSTR will be the last word returned by _EXTRACT_. Try:
+This example illustrates how the _EXTRACT_ macro can include the wiki text from a topic and flatten it,
+thereby making the topic text available for further manipulation by other macros. We will see an example when we visit the _SpreadsheetPlugin_.
 
-```
-%CALCULATE{ "$COUNTSTR($SPLIT( $comma, %EXTRACT{ 
-                                          topic="System.WebHome" 
-                                          pattern="(\w+)" 
-                                          format="$1"  
-                                          separator=","
-                                        }%)  )" }%
-```{{copy}}
-
-_COUNTSTR_ now takes the last element in the list as the string to count and counts the occurrences of that string in the remainder of the list.
-There are none!
-
-There are other ways of using _EXTRACT_ to achieve the same result. The following maps all words to a single character and returns the length of the string.
-```
-%CALCULATE{ "$LENGTH( %EXTRACT{ 
-                                          topic="System.WebHome" 
-                                          pattern="(\w+)" 
-                                          format="A"  
-                      }%)" }%
-```{{copy}}
-
-As an exercise: Use _EXTRACT_ and _CALCULATE_ to count:
-*   the number of characters in a topic
-*   the number of non-blank characters ina topic
-*   the number of lines in a topic
+        

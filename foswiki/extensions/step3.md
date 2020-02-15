@@ -1,51 +1,52 @@
-### _CommentPlugin_
-The comment plugin provides a quick way to enter text in Foswiki, without going through an Edit/Save cycle. The simplest version of the use of the comment plugin is to add:
+### _SpreadsheetPlugin_
+The Spreadsheet plugin provides the ability to perform arithmatic and some list manipulation in Foswiki.
+The manipulation can be performed within a table, thereby providing spreadsheet functionality.
+That can be useful in some applications. The plugin also provides for simple calculations through the _%CALCULATE{ ... }%_ macro.
+For example, the following construct returns a very crude wordcount for the WebHome topic. In the _Sandbox.ExtensionsStep2_ topic try:
+
 ```
-%COMMENT%
+%CALCULATE{ "$COUNTSTR($SPLIT( $comma, %EXTRACT{ 
+                                          topic="System.WebHome" 
+                                          pattern="(\w+)" 
+                                          format="$1"  
+                                          separator=","
+                                        }%),  )" }%
 ```{{copy}}
-to the TML in Sandbox.ExtenstionsStep3 and after saving you are presented with a edit text box and an Add comment button.
 
-The comment plugin is more versatile than that. Its presentation as well as its output is controlled through templates. For instance:
+This example also illustrates how nested macros are evaluated: Left to right, inside out. 
+1.   As Foswiki scans the statement it first evaluates _%EXTRACT{ ... }%_.
+     The _%EXTRACT{ ... }%_ will be replaced by the text of the _WebHome_ topicsplit into words by the _(\w+)_ pattern.
+2.   Next Foswiki finds the _}%_ associated with the _%CALCULATE{_ macro and passes the parameters
+     _$COUNTSTR($SPLIT( $comma, WebHome&#95;word&#95;list),  )_ to the spreadsheet plugin
+3.   The spreadsheet plugin parses the parameters and completes the _SPLIT_ of the WebHome&#95;topic&#95;text into individual list items separated by a comma.
+     The _SPLIT_ is done using a comma ($comma) as the boundary between items.
+4.   The resulting list is passed to _COUNTSTR_, which counts the items in the list since the last parameter (the string text to count) is not specified
+
+A word of warning. Although this looks very much like a programming example, Foswiki is essentially a text processor.
+If you omit the comma after _}%)_ the last parameter of COUNTSTR will be the last word returned by _EXTRACT_. Try:
+
 ```
-%COMMENT{type="table" button="Add" target="Sandbox.TestCommentPlugin" }%
+%CALCULATE{ "$COUNTSTR($SPLIT( $comma, %EXTRACT{ 
+                                          topic="System.WebHome" 
+                                          pattern="(\w+)" 
+                                          format="$1"  
+                                          separator=","
+                                        }%)  )" }%
 ```{{copy}}
-will add the comment as a wiki table entry in the _Sandbox.TestCommentPlugin_.
 
+_COUNTSTR_ now takes the last element in the list as the string to count and counts the occurrences of that string in the remainder of the list.
+There are none!
 
-The comment plugin uses the _comment.tmpl_ template file, which contains one line:
-`%TMPL:INCLUDE{CommentPlugin}%`
-The plugin looks for the _CommentPluginTemplate_ topic in the current web and, if not found, in the System web
-to define the presentation of the input (the PROMPT box) and the output.
-Different from the expansion of skin templates reads the template and emits text for every TMPL:P directive,
-the comment plugin starts the text generation with a specific definition.  
+There are other ways of using _EXTRACT_ to achieve the same result. The following maps all words to a single character and returns the length of the string.
+```
+%CALCULATE{ "$LENGTH( %EXTRACT{ 
+                                          topic="System.WebHome" 
+                                          pattern="(\w+)" 
+                                          format="A"  
+                      }%)" }%
+```{{copy}}
 
-For a particular _type_ the comment plugin will 
-*   use the _PROMPT:type_ directive definition (_%TMPL:DEF{PROMPT:type}%_) to generate the input panel for the comment to replace the _%COMMENT{ ... }%_ macro
-*   use the _OUTPUT:type_ directive definition (_%TMPL:DEF{OUTPUT:type}%_) to generate the text to be inserted in the requested location
-
-The default entries in _CommentPluginTemplate_ are:
- 
-**the PROMPT directive**
-`less -N -j 10 -p 'DEF\{PROMPT:table\}' /var/www/foswiki/data/System/CommentPluginTemplate.txt`{{execute}}
-
-
-**the OUTPUT directive**
-`less -N -j 10 -p 'DEF\{OUTPUT:table\}' /var/www/foswiki/data/System/CommentPluginTemplate.txt`{{execute}}
-
-Some observations on the templates:
-*   The _TMPL:DEF_ directives (like: _%TMPL:DEF{PROMPT:table}%_) do not quote the identyfier as in the skin templates we saw previously.
-    The quoted syntax (like: _%TMPL:DEF{ "PROMPT:table" }%_ works, and is preferred for consistency.
-*   The _PROMPT_ directive is a html form, presented in a TML table. It has _&lt;label>_ and _&lt;input>_ tags.
-*      The _PROMPT_ directive does not define _&lt;form>&lt;/form>_ enclosing tags. These are automatically generated around the _PROMPT_.
-*   The _DISABLED_ macro will expand to <code>disabled="disabled"</code> in the preview context
-*   Macros are expanded in the _PROMPT_ templates, as they are in skin templates
-*   The parameters are expanded in the template. For instance: <code>button="Add"</code> will expand _%button|Add entry%_ to _Add_
-*      if the button parameter is not provided _%button|Add entry%_ will expand to  _Add entry_
-*   User defined parameters will be expanded in the template. For instance: <code>myparameter="myvalue"</code> will expand _%myparameter|mydefault%_ to _myvalue_
-*      and _%myparameter|%_ to _myvalue_, but _%myparameter%_ will not expand and display as _%myparameter%_
-*      This construct for expanding parameters and default values is limited to the comment plugin templates.
-*   The _OUTPUT_ directive supports a _POS:location_ macro to identify where the generated text is to be inserted in the target topic.
-*      _location_ can be _TOP_ or _BOTTOM_ related to the target topic. Or _BEFORE_ or _AFTER_ related to the _%COMMENT{ ... }%_ macro.
-*      The actual insertion is handled by the plugin code.
-*   Only a limited set of macros are expanded in the output template at the time the comment is made.
-    The remainder will be inserted in the comment and expanded when the comment is viewed.
+As an exercise: Use _EXTRACT_ and _CALCULATE_ to count:
+*   the number of characters in a topic
+*   the number of non-blank characters ina topic
+*   the number of lines in a topic

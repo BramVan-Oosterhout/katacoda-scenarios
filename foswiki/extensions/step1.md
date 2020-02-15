@@ -11,7 +11,9 @@ These extensions are called plugins and can be downloaded from the Foswiki web s
 ### _Plugin installation_
 Plugins can be installed by a user with _admin_ rights using the _Extensions_ section on the 
 [configure](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/bin/configure) page.
-Select the _Install, update and remove_ tab   in the section and search for the plugin you want to install.
+We will use _FilterPlugin_ in the next steps, so we need to install that.
+
+Select the _Install, update and remove_ tab in the section and search for the plugin you want to install.
 When the plugin is found, you need to select the plugin and click install.
 Foswiki will check if the plugin has dependencies on other plugins and if so, install those as well.
 Foswiki will warn if there are _cpan_ dependencies, but not install those.
