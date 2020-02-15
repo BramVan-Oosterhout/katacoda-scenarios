@@ -23,7 +23,7 @@ For a particular _type_ the comment plugin will
 *   use the _PROMPT:type_ directive definition (_%TMPL:DEF{PROMPT:type}%_) to generate the input panel for the comment to replace the _%COMMENT{ ... }%_ macro
 *   use the _OUTPUT:type_ directive definition (_%TMPL:DEF{OUTPUT:type}%_) to generate the text to be inserted in the requested location
 
-The default entries in _CommentPluginTemplate_ are:
+The default entries in _System.CommentPluginTemplate_ are:
  
 **the PROMPT directive**
 `less -N -j 10 -p 'DEF\{PROMPT:table\}' /var/www/foswiki/data/System/CommentPluginTemplate.txt`{{execute}}

@@ -16,6 +16,6 @@ This leads to a mixed access scenario, which is by default not allowed in modern
 For Firefox  you need to turn off all mixed content checking in
 [about:config](https://docs.sdl.com/LiveContent/content/en-US/SDL%20Web-v5/GUID-A96F0612-53DE-4E35-AE09-48D57146D6E4)
 <p />
-**Please note** that you are `root`on the server in the training scenarios.
+**Please note** that you are `root` on the server in the training scenarios.
 If you are not a user with root privileges on your own system, some commands will need to be `sudo'ed`.
 </div>
