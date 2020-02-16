@@ -1,0 +1,29 @@
+{
+  "title": "Preamble",
+  "description": "What this course is about.",
+  "difficulty": "beginner",
+  "time": "20 minutes",
+  "details": {
+    "steps": [{
+      "title": "STEP1-Preamble",
+      "text": "step1.md"
+    }],
+    "intro": {
+      "text": "intro.md",
+      "credits": "Bram van Oosterhout"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "hidefinish": "true",
+    "uilayout": "terminal-iframe",
+    "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r\nRun your own commands here\u001b[m\r\n",
+    "showdashboard": "1",
+    "dashboards": [ {"name": "Foswiki", "port": "80", "host": "host01"} ]
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

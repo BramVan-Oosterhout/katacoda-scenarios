@@ -3,6 +3,11 @@
     "description": "An introduction. Webs, Macros, Metadata, Templates and Extensions.",
     "icon": "fa-katacoda",
     "courses": [
+            {
+        "course_id": "preamble",
+        "title": "Preamble",
+        "description": "An introduction to this course material."
+      },
       {
         "course_id": "introduction",
         "title": "Introduction",
