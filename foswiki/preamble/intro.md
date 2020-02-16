@@ -22,35 +22,46 @@ Foswiki is an excellent vehicle to develop and supply applications that support 
 (The structured data capabilities are a real asset in this area)
 
 This multipart tutorial presents Foswiki as a vehicle to build, distribute, extend and reuse applications rather than specific functionality.
+The tutorial assumes that you have some experience with Foswiki out of the box.
+Foswiki is first and foremost a wiki. The application supports the creation of web pages, hyperlinked through wiki words.
+You can create new pages called topics, link topics with other topics and in that way create a web that can be maintained by anyone that the appropriate access rights.
+
 Foswiki applications are collections of functionality that can be deployed to support particular data collections.
 Foswiki applications separate the application data from the functions that manipulate the data.
-For example, Foswiki can maintain a number of completely independent note pads, all supported by a common set of manipulation and display tools.
----------
-### Part 1 - Foswiki overview
-In this part I will summarise the operation of Foswiki with functioning examples.
-I will focus on the major parts that make the Foswiki infrastructure as an introduction to Foswiki applications.
-In part 2 I will knit these parts together in the context of the delivery of applications using the Foswiki infrastructure.
-There I will present coherent examples, rather than the spot examples that illustrat the capabilities of a particular Foswiki feature.
 
-In Scenario 1 - [Introduction](https://www.katacoda.com/bramvanoosterhout/courses/foswiki/introduction)
-I present the operation of Foswiki out of the box as seen through the user interface.
+
+### Part 1 - Foswiki overview
+In this part summarises the operation of Foswiki with functioning examples.
+It focusses on the major parts that make up the Foswiki infrastructure as an introduction to Foswiki applications.
+Part 2 knits these parts together in the context of the delivery of applications using the Foswiki infrastructure.
+It presents coherent examples, rather than the spot examples that illustrate the capabilities of a particular Foswiki feature.
+
+Scenario 1 - [Introduction](https://www.katacoda.com/bramvanoosterhout/courses/foswiki/introduction)
+Presents the operation of Foswiki out of the box as seen through the user interface.
 Although there is much functionality under the hood, the immediately visible capabilities are essentially the entry of text in topics
 and the searching across previously entered text.
 
-In Scenario 2 - [Webs](https://www.katacoda.com/bramvanoosterhout/courses/foswiki/webs) I present the basic data management feature,
-the possibility to divide the to in broad classifications: the web. Webs are a basic component in the maintenance and creation of applications.
+Scenario 2 - [Webs](https://www.katacoda.com/bramvanoosterhout/courses/foswiki/webs)
+Present the basic data management feature,
+the possibility to divide the wiki content in broad classifications: the web. Webs are a basic component in the maintenance and creation of applications.
 Webs, sub-webs and the relation between them are fundamental.
 
-In Scenario 3 - [Macros](https://www.katacoda.com/bramvanoosterhout/courses/foswiki/macros)
-I present the use of data definitions to control presentation and behaviour of Foswiki topics.
+Scenario 3 - [Macros](https://www.katacoda.com/bramvanoosterhout/courses/foswiki/macros)
+Presents the use of data definitions to control presentation and behaviour of Foswiki topics.
 Macros are the cornerstones of the functioning of Foswiki applications and this chapter presents the mechanisms used.
 
-In Scenario 4 - [Meta data](https://www.katacoda.com/bramvanoosterhout/courses/foswiki/meta) ...
+Scenario 4 - [Meta data](https://www.katacoda.com/bramvanoosterhout/courses/foswiki/meta)
+Presents the implementation of structured data with each topic. This data is referred to as Meta data
+and can be entered and manipulated separate from the text content of the wiki topic.
 
-In Scenario 5 - [Templates](https://www.katacoda.com/bramvanoosterhout/courses/foswiki/templates) ...
+Scenario 5 - [Templates](https://www.katacoda.com/bramvanoosterhout/courses/foswiki/templates) 
+Presents templates. Foswiki templates define the format and presentation of the topic content.
+Templates support wholesale changes to the appearance of a Foswiki site.
 
-In Scenario 6 - [Extensions](https://www.katacoda.com/bramvanoosterhout/courses/foswiki/extensions) ...
------------
+Scenario 6 - [Extensions](https://www.katacoda.com/bramvanoosterhout/courses/foswiki/extensions) 
+Presents the use of extensions and their interface with the topic content. There are hundreds of plugins shipped with Foswiki.
+This scenario demonstrates the basic syntax and functionality.
+
 <div style="background-color: khaki" >
 The Katacoda training environment is somewhat out of the ordinary. This setup installs Foswiki, listening at port 80 for the http protocol.
 Access is through the katacoda-services host, which is accessible with the https protocol.
@@ -61,65 +72,3 @@ For Firefox  you need to turn off all mixed content checking in
 **Please note** that you are `root`on the server.
 If you are not a user with root privileges, some commands will need to be `sudo'ed`.
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Last update: Tuesday 21 January  11:22:38 AEDT 2020

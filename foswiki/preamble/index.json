@@ -1,13 +1,9 @@
 {
   "title": "Preamble",
-  "description": "What this course is about.",
+  "description": "What this tutorial is about.",
   "difficulty": "beginner",
   "time": "20 minutes",
   "details": {
-    "steps": [{
-      "title": "STEP1-Preamble",
-      "text": "step1.md"
-    }],
     "intro": {
       "text": "intro.md",
       "credits": "Bram van Oosterhout"
@@ -17,7 +13,6 @@
     }
   },
   "environment": {
-    "hidefinish": "true",
     "uilayout": "terminal-iframe",
     "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r\nRun your own commands here\u001b[m\r\n",
     "showdashboard": "1",
