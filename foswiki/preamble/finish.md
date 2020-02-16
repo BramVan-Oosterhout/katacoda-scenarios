@@ -1,5 +1,5 @@
 With this introduction you are ready to go.
-You can navigate to any of the following scenarions from this page. Or click _Next Scenario_ and return to the tutorial home page.
+You can navigate to any of the following scenarios from this page. Or click _Next Scenario_ and return to the tutorial home page.
 
 ## Part 1 - Foswiki overview
 

@@ -15,12 +15,12 @@ When you select the _Foswiki_ tab in the right hand panel, the default Apache pa
 After Foswiki is installed, you need to refresh the tab by clicking the refresh symbol next to the tab. (Not the refresh on the browser!).
 After the refresh, the Foswiki _Main.WebHome_ page will be displayed.
 
-This tutorial has only one user configured: _admin_ with password _password_.
-This is not suited for a permanent installation. Scenarios exist for a limited time only.
+This tutorial has only one Foswiki user configured: _admin_ with password _password_.
+This is not suited for a permanent installation. Tutorial scenarios exist for a limited time only.
 All details are removed when you complete the scenario or after 45 minutes, whichever comes first.
 
 The instructions in the Scenarios will request you to inspect or create topics in Foswiki.
 These references are of the form _Sandbox.WebPreferences_. In this case _Sandbox_ is the web and _WebPreferences_ the topic.
-You can navigate to these topics from the Foswiki menus in the Foswiki tab in the right hand side menu.
+You can navigate to these topics from the Foswiki menus in the Foswiki tab in the right hand side panel.
 
 If you are equipped with dual monitors, you can right click on any link and _Open in new window_.
