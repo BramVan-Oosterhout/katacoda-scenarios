@@ -1,22 +1,26 @@
-## First encounter
+This tutorial consist of scenarios that consist of steps with explanations and instructions.
+Each step is presented like this page. On the left is a panel that contains the instructions.
+On the right is a panel with two tabs: A terminal tab, showing a bash command line interface.
+And a Foswiki tab, which presents a web page in a browser.
 
-Wait for the scenarion to be configured. Divide the browser in two equal vertical parts. Select the Foswiki tab.
+This tutorial works best if you use a wide screen and divide the screen in one third instruction and two third terminal/browser.
 
-Start foswiki: https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki
+As you start a scenario the environment will be constructed, installing cpan modules and instal and configure Foswiki. This will take about 60 seconds.
 
-When you access your Foswiki installation for the first time you will land on a page that says: "Welcome to the Main web".
-Halfway down the page is a **Registration** link. Register yourself as a user
-(We'll use: Joe Blog, password: password. Email is not configured and not required)
-Once you are registerd, come back to [this page](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki)
+Throughout the tutorial you will see command line instructions like `ls`{{execute}}.
+When you click these, the command will be executed in the terminal window.
+The installation of Foswiki is complete when `ls`{{execute}} does not show _foswiki.conf_.
 
-There are some basic features to note:
-*   There is a banner at the top with a Jump and a Search box
-*   There is a bar on the right with a dozen navigation links 
-*   Inside that structure is:
-   *   At the top: a breadcrumb, an edit button, an attachment button and a subscribe button
-   *   At the bottom is a navigation bar with actions: Edit, Attach, Subscribe, Print version, History: r1, Backlinks, View wiki text, Edit wiki text, More topic actions
-   *   And between those two is the topic body, a collection of text and hyperlinks.
-   
-Each of those artefacts is decribed in the following steps.
+When you select the _Foswiki_ tab in the right hand panel, the default Apache page will show.
+After Foswiki is installed, you need to refresh the tab by clicking the refresh symbol next to the tab. (Not the refresh on the browser!).
+After the refresh, the Foswiki _Main.WebHome_ page will be displayed.
 
-Feel free to navigate the links as they are described. The environment is robust enough to support experimentation!
+This tutorial has only one user configured: _admin_ with password _password_.
+This is not suited for a permanent installation. Scenarios exist for a limited time only.
+All details are removed when you complete the scenario or after 45 minutes, whichever comes first.
+
+The instructions in the Scenarios will request you to inspect or create topics in Foswiki.
+These references are of the form _Sandbox.WebPreferences_. In this case _Sandbox_ is the web and _WebPreferences_ the topic.
+You can navigate to these topics from the Foswiki menus in the Foswiki tab in the right hand side menu.
+
+If you are equipped with dual monitors, you can right click on any link and _Open in new window_.

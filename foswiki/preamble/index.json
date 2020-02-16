@@ -1,11 +1,11 @@
 {
   "title": "Preamble",
-  "description": "What this tutorial is about.",
+  "description": "About this tutorial.",e
   "difficulty": "beginner",
   "time": "20 minutes",
   "details": {
     "steps": [{
-      "title": "STEP1-Preamble",
+      "title": "How to use this tutorial",
       "text": "step1.md"
     }],
     "intro": {
