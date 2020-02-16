@@ -4,6 +4,10 @@
   "difficulty": "beginner",
   "time": "20 minutes",
   "details": {
+    "steps": [{
+      "title": "STEP1-Preamble",
+      "text": "step1.md"
+    }],
     "intro": {
       "text": "intro.md",
       "credits": "Bram van Oosterhout"
@@ -22,3 +26,5 @@
     "imageid": "ubuntu"
   }
 }
+
+ 
