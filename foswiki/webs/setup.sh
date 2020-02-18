@@ -1,5 +1,5 @@
 #!/bin/bash
-perl -e '$|=1;print "Installing Foswiki "; while( -e "foswiki.conf" ) { print "+"; sleep( 5 ) } print " DONE\n"' &
+perl -e '$|=1;print STDERR "Installing Foswiki "; while( -e "foswiki.conf" ) { print STDERR "+"; sleep( 5 ) } print STDERR " DONE\n"' &
 apt-get update
 apt-get -y install apache2
 apt-get update; apt-get -y install libalgorithm-diff-perl libarchive-tar-perl libauthen-sasl-perl libcgi-pm-perl libcgi-session-perl libcrypt-passwdmd5-perl libdigest-sha-perl libemail-address-perl libemail-mime-perl libencode-perl liberror-perl libfile-copy-recursive-perl libhtml-parser-perl libhtml-tree-perl libio-socket-ip-perl libio-socket-ssl-perl libjson-perl liblocale-maketext-perl liblocale-maketext-lexicon-perl liblocale-msgfmt-perl libwww-perl liblwp-protocol-https-perl liburi-perl libversion-perl

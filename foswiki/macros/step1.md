@@ -1,10 +1,4 @@
 
-Foswiki uses a simple syntax to influence the presentation of the text entered in the wiki.
-All words starting and ending with a percent (%) character are potential candidates for translation.
-For instance %TOPIC% is translated into the topic name. All Foswiki translation can be viewed as a text manipulation.
-Collectively these constructs are referred to as macros, but there are some semantic constructs that distinguish them as
-variables, preferences or macros.
-
 Create a topic like: TestMacros in the Sandbox and experiment along with the text.
 
 ## Variables
