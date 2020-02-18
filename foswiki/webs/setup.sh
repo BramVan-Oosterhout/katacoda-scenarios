@@ -22,4 +22,4 @@ tools/configure -save -set {Password}='password'
 tools/configure -save -set {Sessions}{UseIPMatching}='0'
 touch data/.htpasswd
 chown www-data:www-data lib/LocalSite.cfg working/logs/configure.log data/.htpasswd
-rm foswiki.conf
+rm ~/foswiki.conf
