@@ -1,4 +1,5 @@
 #!/bin/bash
+perl -e '$|=1;print "Installing Foswiki "; while( -e "foswiki.conf" ) { print "+"; sleep( 5 ) } print " DONE\n"' &
 apt-get update
 apt-get -y install apache2
 apt-get update; apt-get -y install libalgorithm-diff-perl libarchive-tar-perl libauthen-sasl-perl libcgi-pm-perl libcgi-session-perl libcrypt-passwdmd5-perl libdigest-sha-perl libemail-address-perl libemail-mime-perl libencode-perl liberror-perl libfile-copy-recursive-perl libhtml-parser-perl libhtml-tree-perl libio-socket-ip-perl libio-socket-ssl-perl libjson-perl liblocale-maketext-perl liblocale-maketext-lexicon-perl liblocale-msgfmt-perl libwww-perl liblwp-protocol-https-perl liburi-perl libversion-perl
@@ -10,7 +11,7 @@ curl -L -o /tmp/Foswiki-2.1.6.tgz https://github.com/foswiki/distro/releases/dow
 tar -C /var/www -xf /tmp/Foswiki-2.1.6.tgz
 ln -s /var/www/Foswiki-2.1.6 /var/www/foswiki
 chown -H -R www-data:www-data /var/www/foswiki
-mv ~/foswiki.conf /etc/apache2/conf-available/.
+cp ~/foswiki.conf /etc/apache2/conf-available/.
 a2enconf foswiki
 sed -i 's/DocumentRoot.*$/DocumentRoot \/var\/www\/foswiki\/bin\/view\//' /etc/apache2/sites-enabled/000-default.conf
 service apache2 restart
@@ -21,3 +22,4 @@ tools/configure -save -set {Password}='password'
 tools/configure -save -set {Sessions}{UseIPMatching}='0'
 touch data/.htpasswd
 chown www-data:www-data lib/LocalSite.cfg working/logs/configure.log data/.htpasswd
+rm foswiki.conf
