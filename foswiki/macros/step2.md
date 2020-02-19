@@ -10,6 +10,8 @@ Preferences are variables with a broader scope. Preferences are variables define
 |Subweb.WebPreferences |All topics in the sub-web and its sub-webs can see the definitions in this topic, but the parent web can not see them. <br />The same variables as for the web are defined when the sub-web is created. |
 | Web.AnyTopic |Variables defined in this topic are local to the topic. |
 
+You may inspect these pages in the browser.
+
 Foswiki preferences are by convention all uppercase. Variables can be defined with mixed case to avoid collisions.
 
 Conceptually the value of a variable used in the evaluation of a topic is taken from the nearest definition available. So:<br />
