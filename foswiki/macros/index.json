@@ -25,13 +25,14 @@
       "text": "step4.md"
     },{
       "title": "Variables, Preferences and Macros (Cont...)",
-      "text": "step4a.md"
-    },{
-      "title": "Variables, Preferences and Macros (Cont...)",
-      "text": "step5.md"
+      "text": "step5.md",
+      "answer": "step5-answer.md"
     },{
       "title": "Variables, Preferences and Macros (Cont...)",
       "text": "step6.md"
+    },{
+      "title": "Variables, Preferences and Macros (Cont...)",
+      "text": "step7.md"
     }],
     "intro": {
       "text": "intro.md",
