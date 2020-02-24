@@ -1,4 +1,5 @@
 !#/bin/bash
+sleep 5
 echo -n "Install/configure Foswiki "
 while [ -e foswiki.conf ]
 do
