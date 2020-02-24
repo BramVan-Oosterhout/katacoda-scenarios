@@ -12,7 +12,8 @@
     },
     "steps": [{
       "title": "Templates",
-      "text": "step1.md"
+      "text": "step1.md",
+      "data": "cdStep1.sh"
     },{
       "title": "Templates (Cont...)",
       "text": "step2.md"
