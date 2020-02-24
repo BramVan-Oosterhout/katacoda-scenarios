@@ -12,19 +12,20 @@
     },
     "steps": [{
       "title": "Templates",
-      "text": "step1.md"
+      "text": "step1.md",
+      "data": "echo data"
     },{
       "title": "Templates (Cont...)",
       "text": "step2.md"
-    },{
-      "title": "Templates (Cont...)",
-      "text": "step2a.md"
     },{
       "title": "Templates (Cont...)",
       "text": "step3.md"
     },{
       "title": "Templates (Cont...)",
       "text": "step4.md"
+    },{
+      "title": "Templates (Cont...)",
+      "text": "step5.md"
     }],
     "intro": {
       "text": "intro.md",

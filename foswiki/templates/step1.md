@@ -1,10 +1,7 @@
-Foswiki topic text is presented in the browser inside a container that is referred to as: the skin.
-The skin is defined through a collection of files and topics that contain a mixture of html,  TML, and macros.
-These files and topics are referred to as template files and template topics, templates for short.
+### _Template directives_
 In the context of a template, Foswiki expands a handful of special macros that are similar to meta data.
 These macros are called template directives. Template directives all have the form _%TMPL:directive{"identifier"}%_.
 
-### _Template directives_
 There are five template directives:
 
 | *Name* | *Purpose* |
