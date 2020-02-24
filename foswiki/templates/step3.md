@@ -8,7 +8,7 @@ This will ask Foswiki to look for:
 As an exercise: remove the remove the _Edit_ link from the bottom of the topic.
 You need to override the definition of the _edit&lowbar;topic&lowbar;link_ directive.
 That directive is defined in the _viewtopicactionbuttons.tmpl_ file
-`./tracetmpl.pl /var/www/foswiki/templates/viewtopicactionbuttons.tmpl | less -H -j 10-p '-- edit_topic_link --'`{{execute}}
+`./tracetmpl.pl /var/www/foswiki/templates/viewtopicactionbuttons.tmpl | less -N -j 10 -p '-- edit_topic_link --'`{{execute}}
 
 The directive can be redefined in a local _Sandbox.MyskinSkinViewTemplate_ with:
 
