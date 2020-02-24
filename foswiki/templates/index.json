@@ -8,7 +8,7 @@
       "host01": [
                 { "file": "foswiki.conf", "target": "~/" },
                 { "file": "tracetmpl.pl", "target": "~/", "chmod": "+x" },
-                { "file": "cdStep1.sh", "target": "~/", "chmod": "+x" }
+                { "file": "cdStep1.sh", "target": "bramvanoosterhout/foswiki/templates", "chmod": "+x" }
               ]
     },
     "steps": [{
