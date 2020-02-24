@@ -9,7 +9,6 @@
                 { "file": "foswiki.conf", "target": "~/" },
                 { "file": "tracetmpl.pl", "target": "~/", "chmod": "+x" },
                 { "file": "cdStep1.sh", "target": "~/", "chmod": "+x" }
-
               ]
     },
     "steps": [{
