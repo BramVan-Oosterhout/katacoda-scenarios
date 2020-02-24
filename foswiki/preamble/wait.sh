@@ -1,4 +1,4 @@
-!#/bin/bash
+{
 sleep 5
 echo -n "Install/configure Foswiki "
 while [ -e foswiki.conf ]
@@ -7,3 +7,4 @@ echo -n "+"
 sleep 1
 done
 echo " done."
+} 2>/dev/null
