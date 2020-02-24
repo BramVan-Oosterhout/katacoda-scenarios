@@ -17,7 +17,6 @@
     "intro": {
       "text": "intro.md",
       "courseData": "setup.sh",
-      "code": "wait.sh",
       "credits": "Bram van Oosterhout"
     },
     "finish": {
