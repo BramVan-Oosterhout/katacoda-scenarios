@@ -1,7 +1,6 @@
 #!/bin/bash
 {
-sleep 5
-echo -n "Install/configure Foswiki "
+echo -n "Install/configure environment "
 while [ -e foswiki.conf ]
 do
 echo -n "+"

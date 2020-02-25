@@ -8,7 +8,8 @@
       "host01": [
                 { "file": "foswiki.conf", "target": "~/" },
                 { "file": "tracetmpl.pl", "target": "~/", "chmod": "+x" },
-                { "file": "SolutionTemplates.tgz", "target": "~/" }
+                { "file": "SolutionTemplates.tgz", "target": "~/" },
+                 { "file": "wait.sh", "target": "~/", "chmod": "+x" }
               ]
     },
     "steps": [{
@@ -31,7 +32,8 @@
     "intro": {
       "text": "intro.md",
       "courseData": "setup.sh",
-      "credits": ""
+      "code": "timer.sh",
+      "credits": "Bram van Oosterhout"
     },
     "finish": {
       "text": "finish.md"
