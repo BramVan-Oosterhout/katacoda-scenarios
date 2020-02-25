@@ -3,7 +3,7 @@ Welcome to your Katacoda Foswiki tutorial environment!
 Meta data is an integral part of the Foswiki data structure. There is some meta data associated with every topic.
 In this scenario we will explore the meta data implementation supported by Foswiki.
 
-<div style="background-color: khaki; font-size: smaller>
+<div style="background-color: khaki; font-size: smaller">
 The Katacoda training environment is somewhat out of the ordinary. This setup installs Foswiki, listening at port 80 for the http protocol.
 Access is through the katacoda-services host, which is accessible with the https protocol.
 This leads to a mixed access scenario, which is by default not allowed in modern browsers.

@@ -1,11 +1,5 @@
 Welcome to Katacoda Foswiki tutorial!
 
----+ Preface
-*   Scope of this book
-*   Availability of Foswiki
-*   Sample programs and topics
-*   Conventions used in this book
-*   Acknowledgements
 ## Scope of this tutorial
 
 Foswiki is a good tool with much functionality available out of the box. At it heart it is a wiki.
@@ -36,7 +30,7 @@ It focusses on the major parts that make up the Foswiki infrastructure as an int
 Part 2 knits these parts together in the context of the delivery of applications using the Foswiki infrastructure.
 It presents coherent examples, rather than the spot examples that illustrate the capabilities of a particular Foswiki feature.
 
-<div style="background-color: khaki" >
+<div style="background-color: khaki; font-size: smaller" >
 The Katacoda training environment is somewhat out of the ordinary. This setup installs Foswiki, listening at port 80 for the http protocol.
 Access is through the katacoda-services host, which is accessible with the https protocol.
 This leads to a mixed access scenario, which is by default not allowed in modern browsers.

@@ -14,10 +14,12 @@
     "steps": [{
       "title": "Meta data and forms",
       "text": "step1.md",
+      "courseData": "cdStep1.sh",
       "answer": "step1-answer.md"
     },{
       "title": "Meta data and forms (Cont...)",
       "text": "step2.md",
+      "courseData": "cdStep2.sh",
       "answer": "step2-answer.md"
     },{
       "title": "Meta data and forms (Cont...)",

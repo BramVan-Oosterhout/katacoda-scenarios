@@ -9,7 +9,7 @@ The Foswiki architecture consists of core functionality and is augmented by exte
 
 This chapter presents an introduction to plugins.
 
-<div style="background-color: khaki" >
+<div style="background-color: khaki; font-size: smaller" >
 The Katacoda training environment is somewhat out of the ordinary. This setup installs Foswiki, listening at port 80 for the http protocol.
 Access is through the katacoda-services host, which is accessible with the https protocol.
 This leads to a mixed access scenario, which is by default not allowed in modern browsers.
