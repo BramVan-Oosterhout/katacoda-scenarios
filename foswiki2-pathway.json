@@ -1,0 +1,12 @@
+{
+    "title": "Foswiki - Part 2",
+    "description": "Applications.",
+    "icon": "fa-katacoda",
+    "courses": [
+            {
+        "course_id": "preamble",
+        "title": "Preamble",
+        "description": "An introduction to this course material."
+      }
+     ]
+  }
