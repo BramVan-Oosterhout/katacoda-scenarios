@@ -1,5 +1,5 @@
 #!/bin/bash
-if [[ ! $(docker inspect foswiki) ]]; then 
+if [[ $(docker inspect foswiki 2>/dev/nul) == '[]' ]]; then
 docker run -d --name foswiki -p 80:80 timlegge/docker-foswiki
 fi
 docker exec -it foswiki /bin/bash
