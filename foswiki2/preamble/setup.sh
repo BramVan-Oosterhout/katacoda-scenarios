@@ -1,5 +1,7 @@
 #!/bin/bash
+if [[ ! $(docker inspect foswiki) ]]; then 
 docker run -d --name foswiki -p 80:80 timlegge/docker-foswiki
+fi
 docker exec -it foswiki /bin/bash
 cd /var/www/foswiki/
 tools/configure -save -set {Password}='password'
