@@ -8,3 +8,4 @@ tools/configure -save -set {Password}='password'
 tools/configure -save -set {Sessions}{UseIPMatching}='0'
 tools/configure -save -set {PermittedRedirectHostUrls}='http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/'
 tools/configure -save -set {Plugins}{CaptchaPlugin}{Enabled}='0'
+touch Foswiki_config_complete
