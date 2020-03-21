@@ -6,7 +6,7 @@
   "details": {
    "assets": {
       "host01": [
-                 { "file": "wait.sh", "target": "/home/scrapbook/tutorial", "chmod": "+x" }
+                 { "file": "wait.sh", "target": "~/", "chmod": "+x" }
               ]
     },
     "steps": [{
@@ -28,6 +28,6 @@
     "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r\nRun your own commands here\u001b[m\r\n"
   },
   "backend": {
-    "imageid": "docker"
+    "imageid": "ubuntu"
   }
 }
