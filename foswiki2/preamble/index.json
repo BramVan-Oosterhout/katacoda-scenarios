@@ -24,7 +24,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-iframe"",
+    "uilayout": "terminal-iframe",
     "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r\nRun your own commands here\u001b[m\r\n"
     "showdashboard": "1",
     "dashboards": [ {"name": "Foswiki", "port": "80", "host": "host01"} ]
