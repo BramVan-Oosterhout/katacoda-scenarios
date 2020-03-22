@@ -32,7 +32,7 @@ Part 2 knits these parts together in the context of the delivery of applications
 It presents coherent examples, rather than the spot examples that illustrate the capabilities of a particular Foswiki feature.
 
 This part expects experience with the various components of the Foswiki application:
-Webs, Macros, Meta data, Forms, templates and extensions.
+Webs, Macros, Meta data, Forms, Templates and Extensions.
 If you don't have a working knowledge  of these components, you should visit Part 1 before continuing.
 
 <div style="background-color: khaki; font-size: smaller" >
