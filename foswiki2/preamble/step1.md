@@ -1,25 +1,25 @@
-Install the docker-foswiki image
+This tutorial consist of scenarios that consist of steps with explanations and instructions.
+Each step is presented like this page. On the left is a panel that contains the instructions.
+On the right is a panel with two tabs: A terminal tab, showing a bash command line interface.
+And a Foswiki tab, which presents a web page in a browser.
 
-`docker run -d --name foswiki -p 80:80 timlegge/docker-foswiki`{{execute}}
+This tutorial works best if you use a wide screen and divide the screen in one third instruction and two third terminal/browser.
 
-You need to configure the password for the admin user. We'll do that from the command line using the shell as described in the documentation
+As you start a scenario the environment will be constructed, installing cpan modules and instal and configure Foswiki.
+A script will run and complete with `... done` when the configuration is complete. This will take about 60 seconds. 
 
-`docker exec -it foswiki /bin/bash`{{execute}}
-`cd /var/www/foswiki/`{{execute}}
-`tools/configure -save -set {Password}='password'`{{execute}}
+Throughout the tutorial you will see command line instructions like `ls`{{execute}}.
+When you click these, the command will be executed in the terminal window.
 
-In the Katacoda environment we also tell Foswiki NOT to use session IP matching.
+When you select the _Foswiki_ tab in the right hand panel after the configuration is complete,
+the Foswiki _Main.WebHome_ page will be displayed.
 
-`tools/configure -save -set {Sessions}{UseIPMatching}='0'`{{execute}}
+This tutorial has only one Foswiki user configured: _admin_ with password _password_.
+This is not suited for a permanent installation. Tutorial scenarios exist for a limited time only.
+All details are removed when you complete the scenario or after 45 minutes, whichever comes first.
 
-And we need to allow redirection to the katacoda url. Note that port 80 is explicit.
+The instructions in the Scenarios will request you to inspect or create topics in Foswiki.
+These references are of the form _Sandbox.WebPreferences_. In this case _Sandbox_ is the web and _WebPreferences_ the topic.
+You can navigate to these topics from the Foswiki menus in the Foswiki tab in the right hand side panel.
 
-`tools/configure -save -set {PermittedRedirectHostUrls}='http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/'`{{execute}}
-
-Error: User registration has issues...
-Captcha plugin to be disabled
-
-`tools/configure -save -set {Plugins}{CaptchaPlugin}{Enabled}='0'`{{execute}}
-
-
-
+If you are equipped with dual monitors, you can right click on any link and _Open in new window_.

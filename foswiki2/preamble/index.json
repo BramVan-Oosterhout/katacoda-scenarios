@@ -10,7 +10,7 @@
               ]
     },
     "steps": [{
-      "title": "Step 1 - Install Foswiki",
+      "title": "How to use this tutorial",
       "text": "step1.md"
     }],
     "intro": {
@@ -24,8 +24,11 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
+    "uilayout": "terminal-iframe"",
     "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r\nRun your own commands here\u001b[m\r\n"
+    "showdashboard": "1",
+    "dashboards": [ {"name": "Foswiki", "port": "80", "host": "host01"} ]
+
   },
   "backend": {
     "imageid": "ubuntu"

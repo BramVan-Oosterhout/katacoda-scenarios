@@ -5,15 +5,14 @@ And a Foswiki tab, which presents a web page in a browser.
 
 This tutorial works best if you use a wide screen and divide the screen in one third instruction and two third terminal/browser.
 
-As you start a scenario the environment will be constructed, installing cpan modules and instal and configure Foswiki. This will take about 60 seconds.
+As you start a scenario the environment will be constructed, installing cpan modules and instal and configure Foswiki.
+A script will run and complete with `... done` when the configuration is complete. This will take about 60 seconds. 
 
 Throughout the tutorial you will see command line instructions like `ls`{{execute}}.
 When you click these, the command will be executed in the terminal window.
-The installation of Foswiki is complete when `ls`{{execute}} does not show _foswiki.conf_.
 
-When you select the _Foswiki_ tab in the right hand panel, the default Apache page will show.
-After Foswiki is installed, you need to refresh the tab by clicking the refresh symbol next to the tab. (Not the refresh on the browser!).
-After the refresh, the Foswiki _Main.WebHome_ page will be displayed.
+When you select the _Foswiki_ tab in the right hand panel after the configuration is complete,
+the Foswiki _Main.WebHome_ page will be displayed.
 
 This tutorial has only one Foswiki user configured: _admin_ with password _password_.
 This is not suited for a permanent installation. Tutorial scenarios exist for a limited time only.
