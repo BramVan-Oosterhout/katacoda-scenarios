@@ -24,7 +24,7 @@ User registration requires  _data/.htpasswd_ to exist.
 
 Update nginx to allow Cross-Origin Resource Sharing (ajax needs it)
 
-`sed -i '/server_name/a      add_header "Access-Control-Allow-Origin"  *;' default.conf`{{execute}}
+`sed -i '/server_name/a      add_header "Access-Control-Allow-Origin"  *;' /etc/nginx/conf.d/default.conf`{{execute}}
 
 And reload the configuration
 
