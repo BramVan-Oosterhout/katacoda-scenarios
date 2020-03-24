@@ -1,4 +1,4 @@
-This tutorial consist of scenarios that consist of steps with explanations and instructions.
+This tutorial consist of scenarios that are steps with explanations and instructions.
 Each step is presented like this page. On the left is a panel that contains the instructions.
 On the right is a panel with two tabs: A terminal tab, showing a bash command line interface.
 And a Foswiki tab, which presents a web page in a browser.
