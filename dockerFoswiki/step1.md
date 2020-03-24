@@ -22,10 +22,15 @@ User registration requires  _data/.htpasswd_ to exist.
 
 `touch data/.htpasswd`{{execute}}
 
+Update nginx to allow Cross-Origin Resource Sharing (ajax needs it)
+
+`sed -i '/server_name/a      add_header "Access-Control-Allow-Origin"  *;' default.conf`{{execute}}
+
+And reload the configuration
+
+`/usr/sbin/nginx -s reload`{{execute}}
+
 Error: User registration has issues...
 Captcha plugin to be disabled
 
 `tools/configure -save -set {Plugins}{CaptchaPlugin}{Enabled}='0'`{{execute}}
-
-
-
