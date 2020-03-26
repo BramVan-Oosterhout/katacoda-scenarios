@@ -10,7 +10,9 @@ You need to configure the password for the admin user. We'll do that from the co
 
 Clear the foswiki cache
 
-`bin/view /Main/WebHome -refresh=all`{{execute}}
+`pushd bin; ./view /Main/WebHome -refresh=all; popd`{{execute}}
+
+Set the admin password
 
 `tools/configure -save -set {Password}='password'`{{execute}}
 
