@@ -8,6 +8,10 @@ You need to configure the password for the admin user. We'll do that from the co
 
 `cd /var/www/foswiki/`{{execute}}
 
+Clear the foswiki cache
+
+`bin/view /Main/WebHome -refresh=all`{{execute}}
+
 `tools/configure -save -set {Password}='password'`{{execute}}
 
 In the Katacoda environment we also tell Foswiki NOT to use session IP matching.

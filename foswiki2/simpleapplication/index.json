@@ -1,6 +1,6 @@
 {
-  "title": "Preamble",
-  "description": "What this tutorial is about and how to us ir",
+  "title": "A simple application",
+  "description": "A application built and deployed in the Sandbox",
   "difficulty": "beginner",
   "time": "20 minutes",
   "details": {
@@ -10,7 +10,7 @@
               ]
     },
     "steps": [{
-      "title": "How to use this tutorial",
+      "title": "Defining the Data Form",
       "text": "step1.md"
     }],
     "intro": {

@@ -8,9 +8,9 @@
         "title": "Preamble",
         "description": "An introduction to this course material."
       },{
-        "course_id": "application_basics",
-        "title": "A basic application",
-        "description": "An application built and deployed in the Sandbox."
+        "course_id": "simpleapplication",
+        "title": "A simple application",
+        "description": "An application to record notes."
       }
      ]
   }
