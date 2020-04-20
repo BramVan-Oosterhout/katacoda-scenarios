@@ -1,6 +1,6 @@
 {
     "title": "Sandbox",
-    "description": "Unrelated experiments to practice \nLast update: Tue Apr 14 22:53:21 2020",
+    "description": "Unrelated experiments to practice \nLast update: Mon Apr 20 16:19:13 2020",
     "icon": "fa-katacoda",
     "courses": [
       {
@@ -22,6 +22,11 @@
         "course_id": "testApache",
         "title": "Apache",
         "description": "Setting up apache 2"
+      },
+      {
+        "course_id": "test-datatables",
+        "title": "Data tables",
+        "description": "checking data tables install"
       }
      ]
   }
