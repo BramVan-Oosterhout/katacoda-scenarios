@@ -18,6 +18,7 @@ tools/configure -save -set {DefaultUrlHost}='http://[[HOST_SUBDOMAIN]]-80-[[KATA
 tools/configure -save -set {Password}='password'
 tools/configure -save -set {Sessions}{UseIPMatching}='0'
 tools/extension_installer JQDataTablesPlugin install
+tools/extension_installer DBCachePlugin install     
 touch data/.htpasswd
 tools/fix_file_permissions.sh
 chown www-data:www-data lib/LocalSite.cfg working/logs/configure.log data/.htpasswd
