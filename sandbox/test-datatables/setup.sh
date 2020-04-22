@@ -14,15 +14,17 @@ cp ~/foswiki.conf /etc/apache2/conf-available/.
 a2enconf foswiki
 cd /var/www/foswiki
 tools/configure -save -noprompt
-tools/configure -save -set {DefaultUrlHost}='http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com'
+tools/configure -save -set {DefaultUrlHost}='https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com'
 tools/configure -save -set {Password}='password'
 tools/configure -save -set {Sessions}{UseIPMatching}='0'
+tools/configure -save -set {PermittedRedirectHostUrls}='http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com,localhost'
+tools/configure -save -set {ForceDefaultUrlHost}='1'
 tools/extension_installer JQDataTablesPlugin -r install
 tools/extension_installer DBCachePlugin -r install
 export PERL_MM_USE_DEFAULT=1; cpan -T install Time::ParseDate 
 touch data/.htpasswd
 tools/fix_file_permissions.sh
-chown www-data:www-data lib/LocalSite.cfg working/logs/configure.log data/.htpasswd
+chown -R www-data:www-data *
 sed -i 's/DocumentRoot.*$/DocumentRoot \/var\/www\/foswiki\/bin\/view\//' /etc/apache2/sites-enabled/000-default.conf
 service apache2 restart
 rm ~/foswiki.conf
