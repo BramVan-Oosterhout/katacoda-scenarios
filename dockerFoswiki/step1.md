@@ -28,13 +28,13 @@ And we need to allow redirection to the katacoda url. Note that port 80 is expli
 
 Update nginx to allow Cross-Origin Resource Sharing (ajax needs it)
 
-`sed -i '/server_name/a      add_header "Access-Control-Allow-Origin"  *;' /etc/nginx/conf.d/default.conf`{{execute}}
+`sed -i '/server_name/a      add_header "Access-Control-Allow-Origin"  *;' /etc/nginx/conf.d/default.conf`{NOT{execute}}
 
 And reload the configuration
 
-`/usr/sbin/nginx -s reload`{{execute}}
+`/usr/sbin/nginx -s reload`{NOT{execute}}
 
 Error: User registration has issues...
 Captcha plugin to be disabled
 
-`tools/configure -save -set {Plugins}{CaptchaPlugin}{Enabled}='0'`{{execute}}
+`tools/configure -save -set {Plugins}{CaptchaPlugin}{Enabled}='0'`{NOT{execute}}
