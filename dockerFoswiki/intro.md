@@ -6,27 +6,16 @@ The docker image used is developed by Tim Legge and available on
 [docker hub](https://hub.docker.com/r/timlegge/docker-foswiki)
 with extensive documentation.
 
+<div style="background-color: khaki; font-size: smaller" >
+
 The Katacoda training environment is somewhat out of the ordinary. This setup installs Foswiki, listening at port 80 for the http protocol.
 Access is through the katacoda-services host, which is accessible with the https protocol.
 This leads to a mixed access scenario, which is by default not allowed in modern browsers.
 For Firefox  you need to turn off all mixed content checking in
 [about:config](https://docs.sdl.com/LiveContent/content/en-US/SDL%20Web-v5/GUID-A96F0612-53DE-4E35-AE09-48D57146D6E4).
 There are also additional Foswiki configuration requirements. They will be covered in the scenario.
-
+<p />
 **Please note** that you are `root`on the server.
 If you are not a user with root privileges, some commands will need to be `sudo'ed`.Last update: Tuesday 24 March  18:31:15 AEDT 2020
-Last update: Tuesday 24 March  18:41:05 AEDT 2020
-Last update: Tuesday 24 March  18:54:01 AEDT 2020
-Last update: Thursday 26 March  15:48:15 AEDT 2020
-Last update: Thursday 26 March  16:01:22 AEDT 2020
-Last update: Thursday 26 March  16:10:07 AEDT 2020
-Last update: Thursday 26 March  16:14:11 AEDT 2020
-Last update: Mon 30 Mar 12:17:32 AEDT 2020
-Last update: Mon 30 Mar 12:33:11 AEDT 2020
-Last update: Tue 14 Apr 22:53:21 AEST 2020
-Last update: Mon 20 Apr 16:19:13 AEST 2020
-Last update: Mon 20 Apr 16:32:14 AEST 2020
-Last update: Tue 21 Apr 17:19:57 AEST 2020
-Last update: Wed 22 Apr 16:14:58 AEST 2020
-Last update: Wed 22 Apr 16:15:20 AEST 2020
-Last update: Thu 23 Apr 15:03:12 AEST 2020
+</div>
+Last update: Thu 23 Apr 15:13:50 AEST 2020
