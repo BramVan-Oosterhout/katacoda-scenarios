@@ -22,17 +22,35 @@ In the Katacoda environment we also tell Foswiki NOT to use session IP matching.
 
 `tools/configure -save -set {Sessions}{UseIPMatching}='0'`{{execute}}
 
-And we need to allow redirection to the katacoda url. Note that port 80 is explicit.
+We need to set the default url to https:...  Note that port 80 is explicit.
 
-`tools/configure -save -set {PermittedRedirectHostUrls}='http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/'`{{execute}}
+`tools/configure -save -set {DefaultUrlHost}='https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com'`{{execute}}
+
+We need to force that url to be used in all constructions, especially redirects in rest calls:
+
+`tools/configure -save -set {ForceDefaultUrlHost}='1'`{{execute}}
+
+And we need to allow redirection to the katacoda http:... url.
+
+`tools/configure -save -set {PermittedRedirectHostUrls}='http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com,http://localhost'`{{execute}}
 
 Update nginx to allow Cross-Origin Resource Sharing (ajax needs it)
 
-`sed -i '/server_name/a      add_header "Access-Control-Allow-Origin"  *;' /etc/nginx/conf.d/default.conf`{NOT{execute}}
+`sed -i '/server_name/a      add_header "Access-Control-Allow-Origin"  *;' /etc/nginx/conf.d/default.conf`{{execute}}
 
 And reload the configuration
 
-`/usr/sbin/nginx -s reload`{NOT{execute}}
+`/usr/sbin/nginx -s reload`{{execute}}
+
+For the wiki workbench, set the default connector to dbcache:
+
+`tools/configure -save -set {DefaultConnector}='dbcache'`{{execute}}
+
+
+
+
+
+
 
 Error: User registration has issues...
 Captcha plugin to be disabled

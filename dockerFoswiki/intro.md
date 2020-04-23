@@ -19,4 +19,4 @@ There are also additional Foswiki configuration requirements. They will be cover
 If you are not a user with root privileges, some commands will need to be `sudo'ed`.Last update: Tuesday 24 March  18:31:15 AEDT 2020
 </div>
 
-Last update: Thu 23 Apr 15:20:31 AEST 2020
+Last update: Thu 23 Apr 16:27:13 AEST 2020
