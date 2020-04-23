@@ -6,8 +6,11 @@
   "details": {
 
     "steps": [{
-      "title": "Step 1 - Install Foswiki",
+      "title": "Step 1 - Install Foswiki for workbench",
       "text": "step1.md"
+    },{
+      "title": "Step 2 - Configure adjustments",
+      "text": "step2.md"
     }],
     "intro": {
       "text": "intro.md",

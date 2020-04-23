@@ -44,15 +44,6 @@ And reload the configuration
 
 For the wiki workbench, set the default connector to dbcache:
 
-`tools/configure -save -set {DefaultConnector}='dbcache'`{{execute}}
+`tools/configure -save -set {JQDataTablesPlugin}{DefaultConnector}='dbcache'`{{execute}}
 
-
-
-
-
-
-
-Error: User registration has issues...
-Captcha plugin to be disabled
-
-`tools/configure -save -set {Plugins}{CaptchaPlugin}{Enabled}='0'`{NOT{execute}}
+And this is sufficient to get the wiki workbench going.
