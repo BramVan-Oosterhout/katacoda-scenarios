@@ -10,11 +10,11 @@ The list is grouped in three parts: _Data Model_, _Control_ and _Documentation_.
 
 The bottom of the page shows a table of the default components generated when the _ExampleApp_ was created.
 You can filter the table with "web" and notice that the commmon Foswiki web control pages (like: WebPreferences and WebHome) are there.
-When you filter by "topic" and sort the table by "TopicTitle", you will also fine topics (like: DataForm and TopicStub) that are
+When you filter by "topic" and sort the table by "TopicTitle", you will also find topics (like: DataForm and TopicStub) that are
 generated to assist with the building of the new application.
 
 If you look closely, you will see that many of the topics are of TopicType: TopicStub.
-The TopicStub is an important component of a wiki application. Have alook at the content of the TopicFunction topic file
+The TopicStub is an important component of a wiki application. Have a look at the content of the DataForm topic file
 `cat data/Applications/ExampleApp/DataForm.txt`{{execute}}
 
 A topic of type TopicStub contains only meta data. The essential fields are 

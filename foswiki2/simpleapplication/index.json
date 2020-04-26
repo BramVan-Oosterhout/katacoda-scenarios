@@ -10,8 +10,11 @@
               ]
     },
     "steps": [{
-      "title": "Defining the Data Form",
+      "title": "Setting up the work bench",
       "text": "step1.md"
+    },{
+      "title": "Defining the Data Form",
+      "text": "step2.md"
     }],
     "intro": {
       "text": "intro.md",
