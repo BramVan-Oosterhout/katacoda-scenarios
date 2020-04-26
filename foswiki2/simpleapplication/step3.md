@@ -15,5 +15,5 @@ You created a stub pointing to the Applications/ExampleApp.ExampleType in the Sa
 ### The "Documentation" section
 This section serves to document what the ExampleType is for and how it is implemented. We will see some examples shortly
 
-### The "Topics of type '_ExampleType_'" section
+### The "Topics of type '_ExampleType_'" section 
 
