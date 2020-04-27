@@ -19,8 +19,9 @@ We will look in detail at the RenderTopicInstallation implementation in the next
 
 ### The _New_ button
 The _New_ button is implemented by %DBCALL{"Applications.RenderSimpleTopicCreator" ... }%. You will see the familiar structure in
-[Applications.RenderSimpleTopicCreator](https://2886795290-80-elsy04.environments.katacoda.com/Applications/RenderSimpleTopicCreator).
+[Applications.RenderSimpleTopicCreator](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/RenderSimpleTopicCreator).
 Lets take a look at the Parameters. The first four parameters are set as part of the DBCALL:
+
 | Parameter | Set to | Presents |
 |===========|========|==========|
 | TEXT | Create a new %TOPIC% | Create a new ExampleType |
@@ -29,6 +30,7 @@ Lets take a look at the Parameters. The first four parameters are set as part of
 | VALUE |  | blank |
 
 The remainder will rely on the default:
+
 | Parameter | Set to | Presents |
 |===========|========|==========|
 |VALUES | not set  | not used |
@@ -37,5 +39,17 @@ The remainder will rely on the default:
 | TYPE | not set | , WikiTopic |
 | PARENT | not set | ExampleType |
 | WHITEBOARD | not set | topic text area for edit (on) |
+| EXTRA | not set | not used |
+| SCRIPT | not set | edit |
+| EDITOR | not set | not used |
 
+From this list we can derive that the RenderSimpleTopicCreator will produce a better result is we call it with a few extra parameters.
+Add the following parameters to %DBCALL{"Applications.RenderSimpleTopicCreator" ... }% in the Applications/ExampleApp/ExampleType topic.
+*   `FORM="Applications/ExampleApp/ExampleForm"`{{copy}} to use the form that you created in step 2.
+*   `TYPE="ExampleType, WikiTopic"`{{copy}}
+
+With these changes the topic creator creates a topic with the desired form and form content.
+Use the ExampleType topic in the Sandbox from step 3 to create a new topic ExampleNote2 and inspect the content of ExampleNote2.txt.
+That topic is only a stub, referencing the now updated Applications/ExampleApp/ExampleType topic.
+`cat data/Sandbox/ExampleNote2.txt`{{execute}}
 
