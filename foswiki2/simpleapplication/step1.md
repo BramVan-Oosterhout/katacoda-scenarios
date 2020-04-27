@@ -1,6 +1,6 @@
 The wiki workbench is a Foswiki application to support the building of applications in Foswiki.
 
-To start, you must login and select the Applications web. On the home page of the Applications web you see a _New_ button.
+To start, you must login (admin/password) and select the Applications web. On the home page of the Applications web you see a _New_ button.
 Clicking the _New_ button opens a form. Enter the name of the new application (ExampleApp) and click _Submit_.
 A new sub-web Application/ExampleApp is created. Navigate to the home page by clicking the _ExampleApp_ link.
 
@@ -23,3 +23,5 @@ A topic of type TopicStub contains only meta data. The essential fields are
 [Applications.DataForm](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/DataForm?raw=on)
 
 You can navigate to Applications.DataForm to inspect the content.
+
+In the next step we will use the DataForm topic to create a form that will list the fields defining the notepad entries in the _ExampleApp_

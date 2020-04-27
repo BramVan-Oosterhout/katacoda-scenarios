@@ -18,6 +18,9 @@
     },{
       "title": "Creating a new topic",
       "text": "step3.md"
+    },{
+      "title": "Under the hood",
+      "text": "step4.md"
     }],
     "intro": {
       "text": "intro.md",
