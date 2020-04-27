@@ -21,7 +21,7 @@ Try it with the the title ExampleNote1 and click _Submit_. A new topic with titl
 Save the topic.
 
 Inspect the new topic with
-[Applications/ExampleApp.ExampleNote1?raw=all](https://2886795295-80-ollie07.environments.katacoda.com/Applications.ExampleApp/ExampleNote1?raw=all)
+[Applications/ExampleApp.ExampleNote1?raw=all](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications.ExampleApp/ExampleNote1?raw=all)
 and note that:
 *   %META:TOPICPARENT{name="ExampleType"}% - the topic parent is the type topic
 *   %META:FORM{name="Applications/ExampleApp.ExampleType"}% - the form is of ExampleType, not ExampleForm we defined earlier.

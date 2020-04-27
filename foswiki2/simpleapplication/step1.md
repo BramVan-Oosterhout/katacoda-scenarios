@@ -1,6 +1,6 @@
 The wiki workbench is a Foswiki application to support the building of applications in Foswiki.
 
-To start, you must login (admin/password) and select the Applications web. On the home page of the Applications web you see a _New_ button.
+To start, you must login (_admin/password_) and select the Applications web. On the home page of the Applications web you see a _New_ button.
 Clicking the _New_ button opens a form. Enter the name of the new application (ExampleApp) and click _Submit_.
 A new sub-web Application/ExampleApp is created. Navigate to the home page by clicking the _ExampleApp_ link.
 
