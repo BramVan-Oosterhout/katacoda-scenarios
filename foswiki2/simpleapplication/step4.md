@@ -23,7 +23,7 @@ The _New_ button is implemented by %DBCALL{"Applications.RenderSimpleTopicCreato
 Lets take a look at the Parameters. The first four parameters are set as part of the DBCALL:
 
 | Parameter | Set to | Presents |
-|===========|========|==========|
+|-----------|--------|----------|
 | TEXT | Create a new %TOPIC% | Create a new ExampleType |
 | LABEL | Title | Title: |
 | BUTTONTEXT | New | New |
@@ -32,7 +32,7 @@ Lets take a look at the Parameters. The first four parameters are set as part of
 The remainder will rely on the default:
 
 | Parameter | Set to | Presents |
-|===========|========|==========|
+|-----------|--------|----------|
 |VALUES | not set  | not used |
 | FORM | not set |uses the form in ExampleType |
 | TEMPLATE | not set | not used |
