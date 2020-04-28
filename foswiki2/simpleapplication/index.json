@@ -21,6 +21,9 @@
     },{
       "title": "Under the hood",
       "text": "step4.md"
+    },{
+      "title": "Creating an application home page",
+      "text": "step5.md"
     }],
     "intro": {
       "text": "intro.md",
