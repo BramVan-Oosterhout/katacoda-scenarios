@@ -20,7 +20,8 @@ docker exec -it -w /var/www/foswiki foswiki /bin/bash -c "tools/configure -save 
 docker exec -it -w /var/www/foswiki foswiki /bin/bash -c "tools/configure -save -set {Plugins}{SolrPlugin}{Enabled}='0' >/dev/null"
 docker exec -it -w /var/www/foswiki foswiki /bin/bash -c "sed -i 's/Set SKIN/#Set SKIN/' data/Main/SitePreferences.txt"
 docker exec -it -w /var/www/foswiki/bin foswiki /bin/bash -c "./view /Main/Webhome -refresh=all >/dev/null"
-docker cp wait.sh foswiki:/tmp/.
+docker cp SolutionExample.tgz foswiki:/tmp/.
+docker cp SolutionExampleTopics.tgz foswiki:/tmp/.
 docker exec -it foswiki /bin/bash -c "sed -i '/server_name/a      add_header \"Access-Control-Allow-Origin\"  *;' /etc/nginx/conf.d/default.conf"
 docker exec -it foswiki /bin/bash -c "/usr/sbin/nginx -s reload"
 echo " done."

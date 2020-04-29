@@ -1,6 +1,6 @@
-The solutions in this scenarion will be created in Foswiki with the names preceeded by "SolutionEx"....
+The solutions in this scenario will be created in Foswiki with the names preceeded by "SolutionEx"....
 
-To see the new application untar the SolutionEx web:
-`cd data/Applications; tar xvf /tmp/SolutionExample.tgz`{{execute}}
+To see the new application, untar the SolutionExample web:
+`tar xvf /tmp/SolutionExample.tgz -C /var/www/foswiki/data/Applications`{{execute}}
 
 Now you can navigate the SolutionsExApp starting in the Applications web.
