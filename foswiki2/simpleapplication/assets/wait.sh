@@ -8,6 +8,7 @@ sleep 2
 done
 } 2>/dev/null
 echo " >>"
+docker cp wait.sh foswiki:/tmp/.
 docker exec -it -w /var/www/foswiki foswiki /bin/bash -c "touch data/.htpasswd"
 docker exec -it -w /var/www/foswiki foswiki /bin/bash -c "tools/configure -save -set {Password}='password' >/dev/null"
 docker exec -it -w /var/www/foswiki foswiki /bin/bash -c "tools/configure -save -set {Sessions}{UseIPMatching}='0' >/dev/null"

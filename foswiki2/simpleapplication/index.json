@@ -6,24 +6,31 @@
   "details": {
    "assets": {
       "host01": [
-                 { "file": "wait.sh", "target": "~/", "chmod": "+x" }
+                 { "file": "wait.sh", "target": "~/", "chmod": "+x" },
+                 { "file": "SolutionExample.tgz", "target": "~/" },
+                 { "file": "SolutionExampleTopics.tgz", "target": "~/" }
               ]
     },
     "steps": [{
       "title": "Setting up the work bench",
-      "text": "step1.md"
+      "text": "step1.md",
+      "answer": "step1-answer.md"
     },{
       "title": "Defining the Data Form",
-      "text": "step2.md"
+      "text": "step2.md",
+      "answer": "step2-answer.md"
     },{
       "title": "Creating a new topic",
-      "text": "step3.md"
+      "text": "step3.md",
+      "answer": "step3-answer.md"
     },{
       "title": "Under the hood",
-      "text": "step4.md"
+      "text": "step4.md",
+      "answer": "step4-answer.md"
     },{
       "title": "Creating an application home page",
-      "text": "step5.md"
+      "text": "step5.md",
+      "answer": "step5-answer.md"
     }],
     "intro": {
       "text": "intro.md",
