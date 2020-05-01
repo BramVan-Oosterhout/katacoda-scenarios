@@ -45,7 +45,7 @@ The remainder will rely on the default:
 
 From this list we can conclude that the RenderSimpleTopicCreator will produce a better result if we call it with a few extra parameters.
 Add the following parameters to `%DBCALL{"Applications.RenderSimpleTopicCreator" ... }%` in the Applications/ExampleApp/ExampleType topic.
-*   `  FORM="Applications/ExampleApp/ExampleForm"`{{copy}} to use the form that you created in step 2.
+*   `  FORM="Applications/ExampleApp.ExampleForm"`{{copy}} to use the form that you created in step 2.
 *   `  TYPE="ExampleType, WikiTopic"`{{copy}}
 
 With these changes the topic creator creates a topic with the desired form and form content.

@@ -19,5 +19,9 @@ so you can add comments without going through the full edit/save cycle.
 That can be done using the CommentPlugin  and the %COMMENT{ ... }% macro.
 You can add that whenever you want to the page if the plugin is installed.
 
-But you can also add it as a default by using a TopicTemplate.
+But you can instead add it as a default by using a TopicTemplate. In the work bench, select the TopicTemplate link.
+Create a new TopicTemplate with the name ExampleTemplate. In the topic add: `%COMMENT%`{{copy}}.
+We  will use all the defaults for now. they are good enough.
+
+You can insert new topics with the comment box  in the ExampleWeb created in step 5.
 
