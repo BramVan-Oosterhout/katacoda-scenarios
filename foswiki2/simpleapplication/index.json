@@ -31,6 +31,10 @@
       "title": "Creating an application home page",
       "text": "step5.md",
       "answer": "step5-answer.md"
+    },{
+      "title": "Adding content to the note",
+      "text": "step6.md",
+      "answer": "step6-answer.md"
     }],
     "intro": {
       "text": "intro.md",
