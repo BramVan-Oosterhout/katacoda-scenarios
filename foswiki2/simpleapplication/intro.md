@@ -1,9 +1,3 @@
-
-STARTSECTION{"documentation"}
-<!-- documentation written in here will be included by CompleteDocumentation -->
-ENDSECTION{"documentation"}
-
-<!-- documentation written in here will NOT be included by CompleteDocumentation -->
 ## Requirements
 The note pad application provides very simple functionality. You have an idea. 
 1   That idea is captured with a title and a short description. 
