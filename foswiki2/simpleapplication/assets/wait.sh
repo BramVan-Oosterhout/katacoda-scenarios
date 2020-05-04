@@ -27,6 +27,8 @@ docker cp SolutionExampleTopics.tgz foswiki:/tmp/.
 rm SolutionExampleTopics.tgz
 docker cp SolutionExampleSandbox.tgz foswiki:/tmp/.
 rm SolutionExampleSandbox.tgz
+docker cp answer.pl foswiki:/tmp/.
+rm answer.pl
 docker exec -it foswiki /bin/bash -c "sed -i '/server_name/a      add_header \"Access-Control-Allow-Origin\"  *;' /etc/nginx/conf.d/default.conf"
 docker exec -it foswiki /bin/bash -c "/usr/sbin/nginx -s reload"
 echo " done."
