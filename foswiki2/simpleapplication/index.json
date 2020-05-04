@@ -9,7 +9,8 @@
                  { "file": "wait.sh", "target": "~/", "chmod": "+x" },
                  { "file": "SolutionExample.tgz", "target": "~/" },
                  { "file": "SolutionExampleTopics.tgz", "target": "~/" },
-                 { "file": "SolutionExampleSandbox.tgz", "target": "~/" }
+                 { "file": "SolutionExampleSandbox.tgz", "target": "~/" },
+                 { "file": "answer.pl", "target": "~/" }
               ]
     },
     "steps": [{
