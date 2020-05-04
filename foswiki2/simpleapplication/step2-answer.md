@@ -1,5 +1,5 @@
 To see the completed form, retrieve it from the SolutionExampleTopics tar ball.
-`tar xvzf /tmp/SolutionExampleTopics.tgz -C /var/www/foswiki/data/Applications SolutionExApp/SolutionExForm*`{{execute}}
+`/tmp/answer step2`{{execute}}
 
 Now you can navigate the SolutionsExApp starting in the Applications web.
 

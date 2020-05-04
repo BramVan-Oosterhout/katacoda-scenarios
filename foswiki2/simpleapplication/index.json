@@ -10,7 +10,7 @@
                  { "file": "SolutionExample.tgz", "target": "~/" },
                  { "file": "SolutionExampleTopics.tgz", "target": "~/" },
                  { "file": "SolutionExampleSandbox.tgz", "target": "~/" },
-                 { "file": "answer.pl", "target": "~/" }
+                 { "file": "answer", "target": "~/", "chmod": "+x" }
               ]
     },
     "steps": [{

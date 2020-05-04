@@ -1,0 +1,97 @@
+#!/usr/bin/perl
+use warnings;
+use strict;
+
+my %step = (
+            'step1' => \&step1,
+            'step2' => \&step2,
+            'step3' => \&step3,
+            'step4' => \&step4,
+            'step5' => \&step5,
+            'step6' => \&step6,
+            'step7' => \&step7,
+          );
+
+my $refresh = 'cd /var/www/foswiki/bin; ./view Applications/SolutionExApp.WebHome -refresh=on; cd /var/www/foswiki;';
+
+if ( ! $ARGV[0] ) { print "Please provide the step as the first parameter: answer.pl stepx\n" }
+elsif ( ! $step{$ARGV[0]} ) { print "No answer for $ARGV[0]\n" }
+else { &{$step{$ARGV[0]}} }
+
+sub refresh {
+  my ($web ) = @_;
+  
+  my $dir = `pwd`;
+  
+  my $command =
+            'cd /var/www/foswiki/bin; '
+          . './view ' . $web . '.WebHome -refresh=on;'
+          . 'cd ' . $dir;
+          
+  return `$command`;
+}
+
+sub step1 {
+  `tar xvzf /tmp/SolutionExample.tgz -C /var/www/foswiki/data/Applications`;
+  refresh( 'Applications/SolutionExApp' );
+}
+sub step2 {
+  `tar --wildcards -xvzf /tmp/SolutionExampleTopics.tgz -C /var/www/foswiki/data/Applications SolutionExApp/SolutionExForm*`;
+  `$refresh`;
+}
+sub step3 {
+  my $result;
+  
+  $result = << `END`;
+    tar
+        --wildcards
+        --transform='flags=r;s/V1//'
+        -xvzf /tmp/SolutionExampleTopics.tgz
+        -C /var/www/foswiki/data/Applications
+        SolutionExApp/SolutionExTypeV1*
+END
+#  `tar --wildcards --transform='flags=r;s/V1//' -xvzf /tmp/SolutionExampleTopics.tgz -C /var/www/foswiki/data/Applications SolutionExApp/SolutionExTypeV1*`;
+  `tar --wildcards -xvzf /tmp/SolutionExampleTopics.tgz -C /var/www/foswiki/data/Applications SolutionExApp/SolutionExNote1*`;
+  $result = <<`END`;
+    tar
+        --wildcards
+        -xvzf /tmp/SolutionExampleSandbox.tgz
+        -C /var/www/foswiki/data/Sandbox
+        SolutionExType* SolutionExNote1*
+  
+END  
+  `$refresh`;
+}
+sub step4 {
+    my result;
+    
+  $result = << `END`;
+    tar
+        --wildcards
+        --transform='flags=r;s/V2//'
+        -xvzf /tmp/SolutionExampleTopics.tgz
+        -C /var/www/foswiki/data/Applications
+        SolutionExApp/SolutionExTypeV2*
+END
+
+  $result = <<`END`;
+    tar
+        --wildcards
+        -xvzf /tmp/SolutionExampleSandbox.tgz
+        -C /var/www/foswiki/data/Sandbox
+        SolutionExNote2*
+  
+END
+
+  `$refresh`;
+  print "I am step 4\n";
+}
+sub step5 {
+  print "I am step 5\n";
+}
+sub step6 {
+  print "I am step 6\n";
+}
+sub step7 {
+  print "I am step 7\n";
+}
