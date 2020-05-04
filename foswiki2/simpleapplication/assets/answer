@@ -10,6 +10,7 @@ my %step = (
             'step5' => \&step5,
             'step6' => \&step6,
             'step7' => \&step7,
+            'test'  => \&test,
           );
 
 my $refresh = 'cd /var/www/foswiki/bin; ./view Applications/SolutionExApp.WebHome -refresh=on; cd /var/www/foswiki;';
@@ -40,30 +41,42 @@ sub step2 {
   `$refresh`;
 }
 sub step3 {
-  my $result;
+  my @command;
   
-  $result = << `END`;
+  @command = qw(
     tar
         --wildcards
         --transform='flags=r;s/V1//'
         -xvzf /tmp/SolutionExampleTopics.tgz
         -C /var/www/foswiki/data/Applications
         SolutionExApp/SolutionExTypeV1*
-END
+   );
+   `join( " ", @command )`;
+   
 #  `tar --wildcards --transform='flags=r;s/V1//' -xvzf /tmp/SolutionExampleTopics.tgz -C /var/www/foswiki/data/Applications SolutionExApp/SolutionExTypeV1*`;
-  `tar --wildcards -xvzf /tmp/SolutionExampleTopics.tgz -C /var/www/foswiki/data/Applications SolutionExApp/SolutionExNote1*`;
-  $result = <<`END`;
+
+  @command = qw(
+    tar
+         --wildcards
+         -xvzf /tmp/SolutionExampleTopics.tgz
+         -C /var/www/foswiki/data/Applications
+         SolutionExApp/SolutionExNote1*  
+   );
+   `join( " ", @command )`;  
+  
+  @command = qw(
     tar
         --wildcards
         -xvzf /tmp/SolutionExampleSandbox.tgz
         -C /var/www/foswiki/data/Sandbox
         SolutionExType* SolutionExNote1*
   
-END  
+   );
+   `join( " ", @command )`;
   `$refresh`;
 }
 sub step4 {
-    my result;
+    my $result;
     
   $result = << `END`;
     tar
@@ -94,4 +107,17 @@ sub step6 {
 }
 sub step7 {
   print "I am step 7\n";
+}
+sub test {
+  my @command;
+  
+    @command = qw(
+    tar
+        --wildcards
+        -xvzf /tmp/SolutionExampleSandbox.tgz
+        -C /var/www/foswiki/data/Sandbox
+        SolutionExType* SolutionExNote1*
+  
+);
+print join( ' ', @command), "\n";
 }

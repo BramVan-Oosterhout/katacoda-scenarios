@@ -1,8 +1,8 @@
 To see the completed form, retrieve it from the SolutionExampleTopics tar ball.
 `/tmp/answer step2`{{execute}}
 
-Now you can navigate the SolutionsExApp starting in the Applications web.
+Now you can navigate the 
+[SolutionsExApp](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/SolutionsExApp/WebHome)
+and inspect the SolutionExForm.
 
-<small>
-You can ignore the error "tar: SolutionExApp/SolutionExForm*: not found in archive". This is a known problem in alpine tar.
-</small>
+You can filter the topics on "solution".
