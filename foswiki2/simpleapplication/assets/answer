@@ -41,7 +41,7 @@ sub step2 {
   `$refresh`;
 }
 sub step3 {
-  my @command;
+  my ( $cmd, @command);
   
   @command = qw(
     tar
@@ -51,7 +51,7 @@ sub step3 {
         -C /var/www/foswiki/data/Applications
         SolutionExApp/SolutionExTypeV1*
    );
-   `join( " ", @command )`;
+   $cmd = join( " ", @command ); `$cmd`; 
    
 #  `tar --wildcards --transform='flags=r;s/V1//' -xvzf /tmp/SolutionExampleTopics.tgz -C /var/www/foswiki/data/Applications SolutionExApp/SolutionExTypeV1*`;
 
@@ -62,7 +62,7 @@ sub step3 {
          -C /var/www/foswiki/data/Applications
          SolutionExApp/SolutionExNote1*  
    );
-   `join( " ", @command )`;  
+   $cmd = join( " ", @command ); `$cmd`; 
   
   @command = qw(
     tar
@@ -72,29 +72,31 @@ sub step3 {
         SolutionExType* SolutionExNote1*
   
    );
-   `join( " ", @command )`;
+   $cmd = join( " ", @command ); `$cmd`;
   `$refresh`;
 }
 sub step4 {
-    my $result;
+  my ( $cmd, @command);
     
-  $result = << `END`;
+  @command = qw(
     tar
         --wildcards
         --transform='flags=r;s/V2//'
         -xvzf /tmp/SolutionExampleTopics.tgz
         -C /var/www/foswiki/data/Applications
         SolutionExApp/SolutionExTypeV2*
-END
-
-  $result = <<`END`;
+    );
+   $cmd = join( " ", @command ); `$cmd`; 
+   
+  @command = qw(
     tar
         --wildcards
         -xvzf /tmp/SolutionExampleSandbox.tgz
         -C /var/www/foswiki/data/Sandbox
         SolutionExNote2*
   
-END
+    );
+   $cmd = join( " ", @command ); `$cmd`; 
 
   `$refresh`;
   print "I am step 4\n";
