@@ -13,7 +13,7 @@ Note that there are no records found, even though we created two topics
 `%DBCALL{"Applications.RenderTopicsOfType"}%` in the ExampleType topic. The documentation of
 [Applications.RenderTopicsOfType](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications.RenderTopicsOfType)
 states that the TYPE rendered is the BASETOPIC by default.
-But our BASETOPIC is ExampleWebHome and there are no topics of thet TYPE. So we nee to proved the TYPE explicitly.
+But our BASETOPIC is ExampleWebHome and there are no topics of that TYPE. So we need to provide the TYPE explicitly.
 Edit the ExampleWebHome topic to use `%DBCALL{ "Applications/ExampleApp.ExampleType" TYPE="ExampleType"}%`{{copy}}
 Now the two topics previously created in appear in the table.
 

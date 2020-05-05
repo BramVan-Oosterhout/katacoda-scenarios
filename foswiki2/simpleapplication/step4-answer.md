@@ -1,1 +1,14 @@
-This is the answer to step x
+To see the completed the updated SolutionExType, retrieve it from the SolutionExampleTopics tar ball.
+
+`/tmp/answer step4`{{execute}}
+
+Now you can navigate to the updated Applications/SolutionExApp.SolutionType as well as the SolutionExNote2 
+[Applications/SolutionExApp.SolutionExNote1?raw=all](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/SolutionExApp/SolutionExNote2?raw=all)
+ to inspect the content.
+ 
+ There is also a SolutionExNote2_ topic in the
+ [Sandbox](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/WebHome)
+ 
+ Note that the SolutionExType is unmodified, but now generates topics with the Status field included.
+ SolutionExType in the sandbox is just a TopicStub (pointer)
+

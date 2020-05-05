@@ -33,7 +33,7 @@ sub refresh {
 }
 
 sub step1 {
-  `tar xvzf /tmp/SolutionExample.tgz -C /var/www/foswiki/data/Applications`;
+  `tar xvzf /tmp/SolutionExampleApp.tgz -C /var/www/foswiki/data/Applications`;
   refresh( 'Applications/SolutionExApp' );
 }
 sub step2 {
@@ -99,13 +99,42 @@ sub step4 {
    $cmd = join( " ", @command ); `$cmd`; 
 
   `$refresh`;
-  print "I am step 4\n";
 }
 sub step5 {
-  print "I am step 5\n";
+  my ( $cmd, @command);
+    
+  @command = qw(
+    tar
+        --wildcards
+        -xvzf /tmp/SolutionExampleTopics.tgz
+        -C /var/www/foswiki/data/Applications
+        SolutionExApp/SolutionExWebHome*
+    );
+   $cmd = join( " ", @command ); `$cmd`;
+   
+     @command = qw(
+    tar
+        --wildcards
+        -xvzf /tmp/SolutionExampleSandbox.tgz
+        -C /var/www/foswiki/data/Sandbox
+        SolutionExWeb
+    );
+   $cmd = join( " ", @command ); `$cmd`; 
+  `$refresh`;
 }
 sub step6 {
-  print "I am step 6\n";
+my ( $cmd, @command);
+    
+  @command = qw(
+    tar
+        --wildcards
+        -xvzf /tmp/SolutionExampleTopics.tgz
+        -C /var/www/foswiki/data/Applications
+        SolutionExApp/SolutionExTopicType*
+        SolutionExApp/SolutionExTemplate*
+    );
+   $cmd = join( " ", @command ); `$cmd`;
+  `$refresh`;
 }
 sub step7 {
   print "I am step 7\n";

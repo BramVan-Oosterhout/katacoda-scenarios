@@ -1,5 +1,6 @@
 ## Requirements
-The note pad application provides very simple functionality. You have an idea. 
+The note pad application provides very simple functionality. You have an idea.
+
 1   That idea is captured with a title and a short description. 
 1   The ideas have two states. Either they are under consideration (Open) or they have been discarded (Closed). 
 1   You want to be able to add to the idea as you research or develop the idea with text, references and attachments
