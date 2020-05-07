@@ -37,6 +37,10 @@
       "title": "Adding content to the note",
       "text": "step6.md",
       "answer": "step6-answer.md"
+    },{
+      "title": "Fixing the grid display titles",
+      "text": "step7.md",
+      "answer": "step7-answer.md"
     }],
     "intro": {
       "text": "intro.md",
