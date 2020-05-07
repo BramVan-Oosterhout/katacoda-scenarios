@@ -104,9 +104,11 @@ sub step4 {
         -xvzf /tmp/SolutionExampleTopics.tgz
         -C /var/www/foswiki/data/Applications
         SolutionExApp/SolutionExTypeV2*
+        SolutionExApp/SolutionExNote2*
     );
    $cmd = join( " ", @command ); `$cmd`; 
-   
+   refresh( 'Applications/SolutionExApp' );
+
   @command = qw(
     tar
         --wildcards
@@ -116,8 +118,8 @@ sub step4 {
   
     );
    $cmd = join( " ", @command ); `$cmd`; 
+   refresh( 'Sandbox' );
 
-  `$refresh`;
 }
 sub step5 {
   my ( $cmd, @command);
@@ -130,16 +132,19 @@ sub step5 {
         SolutionExApp/SolutionExWebHome*
     );
    $cmd = join( " ", @command ); `$cmd`;
-   
+   refresh( 'Applications/SolutionExApp' );
+  
      @command = qw(
     tar
         --wildcards
         -xvzf /tmp/SolutionExampleSandbox.tgz
         -C /var/www/foswiki/data/Sandbox
+        --exclude='SolutionExWeb/SolutionExNote2*'
         SolutionExWeb
     );
    $cmd = join( " ", @command ); `$cmd`; 
-  `$refresh`;
+   refresh( 'Sandbox' );
+
 }
 sub step6 {
 my ( $cmd, @command);
@@ -147,16 +152,37 @@ my ( $cmd, @command);
   @command = qw(
     tar
         --wildcards
+        --transform='flags=r;s/V3//'
         -xvzf /tmp/SolutionExampleTopics.tgz
         -C /var/www/foswiki/data/Applications
-        SolutionExApp/SolutionExTopicType*
+        SolutionExApp/SolutionExTypeV3*
         SolutionExApp/SolutionExTemplate*
     );
    $cmd = join( " ", @command ); `$cmd`;
-  `$refresh`;
+   refresh( 'Applications/SolutionExApp' );
+   
+        @command = qw(
+    tar
+        --wildcards
+        -xvzf /tmp/SolutionExampleSandbox.tgz
+        -C /var/www/foswiki/data/Sandbox
+        SolutionExWeb/SolutionExNote2*
+    );
+   $cmd = join( " ", @command ); `$cmd`; 
+   refresh( 'Sandbox' );
 }
 sub step7 {
-  print "I am step 7\n";
+my ( $cmd, @command);
+    
+  @command = qw(
+    tar
+        --wildcards
+        -xvzf /tmp/SolutionExampleTopics.tgz
+        -C /var/www/foswiki/data/Applications
+        SolutionExApp/SolutionExType*
+    );
+   $cmd = join( " ", @command ); `$cmd`;
+   refresh( 'Applications/SolutionExApp' );
 }
 sub test {
   my @command;

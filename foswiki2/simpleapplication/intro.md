@@ -1,10 +1,10 @@
 ## Requirements
 The note pad application provides very simple functionality. You have an idea.
 
-1   That idea is captured with a title and a short description. 
-1   The ideas have two states. Either they are under consideration (Open) or they have been discarded (Closed). 
-1   You want to be able to add to the idea as you research or develop the idea with text, references and attachments
-1   You want to have a list of the ideas, All ideas, just the Open ones or just the Closed ones.
+1.   That idea is captured with a title and a short description. 
+1.   The ideas have two states. Either they are under consideration (Open) or they have been discarded (Closed). 
+1.   You want to be able to add to the idea as you research or develop the idea with text, references and attachments
+1.   You want to have a list of the ideas, All ideas, just the Open ones or just the Closed ones.
 
 Knowing Foswiki, you know that for requirement 3, you will need a topic for each idea.
 Requirement 2 needs the status information to be easily accessible and that is best achived with a formfield.
