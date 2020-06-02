@@ -29,7 +29,7 @@ Following the form are some macros to make the javascript, necessary for the top
 
 The javascript defined in the `init` section binds an anonymous callback function to the form through the `#topicinstaller` tag. On `submit` the function prefixes the selected `web` to  `topic` parameter to define the topic to be saved.
 
-For some more examples see [Ex07](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/FoswikiTwo3.Ex07) in the Sandbox
+For some more examples see [Ex07](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox.Ex07) in the Sandbox
 
 **How the stub works** <br />
 The `TopicStub` implementation works through the support of the [AutoViewTemplatePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.AutoViewTemplatePlugin) documented in the System web. In the default mode (`exist`) the plugin will, on opening the topic, check the attached form. In case of the default for the RenderTopicInstaller, that will be the [Applications.TopicStub](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications.TopicStub). From this name AutoViewTemplatePlugin will derive a `view` template: [Applications.TopicStubViewTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications.TopicStubViewTemplate).
@@ -40,7 +40,7 @@ The `TopicStubViewTemplate` is used to render the `TopicStub`. The template cont
 ```
 This DBCALL will include the topic text of the topic listed in the `Target` formfield of the stub topic. It will honor the `Section` field if it is not empty.
 
-[Ex08](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/FoswikiTwo3.Ex08) in the Sandbox explores some examples of this mechanism. 
+[Ex08](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox.Ex08) in the Sandbox explores some examples of this mechanism. 
 
 
 

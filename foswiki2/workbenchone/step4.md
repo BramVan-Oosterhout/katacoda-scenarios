@@ -15,7 +15,7 @@ To explore the macro we will start with the second occurrence in the RenderSimpl
 
 The last two parameters are a pattern. Any field defined in the form definition can be given an initial display value and a prompt using the pattern: &lt;fieldname>_attribute.
 
-See [Ex05](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/FoswikiTwo3.Ex05) in the Sandbox for examples.
+See [Ex05](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox.Ex05) in the Sandbox for examples.
 
 ### The first occurrence of RENDERFOREDIT
 Now that we have seen th basic invocation of RENDERFOREDIT, we will take a look at some more complicated constructs. The first RENDERFOREDIT expects the VALUES parameter to be passed. A typical parameter would be `VALUES="fieldName1=value1;fieldName2=value2;fieldName3=value3"`.
@@ -33,7 +33,7 @@ A similar expression is used further down to create a collection of parameters t
 
 Finally, the RENDERFORDISPLAY macro is use to contruct the `exclude=` parameter to exclude specific fieldnames from rendering. RENDERFORDISPLAY is used to extract the field `name` from the FORM for those fields that have an attribute : `c`. The resulting list of field names is returned, preceded by a vertical bar (|) and separated by vertical bars. So if `fieldName4` and `fieldName6` both had an attribute `c` then RENDERFORDISPLAY would result in: `|fieldName4|fieldName6`. And the resulting RENDERFOREDIT parameter would be: `exclude="^(TopicType|fieldName4|fieldName6)$`
 
-See [Ex06](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/FoswikiTwo3.Ex06) in the Sandbox for examples.
+See [Ex06](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox.Ex06) in the Sandbox for examples.
 
 ### The third occurrence of RENDERFOREDIT
 The third occurrentce of RENDERFOREDIT renders a data entry format like the second occurrence does:

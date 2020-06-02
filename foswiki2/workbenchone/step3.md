@@ -7,7 +7,7 @@ The form is wrapped up in a TWISTY. The TWISTY macro is implemented in the [Syst
 %TWISTY{ ... %BUTTON{ ... }% }% wrapped form definition %BUTTON{ ... }% %ENDTWISTY%
 ```
 
-The TWISTY macro uses jquery to implement the twisty functionality. See [Ex02](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/FoswikiTwo3.Ex02) in the Sandbox for some examples of TWISTY use.
+The TWISTY macro uses jquery to implement the twisty functionality. See [Ex02](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox.Ex02) in the Sandbox for some examples of TWISTY use.
 
 The twisty uses the BUTTON macro. This is a handy and powerful macro  documented in [System.VarBUTTON](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.VarBUTTON). The first definition uses the default `type="button"` parameter. The twisty gets fired by the on-click event from the button. The second definition uses `type="submit"`. Clicking this button will submit the form containing the button.
 
@@ -24,7 +24,7 @@ The html form definition inside the TWISTY is defined between the &lt;form> &lt;
 
 The definition of the value in the name="templatetopic" field is a demonstration of the use of the Foswiki form. A Foswiki form contains fields with values. A field value can be extracted from a form located with a particular topic. The `default="%`FORMFIELD{"Template" topic="%`FORM%"}%"` will extract the value of the field `Template` in the form associated with the topic defined in the FORM parameter. The documentation is in [System.VarFORMFIELD](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.VarFORMFIELD).
 
-It is easy to get confused here. The FORM parameter to RenderSimpleTopicCreator is a reference to the topic that contains the data form **definition** (in table form) for the form data to be included in the new topic. The FORMFIELD macro will extract the value of the `Template` field from the **METADATA** associated with the topic that contains the data form definition (in table form), not the definition in the table or the new topic. You can see some examples in [Ex03](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/FoswikiTwo3.Ex03) in the Sandbox.
+It is easy to get confused here. The FORM parameter to RenderSimpleTopicCreator is a reference to the topic that contains the data form **definition** (in table form) for the form data to be included in the new topic. The FORMFIELD macro will extract the value of the `Template` field from the **METADATA** associated with the topic that contains the data form definition (in table form), not the definition in the table or the new topic. You can see some examples in [Ex03](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox.Ex03) in the Sandbox.
 
 ## The topicnaming section
 The topicnaming section renders one of three modes: (|default|template|derived). The mode used is determined by the value of the TopicNamingMode field in the FORM topic. The input field is used by the jqWikiWord javascript (refer: [System.JQueryWikiWord](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.JQueryWikiWord)) to construct a topic name based on the parameters supplied.
@@ -47,7 +47,7 @@ The **derived** mode renders:
 ```
 The DBQUERY renders as a collection of jquery data-* attributes: source, prefix, suffix and transliterate which can be provided as form fields with name TopicName(Source|Prefix|Suffix|Transliterate)
 
-See more example of the topicnaming section in [Ex04](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/FoswikiTwo3.Ex04) topic in the Sandbox.
+See more example of the topicnaming section in [Ex04](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox.Ex04) topic in the Sandbox.
 
 
 
