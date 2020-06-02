@@ -12,12 +12,14 @@ There is no `else="..."`, so nothing happens if access id denied.
 
 The documentation in [System.IfStatements](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.IfStatements) describes the `allows` comparison as :
 
-| allows  | allows 'Y' is true if web/topic 'X' exists and allows access mode 'Y' for the current user... |
+<table><tr>
+<td> allows  </td><td> allows 'Y' is true if web/topic 'X' exists and allows access mode 'Y' for the current user... </td>
+</tr></table>
 
 An access mode is defined by an Acces control setting. Typical settings are DENYTOPICCHANGE, ALLOWTOPICVIEW, ALLOWWEBRENAME...
-See [System.AccessControl#Restricting_Access][System.AccessControl](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.AccessControl#Restricting_Access][System.AccessControl) for other common seeting. The complete access control scheme is extended to arbitrary Access controls of the type _permission context mode_. So you can define a CREATE access control using `Set ALLOWTOPICCREATE = user1, user2, ...` to limit the create access to user1, user 2 etc...
+See [System.AccessControl](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.AccessControl#Restricting_Access) for other common seeting. The complete access control scheme is extended to arbitrary Access controls of the type _permission context mode_. So you can define a CREATE access control using `Set ALLOWTOPICCREATE = user1, user2, ...` to limit the create access to user1, user 2 etc...
 
-For an example see: [Sandbox/FoswikiTwo3.Ex00][Ex00](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/FoswikiTwo3.Ex00][Ex00) in the Sandbox web.
+For an example see: [Ex00](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/FoswikiTwo3.Ex00) in the Sandbox web.
 
 ### The BASEWEB and BASETOPIC
 
@@ -26,14 +28,14 @@ Throughout wiki applications you will encounter and use the BASEWEB and BASETOPI
 RenderSimpleTopicCreator is defined in the Applications web and is included in many places in webs using the implementation. So there is need to indicate what topic is using the implementation, so references can be tested and expanded appropriately.
 
 BASEWEB and BASETOPIC have equivalents in INCLUDINGWEB and INCLUDINTOPIC and WEB and TOPIC. You find their documentation in the following references:
-* [System.VarBASEWEB][BASEWEB](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.VarBASEWEB][BASEWEB)
-* [System.VarBASETOPIC][BASETOPIC](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.VarBASETOPIC][BASETOPIC)
-* [System.VarINCLUDINGWEB][INCLUDINGWEB](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.VarINCLUDINGWEB][INCLUDINGWEB)
-* [System.VarINCLUDINGWEB][INCLUDINGWEB](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.VarINCLUDINGWEB][INCLUDINGWEB)
-* [System.VarWEB][WEB](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.VarWEB][WEB)
-* [System.VarTOPIC][TOPIC](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.VarTOPIC][TOPIC)
+* [BASEWEB](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.VarBASEWEB)
+* [BASETOPIC](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.VarBASETOPIC)
+* [INCLUDINGWEB](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.VarINCLUDINGWEB)
+* [INCLUDINGWEB](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.VarINCLUDINGWEB)
+* [WEB](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.VarWEB)
+* [TOPIC](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.VarTOPIC)
 
-For examples see: [Sandbox/FoswikiTwo3.Ex01][Ex01](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/FoswikiTwo3.Ex01][Ex01) in the Sandbox web.
+For examples see: [Ex01](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/FoswikiTwo3.Ex01) in the Sandbox web.
 
 ### Answer
 To reset the examples use:

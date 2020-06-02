@@ -21,7 +21,7 @@ Then the DBCALL would have been expanded first and the result discarded if the "
 
 Note that the DBCALL simply includes the section="form" in the Applications.RenderSimpleTopicCreator, the current topic. This reduces the complexity of each step and avoids multiple escapes.
 
-You can experiment with this construct in the [Sandbox/Katacoda/FoswikiTwo3.Ex02][Sandbox.Ex02](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/Katacoda/FoswikiTwo3.Ex02][Sandbox.Ex02)
+You can experiment with this construct in the [Sandbox.Ex02](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/Katacoda/FoswikiTwo3.Ex02)
 
 ## The parameter default="..." clause
 Many of the parameters passed to RenderSimpleTopicCreator are assigned in the form 
