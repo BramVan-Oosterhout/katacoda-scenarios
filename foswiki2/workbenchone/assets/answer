@@ -8,9 +8,9 @@ my %step = (
             'step3' => \&step3,
             'step4' => \&step4,
             'step5' => \&step5,
-            'step6' => \&step6,
-            'step7' => \&step7,
-  ##          'test'  => \&test,
+##          'step6' => \&step6,
+##          'step7' => \&step7,
+##          'test'  => \&test,
           );
 
 my $refresh = 'cd /var/www/foswiki/bin; ./view Applications/SolutionExApp.WebHome -refresh=on; cd /var/www/foswiki;';
@@ -37,9 +37,10 @@ sub step1 {
   
   @command = qw(
       tar
+           --wildcards
            -xvzf /tmp/WorkbenchExample.tgz
            -C /var/www/foswiki/data/Sandbox
-           Ex00*.txt Ex00*,* Ex01*.txt Ex01*,*
+           Ex00* Ex01*
     );
     $cmd = join( " ", @command ); `$cmd`; 
 
@@ -52,11 +53,11 @@ sub step2 {
       tar
            -xvzf /tmp/WorkbenchExample.tgz
            -C /var/www/foswiki/data/Sandbox
-           Ex02*.txt Ex02*,* 
+           Ex02* 
     );
   $cmd = join( " ", @command ); `$cmd`; 
 #  `tar --wildcards -xvzf /tmp/SolutionExampleTopics.tgz -C /var/www/foswiki/data/Applications SolutionExApp/SolutionExForm*`;
-  refresh( 'Applications/SolutionExApp' );
+  refresh( 'Sandbox' );
 }
 sub step3 {
   my ( $cmd, @command);
@@ -65,7 +66,7 @@ sub step3 {
       tar
            -xvzf /tmp/WorkbenchExample.tgz
            -C /var/www/foswiki/data/Sandbox
-           Ex02*.txt Ex02*,* Ex03*.txt Ex03*,* Ex04*.txt Ex04*,*
+           Ex02* Ex03* Ex04*
     );  $cmd = join( " ", @command ); `$cmd`; 
 
   refresh( 'Sandbox' );
@@ -77,7 +78,7 @@ sub step4 {
       tar
            -xvzf /tmp/WorkbenchExample.tgz
            -C /var/www/foswiki/data/Sandbox
-           Ex05*.txt Ex05*,* Ex06*.txt Ex06*,*
+           Ex05* Ex06*
     );
    $cmd = join( " ", @command ); `$cmd`; 
    refresh( 'Sandbox' );
@@ -90,7 +91,7 @@ sub step5 {
       tar
            -xvzf /tmp/WorkbenchExample.tgz
            -C /var/www/foswiki/data/Sandbox
-           Ex07*.txt Ex07*,* Ex08*.txt Ex08*,*
+           Ex07* Ex08*
     );
    $cmd = join( " ", @command ); `$cmd`; 
    refresh( 'Sandbox' );
