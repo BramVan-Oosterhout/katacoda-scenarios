@@ -51,6 +51,7 @@ sub step2 {
   
   @command = qw(
       tar
+           --wildcards
            -xvzf /tmp/WorkbenchExample.tgz
            -C /var/www/foswiki/data/Sandbox
            Ex02* 
@@ -64,6 +65,7 @@ sub step3 {
   
   @command = qw(
       tar
+           --wildcards      
            -xvzf /tmp/WorkbenchExample.tgz
            -C /var/www/foswiki/data/Sandbox
            Ex02* Ex03* Ex04*
@@ -76,6 +78,7 @@ sub step4 {
     
   @command = qw(
       tar
+           --wildcards      
            -xvzf /tmp/WorkbenchExample.tgz
            -C /var/www/foswiki/data/Sandbox
            Ex05* Ex06*
@@ -89,6 +92,7 @@ sub step5 {
     
   @command = qw(
       tar
+           --wildcards      
            -xvzf /tmp/WorkbenchExample.tgz
            -C /var/www/foswiki/data/Sandbox
            Ex07* Ex08*

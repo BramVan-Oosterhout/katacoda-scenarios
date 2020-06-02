@@ -23,7 +23,7 @@ Now that we have seen th basic invocation of RENDERFOREDIT, we will take a look 
 The FORMATLIST macro will:
 * split this list on the semicolon in three elements of the form field=value
 * for each element
-    * match the regular expression pattern `(.*)=(.*)` and collect $1=field and $2=value
+    * match the regular expression pattern `(.*)=(.*)` and collect the values for $1=field and $2=value
     * store $1 (the fieldName) in an array  
 * join the elements of the array separated by a comma
 The result is `fieldName1,fieldName2,fieldName3`. And this string becomes the value of the `fields` parameter. 

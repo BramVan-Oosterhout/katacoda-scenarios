@@ -1,6 +1,8 @@
 <!-- Scenario text goes here -->
 When you open the RenderSimpleTopicCreator, you will recognise the START/STOPINCLUDE section. This section is included when you call the RenderSimpleTopicCreator.
 
+SANDBOX=Sandbox
+
 ### The IF statement
 
 The first statement is
@@ -17,9 +19,9 @@ The documentation in [System.IfStatements](https://[[HOST_SUBDOMAIN]]-80-[[KATAC
 </tr></table>
 
 An access mode is defined by an Acces control setting. Typical settings are DENYTOPICCHANGE, ALLOWTOPICVIEW, ALLOWWEBRENAME...
-See [System.AccessControl](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.AccessControl#Restricting_Access) for other common seeting. The complete access control scheme is extended to arbitrary Access controls of the type _permission context mode_. So you can define a CREATE access control using `Set ALLOWTOPICCREATE = user1, user2, ...` to limit the create access to user1, user 2 etc...
+See [System.AccessControl](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.AccessControl#Restricting_Access) for other common settings. The complete access control scheme is extended to arbitrary Access controls of the type _permission context mode_. So you can define a CREATE access control using `Set ALLOWTOPICCREATE = user1, user2, ...` to limit the create access to user1, user 2 etc...
 
-For an example see: [Ex00](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/FoswikiTwo3.Ex00) in the Sandbox web.
+For an example see: [Ex00](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox.Ex00) in the Sandbox web.
 
 ### The BASEWEB and BASETOPIC
 
@@ -35,7 +37,7 @@ BASEWEB and BASETOPIC have equivalents in INCLUDINGWEB and INCLUDINTOPIC and WEB
 * [WEB](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.VarWEB)
 * [TOPIC](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.VarTOPIC)
 
-For examples see: [Ex01](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/FoswikiTwo3.Ex01) in the Sandbox web.
+For examples see: [Ex01](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox.Ex01) in the Sandbox web.
 
 ### Answer
 To reset the examples use:
