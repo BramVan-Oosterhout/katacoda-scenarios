@@ -12,5 +12,9 @@
         "title": "A simple application",
         "description": "An application to record notes."
       }
-     ]
+     ],{
+        "course_id": "workbenchone",
+        "title": "Some work bench internals",
+        "description": "RenderSimpleTopicCreator and TopicInstaller."
+      }
   }
