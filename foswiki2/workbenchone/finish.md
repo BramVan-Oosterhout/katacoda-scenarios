@@ -9,7 +9,7 @@ This scenario is explanatory rather than exploratory. Many of the examples are p
 
 This approach should not discourage you from experimenting with the components presented. Feel free to modify any of the examples to experiment. The solutions will include a "reset' instruction so you can undo all your changes if desired. 
 
-To start you should open the topic [Applications.RenderSimpleTopicCreator](https://[HOST_SUBDOMAIN](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/HOST_SUBDOMAIN)-80-[KATACODA_HOST](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/KATACODA_HOST).environments.katacoda.com/Applications.RenderSimpleTopicCreator) in a separate window or tab, so you can reference it as parts of the implementation are explained.
+To start you should open the topic [Applications.RenderSimpleTopicCreator][Applications.RenderSimpleTopicCreator](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications.RenderSimpleTopicCreator][Applications.RenderSimpleTopicCreator) in a separate window or tab, so you can reference it as parts of the implementation are explained.
 
 ### Answer
 
