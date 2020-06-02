@@ -1,0 +1,111 @@
+#!/usr/bin/perl
+use warnings;
+use strict;
+
+my %step = (
+            'step1' => \&step1,
+            'step2' => \&step2,
+            'step3' => \&step3,
+            'step4' => \&step4,
+            'step5' => \&step5,
+            'step6' => \&step6,
+            'step7' => \&step7,
+  ##          'test'  => \&test,
+          );
+
+my $refresh = 'cd /var/www/foswiki/bin; ./view Applications/SolutionExApp.WebHome -refresh=on; cd /var/www/foswiki;';
+
+if ( ! $ARGV[0] ) { print "Please provide the step as the first parameter: answer.pl stepx\n" }
+elsif ( ! $step{$ARGV[0]} ) { print "No answer for $ARGV[0]\n" }
+else { &{$step{$ARGV[0]}} }
+
+sub refresh {
+  my ($web ) = @_;
+  
+  my $dir = `pwd`;
+  
+  my $command =
+            'cd /var/www/foswiki/bin; '
+          . './view ' . $web . '.WebHome -refresh=on;'
+          . 'cd ' . $dir;
+          
+  return `$command`;
+}
+
+sub step1 {
+  my ( $cmd, @command);
+  
+  @command = qw(
+      tar
+           -xvzf /tmp/WorkbenchExample.tgz
+           -C /var/www/foswiki/data/Sandbox
+           Ex00*.txt Ex00*,* Ex01*.txt Ex01*,*
+    );
+    $cmd = join( " ", @command ); `$cmd`; 
+
+  refresh( 'Sandbox' );
+}
+sub step2 {
+    my ( $cmd, @command);
+  
+  @command = qw(
+      tar
+           -xvzf /tmp/WorkbenchExample.tgz
+           -C /var/www/foswiki/data/Sandbox
+           Ex02*.txt Ex02*,* 
+    );
+  $cmd = join( " ", @command ); `$cmd`; 
+#  `tar --wildcards -xvzf /tmp/SolutionExampleTopics.tgz -C /var/www/foswiki/data/Applications SolutionExApp/SolutionExForm*`;
+  refresh( 'Applications/SolutionExApp' );
+}
+sub step3 {
+  my ( $cmd, @command);
+  
+  @command = qw(
+      tar
+           -xvzf /tmp/WorkbenchExample.tgz
+           -C /var/www/foswiki/data/Sandbox
+           Ex02*.txt Ex02*,* Ex03*.txt Ex03*,* Ex04*.txt Ex04*,*
+    );  $cmd = join( " ", @command ); `$cmd`; 
+
+  refresh( 'Sandbox' );
+}
+sub step4 {
+  my ( $cmd, @command);
+    
+  @command = qw(
+      tar
+           -xvzf /tmp/WorkbenchExample.tgz
+           -C /var/www/foswiki/data/Sandbox
+           Ex05*.txt Ex05*,* Ex06*.txt Ex06*,*
+    );
+   $cmd = join( " ", @command ); `$cmd`; 
+   refresh( 'Sandbox' );
+
+}
+sub step5 {
+  my ( $cmd, @command);
+    
+  @command = qw(
+      tar
+           -xvzf /tmp/WorkbenchExample.tgz
+           -C /var/www/foswiki/data/Sandbox
+           Ex07*.txt Ex07*,* Ex08*.txt Ex08*,*
+    );
+   $cmd = join( " ", @command ); `$cmd`; 
+   refresh( 'Sandbox' );
+
+}
+sub test {
+  my @command;
+  
+    @command = qw(
+    tar
+        --wildcards
+        -xvzf /tmp/SolutionExampleSandbox.tgz
+        -C /var/www/foswiki/data/Sandbox
+        SolutionExType* SolutionExNote1*
+  
+);
+print join( ' ', @command), "\n";
+}
