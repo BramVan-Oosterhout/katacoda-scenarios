@@ -1,4 +1,5 @@
 <!-- Scenario text goes here -->
+If you have notalready done so, open the [Applications.RenderSimpleTopicCreator](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications.RenderSimpleTopicCreator) is a separate tab.
 
 ## Delaying the evaluation
 Once the credentials of the user are accepted, the application will render the DBCALL:
@@ -21,9 +22,9 @@ Then the DBCALL would have been expanded first and the result discarded if the "
 
 Note that the DBCALL simply includes the section="form" in the Applications.RenderSimpleTopicCreator, the current topic. This reduces the complexity of each step and avoids multiple escapes.
 
-You can experiment with this construct in the [Sandbox.Ex02](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/Katacoda/FoswikiTwo3.Ex02)
+You can experiment with this construct in the [Ex02](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox.Ex02) in the Sandbox.
 
-## The parameter default="..." clause
+## The PARAMETER default="..." clause
 Many of the parameters passed to RenderSimpleTopicCreator are assigned in the form 
 ```
   PARAMETER="%PARAMETER{ default="some value" }%"
@@ -38,10 +39,10 @@ This is a general construct supported by parametrised INCLUDEs. If the PARAMETER
                        }%"
             }%\"
 ```
-You can see the convenienence of the inside out, left to right evaluation.  First the FORM parameter is expanded. Then the RENDERFORMDEF macro extracts the TopicType from the Form definition. And that type is provided as the default for the TYPE parameter.
+You can see the convenienence of the inside out, left to right evaluation.  First the FORM macro is expanded. Then the RENDERFORMDEF macro extracts the TopicType from the form definition. And that type is provided as the default for the TYPE parameter.
 
 ## The DBCALL with parameters resolved
-To illustrate the parameter default and the consequence of the expansion, you find the content repeated below with a minor modification: `percentDBCALL` has been replaced by `percent%lt;nop>DBCALL`. DBCALL is no longer recognized as a macro! The result of including the topic %`INCLUDE{ "%`TOPIC%" }% is now:
+To illustrate the parameter default and the consequence of the expansion, you find the content repeated below with a minor modification: `percntDBCALL` has been replaced by `percnt%lt;nop>DBCALL`. DBCALL is no longer recognized as a macro! The result of including the topic %`INCLUDE{ "%`TOPIC%" }% is now:
 
 %INCLUDE{ "%TOPIC%" }%
 

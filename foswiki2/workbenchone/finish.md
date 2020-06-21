@@ -1,5 +1,5 @@
 <!-- Scenario text goes here -->
-
+The following references are to be moved to the final step of the scenario. The links are not rendered.
 ## References
 * [BASEWEB](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.VarBASEWEB)
 * [BASETOPIC](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.VarBASETOPIC)

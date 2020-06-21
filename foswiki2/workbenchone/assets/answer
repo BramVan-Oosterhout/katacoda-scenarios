@@ -40,7 +40,7 @@ sub step1 {
            --wildcards
            -xvzf /tmp/WorkbenchExample.tgz
            -C /var/www/foswiki/data/Sandbox
-           Ex00* Ex01*
+           Ex01* Ex00*
     );
     $cmd = join( " ", @command ); `$cmd`; 
 
@@ -68,7 +68,7 @@ sub step3 {
            --wildcards      
            -xvzf /tmp/WorkbenchExample.tgz
            -C /var/www/foswiki/data/Sandbox
-           Ex02* Ex03* Ex04*
+           Ex04* Ex03* Ex02* 
     );  $cmd = join( " ", @command ); `$cmd`; 
 
   refresh( 'Sandbox' );
@@ -81,7 +81,7 @@ sub step4 {
            --wildcards      
            -xvzf /tmp/WorkbenchExample.tgz
            -C /var/www/foswiki/data/Sandbox
-           Ex05* Ex06*
+           Ex06* Ex05* 
     );
    $cmd = join( " ", @command ); `$cmd`; 
    refresh( 'Sandbox' );
@@ -95,7 +95,7 @@ sub step5 {
            --wildcards      
            -xvzf /tmp/WorkbenchExample.tgz
            -C /var/www/foswiki/data/Sandbox
-           Ex07* Ex08*
+           Ex08* Ex07* 
     );
    $cmd = join( " ", @command ); `$cmd`; 
    refresh( 'Sandbox' );

@@ -1,4 +1,4 @@
-Our _ExampleApp_ will support topics with specific data. In the previous step we defined to form that defined that data.
+Our _ExampleApp_ will support topics with specific data. In the previous step we defined the form that defined that data.
 The wiki work bench refers to topics that are associated with a particular set of fields as topic of that **type**
 
 To develop a button that will create a topic of a particular type, we use the TopicType wiki work bench link.

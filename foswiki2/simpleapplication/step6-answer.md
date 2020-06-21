@@ -1,4 +1,4 @@
-To see SolutionExTemplate topic template, the updated SolutionExType, extract them from the tar ball.
+To see SolutionExTemplate topic template and the updated SolutionExType, extract them from the tar ball.
 
 `/tmp/answer step6`{{execute}}
 

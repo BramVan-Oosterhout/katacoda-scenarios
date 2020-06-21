@@ -29,5 +29,5 @@ Add the `TEMPLATE="Applications/ExampleApp.ExampleTemplate"`{{copy}} parameter t
 
 After you save the update in the application, 
 you can insert new topics with the comment box in the ExampleWeb created in step 5.
-All the application chages are reflected in the implementation webs relying on the application.
+All the application changes are reflected in the implementation webs relying on the application.
 

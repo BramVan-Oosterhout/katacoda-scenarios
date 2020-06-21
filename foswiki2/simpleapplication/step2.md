@@ -13,9 +13,11 @@ Complete the ExampleForm with the following details:
 |Status     | Status          |Name:_Status_ <br>Type: _select+values_ <br />Size: _1_ <br />Values: _Open,Closed_  |
 
 The Status field is defined as a select drop down.
+
 `| Status | select+values | 1 | Open,Closed | status drop down | | |`{{copy}}
+
 More on field definitions in the [documentation](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/DataForms).
 
 When you save the ExampleForm topic, it will be added in the ExampleApp web as type DataForm.
 
-In the next step we will define a mechanism to create a new topic that includes the fields in the ExampleForm..
+In the next step we will define a mechanism to create a new topic that includes the fields in the ExampleForm.

@@ -15,7 +15,7 @@ you see a page starting with a "Documentation" section. The "Documentation" sect
 Following is an "Implementation" section which contains a mixture of TML, HTML and Foswiki macros.
 This section renders the _Install_ button with the part wrapped by %STARTINCLUDE% and %STOPINCLUDE%.
 The structure of this page is typical of the topic structure used to implement Foswiki applications.
-We will look in detail at the RenderTopicInstallation implementation in the next Scenario.
+We will look in detail at the RenderTopicInstaller implementation in the next Scenario.
 
 ### The _New_ button
 The _New_ button is implemented by `%DBCALL{"Applications.RenderSimpleTopicCreator" ... }%`. You will see the familiar structure in
@@ -32,7 +32,7 @@ Lets take a look at the Parameters. The first four parameters are set as part of
 The remainder will rely on the default:
 
 | Parameter | Set to | Presents |
-|-----------|--------|----------|
+|:---------:|:------:|:--------:|
 |VALUES | not set  | not used |
 | FORM | not set |uses the form in ExampleType |
 | TEMPLATE | not set | not used |

@@ -7,7 +7,7 @@ The note pad application provides very simple functionality. You have an idea.
 1.   You want to have a list of the ideas, All ideas, just the Open ones or just the Closed ones.
 
 Knowing Foswiki, you know that for requirement 3, you will need a topic for each idea.
-Requirement 2 needs the status information to be easily accessible and that is best achived with a formfield.
+Requirement 2 needs the status information to be easily accessible and that is best achieved with a formfield.
 Requirement 4 can be implemented with the SEARCH{ ... } macro. And the COMMENT{ ... } plugin macro seems convenient
 to capture the idea.
 

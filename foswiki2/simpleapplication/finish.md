@@ -1,6 +1,6 @@
 This finishes the scenario.
 
-You have successfully built a simpla application.
+You have successfully built a simple application.
 
 You have built a topic creator for a particular type of topic.
 
