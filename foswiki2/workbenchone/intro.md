@@ -9,7 +9,7 @@ This scenario is explanatory rather than exploratory. Many of the examples are p
 
 This approach should not discourage you from experimenting with the components presented. Feel free to modify any of the examples to experiment. The solutions will include a "reset' instruction so you can undo all your changes if desired. Or you can restart the scenario to refresh completely.
 
-Throughout this scenario we will be referring to Foswiki macros. These are normally identified by surrounding them with percent (%) marks. For readability this scenario omits the percent marks where the macro is references in the plain text. Code blocks will show the complete code, including percent marks.
+Throughout this scenario we will be referring to Foswiki macros. These are normally identified by surrounding them with percent (%) marks. For readability this scenario omits the percent marks where the macro is referenced in the plain text. Code blocks will show the complete code, including percent marks.
 
 <!-- Solution text (if any) goes here -->
 

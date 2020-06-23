@@ -1,5 +1,5 @@
 <!-- Scenario text goes here -->
-If you have notalready done so, open the [Applications.RenderSimpleTopicCreator](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications.RenderSimpleTopicCreator) is a separate tab.
+If you have not already done so, open the [Applications.RenderSimpleTopicCreator](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications.RenderSimpleTopicCreator) in a separate tab.
 
 ## Delaying the evaluation
 Once the credentials of the user are accepted, the application will render the DBCALL:
@@ -22,7 +22,7 @@ Then the DBCALL would have been expanded first and the result discarded if the "
 
 Note that the DBCALL simply includes the section="form" in the Applications.RenderSimpleTopicCreator, the current topic. This reduces the complexity of each step and avoids multiple escapes.
 
-You can experiment with this construct in the [Ex02](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox.Ex02) in the Sandbox.
+You can experiment with this construct in the [Ex01_1](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox.Ex01_1) in the Sandbox.
 
 ## The PARAMETER default="..." clause
 Many of the parameters passed to RenderSimpleTopicCreator are assigned in the form 
@@ -41,46 +41,7 @@ This is a general construct supported by parametrised INCLUDEs. If the PARAMETER
 ```
 You can see the convenienence of the inside out, left to right evaluation.  First the FORM macro is expanded. Then the RENDERFORMDEF macro extracts the TopicType from the form definition. And that type is provided as the default for the TYPE parameter.
 
-## The DBCALL with parameters resolved
-To illustrate the parameter default and the consequence of the expansion, you find the content repeated below with a minor modification: `percntDBCALL` has been replaced by `percnt%lt;nop>DBCALL`. DBCALL is no longer recognized as a macro! The result of including the topic %`INCLUDE{ "%`TOPIC%" }% is now:
-
-%INCLUDE{ "%TOPIC%" }%
-
-Note how all the $`percent and \" are now shown as the proper expressions (% and "). Also note that the all parameters have been expanded with their defaults. TEMPLATE is defined in terms of an undefined macror %TEMPLATE%, which is rendered as the original macro. This use of the &lt;nop> tag can be very helpful when debugging a particular wiki application script.
-
-If we had included the topic with some parameters %`INCLUDE{ "%`TOPIC%" TEXT="Hello world" TEMPLATE="theTemplate" }% these parameters would have been set as parameters for the DBCALL:
-
-%INCLUDE{ "%TOPIC%" TEXT="Hello world" TEMPLATE="theTemplate" }%
-
-```
-%STARTINCLUDE%%IF{"'%BASEWEB%.%BASETOPIC%' allows 'CREATE'" 
-   then="$percnt`DBCALL{\"Applications.RenderSimpleTopicCreator\"
-            section=\"form\"
-            TEXT=\"%TEXT{default="%TRANSLATE{"Create a new [_1]" args="%INCLUDINGTOPIC%"}%"}%\"
-            LABEL=\"%LABEL{default="%TRANSLATE{"Title"}%"}%\"
-            BUTTONTEXT=\"%BUTTONTEXT{default="%TRANSLATE{"New"}%"}%\"
-            VALUE=\"%VALUE{default=""}%\"
-            VALUES=\"%VALUES{default=""}%\"
-            FORM=\"%FORM{default="%INCLUDINGWEB%.%INCLUDINGTOPIC%"}%\"
-            TEMPLATE=\"%TEMPLATE%\"
-            TYPE=\"%TYPE{
-                  default="%RENDERFORMDEF{
-                  form="%FORM{default="%INCLUDINGWEB%.%INCLUDINGTOPIC%"}%"
-                  fields="TopicType"
-                  format="$value"
-               }%"
-            }%\"
-            PARENT=\"%PARENT{default="%BASETOPIC%"}%\"
-            WHITEBOARD=\"%WHITEBOARD{default="on"}%\"
-            EXTRA=\"%EXTRA{default="<!-- -->"}%\"
-            SCRIPT=\"%SCRIPT{default="edit"}%\"
-            EDITOR=\"%EDITOR{default="%FORMFIELD{"Editor" topic="%FORM{default="%INCLUDINGWEB%.%INCLUDINGTOPIC%"}%"}%"}%\"
-         }$percnt"
-}%%STOPINCLUDE%
-```
- 
-
-
+You can see the expansion of the DBCALL with default parameters in [Ex01_2](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox.Ex01_2) in the Sandbox.
 
 
 
