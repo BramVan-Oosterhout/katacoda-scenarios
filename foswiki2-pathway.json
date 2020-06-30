@@ -14,7 +14,7 @@
       },{
         "course_id": "workbenchone",
         "title": "Some work bench internals",
-        "description": "RenderSimpleTopicCreator and TopicInstaller."
+        "description": "RenderSimpleTopicCreator."
       }
      ]
   }
