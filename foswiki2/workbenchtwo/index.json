@@ -13,17 +13,14 @@
               ]
     },
     "steps": [{
-      "title": "RenderSimpleTopicCreator - Basics",
+      "title": "RenderTopicInstaller",
       "text": "step1.md"
     },{
-      "title": "RenderSimpleTopicCreator - DBCALL",
+      "title": "RenderWikiTopicView",
       "text": "step2.md"
     },{
-      "title": "RenderSimpleTopicCreator - the Form section",
+      "title": "RenderTopicsOfType",
       "text": "step3.md"
-    },{
-      "title": "RenderSimpleTopicCreator - Input fields",
-      "text": "step4.md"
     }],
     "intro": {
       "text": "intro.md",
