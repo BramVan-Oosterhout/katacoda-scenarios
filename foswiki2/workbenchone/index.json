@@ -9,21 +9,28 @@
                  { "file": "wait.sh", "target": "~/", "chmod": "+x" },
                  { "file": "answer", "target": "~/", "chmod": "+x" },
                  { "file": "WorkbenchExample.tgz", "target": "~/" },
-                 { "file": "step1.sh", "target": "~/", "chmod": "+x" }
+                 { "file": "step1.sh", "target": "~/", "chmod": "+x" },
+                 { "file": "step2.sh", "target": "~/", "chmod": "+x" },
+                 { "file": "step3.sh", "target": "~/", "chmod": "+x" },
+                 { "file": "step4.sh", "target": "~/", "chmod": "+x" }
               ]
     },
     "steps": [{
       "title": "RenderSimpleTopicCreator - Basics",
-      "text": "step1.md"
+      "text": "step1.md",
+      "couseData": "step1.sh"
     },{
       "title": "RenderSimpleTopicCreator - DBCALL",
-      "text": "step2.md"
+      "text": "step2.md",
+      "couseData": "step2.sh"
     },{
       "title": "RenderSimpleTopicCreator - the Form section",
-      "text": "step3.md"
+      "text": "step3.md",
+      "couseData": "step3.sh"
     },{
       "title": "RenderSimpleTopicCreator - Input fields",
-      "text": "step4.md"
+      "text": "step4.md",
+      "couseData": "step4.sh"
     }],
     "intro": {
       "text": "intro.md",
