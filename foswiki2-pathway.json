@@ -15,6 +15,10 @@
         "course_id": "workbenchone",
         "title": "Some work bench internals",
         "description": "RenderSimpleTopicCreator."
+      },{
+        "course_id": "workbenchtwo",
+        "title": "More work bench internals",
+        "description": "RenderTopicInstaller, RenderWikiTopicView and RenderTopicsOfType."
       }
      ]
   }
