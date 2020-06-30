@@ -6,10 +6,6 @@ my %step = (
             'step1' => \&step1,
             'step2' => \&step2,
             'step3' => \&step3,
-            'step4' => \&step4,
-            'step5' => \&step5,
-##          'step6' => \&step6,
-##          'step7' => \&step7,
 ##          'test'  => \&test,
           );
 
@@ -40,7 +36,7 @@ sub step1 {
            --wildcards
            -xvzf /tmp/WorkbenchExample.tgz
            -C /var/www/foswiki/data/Sandbox
-           Ex01* Ex00*
+           Ex00_2* Ex00_1*
     );
     $cmd = join( " ", @command ); `$cmd`; 
 
@@ -54,7 +50,7 @@ sub step2 {
            --wildcards
            -xvzf /tmp/WorkbenchExample.tgz
            -C /var/www/foswiki/data/Sandbox
-           Ex01_1* Ex01_2*
+           Ex01*
            
     );
   $cmd = join( " ", @command ); `$cmd`; 
@@ -69,39 +65,12 @@ sub step3 {
            --wildcards      
            -xvzf /tmp/WorkbenchExample.tgz
            -C /var/www/foswiki/data/Sandbox
-           Ex04* Ex03* Ex02* 
+           Ex02* 
     );  $cmd = join( " ", @command ); `$cmd`; 
 
   refresh( 'Sandbox' );
 }
-sub step4 {
-  my ( $cmd, @command);
-    
-  @command = qw(
-      tar
-           --wildcards      
-           -xvzf /tmp/WorkbenchExample.tgz
-           -C /var/www/foswiki/data/Sandbox
-           Ex06* Ex05* 
-    );
-   $cmd = join( " ", @command ); `$cmd`; 
-   refresh( 'Sandbox' );
 
-}
-sub step5 {
-  my ( $cmd, @command);
-    
-  @command = qw(
-      tar
-           --wildcards      
-           -xvzf /tmp/WorkbenchExample.tgz
-           -C /var/www/foswiki/data/Sandbox
-           Ex08* Ex07* 
-    );
-   $cmd = join( " ", @command ); `$cmd`; 
-   refresh( 'Sandbox' );
-
-}
 sub test {
   my @command;
   

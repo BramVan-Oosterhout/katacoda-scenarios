@@ -1,65 +1,22 @@
 <!-- Scenario text goes here -->
-## The TWISTY and BUTTONs
-The form section of the RenderSimpleTopicCreator defines an html form. The html form defines the data submitted to the Foswiki edit script (SCRIPT{ default="edit"}), initiating the creation of a topic. The full documentation of the Foswiki edit script can be found at [System.CommandAndCGIScripts](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.CommandAndCGIScripts#A_61edit_61).
+Login (_admin/password_) if you have not already done so. And open the RenderTopicsOfType in a separate tab.
 
-The form is wrapped up in a TWISTY. The TWISTY macro is implemented in the [System.TwistyPlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System. TwistyPlugin). The use here is typical: 
-```
-%TWISTY{ ... %BUTTON{ ... }% }% wrapped form definition %BUTTON{ ... }% %ENDTWISTY%
-```
+The RenderTopicsOfType function presents topics of a givent type in a tabular format. The RenderTopicsOfType  function is implemented using a single macro: DATATABLE, documented in the [System.JQDataTablesPlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.JQDataTablesPlugin). The plugin has a large number of parameters that affect the display content, format and beviour. 
 
-The TWISTY macro uses jquery to implement the twisty functionality. See [Ex02](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox.Ex02) in the Sandbox for some examples of TWISTY use.
+Some of the parameters used in RenderTopicsOfType are affected by the parameters passed to RenderTopicsOfType. 
+* **TYPE** is used to limit the data displayed through the `query` parameter.
+* **FILTER** extends the `query` with additional selection criteria
+* **ROWNUMBERS** adds a special column `index` to the `columns` parameter if set to on.
+* **SORT** and **REVERSE** affect sort order and field to be sorted on.
+* **SELECTING** adds the `selecting`, `selectionmode` and `selectproperty` to define which column(s) have select boxes
+* **FIELDS** lists the fields to be rendered in the table
+    * For each field, the title and width can be set with the modifiers &lt;field>_title and &lt;field>_width. These are selected using the FORMATLIST macro
 
-The twisty uses the BUTTON macro. This is a handy and powerful macro  documented in [System.VarBUTTON](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.VarBUTTON). BUTTON uses [System.JQueryButton](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.JQueryButton) to implement the functionality. The first definition uses the default `type="button"` parameter. The twisty gets fired by the on-click event from the button and opens the twisty. The second definition uses `type="submit"`. Clicking this button will submit the form containing the button.
+FORMATLIST is a versatile formatter, documented in the [System.FilterPlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.FilterPlugin). It takes a list, splits it on a defined separator character and then renders each element in the selected format. The format must be delayed so that the result translates into `&lt;field>_title="%&lt;field>_title%"` and `&lt;field>_width="%&lt;field>_width%"` with each `&lt;field>` appropriately substituted.
 
-## The html form definition
-The html form definition inside the TWISTY is defined between the &lt;form> &lt;/form> html tags. The definition contains many hidden input fields, that will define the parameters passed to the `edit` script. In addition there are several macros. We will look at these in detail in the next step, but after expansion these will also expand in hidden input fieds. In summary the form is defined by:
-```
-<form ... action="%SCRIPTURLPATH{"%SCRIPT%"}%/%BASEWEB%/" method="post">
-  <input type="hidden" name="(web|onlynewtopic|action|onlywikiname|topicparent|formtemplate|template)" ... />
-  <input type="hidden" name="templatetopic" value="%TEMPLATE{default="%FORMFIELD{"Template" topic="%FORM%"}%"}%" />
-  %DBCALL{"%WEB%.%TOPIC%" section="topicnaming" ... }%
-  %RENDERFOREDIT{ form="%FORM%" ... }% (x4)
-</form>
-```
-
-The definition of the value in the name="templatetopic" field is a demonstration of the use of the Foswiki form. A Foswiki form is included in the topic content and contains fields with values. A field value can be extracted from a form located with a particular topic. The `default="%`FORMFIELD{"Template" topic="%`FORM%"}%"` will extract the value of the field `Template` in the form associated with the topic defined in the FORM parameter. The documentation is in [System.VarFORMFIELD](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.VarFORMFIELD).
-
-It is easy to get confused here. The FORM parameter to RenderSimpleTopicCreator is a reference to the topic that contains the data form **definition** (in table form) for the form data to be included in the new topic. The FORMFIELD macro will extract the value of the `Template` field from the **METADATA** associated with the topic that contains the data form definition (in table form), not the definition in the table or the new topic. You can see some examples in [Ex03](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox.Ex03) in the Sandbox.
-
-## The topicnaming section
-The topicnaming section renders one of three modes: (|default|template|derived). The mode used is determined by the value of the TopicNamingMode field in the FORM topic. The input field is used by the jqWikiWord javascript (refer: [System.JQueryWikiWord](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.JQueryWikiWord)) to construct a topic name based on the parameters supplied.
-
-The **default** mode  renders a simple input field:
-```
-<input type='hidden' name='topic' class='jqWikiWord' data-source='input[name=TopicTitle]' data-transliterate='true' value='%value%' />
-```
- where the %`value% is provided by the VALUE parameter passed to RenderSimpleTopicCreator.
-
-The **template** mode renders: 
-```
-<input type='hidden' name='topic' value='%FORMFIELD{"TopicNameTemplate" topic="%form%"}%' value='%value%' />
-```
- where the %`value% is provided by the VALUE parameter passed to RenderSimpleTopicCreator, but can be provided by by a formfield: TopicNameTemplate in the topic provided by the FORM parameter passed to RenderSimpleTopicCreator.
-
-The **derived** mode renders:
-```
-<input type='hidden' name='topic' class='jqWikiWord' value='%value%' $percntDBQUERY{ ... }$percnt/>
-```
-The DBQUERY renders as a collection of jquery data-* attributes: source, prefix, suffix and transliterate which can be provided as form fields with name TopicName(Source|Prefix|Suffix|Transliterate)
-
-See more example of the topicnaming section in [Ex04](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox.Ex04) topic in the Sandbox.
-
-
-
-
-
-
+You can explore some detailed examples in [Ex02](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/FoswikiTwo4.Ex02) in the Sandbox.
 
 ### Answer
+
 <!-- Solution text (if any) goes here -->
-To reset the examples use:
-* `/tmp/answer step3`{{execute}}
-
-
-
 
