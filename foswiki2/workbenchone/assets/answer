@@ -15,10 +15,12 @@ my %step = (
 
 my $refresh = 'cd /var/www/foswiki/bin; ./view Applications/SolutionExApp.WebHome -refresh=on; cd /var/www/foswiki;';
 
-if ( ! $ARGV[0] ) { print "Please provide the step as the first parameter: answer.pl stepx\n" }
-elsif ( ! $step{$ARGV[0]} ) { print "No answer for $ARGV[0]\n" }
-else { &{$step{$ARGV[0]}} }
+if ( ! $ARGV[0] ) { print "Please provide the step as the first parameter: answer.pl stepx\n"; return }
 
+foreach my $request ( @ARGV ) {
+  if ( ! $step{$request} ) { print "No answer for $request\n" }
+  else { &{$step{$request}} }
+}
 sub refresh {
   my ($web ) = @_;
   
