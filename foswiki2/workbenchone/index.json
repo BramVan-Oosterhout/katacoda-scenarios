@@ -18,7 +18,7 @@
     "steps": [{
       "title": "RenderSimpleTopicCreator - Basics",
       "text": "step1.md",
-      "couseData": "step1.sh"
+      "code": "step1.sh"
     },{
       "title": "RenderSimpleTopicCreator - DBCALL",
       "text": "step2.md",
