@@ -1,4 +1,4 @@
-The implementation of the RenderTopicInstaller has similarities to the RenderSimpleTopicCreator. The RenderTopicInstaller provides a mechnism to create a TopicStub in a web of your choosing. The TopicStub will refer back to the SOURCE, an application topic. To follow the explanation, open the [Applications.RenderTopicInstaller](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications.RenderTopicInstaller) in a separate Tab or window, so can can easily refer to the implementation.
+The implementation of the RenderTopicInstaller has similarities to the RenderSimpleTopicCreator. The RenderTopicInstaller provides a mechnism to create a TopicStub in a web of your choosing. The TopicStub will refer back to the SOURCE, an application topic. To follow the explanation, login (_admin/password_) and open the [Applications.RenderTopicInstaller](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications.RenderTopicInstaller) in a separate Tab or window, so can can easily refer to the implementation.
 
 Like the RenderSimpleTopicCreator, the implementation of RenderTopicInstaller  is wrapped in a TWISTY. Inside the TWISTY is form, this time invoking the `save` script:
 ```
@@ -57,7 +57,7 @@ This DBCALL will include the topic text of the topic listed in the `Target` form
 ### Answer
 <!-- Solution text (if any) goes here -->
 To refresh the examples use:
-* `/tmp/answer step5`{{execute}}
+* `/tmp/answer step1`{{execute}}
 
 
 

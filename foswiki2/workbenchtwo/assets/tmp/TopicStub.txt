@@ -1,0 +1,9 @@
+%META:TOPICINFO{author="BaseUserMapping_333" date="1590469618" format="1.1" version="1"}%
+%META:TOPICPARENT{name="Ex08"}%
+| *Name*  | *Type* | *Size* | *Values* | *Description* | *Attributes* | *Default* |
+| Target | text | 75 |  | Placeholder for target | | |
+
+
+
+-- Main.AdminUser - 26 May 2020
+

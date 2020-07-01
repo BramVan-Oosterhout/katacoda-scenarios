@@ -17,6 +17,7 @@ FORMATLIST is a versatile formatter, documented in the [System.FilterPlugin](htt
 You can explore some detailed examples in [Ex02](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/FoswikiTwo4.Ex02) in the Sandbox.
 
 ### Answer
-
+To refresh the examples use:
+* `/tmp/answer step3`{{execute}}
 <!-- Solution text (if any) goes here -->
 

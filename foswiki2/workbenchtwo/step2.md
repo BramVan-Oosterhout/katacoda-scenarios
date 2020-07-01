@@ -31,6 +31,7 @@ You can explore some detailed examples in [Ex01](https://[[HOST_SUBDOMAIN]]-80-[
 .
 
 ### Answer
-
 <!-- Solution text (if any) goes here -->
+To refresh the examples use:
+* `/tmp/answer step2`{{execute}}
 
