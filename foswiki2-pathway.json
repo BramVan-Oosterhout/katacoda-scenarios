@@ -19,6 +19,10 @@
         "course_id": "workbenchtwo",
         "title": "More work bench internals",
         "description": "RenderTopicInstaller, RenderWikiTopicView and RenderTopicsOfType."
+      },{
+        "course_id": "notepadapp",
+        "title": "Note pad app",
+        "description": "RCreating a note pad application."
       }
      ]
   }
