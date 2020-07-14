@@ -28,6 +28,9 @@
     },{
       "title": "Step 6 - Configuring FCGI",
       "text": "step6.md"
+    },{
+      "title": "Step 7 - Installing DBCachePlugin",
+      "text": "step7.md"
     }],
     "intro": {
       "text": "intro.md",
