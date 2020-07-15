@@ -31,7 +31,7 @@ DBCachePlugin creates a cache per web in the Foswiki working directory.
 `ls -l /var/www/foswiki/core/working/work_areas/DBCacheContrib`{{execute}}
 To populate the cache, you can add `?refresh=aa` to any topic and it will re populate the full cache. Try:
 [System.WebHome?refresh=all](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/System.WebHome?refresh=all)
-and you will see the cache being built: `ls -l /var/www/foswiki/core/working/work_areas/DBCacheContrib`{{execute}}
+and you will see the cache being built: `ls -l /var/www/foswiki/working/work_areas/DBCacheContrib`{{execute}}
 
 This cache will affect the performance of the macros listed in the documentation of the DBCachePlugin. To see the effect, create two Sandbox topics.
 
