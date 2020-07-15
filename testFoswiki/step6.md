@@ -39,6 +39,7 @@ The generated file is supplied as `foswiki.fcgi.conf`. You can compare this conf
 *   The Alias declarations change the foswiki executable to the `foswiki.fcgi` executable. 
 *   If mod_fcgi is enabled, there are some control parameters set. They make sure that the continuous running process plays nicely in the environment.
 *   The Files declaration defines the foswiki.fcgi script as an fcgi daemon.
+
 Make the fcgi configuration available with `mv foswiki.fcgi.conf /etc/apache2/conf-available/.`{{execute}}
 
 

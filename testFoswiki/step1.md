@@ -8,6 +8,10 @@ Which Apache version is installed? `/usr/sbin/apache2 -v`{{execute}}
 
 Does it serve the default page? `curl http://host01`{{execute}}
 
+Click the Foswiki tab to open the browser window and view the Apache2 Ubuntu default page.
+Press F12 to open the browser development console and check the performance of the retrieval of this page.
+Refresh a few times. I get 734, 723, 731, 721, 729 ms to render the html.
+
 ## Download the software and install.
 
 Download the current release from github.
