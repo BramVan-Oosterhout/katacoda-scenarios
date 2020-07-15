@@ -45,8 +45,8 @@ Make the fcgi configuration available with `mv foswiki.fcgi.conf /etc/apache2/co
 
 ### Activate the new configuration
 Replace the `foswiki.conf` with the `foswiki.fcgi.conf` through:
-`a2disconf foswiki`{{execute}}
-`a2enconf foswiki.fcgi`{{execute}}
+*   `a2disconf foswiki`{{execute}}
+*   `a2enconf foswiki.fcgi`{{execute}}
 
 and restart the apache server: `service apache2 restart`{{execute}}
 
