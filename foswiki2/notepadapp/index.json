@@ -1,6 +1,6 @@
 {
-  "title": "WorkbenchTwo", 
-  "description": "An explanation of some workbench topics",
+  "title": "Building the NotePadApp",
+  "description": "In this scenarioyou will build the NotePadApp",
   "difficulty": "beginner",
   "time": "20 minutes",
   "details": {
@@ -8,18 +8,24 @@
       "host01": [
                  { "file": "wait.sh", "target": "~/", "chmod": "+x" },
                  { "file": "answer", "target": "~/", "chmod": "+x" },
-                 { "file": "WorkbenchExample.tgz", "target": "~/" }
+                 { "file": "NotePadApp.tgz", "target": "~/" }
               ]
     },
     "steps": [{
-      "title": "RenderTopicInstaller",
+      "title": "Creating unique topic names",
       "text": "step1.md"
     },{
-      "title": "RenderWikiTopicView",
+      "title": "Creating a VIEW template",
       "text": "step2.md"
     },{
-      "title": "RenderTopicsOfType",
+      "title": "VIEW template - cont...",
       "text": "step3.md"
+    },{
+      "title": "VIEW template - styles",
+      "text": "step4.md"
+    },{
+      "title": "Creating an EDIT template",
+      "text": "step5.md"
     }],
     "intro": {
       "text": "intro.md",
