@@ -52,13 +52,22 @@ sub step1 {
   @command = qw(
       tar
            --wildcards
-           -xvzf /tmp/WorkbenchExample.tgz
-           -C /var/www/foswiki/data/Sandbox
-           Ex00_2* Ex00_1*
+           -xvzf /tmp/SolNotePadApp.tgz
+           -C /var/www/foswiki/data/Applications
+           Web* NoteForm* NoteType*
     );
-    $cmd = join( " ", @command ); `$cmd`; 
+    $cmd = join( " ", @command ); `$cmd`;
+    
+      @command = qw(
+      tar
+           --wildcards
+           -xvzf /tmp/SolNotePad.tgz
+           -C /var/www/foswiki/data/Sandbox
+           Web* 
+    );
+    $cmd = join( " ", @command ); `$cmd`;
 
-  refresh( 'Sandbox' );
+  refresh( 'Applications' );
 }
 
 ##########################################################################
