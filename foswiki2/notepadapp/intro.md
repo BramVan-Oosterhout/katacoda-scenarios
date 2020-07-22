@@ -1,5 +1,5 @@
 <!-- Scenario text goes here -->
-In scenario 2 we createated a simple application to illustrate the use of the components of the wiki work bench. In this scenaro we will elaborate and create an application to create and maintain notes.
+In scenario 2 we created a simple application to illustrate the use of the components of the wiki work bench. In this scenaro we will elaborate and create an application to create and maintain notes.
 ### Plan
 Like in the earlier scenario you will be asked to built the application. The starting point is the application previously developed. We will:
 * Cleanup the fields associated with a note topic
