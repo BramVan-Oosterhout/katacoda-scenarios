@@ -23,6 +23,8 @@ docker exec -it -w /var/www/foswiki foswiki /bin/bash -c "sed -i 's/Set SKIN/#Se
 docker exec -it -w /var/www/foswiki/bin foswiki /bin/bash -c "./view /Main/Webhome -refresh=on >/dev/null"
 docker exec -it foswiki /bin/bash -c "apk add tar"
 docker cp NotePadApp.tgz foswiki:/tmp/.
+docker cp SolNotePadApp.tgz foswiki:/tmp/.
+docker cp SolNotePad.tgz foswiki:/tmp/.
 docker cp answer foswiki:/tmp/.
 docker exec -it foswiki /bin/bash -c "/tmp/answer notepadapp "
 docker exec -it foswiki /bin/bash -c "sed -i '/server_name/a      add_header \"Access-Control-Allow-Origin\"  *;' /etc/nginx/conf.d/default.conf"
