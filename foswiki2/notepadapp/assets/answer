@@ -79,7 +79,6 @@ sub step1 {
 ####  NoteWebHome rev=2
 ####  NoteTemplate rev=1
   my %selections = (
-                    'Applications/SolNotePadApp/NoteForm' => 2,
                     'Applications/SolNotePadApp/NoteType' => 2,
                     'Applications/SolNotePadApp/NoteTemplate' => 1
                     );
@@ -102,18 +101,17 @@ sub step1 {
 ##########################################################################
 sub step2 {
     my ( $cmd, @command);
-  
-  @command = qw(
-      tar
-           --wildcards
-           -xvzf /tmp/WorkbenchExample.tgz
-           -C /var/www/foswiki/data/Sandbox
-           Ex01*
-           
-    );
-  $cmd = join( " ", @command ); `$cmd`; 
-#  `tar --wildcards -xvzf /tmp/SolutionExampleTopics.tgz -C /var/www/foswiki/data/Applications SolutionExApp/SolutionExForm*`;
-  refresh( 'Sandbox' );
+    
+    ### TestSkinNoteViewTemplate rev 7
+    
+    step1() unless -d '/var/www/foswiki/data/Applications/SolNotePadApp';
+    
+    my %selections = (
+              'Applications/SolNotePadApp/TestSkinNoteViewTemplate' => 7     
+                     );  
+      
+    restoreRevision( \%selections );
+    refresh( 'Applications' );
 }
 
 ##########################################################################

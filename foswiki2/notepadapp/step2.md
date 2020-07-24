@@ -8,7 +8,7 @@ Before you proceed, reread:
 *  the [System.SkinTemplates](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.SkinTemplates) topic and pay special attention to the description of the template path. A skin template topic is searched for in the current web (BASEWEB) or the System web. Nowhere else.
 * the [System.AutoViewTemplatePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.AutoViewTemplatePlugin) topic and note how the skin template topic name is formed with mode `exist`. Form at the end is removed and Skin and View are added. The skin template topic name for a Note with form NoteForm and skin &lt;cover> is &lt;cover>SkinNoteViewTemplate.
 
-While you are developing the skin, it is easiest to use the COVER preference via the `?cover=` url parameter. When something goes wrong, you can get back to the default by not using the the url parameter. Use the cover name `test` and create a new `TopicView`:  `TestSkinNoteViewTemplate`
+While you are developing the skin, it is convenient to use the COVER preference via the `?cover=` url parameter. When something goes wrong, you can get back to the default by not using the the url parameter. Use the cover name `test` and create a new `TopicView`:  `TestSkinNoteViewTemplate`
 
 Start with 
 * the removal of the form display box at the bottom of the page (INCLUDE: WikiTopicView)
@@ -20,7 +20,7 @@ Here is the component to achieve that:
 ```
 %TMPL:INCLUDE{"Applications.WikiTopicView"}%
 %TMPL:DEF{"beforetext"}%
-`---+ %FORMFIELD{ "TopicTitle" }% <span style="font-size; small">(test skin note view template)</span>
+`---+ %FORMFIELD{ "TopicTitle" }% <span style="font-size: small">(test skin note view template)</span>
 
 %FORMFIELD{ "Summary" }%
 %TMPL:END%
@@ -45,7 +45,7 @@ Start with the links at the bottom.. To find what to modify, use grep:
 Bingo! Modifying `topicactionbuttons` will do the trick. Note that the `action_printable` definition includes a final separator. So it is replaced with `printable`
 ```
 %TMPL:DEF{"topicactionbuttons"}%%TMPL:P{"action_activatable_edit_or_create"}%%TMPL:P{"action_activatable_attach"}%%TMPL:P{"action_activatable_subscribe"}%%TMPL:P{"printable"}%%TMPL:END%
-```{{copy}
+```{{copy}}
 
 The breadcrumbs at the top are meaningless for web user not familiar with Foswiki. And we can also remove the Edit, Attach and Subscribe buttons at the top. For the breadcrumbs `grep -l "You are here" core/templates/*`{{execute}} suggests the `core/templates/view.pattern.tmpl` and `less -N core/templates/view.pattern.tmpl`{{execute}} indicates we can redefine the `breadcrumb` definition. But looking a bit further, you will notice that the breadcrumb and the `toolbarbuttons` are both wrapped in a single definition `top`. So we can kill two birds with one stone:
 
@@ -56,27 +56,10 @@ The breadcrumbs at the top are meaningless for web user not familiar with Foswik
 
 
 ### Answer
-https://foswiki.org/Support.Question1681
-<!-- Solution text (if any) goes here -->
-```
-%TMPL:INCLUDE{"view"}% 
-%TMPL:DEF{"beforetext"}
-<noautolink>
-#! %FORMFIELD{ "variable1" }%
+Update SolNotePadApp with the answer using:
+`/tmp/answer step2`{{execute}}
 
-## Short description
-%RENDERFORDISPLAY{ fields="variable2"
-                   hideempty="on"
-                   format="$percntIMAGE{\"$value\" type=\"frame\" align=\"right\" caption=\"%FORMFIElD{ "variable3" }%\" }$percnt"
-}%
-%RENDERFORDISPLAY{ fields="variable4"
-                   hideempty="on"
-                   format="$percntINCLUDE{\"$value\"}$percnt"
-}%
-%IF{"defined variable5" then="%FORMFIElD{ "variable5" }%"}%
-</noautolink>
-%TMPL:END%
-```
+For the changes see: [Applications/SolNotePadApp.TestSkinNoteViewTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/SolNotePadApp.TestSkinNoteViewTemplate)
 
 
 
