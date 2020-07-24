@@ -18,12 +18,17 @@ foreach my $request ( @ARGV ) {
 }
 
 ##########################################################################
-sub setowner {
-  my ($web, $owner ) = @_;
-  
-  my $command = "chown -R $owner $web";
-  
-  return `$command`;  
+sub restoreRevision {
+  my ( $selections ) = @_;
+
+  my $dir = `pwd`;
+  chdir( '/var/www/foswiki/bin' );
+  while( my ( $webTopic, $rev) = each %{$selections}) {
+    system( "./manage $webTopic -action restoreRevision -rev $rev" );
+    print "Restored $webTopic to rev $rev. Result: $!\n"
+  }
+  chdir( $dir );
+
 }
 
 ##########################################################################
@@ -46,12 +51,12 @@ sub notepadapp {
   
   @command = qw(
       tar
+           --same-owner
            -xvzf /tmp/NotePadApp.tgz
            -C /var/www/foswiki/data/Applications
   );
   $cmd = join( " ", @command ); `$cmd`; 
 
-  setowner( 'Applications', 'nginx:nginx' );
   refresh( 'Applications' );
 }
 
@@ -62,40 +67,35 @@ sub step1 {
   @command = qw(
       tar
            --wildcards
+           --same-owner
            -xvzf /tmp/SolNotePadApp.tgz
            -C /var/www/foswiki/data/Applications
-           --exclude SolNotPadApp/Note*
            SolNotePadApp/* 
     );
     $cmd = join( " ", @command ); `$cmd`;
    
-####  NoteForm rev=4
-####  NoteType rev=4
+####  NoteForm rev=2
+####  NoteType rev=2
 ####  NoteWebHome rev=2
 ####  NoteTemplate rev=1
+  my %selections = (
+                    'Applications/SolNotePadApp/NoteForm' => 1,
+                    'Applications/SolNotePadApp/NoteType' => 2,
+                    'Applications/SolNotePadApp/NoteTemplate' => 1
+                    );
   
-  @command = qw(
-      pushd bin;
-      ./manage Applications/SolNotePadApp/NoteTemplate
-           -action restoreRevision
-           -rev 1;
-      popd
-    );
-    $cmd = join( " ", @command );
-    print $cmd, "\n";
-    `$cmd`;
+  restoreRevision( \%selections );
     
   @command = qw(
       tar
            --wildcards
+           --same-owner
            -xvzf /tmp/SolNotePad.tgz
            -C /var/www/foswiki/data/Sandbox
            SolNotePad/Web* 
     );
     $cmd = join( " ", @command ); `$cmd`;
   
-  setowner( 'Sandbox', 'nginx:nginx' );
-  setowner( 'Applications', 'nginx:nginx' );
   refresh( 'Applications' );
 }
 
