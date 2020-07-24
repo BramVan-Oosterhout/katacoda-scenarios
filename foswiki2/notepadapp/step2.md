@@ -1,10 +1,14 @@
 <!-- Scenario text goes here -->
 ## A new VIEW template for the Note
-The regular Foswiki skin we have used (the `pattern` skin) displays many options that are marginal and distracting to the functioning of the Note application. In this step you will define a skin for the `NoteType` that leaves many of these distractions behind. The principles of this modification were presented in the previous scenario with the `TopicStub`. 
+We are using the regular Foswiki skin (the `pattern` skin). The `pattern` skin displays many options that are marginal and distracting to the functioning of the Note application. In this step you will define a skin for the `NoteType` that leaves many of these distractions behind. The principles of this modification were presented in the previous scenario with the `TopicStub`.
+
+Remember that we are now changing the **presentation** of the topic when it is VIEWed. We are dealing with `TopicView` templates, not `TopicTemplates`. `TopicTemplates` contain default topic **content** at the time the topic is created. 
 
 Before you proceed, reread:
 *  the [System.SkinTemplates](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.SkinTemplates) topic and pay special attention to the description of the template path. A skin template topic is searched for in the current web (BASEWEB) or the System web. Nowhere else.
-* the [System.AutoViewTemplatePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.AutoViewTemplatePlugin) topic and note how the template topic name is formed with mode `exist`. Form at the end is removed and Skin and View are added. The skin template topic name for a Note with form NoteForm and skin &lt;cover> is &lt;cover>SkinNoteViewTemplate
+* the [System.AutoViewTemplatePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.AutoViewTemplatePlugin) topic and note how the skin template topic name is formed with mode `exist`. Form at the end is removed and Skin and View are added. The skin template topic name for a Note with form NoteForm and skin &lt;cover> is &lt;cover>SkinNoteViewTemplate.
+
+While you are developing the skin, it is easiest to use the COVER preference via the `?cover=` url parameter. When something goes wrong, you can get back to the default by not using the the url parameter. Use the cover name `test` and create a new `TopicView`:  `TestSkinNoteViewTemplate`
 
 Start with 
 * the removal of the form display box at the bottom of the page (INCLUDE: WikiTopicView)
@@ -16,11 +20,13 @@ Here is the component to achieve that:
 ```
 %TMPL:INCLUDE{"Applications.WikiTopicView"}%
 %TMPL:DEF{"beforetext"}%
-# %FORMFIELD{ "TopicTitle" }%
+`---+ %FORMFIELD{ "TopicTitle" }% <span style="font-size; small">(test skin note view template)</span>
 
 %FORMFIELD{ "Summary" }%
 %TMPL:END%
 ```{{copy}}
+
+Go to the NotePadApp/NoteType topic, create a new note and save it. 
 
 We want to be able to add comments to the note. But we don't need to edit the COMMENT macro as part of the topic text. We can add it by adding the COMMENT at the bottom of the text:
 ```

@@ -26,7 +26,7 @@ To compare you answers execute:
 
 Use the SolNotePad web in the Sandbox to experiment.
 
-Check your answers in the Applications/SolNotePadApp.
+Check your answers in the Applications/SolNotePadApp web.
 
 <!-- Solution text (if any) goes here -->
 

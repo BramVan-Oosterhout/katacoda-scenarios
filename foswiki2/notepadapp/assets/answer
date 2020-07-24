@@ -79,7 +79,7 @@ sub step1 {
 ####  NoteWebHome rev=2
 ####  NoteTemplate rev=1
   my %selections = (
-                    'Applications/SolNotePadApp/NoteForm' => 1,
+                    'Applications/SolNotePadApp/NoteForm' => 2,
                     'Applications/SolNotePadApp/NoteType' => 2,
                     'Applications/SolNotePadApp/NoteTemplate' => 1
                     );
