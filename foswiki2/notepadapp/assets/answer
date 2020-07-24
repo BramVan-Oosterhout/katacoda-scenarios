@@ -82,11 +82,11 @@ sub step1 {
       popd
     );
     $cmd = join( " ", @command );
-    print $cmd, "\n:;
+    print $cmd, "\n";
     `$cmd`;
     
   @command = qw(
-      tar2
+      tar
            --wildcards
            -xvzf /tmp/SolNotePad.tgz
            -C /var/www/foswiki/data/Sandbox
