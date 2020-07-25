@@ -6,7 +6,7 @@ You can use the same technique for user defined styles. First you decide where t
 
 Let's start with hiding the left bar as a user style. You can copy the content from the [System.PatternSkinCssCookbookNoLeftBar](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.PatternSkinCssCookbookNoLeftBar). To create the `UserNoteTypeStyle` you add the following code to the bottom of the text area in the NoteType topic:
 ```
-%`STARTATTACH{"UserNoteTypeStyle.css"
+%STARTATTACH{"UserNoteTypeStyle.css"
              comment="Stylesheet for the Notes in the NotePadApp."
              hidecontent="on"
 }%
@@ -22,7 +22,7 @@ Let's start with hiding the left bar as a user style. You can copy the content f
 	padding-left:2em; /*S6*/
 }
 /* end copy */
-%`ENDATTACH%
+%ENDATTACH%
 ```{{copy}}
 Once you have saved the topic, you will see the attachment `UserNoteTypeStyle.css` listed.
 

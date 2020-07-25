@@ -20,7 +20,7 @@ Here is the component to achieve that:
 ```
 %TMPL:INCLUDE{"Applications.WikiTopicView"}%
 %TMPL:DEF{"beforetext"}%
-`---+ %FORMFIELD{ "TopicTitle" }% <span style="font-size: small">(test skin note view template)</span>
+---+ %FORMFIELD{ "TopicTitle" }% <span style="font-size: small">(test skin note view template)</span>
 
 %FORMFIELD{ "Summary" }%
 %TMPL:END%
@@ -43,12 +43,12 @@ Start with the links at the bottom.. To find what to modify, use grep:
 `grep -l "topic actions" templates/*`{{execute}}.
 `templates/viewtopicactionbuttons.tmpl` looks like a good candidate:
 `less -N templates/viewtopicactionbuttons.tmpl`{{execute}}.
-Bingo! Modifying `topicactionbuttons` will do the trick. Note that the `action_printable` definition includes a final separator. So it is replaced with `printable`
+Bingo ! Modifying `topicactionbuttons (line 1)` will do the trick. Note that the `action_printable (line 21)` definition includes a final separator. So it is replaced with `printable (line 23)`
 ```
 %TMPL:DEF{"topicactionbuttons"}%%TMPL:P{"action_activatable_edit_or_create"}%%TMPL:P{"action_activatable_attach"}%%TMPL:P{"action_activatable_subscribe"}%%TMPL:P{"printable"}%%TMPL:END%
 ```{{copy}}
 
-The breadcrumbs at the top are meaningless for web user not familiar with Foswiki. And we can also remove the Edit, Attach and Subscribe buttons at the top. For the breadcrumbs `grep -l "You are here" templates/*`{{execute}} suggests the `templates/view.pattern.tmpl` and `less -N templates/view.pattern.tmpl`{{execute}} indicates we can redefine the `breadcrumb` definition. But looking a bit further, you will notice that the breadcrumb and the `toolbarbuttons` are both wrapped in a single definition `top`. So we can kill two birds with one stone:
+The breadcrumbs at the top are meaningless for web user not familiar with Foswiki. And we can also remove the Edit, Attach and Subscribe buttons at the top. For the breadcrumbs `grep -l "You are here" templates/*`{{execute}} suggests the `templates/view.pattern.tmpl` and `less -N templates/view.pattern.tmpl`{{execute}} indicates we can redefine the `breadcrumb (line 30)` definition. But looking a bit further, you will notice that the breadcrumb and the `toolbarbuttons` are both wrapped in a single definition `top (line 24)`. So we can kill two birds with one stone:
 
 ```
 %TMPL:DEF{"top"}%%TMPL:END%

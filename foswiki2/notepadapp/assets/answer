@@ -21,12 +21,18 @@ foreach my $request ( @ARGV ) {
 sub restoreRevision {
   my ( $selections ) = @_;
 
+  my $result = '';
   my $dir = `pwd`;
   chdir( '/var/www/foswiki/bin' );
   while( my ( $webTopic, $rev) = each %{$selections}) {
-    system( "./manage $webTopic -action restoreRevision -rev $rev" )
-         if ( -e "/var/www/foswiki/data/$webTopic,pfv/" . ($rev+1) );
-    print "Restored $webTopic to rev $rev. Result: ", $! ? $! : 'OK', "\n"
+    if ( -e "/var/www/foswiki/data/$webTopic,pfv/" . ($rev+1) ) {
+      system( "./manage $webTopic -action restoreRevision -rev $rev" );
+      $result = $! ? $! : 'OK';
+    }
+    else {
+      $result = "rev: $rev is current"
+    }
+    print "Restored $webTopic to rev $rev. Result: $result\n"
   }
   chdir( $dir );
 
@@ -115,22 +121,22 @@ sub step2 {
                      );  
       
     restoreRevision( \%selections );
-    refresh( 'Applications' 
+    refresh( 'Applications' )
 }
 
 ##########################################################################
 sub step3 {
   my ( $cmd, @command);
   
-  @command = qw(
-      tar
-           --wildcards      
-           -xvzf /tmp/WorkbenchExample.tgz
-           -C /var/www/foswiki/data/Sandbox
-           Ex02* 
-    );  $cmd = join( " ", @command ); `$cmd`; 
-
-  refresh( 'Sandbox' );
+    step1() unless -d '/var/www/foswiki/data/Applications/SolNotePadApp';
+    
+    my %selections = (
+                'Applications/SolNotePadApp/NoteTemplate' => 2,
+                'Applications/SolNotePadApp/TestSkinNoteViewTemplate' => 6     
+                     );  
+      
+    restoreRevision( \%selections );
+    refresh( 'Applications' )
 }
 
 ##########################################################################
