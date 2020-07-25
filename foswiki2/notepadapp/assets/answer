@@ -24,8 +24,9 @@ sub restoreRevision {
   my $dir = `pwd`;
   chdir( '/var/www/foswiki/bin' );
   while( my ( $webTopic, $rev) = each %{$selections}) {
-    system( "./manage $webTopic -action restoreRevision -rev $rev" );
-    print "Restored $webTopic to rev $rev. Result: $!\n"
+    system( "./manage $webTopic -action restoreRevision -rev $rev" )
+         if ( -e "/var/www/foswiki/data/$webTopic,pfv/" . ($rev+1) );
+    print "Restored $webTopic to rev $rev. Result: ", $! ? $! : 'OK', "\n"
   }
   chdir( $dir );
 
@@ -79,7 +80,9 @@ sub step1 {
 ####  NoteWebHome rev=2
 ####  NoteTemplate rev=1
   my %selections = (
+                    'Applications/SolNotePadApp/NoteForm' => 2,
                     'Applications/SolNotePadApp/NoteType' => 2,
+                    'Applications/SolNotePadApp/NoteWebHome' => 2,
                     'Applications/SolNotePadApp/NoteTemplate' => 1
                     );
   
@@ -107,11 +110,12 @@ sub step2 {
     step1() unless -d '/var/www/foswiki/data/Applications/SolNotePadApp';
     
     my %selections = (
-              'Applications/SolNotePadApp/TestSkinNoteViewTemplate' => 7     
+                'Applications/SolNotePadApp/NoteTemplate' => 2,
+                'Applications/SolNotePadApp/TestSkinNoteViewTemplate' => 7     
                      );  
       
     restoreRevision( \%selections );
-    refresh( 'Applications' );
+    refresh( 'Applications' 
 }
 
 ##########################################################################

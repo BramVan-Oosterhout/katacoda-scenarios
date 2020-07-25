@@ -23,6 +23,7 @@ You may have noticed that underneath the data entry box there is some small text
 ### Answer
 To compare you answers execute:
 `/tmp/answer step1`{{execute}}
+and refresh your foswiki page. New webs will appear in the left margin.
 
 Use the SolNotePad web in the Sandbox to experiment.
 

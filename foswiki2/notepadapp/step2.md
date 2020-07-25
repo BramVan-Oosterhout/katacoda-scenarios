@@ -26,7 +26,7 @@ Here is the component to achieve that:
 %TMPL:END%
 ```{{copy}}
 
-Go to the NotePadApp/NoteType topic, create a new note and save it. 
+Go to  [Sandbox.NotePadHome](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox.NotePadHome) topic, create a new note and save it. Now add `?cover=test` to the url and see the same topic rendered with the `TestSkinNoteViewTemplate`.
 
 We want to be able to add comments to the note. But we don't need to edit the COMMENT macro as part of the topic text. We can add it by adding the COMMENT at the bottom of the text:
 ```
@@ -34,20 +34,21 @@ We want to be able to add comments to the note. But we don't need to edit the CO
 %COMMENT{ type="above" }%
 %TMPL:END%
 ```{{copy}}
-Now that the COMMENT macro is embedded in the template, you can remove it from the [NoteTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/NotePadApp.NoteTemplate) in the application.
+Check it out in the Sandbox. Refresh the Note you displayed previously or create a new one. 
+Now that the COMMENT macro is embedded in the template, you can remove it from the [NoteTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/NotePadApp.NoteTemplate) in the application. This change will not affect existing notes. You need to delete the COMMENT from the topic text. New Notes will be fine.
 
 Edit, Attach, Subscribe and Print are useful. But we can remove History, Backlinks, wiki text and topic actions. At the top we don't need any distractions. 
 
 Start with the links at the bottom.. To find what to modify, use grep:
-`grep -l "topic actions" core/templates/*`{{execute}}.
-`core/templates/viewtopicactionbuttons.tmpl` looks like a good candidate:
-`less -N core/templates/viewtopicactionbuttons.tmpl`{{execute}}.
+`grep -l "topic actions" templates/*`{{execute}}.
+`templates/viewtopicactionbuttons.tmpl` looks like a good candidate:
+`less -N templates/viewtopicactionbuttons.tmpl`{{execute}}.
 Bingo! Modifying `topicactionbuttons` will do the trick. Note that the `action_printable` definition includes a final separator. So it is replaced with `printable`
 ```
 %TMPL:DEF{"topicactionbuttons"}%%TMPL:P{"action_activatable_edit_or_create"}%%TMPL:P{"action_activatable_attach"}%%TMPL:P{"action_activatable_subscribe"}%%TMPL:P{"printable"}%%TMPL:END%
 ```{{copy}}
 
-The breadcrumbs at the top are meaningless for web user not familiar with Foswiki. And we can also remove the Edit, Attach and Subscribe buttons at the top. For the breadcrumbs `grep -l "You are here" core/templates/*`{{execute}} suggests the `core/templates/view.pattern.tmpl` and `less -N core/templates/view.pattern.tmpl`{{execute}} indicates we can redefine the `breadcrumb` definition. But looking a bit further, you will notice that the breadcrumb and the `toolbarbuttons` are both wrapped in a single definition `top`. So we can kill two birds with one stone:
+The breadcrumbs at the top are meaningless for web user not familiar with Foswiki. And we can also remove the Edit, Attach and Subscribe buttons at the top. For the breadcrumbs `grep -l "You are here" templates/*`{{execute}} suggests the `templates/view.pattern.tmpl` and `less -N templates/view.pattern.tmpl`{{execute}} indicates we can redefine the `breadcrumb` definition. But looking a bit further, you will notice that the breadcrumb and the `toolbarbuttons` are both wrapped in a single definition `top`. So we can kill two birds with one stone:
 
 ```
 %TMPL:DEF{"top"}%%TMPL:END%
