@@ -26,11 +26,12 @@ sub restoreRevision {
   chdir( '/var/www/foswiki/bin' );
   while( my ( $webTopic, $rev) = each %{$selections}) {
     if ( -e "/var/www/foswiki/data/$webTopic,pfv/" . ($rev+1) ) {
+      $! = undef;
       system( "./manage $webTopic -action restoreRevision -rev $rev" );
       $result = $! ? $! : 'OK';
     }
     else {
-      $result = "rev: $rev is current"
+      $result = "rev $rev is current"
     }
     print "Restored $webTopic to rev $rev. Result: $result\n"
   }
@@ -117,7 +118,7 @@ sub step2 {
     
     my %selections = (
                 'Applications/SolNotePadApp/NoteTemplate' => 2,
-                'Applications/SolNotePadApp/TestSkinNoteViewTemplate' => 7     
+                'Applications/SolNotePadApp/TestSkinNoteViewTemplate' => 1     
                      );  
       
     restoreRevision( \%selections );
@@ -132,7 +133,23 @@ sub step3 {
     
     my %selections = (
                 'Applications/SolNotePadApp/NoteTemplate' => 2,
-                'Applications/SolNotePadApp/TestSkinNoteViewTemplate' => 6     
+                'Applications/SolNotePadApp/TestSkinNoteViewTemplate' => 2     
+                     );  
+      
+    restoreRevision( \%selections );
+    refresh( 'Applications' )
+}
+
+##########################################################################
+sub step4 {
+  my ( $cmd, @command);
+  
+    step1() unless -d '/var/www/foswiki/data/Applications/SolNotePadApp';
+    
+    my %selections = (
+                'Applications/SolNotePadApp/NoteType' => 3,
+                'Applications/SolNotePadApp/NoteTemplate' => 2,
+                'Applications/SolNotePadApp/TestSkinNoteViewTemplate' => 3     
                      );  
       
     restoreRevision( \%selections );

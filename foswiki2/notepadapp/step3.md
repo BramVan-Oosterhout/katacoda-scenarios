@@ -42,18 +42,13 @@ Without the left bar, the login links are no longer available. We can add the lo
 You are almost there. The content of the page is now all laid out. The page can look better if you add some styling. We will do that in the next step.
 
 
-
-
-
-
-
-
-
-
-
 ### Answer
 <!-- Solution text (if any) goes here -->
+To compare you answers execute: `/tmp/answer step3`{{execute}} 
 
+The complete template is in [SolNotePadApp/TestSkinNoteViewTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/SolNotePadApp/TestSkinNoteViewTemplate).
+
+Check the answer in the Sandbox by creating a new note.
 
 
 

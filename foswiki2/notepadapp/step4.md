@@ -30,9 +30,9 @@ To use this style sheet instead of the `hideleftbar.css` attached to [System.Pat
 ```
 <link rel='stylesheet' href='%PUBURLPATH%/%SYSTEMWEB%/PatternSkinCssCookbookNoLeftBar/hideleftbar.css' media='all' type='text/css' />
 ```
-to
+to the link below. Note that you cannot use %WEB% for `Applications/NotePadApp`, because the skin template variables are expaned in the context of the topic. This is not an INCLUDE.
 ```
-<link rel='stylesheet' href='%PUBURLPATH%/%WEB%/NoteType/UserNoteTypeStyle.css' media='all' type='text/css' />
+<link rel='stylesheet' href='%PUBURLPATH%/Applications/SolNotePadApp/NoteType/UserNoteTypeStyle.css' media='all' type='text/css' />
 ```{{copy}} 
 
 Now you need to spruce up the top bar. It looks thin and the login is squeezed in the top left corner. Change the class of the container of the login actions from `class="patternLeftBarPersonal"` to `class="userTopBarLogin"`{{copy}} and add the following styles to the `UserNoteTypeStyle.css` by editing the `NoteType`.
