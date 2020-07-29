@@ -17,6 +17,7 @@ docker exec -it -w /var/www/foswiki foswiki /bin/bash -c "tools/configure -save 
 docker exec -it -w /var/www/foswiki foswiki /bin/bash -c "tools/configure -save -set {PermittedRedirectHostUrls}='http://$1,http://localhost' >/dev/null"
 docker exec -it -w /var/www/foswiki foswiki /bin/bash -c "tools/configure -save -set {JQDataTablesPlugin}{DefaultConnector}='dbcache' >/dev/null"
 docker exec -it -w /var/www/foswiki foswiki /bin/bash -c "tools/configure -save -set {Plugins}{AutoViewTemplatePlugin}{Enabled}='0' >/dev/null"
+docker exec -it -w /var/www/foswiki foswiki /bin/bash -c "tools/configure -save -set {Plugins}{PageOptimizerPlugin}{Enabled}='0' >/dev/null"
 docker exec -it -w /var/www/foswiki foswiki /bin/bash -c "tools/configure -save -set {Plugins}{SolrPlugin}{Enabled}='0' >/dev/null"
 docker exec -it -w /var/www/foswiki foswiki /bin/bash -c "tools/configure -save -set {Plugins}{CaptchaPlugin}{Enabled}='0' >/dev/null"
 docker exec -it -w /var/www/foswiki foswiki /bin/bash -c "sed -i 's/Set SKIN/#Set SKIN/' data/Main/SitePreferences.txt"
