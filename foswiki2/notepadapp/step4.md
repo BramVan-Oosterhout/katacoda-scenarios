@@ -30,7 +30,7 @@ To use this style sheet instead of the =hideleftbar.css= attached to [System.Pat
 ```
 <link rel='stylesheet' href='%PUBURLPATH%/%SYSTEMWEB%/PatternSkinCssCookbookNoLeftBar/hideleftbar.css' media='all' type='text/css' />
 ```
-to the link below. Note that you cannot use %WEB% for =Applications/NotePadApp=, because the skin template variables are expaned in the context of the topic. This is not an INCLUDE.
+to the link below. Note that you cannot use %WEB% for =Applications/NotePadApp=, because the skin template variables are expanded in the context of the rendered topic. This is not an INCLUDE.
 ```
 <link rel='stylesheet' href='%PUBURLPATH%/Applications/SolNotePadApp/NoteType/UserNoteTypeStyle.css' media='all' type='text/css' />
 ```{{copy}} 

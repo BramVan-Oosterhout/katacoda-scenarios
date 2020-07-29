@@ -10,6 +10,8 @@ Like in the earlier scenario you will be asked to built the application. The sta
 
 ### Actual
 * Use AUTOINC to create the topic name to avoid duplication
+* Create a VIEW template for the Note
+* Create an EDIT template for the Note
 
 
 At the end of this scenario you will have a complete application for your own use!
