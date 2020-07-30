@@ -1,14 +1,14 @@
 <!-- Scenario text goes here -->
 ## A new VIEW template for the Note
-We are using the regular Foswiki skin (the =pattern= skin). The =pattern= skin displays many options that are marginal and distracting to the functioning of the Note application. In the following steps you will define a skin for the =NoteType= that leaves many of these distractions behind. The principles of this modification were presented in the previous scenario with the =TopicStub=.
+We are using the regular Foswiki skin (the `pattern` skin). The `pattern` skin displays many options that are marginal and distracting to the functioning of the Note application. In the following steps you will define a skin for the `NoteType` that leaves many of these distractions behind. The principles of this modification were presented in the previous scenario with the `TopicStub`.
 
-Remember that we are now changing the **presentation** of the topic when it is VIEWed. We are dealing with =TopicView= templates, not =TopicTemplates=. =TopicTemplates= contain default topic **content** at the time the topic is created. 
+Remember that we are now changing the **presentation** of the topic when it is VIEWed. We are dealing with `TopicView` templates, not `TopicTemplates`. `TopicTemplates` contain default topic **content** at the time the topic is created. 
 
 Before you proceed, reread:
 *  the [System.SkinTemplates](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.SkinTemplates) topic and pay special attention to the description of the template path. A skin template topic is searched for in the current web (BASEWEB) or the System web. Nowhere else.
-* the [System.AutoViewTemplatePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.AutoViewTemplatePlugin) topic and note how the skin template topic name is formed with mode =exist=. Form at the end is removed and Skin and View are added. The skin template topic name for a Note with form NoteForm and skin &lt;cover> is &lt;cover>SkinNoteViewTemplate.
+* the [System.AutoViewTemplatePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.AutoViewTemplatePlugin) topic and note how the skin template topic name is formed with mode `exist`. Form at the end is removed and Skin and View are added. The skin template topic name for a Note with form NoteForm and skin &lt;cover> is &lt;cover>SkinNoteViewTemplate.
 
-While you are developing the skin, it is convenient to use the COVER preference via the `?cover=` url parameter. When something goes wrong, you can get back to the default by not using the the url parameter. Use the cover name =test= and create a new `TopicView`:  =TestSkinNoteViewTemplate=
+While you are developing the skin, it is convenient to use the COVER preference via the `?cover=` url parameter. When something goes wrong, you can get back to the default by not using the the url parameter. Use the cover name `test` and create a new `TopicView`:  `TestSkinNoteViewTemplate`
 
 Start with 
 * the removal of the form display box at the bottom of the page (INCLUDE: WikiTopicView)
@@ -26,7 +26,7 @@ Here is the component to achieve that:
 %TMPL:END%
 ```{{copy}}
 
-Go to  [Sandbox.NotePadHome](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox.NotePadHome) topic, create a new note and save it. Now add `?cover=test` to the url and see the same topic rendered with the =TestSkinNoteViewTemplate=.
+Go to  [Sandbox.NotePadHome](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox.NotePadHome) topic, create a new note and save it. Now add `?cover=test` to the url and see the same topic rendered with the `TestSkinNoteViewTemplate`.
 
 We want to be able to add comments to the note. But we don't need to edit the COMMENT macro as part of the topic text. We can add it by adding the COMMENT at the bottom of the text:
 ```
@@ -41,14 +41,14 @@ Edit, Attach, Subscribe and Print are useful. But we can remove History, Backlin
 
 Start with the links at the bottom.. To find what to modify, use grep:
 `grep -l "topic actions" templates/*`{{execute}}.
-=templates/viewtopicactionbuttons.tmpl= looks like a good candidate:
+`templates/viewtopicactionbuttons.tmpl` looks like a good candidate:
 `less -N templates/viewtopicactionbuttons.tmpl`{{execute}}.
-Bingo ! Modifying =topicactionbuttons (line 1)= will do the trick. Note that the =action_printable (line 21)= definition includes a final separator. So it is replaced with =printable (line 23)=
+Bingo ! Modifying `topicactionbuttons (line 1)` will do the trick. Note that the `action_printable (line 21)` definition includes a final separator. So it is replaced with `printable (line 23)`
 ```
 %TMPL:DEF{"topicactionbuttons"}%%TMPL:P{"action_activatable_edit_or_create"}%%TMPL:P{"action_activatable_attach"}%%TMPL:P{"action_activatable_subscribe"}%%TMPL:P{"printable"}%%TMPL:END%
 ```{{copy}}
 
-The breadcrumbs at the top are meaningless for web user not familiar with Foswiki. And we can also remove the Edit, Attach and Subscribe buttons at the top. For the breadcrumbs `grep -l "You are here" templates/*`{{execute}} suggests the =templates/view.pattern.tmpl= and `less -N templates/view.pattern.tmpl`{{execute}} indicates we can redefine the =breadcrumb (line 30)= definition. But looking a bit further, you will notice that the breadcrumb and the =toolbarbuttons= are both wrapped in a single definition =top (line 24)=. So we can kill two birds with one stone:
+The breadcrumbs at the top are meaningless for web user not familiar with Foswiki. And we can also remove the Edit, Attach and Subscribe buttons at the top. For the breadcrumbs `grep -l "You are here" templates/*`{{execute}} suggests the `templates/view.pattern.tmpl` and `less -N templates/view.pattern.tmpl`{{execute}} indicates we can redefine the `breadcrumb (line 30)` definition. But looking a bit further, you will notice that the breadcrumb and the `toolbarbuttons` are both wrapped in a single definition `top (line 24)`. So we can kill two birds with one stone:
 
 ```
 %TMPL:DEF{"top"}%%TMPL:END%
