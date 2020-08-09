@@ -9,6 +9,7 @@ my %step = (
             'step3' => \&step3,
             'step4' => \&step4,
             'step5' => \&step5,
+            'step6' => \&step6,
 ##          'test'  => \&test,
           );
 
@@ -176,6 +177,23 @@ sub step5 {
     refresh( 'Applications' )
 }
 
+##########################################################################
+sub step6 {
+  my ( $cmd, @command);
+  
+    step1() unless -d '/var/www/foswiki/data/Applications/SolNotePadApp';
+    
+    my %selections = (
+                'Applications/SolNotePadApp/NoteType' => 6,
+                'Applications/SolNotePadApp/NoteForm' => 6,
+                'Applications/SolNotePadApp/NoteTemplate' => 2,
+                'Applications/SolNotePadApp/TestSkinNoteViewTemplate' => 3,
+                'Applications/SolNotePadApp/TestSkinNoteEditTemplate' => 3
+                     );  
+      
+    restoreRevision( \%selections );
+    refresh( 'Applications' )
+}
 ##########################################################################
 sub test {
   my @command;
