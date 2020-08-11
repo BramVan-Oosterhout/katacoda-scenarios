@@ -12,7 +12,7 @@ Happy experimentation!
 
 
 
-### Answer
+
 <!-- Solution text (if any) goes here -->
 
 
