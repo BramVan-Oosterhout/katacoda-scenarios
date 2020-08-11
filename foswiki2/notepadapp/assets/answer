@@ -81,7 +81,12 @@ sub step1 {
            --same-owner
            -xvzf /tmp/SolNotePadApp.tgz
            -C /var/www/foswiki/data/Applications
-           --exclude SolNotePadApp/NoteViewTemplate.* SolNotePadApp/NoteEditTemplate.*
+           --exclude SolNotePadApp/NoteViewTemplate*
+           --exclude SolNotePadApp/NoteEditTemplate*
+           --exclude SolNotePadApp/NoteWebHomeViewTemplate*
+           --exclude SeedWebHome*
+           --exclude SeedWebPreferences*
+           --exclude RenderDeployButton*
            SolNotePadApp/* 
     );
     $cmd = join( " ", @command ); `$cmd`;
@@ -190,7 +195,12 @@ sub step6 {
            --same-owner
            -xvzf /tmp/SolNotePadApp.tgz
            -C /var/www/foswiki/data/Applications
-           SolNotePadApp/NoteViewTemplate.* SolNotePadApp/NoteEditTemplate.*
+              SolNotePadApp/NoteViewTemplate*
+              SolNotePadApp/NoteEditTemplate*
+              SolNotePadApp/NoteWebHomeViewTemplate*
+              SeedWebHome*
+              SeedWebPreferences*
+              RenderDeployButton*
     );
     
     my %selections = (
