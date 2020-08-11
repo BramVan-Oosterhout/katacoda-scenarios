@@ -81,6 +81,7 @@ sub step1 {
            --same-owner
            -xvzf /tmp/SolNotePadApp.tgz
            -C /var/www/foswiki/data/Applications
+           --exclude SolNotePadApp/NoteViewTemplate.* SolNotePadApp/NoteEditTemplate.*
            SolNotePadApp/* 
     );
     $cmd = join( " ", @command ); `$cmd`;
@@ -182,6 +183,15 @@ sub step6 {
   my ( $cmd, @command);
   
     step1() unless -d '/var/www/foswiki/data/Applications/SolNotePadApp';
+    
+      @command = qw(
+      tar
+           --wildcards
+           --same-owner
+           -xvzf /tmp/SolNotePadApp.tgz
+           -C /var/www/foswiki/data/Applications
+           SolNotePadApp/NoteViewTemplate.* SolNotePadApp/NoteEditTemplate.*
+    );
     
     my %selections = (
                 'Applications/SolNotePadApp/NoteType' => 6,

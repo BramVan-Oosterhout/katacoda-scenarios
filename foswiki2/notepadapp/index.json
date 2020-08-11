@@ -1,8 +1,8 @@
 {
   "title": "Building the NotePadApp",
   "description": "In this scenario you will build the NotePadApp",
-  "difficulty": "beginner",
-  "time": "20 minutes",
+  "difficulty": "intermediate",
+  "time": "40 minutes",
   "details": {
    "assets": {
       "host01": [
@@ -28,6 +28,9 @@
     },{
       "title": "Creating an EDIT template",
       "text": "step5.md"
+    },{
+      "title": "Deployment and Home page",
+      "text": "step6.md"
     }],
     "intro": {
       "text": "intro.md",

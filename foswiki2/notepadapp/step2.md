@@ -6,7 +6,7 @@ Remember that we are now changing the **presentation** of the topic when it is V
 
 Before you proceed, reread:
 *  the [System.SkinTemplates](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.SkinTemplates) topic and pay special attention to the description of the template path. A skin template topic is searched for in the current web (BASEWEB) or the System web. Nowhere else.
-* the [System.AutoViewTemplatePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.AutoViewTemplatePlugin) topic and note how the skin template topic name is formed with mode `exist`. Form at the end is removed and Skin and View are added. The skin template topic name for a Note with form NoteForm and skin &lt;cover> is &lt;cover>SkinNoteViewTemplate.
+* the [System.AutoTemplatePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.AutoTemplatePlugin) topic and note how the skin template topic name is formed with mode `exist`. Form at the end is removed and Skin and View are added. The skin template topic name for a Note with form NoteForm and skin &lt;cover> is &lt;cover>SkinNoteViewTemplate.
 
 While you are developing the skin, it is convenient to use the COVER preference via the `?cover=` url parameter. When something goes wrong, you can get back to the default by not using the the url parameter. Use the cover name `test` and create a new `TopicView`:  `TestSkinNoteViewTemplate`
 
