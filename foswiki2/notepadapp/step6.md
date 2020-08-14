@@ -1,6 +1,7 @@
 <!-- Scenario text goes here -->
-<noautolink>
+
 You now have a working application, with a home page in the Sandbox web. There are sevaral approaches to creating Note pads for multiple purposes and multiple people:
+
 1 Using tags - through the [System.TagMePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.TagMePlugin)
 2 Using categories - through the [System.ClassificationPlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.ClassificationPlugin)
 3 Using webs - by creating a web for each personalised Note pad
@@ -29,16 +30,19 @@ Next you need to deploy a home page in the new web. The seed for the home page i
 Save the topic.
 
 To add the `SeedWebHome` topic as part of the creation of the new web, you add some parameters to the `copy` operation:
+
 * `source - SeedWebHome => WebHome` will copy the seed as the real `WebHome` topic. Note &amp;gt; instead of >.
     * `&lt;input type='hidden' name='source' value='SeedWebHome =&amp;gt; WebHome' /&gt;`{{copy}}
 * `onlynew - off` to allow repeated deployments to the same web
     * `&lt;input type='hidden' name='onlynew' value='off' /&gt;`{{copy}}
 * and you can adjust the button text by repacing the `submit` with:
     * `%BUTTON{"%TRANSLATE{"Deploy"}%" type="submit" icon="fa-check"}%`{{copy}}
+
 Save the topic and deploy `Sandbox/Testapp1` again. You will find that the WebHome page is now a proper home page for the application. You can update `SeedWebHome` and redeploy to see the updates applied. 
 
 ### The VIEW template for the home page
 To make the home page specific for the Note pad application, you need toapply a view template. It will be very similar to the Note VIEW template. Copy `TestSkinNoteViewTemplate` to `NoteWebHomeViewTemplate` and make the following changes:
+
 * Remove the `aftertext` definition, returning it to the default empty one
     * This removes the `COMMENT` box from the VIEW template
 
@@ -52,22 +56,15 @@ and save `WebPreferences`. Navigate to `WebHome` and you will see the template a
 
 ### Automatic application of the VIEW and EDIT template for a note
 So far we have applied the `?cover=test` url parameter to display the note in the defined skin. In the deployed application you want this cover to be applied automatically. This is easy to achieve with the AutoTemplatePlugin. Copy the `TopicView`s 
+
 * from `TestSkinNoteViewTemplate` to `NoteViewTemplate`; and
 * from `TestSkinNoteEditTemplate` to `NoteEditTemplate`.
 
 These templates are now automatically applied to any topic with a `NoteForm` attached.
 
-### Further changes
-There are a few other changes that are useful at this point. You can:
-* Refactor the `NoteViewTemplate` and base it ion the `NoteWebHomeViewTemplate`
-* Add a _Home_ link to the top bar in the VIEW template, so you can navigate back to the home page
-* Add a _Preferences_ link, available only to users in the Admin group, so they can update and navigate across the Foswiki site from the NotePaddApp 
-* Remove the COMMENT box if the note has status `Closed` unless the user is in the Admin group
-* Show `Closed` instead of the `Edit` link if the note has status `Closed` unless the user is in the Admin group
+The next step provides an opportuinity to fine tune the application. This is presented in the form of execises.
 
-These modifications are shown in the SolNotePadApp if you want to see an example.
 
-</noautolink>
 
 ### Answer
 <!-- Solution text (if any) goes here -->
