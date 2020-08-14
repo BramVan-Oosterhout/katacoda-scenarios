@@ -1,5 +1,5 @@
 <!-- Scenario text goes here -->
-## A new VIEW template for the Note css...
+
 Using styles and cascading style sheets (css) is a large topic, outside the scope of this tutorial. I will assume you are familiar with the basics and limit this tutorial to a mechanisms Foswiki offers to add styles to a page. You have already seen this in the previous step, where you removed the side bar from view by linking the styles in a stylesheet attached to [System.PatternSkinCssCookbookNoLeftBar](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.PatternSkinCssCookbookNoLeftBar).
 
 You can use the same technique for user defined styles. First you decide where to attach the style sheet. Since it is associated with the NoteType, it is logical to attach the style sheet there. Maintaining this kind of attachment is well supported by the [System.AttachContentPlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.AttachContentPlugin). Call the style sheet `UserNoteTypeStyle`

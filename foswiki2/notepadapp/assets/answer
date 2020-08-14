@@ -87,6 +87,8 @@ sub step1 {
            --exclude SolNotePadApp/SeedWebHome*
            --exclude SolNotePadApp/SeedWebPreferences*
            --exclude SolNotePadApp/RenderDeployButton*
+           --exclude SolNotePadApp/NoteOpenViewTemplate*
+           --exclude SolNotePadApp/NoteClosedViewTemplate*
            SolNotePadApp/* 
     );
     $cmd = join( " ", @command ); `$cmd`;
@@ -208,6 +210,12 @@ sub step6 {
                 'Applications/SolNotePadApp/NoteType' => 6,
                 'Applications/SolNotePadApp/NoteForm' => 6,
                 'Applications/SolNotePadApp/NoteTemplate' => 2,
+                'Applications/SolNotePadApp/NoteViewTemplate' => 3,
+                'Applications/SolNotePadApp/NoteEditTemplate' => 1,
+                'Applications/SolNotePadApp/NoteWebHomeViewTemplate' => 1,
+                'Applications/SolNotePadApp/RenderDeployButton' => 7,
+                'Applications/SolNotePadApp/SeedWebHome' => 3,
+                'Applications/SolNotePadApp/SeedWebPreferences' => 1,
                 'Applications/SolNotePadApp/TestSkinNoteViewTemplate' => 3,
                 'Applications/SolNotePadApp/TestSkinNoteEditTemplate' => 3
                      );  
