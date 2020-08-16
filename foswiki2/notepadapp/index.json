@@ -10,7 +10,8 @@
                  { "file": "answer", "target": "~/", "chmod": "+x" },
                  { "file": "NotePadApp.tgz", "target": "~/" },
                  { "file": "SolNotePadApp.tgz", "target": "~/" },
-                 { "file": "SolNotePad.tgz", "target": "~/" }
+                 { "file": "SolNotePad.tgz", "target": "~/" },
+                 { "file": "TopicAgent.pm", "target": "~/" }
               ]
     },
     "steps": [{
