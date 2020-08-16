@@ -1,10 +1,10 @@
 <!-- Scenario text goes here -->
-We can adjust the presentation of the `edit` screen in the same way we adjusted the `view`. In this case we need to create a `TopicView` =TestSkinNoteEditTemplate=. The default `WikiTopicEdit` provides a good starting point. 
+We can adjust the presentation of the `edit` screen in the same way we adjusted the `view`. In this case we need to create a `TopicView` `TestSkinNoteEditTemplate`. The default `WikiTopicEdit` provides a good starting point. 
 
-Create the `TopicView` =TestSkinNoteEditTemplate= and save it with the default content:
+Create the `TopicView` `TestSkinNoteEditTemplate` and save it with the default content:
 ```
 %TMPL:INCLUDE{"Applications.WikiTopicEdit"}%
-``` 
+```{{copy}} 
 
 Display the edit screen for the note in the [Sandbox.Note00000](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox.Note00000). Once the screen is displayed, add `&cover=test`{{copy}} to the url. You will notice that in addition to the title, the summary field is available for edit above the text box.
 
@@ -24,7 +24,7 @@ To change the `Summary` field, you can change the following attributes (See: [Sy
 Once the change is saved, edit your note previously created in the Sandbox with `&cover=test`{{copy}} added to the url.
 
 ### Status
-On inspection of the [Applications.WikiTopicEditTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications.WikiTopicEditTemplate) you will have noticed that the rendering of the topic meta data is performed by `RENDERFOREDIT` as defined in the `topicmeta` template definition. The fields to be rendered are listed in the `editfields` template definition. Add the Status to that defininition =%TMPL:DEF{"editfields"}%TopicTitle, Status, Summary%TMPL:END%={{copy}} in the =TestSkinNoteEditTemplate. Save the topic. 
+On inspection of the [Applications.WikiTopicEditTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications.WikiTopicEditTemplate) you will have noticed that the rendering of the topic meta data is performed by `RENDERFOREDIT` as defined in the `topicmeta` template definition. The fields to be rendered are listed in the `editfields` template definition. Add the Status to that defininition `%TMPL:DEF{"editfields"}%TopicTitle, Status, Summary%TMPL:END%`{{copy}} in the =TestSkinNoteEditTemplate. Save the topic. 
 
 Now refresh the edit view of your note in the Sandbox. The `Status` field is displayed between the `Title` and the `Summary` as a dropdown. You can change it by modifying the definition of the Status field on the `NoteForm`. Change the Type from `select+values` to `radio+values`{{copy}}. Save the `NoteForm` and refresh the note in the Sandbox. The `Status` is displayed as an _Open_ and a _Close_ radio button.
 
@@ -70,7 +70,7 @@ The edit template does not include the link to `UserNoteTypeStyle.css`. You need
 %IF{ "$ FOSWIKI_STYLE_URL"  then="<link rel='stylesheet' href='%FOSWIKI_STYLE_URL%' media='all' type='text/css' />"}%
 %IF{ "$ FOSWIKI_COLORS_URL" then="<link rel='stylesheet' href='%FOSWIKI_COLORS_URL%' media='all' type='text/css' />"}%
 %TMPL:P{"styles:custom_skin"}%%IF{ "$ USERLAYOUTURL or $ USERSTYLEURL or $ USERCOLORSURL" then="$percntTMPL:P{$quotstyles:user_defined$quot}$percnt"}%
-<link rel='stylesheet' href='%PUBURLPATH%/Applications/SolNotePadApp/NoteType/UserNoteTypeStyle.css' media='all' type='text/css' />
+<link rel='stylesheet' href='%PUBURLPATH%/Applications/NotePadApp/NoteType/UserNoteTypeStyle.css' media='all' type='text/css' />
 %TMPL:P{"styles:dynamic"}%%TMPL:END%
 ```{{copy}}
 

@@ -17,12 +17,12 @@ To begin you create a new `TopicFunction`: `RenderDeployButton` in the NotePad a
   <input type='submit' />
 </form>
 ```{{copy}}
-Save the topic. Under the _Test_ header you find a text field with the target webname: `Sandbox.Testapp1` and a button: _Submit query_. Click the button and the `Sandbox.Testapp1` web is created. Check the `WebTopicList` to verify the topics created. They are the default Foswiki topics, plus a copy of the `RenderDeployButton`. Try to repeat the button click and you will be told you cannot overwrite existing topics.
+Save the topic. Under the _Test_ header you find a text field with the target webname: `Sandbox.Testapp1` and a button: _Submit query_. Click the button and the `Sandbox.Testapp1` web is created. Check the _Index_ to verify the topics created. They are the default Foswiki topics, plus a copy of the `RenderDeployButton`. Try to repeat the button click and you will be told you cannot overwrite existing topics.
 
 ### The home page
 Next you need to deploy a home page in the new web. The seed for the home page is part of the application. There are several options for the type of the seed topic. Make it a `TopicTemplate` for a `WikiTopic`.  Use the `TopicTemplate` application topic to create a `WikiTopic` in the application with title: `SeedWebHome` and content:
 ```
-%DBCALL{ "Applications/SolNotePadApp.NoteType" 
+%DBCALL{ "Applications/NotePadApp.NoteType" 
              TYPE="NoteType" 
              TEXT="Create a new Note" 
 }%

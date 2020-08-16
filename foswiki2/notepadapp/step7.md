@@ -1,79 +1,41 @@
 <!-- Scenario text goes here -->
 
-You now have a working application, with a home page in the Sandbox web. There are sevaral approaches to creating Note pads for multiple purposes and multiple people:
+There are many presentation and useability changes appropriate to the current for of the application. You can take the following suggestions and try your hand at implementing them. Solutions to these execises are provided in the answers.
 
-1. Using tags - through the [System.TagMePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.TagMePlugin)
-2. Using categories - through the [System.ClassificationPlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.ClassificationPlugin)
-3. Using webs - by creating a web for each personalised Note pad
+#### 1. Refactor the `NoteViewTemplate` and base it on the `NoteWebHomeViewTemplate`
+_Hint_: Use `NoteWebHomeViewTemplate` as the root for `NoteViewTemplate` and remove all common components from `NoteViewTemplate`. 
 
-Each approach has its own merit. In this course we will use the latter. Creating webs does not introduce new concepts and is relatively straight forward. The approach is well supported by the [System.CopyContrib](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.CopyContrib) with `mode="application"`.
+####2. Change the access control to allow all registered users to create and edit notes
+_Hint_: Experiment in a deployed application. When satisfied, update `SeedWebPreferences`
 
-### The Deploy button
-To begin you create a new `TopicFunction`: `RenderDeployButton` in the NotePad application. we start with the basic functionality from the documentation:
-```
-<form action='%SCRIPTURLPATH{"copy"}%/%WEB%/%TOPIC%' method='post'>
-  <input type='hidden' name='mode' value='application' />
-  <input type='text' name='destination' size='80' value='Sandbox/Testapp1' />
-  <input type='submit' />
-</form>
-```{{copy}}
-Save the topic. Under the _Test_ header you find a text field with the target webname: `Sandbox.Testapp1` and a button: _Submit query_. Click the button and the `Sandbox.Testapp1` web is created. Check the `WebTopicList` to verify the topics created. They are the default Foswiki topics, plus a copy of the `RenderDeployButton`. Try to repeat the button click and you will be told you cannot overwrite existing topics.
+#### 3. Add a _Home_ link to the top bar in the VIEW template, so you can navigate back to the home page
+_Hint_: Update the `topbar` DEF template definition. Use the ICON macro.
 
-### The home page
-Next you need to deploy a home page in the new web. The seed for the home page is part of the application. There are several options for the type of the seed topic. Make it a `TopicTemplate` for a `WikiTopic`.  Use the `TopicTemplate` application topic to create a `WikiTopic` in the application with title: `SeedWebHome` and content:
-```
-%DBCALL{ "Applications/SolNotePadApp.NoteType" 
-             TYPE="NoteType" 
-             TEXT="Create a new Note" 
-}%
-```{{copy}}
-Save the topic.
+#### 4. Add a _Preferences_ link, available only to users in the Admin group.
+_Hint_:  Update the `topbar` DEF template definition. Use IF{ "context isadmin" ...}
 
-To add the `SeedWebHome` topic as part of the creation of the new web, you add some parameters to the `copy` operation:
+#### 5. Restrict the COMMENT box to notes with status `Open` or when the user is in the Admin group
+_Hint_: Update the `aftertext` DEF template. Refiew the [System.IfStatements](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.IfStatements) carefully.
 
-* `source - SeedWebHome => WebHome` will copy the seed as the real `WebHome` topic. Note &amp;gt; instead of >.
-    * `&lt;input type='hidden' name='source' value='SeedWebHome =&amp;gt; WebHome' /&gt;`{{copy}}
-* `onlynew - off` to allow repeated deployments to the same web
-    * `&lt;input type='hidden' name='onlynew' value='off' /&gt;`{{copy}}
-* and you can adjust the button text by repacing the `submit` with:
-    * `%BUTTON{"%TRANSLATE{"Deploy"}%" type="submit" icon="fa-check"}%`{{copy}}
+#### 6. Remove the Edit, etc. links for a `Closed` note
+Show "You cannot change the content of a closed note." instead of the `Edit | Attach | Subscribe | = links if the note has status =Closed` unless the user is in the Admin group.
 
-Save the topic and deploy `Sandbox/Testapp1` again. You will find that the WebHome page is now a proper home page for the application. You can update `SeedWebHome` and redeploy to see the updates applied. 
+_Hint_: Create a separate template for `Open` and `Closed` notes. Add `section` the configuration of the !AutoTemplatePlugin to Mode: `rules, section, exist, type`. And  place the logig to select the template in the `NoteForm` See the documentation for [System.AutoTemplatePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.AutoTemplatePlugin), `mode=sction`
 
-### The VIEW template for the home page
-To make the home page specific for the Note pad application, you need toapply a view template. It will be very similar to the Note VIEW template. Copy `TestSkinNoteViewTemplate` to `NoteWebHomeViewTemplate` and make the following changes:
+These modifications are shown in the SolNotePadApp if you want to see an example.
 
-* Remove the `aftertext` definition, returning it to the default empty one
-    * This removes the `COMMENT` box from the VIEW template
 
-To apply the template to the `WebHome` page you can use the `rules` mode of the [System.AutoTemplatePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.AutoTemplatePlugin). Define the `rule` in `WebPreferences` with:
-```
-* Set VIEW_TEMPLATE_RULES =  WebHome => Applications.SolNotePadApp.NoteWebHomeView 
-```{{copy}}
-and save `WebPreferences`. Navigate to `WebHome` and you will see the template applied. To make this setting  part of the application, you create a `SeedWebPreferences` topic with the desired content in the application and add it to the list of topics to be deployed in `RenderDeployButton`.
-* Change: `value='SeedWebHome =&gt; WebHome, SeedWebPreferences =&gt; WebPreferences'`
-* To: `value='SeedWebHome =&gt; WebHome, SeedWebPreferences =&gt; WebPreferences'`{{copy}}
 
-### Automatic application of the VIEW and EDIT template for a note
-So far we have applied the `?cover=test` url parameter to display the note in the defined skin. In the deployed application you want this cover to be applied automatically. This is easy to achieve with the AutoTemplatePlugin. Copy the `TopicView`s 
 
-* from `TestSkinNoteViewTemplate` to `NoteViewTemplate`; and
-* from `TestSkinNoteEditTemplate` to `NoteEditTemplate`.
 
-These templates are now automatically applied to any topic with a `NoteForm` attached.
-
-The next step provides an opportuinity to fine tune the application. This is presented in the form of execises.
 
 
 
 ### Answer
 <!-- Solution text (if any) goes here -->
+#### Exercise 1
+See: `/tmp/answer step7`{{execute}}
 
-To compare you answers execute: `/tmp/answer step6`{{execute}}
-
-The complete template is in [Applications/SolNotePadApp/NoteViewTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/SolNotePadApp/NoteViewTemplate) and [Applications/SolNotePadApp/NoteEditTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/SolNotePadApp/NoteEditTemplate).
-
-Check the answer in the Sandbox by creating a new note.
 
 
 

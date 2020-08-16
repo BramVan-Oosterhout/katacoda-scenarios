@@ -1,5 +1,4 @@
 <!-- Scenario text goes here -->
-## A new VIEW template for the Note cont...
 In the previous step we modified the text content display. In this step we will adjust the display of the container.
 
 The left bar can be removed, but we need to retain the registration and login capability. At the top we can remove Jump (To use it you need to know a topic name) and Search, because we have the grid on the home page. So replacing Jump and Search with the login seems appropriate. The techniques used before don't work here. So you need to read the documentation: [System.PatternSkin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.PatternSkin). 
@@ -19,7 +18,7 @@ So instead of `Set USERSTYLEURL = %PUBURLPATH%/%SYSTEMWEB%/PatternSkinCssCookboo
 ```{{copy}}
 
 Without the left bar, the login links are no longer available. We can add the login links in the top bar by changing the definition of the `topbar (line 5)` template macro in
-`less -N templates/viewtopbar.pattern.tmpl`{{execite}}. The `login` controls are rendered in [System.WebLeftBarLogin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.WebLeftBarLogin) and we can use that code in our `topbar`
+`less -N templates/viewtopbar.pattern.tmpl`{{execute}}. The `login` controls are rendered in [System.WebLeftBarLogin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.WebLeftBarLogin) and we can use that code in our `topbar`
 ```
 %TMPL:DEF{"topbar"}%<div class="patternLeftBarPersonal">
 %IF{
