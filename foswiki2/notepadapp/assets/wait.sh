@@ -27,6 +27,7 @@ docker cp NotePadApp.tgz foswiki:/tmp/.
 docker cp SolNotePadApp.tgz foswiki:/tmp/.
 docker cp SolNotePad.tgz foswiki:/tmp/.
 docker cp answer foswiki:/tmp/.
+docker cp TopicAgent.pm foswiki:/var/www/foswiki/lib/Foswiki/Contrib/CopyContrib/.
 docker exec -it foswiki /bin/bash -c "/tmp/answer notepadapp "
 docker exec -it foswiki /bin/bash -c "sed -i '/server_name/a      add_header \"Access-Control-Allow-Origin\"  *;' /etc/nginx/conf.d/default.conf"
 docker exec -it foswiki /bin/bash -c "/usr/sbin/nginx -s reload"

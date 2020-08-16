@@ -10,6 +10,7 @@ my %step = (
             'step4' => \&step4,
             'step5' => \&step5,
             'step6' => \&step6,
+            'step7' => \&step7,
 ##          'test'  => \&test,
           );
 
@@ -221,7 +222,43 @@ sub step6 {
                      );  
       
     restoreRevision( \%selections );
-    refresh( 'Applications' )
+    refresh( 'Applications/SolNotePadApp' )
+}
+
+##########################################################################
+sub step7 {
+  my ( $cmd, @command);
+  
+    step1() unless -d '/var/www/foswiki/data/Applications/SolNotePadApp';
+    
+      @command = qw(
+      tar
+           --wildcards
+           --same-owner
+           -xvzf /tmp/SolNotePadApp.tgz
+           -C /var/www/foswiki/data/Applications
+              SolNotePadApp/NoteOpenViewTemplate*
+              SolNotePadApp/NoteClosedTemplate*
+
+    );
+    $cmd = join( " ", @command ); `$cmd`;
+    
+    my %selections = (
+                'Applications/SolNotePadApp/NoteType' => 6,
+                'Applications/SolNotePadApp/NoteForm' => 6,
+                'Applications/SolNotePadApp/NoteTemplate' => 2,
+                'Applications/SolNotePadApp/NoteViewTemplate' => 3,
+                'Applications/SolNotePadApp/NoteEditTemplate' => 1,
+                'Applications/SolNotePadApp/NoteWebHomeViewTemplate' => 1,
+                'Applications/SolNotePadApp/RenderDeployButton' => 7,
+                'Applications/SolNotePadApp/SeedWebHome' => 3,
+                'Applications/SolNotePadApp/SeedWebPreferences' => 1,
+                'Applications/SolNotePadApp/TestSkinNoteViewTemplate' => 3,
+                'Applications/SolNotePadApp/TestSkinNoteEditTemplate' => 3
+                     );  
+      
+    restoreRevision( \%selections );
+    refresh( 'Applications/SolNotePadApp' )
 }
 ##########################################################################
 sub test {
