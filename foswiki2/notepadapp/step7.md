@@ -5,7 +5,7 @@ There are many presentation and useability changes appropriate to the current fo
 #### 1. Refactor the `NoteViewTemplate` and base it on the `NoteWebHomeViewTemplate`
 _Hint_: Use `NoteWebHomeViewTemplate` as the root for `NoteViewTemplate` and remove all common components from `NoteViewTemplate`. 
 
-####2. Change the access control to allow all registered users to create and edit notes
+#### 2. Change the access control to allow all registered users to create and edit notes
 _Hint_: Experiment in a deployed application. When satisfied, update `SeedWebPreferences`
 
 #### 3. Add a _Home_ link to the top bar in the VIEW template, so you can navigate back to the home page
@@ -18,9 +18,9 @@ _Hint_:  Update the `topbar` DEF template definition. Use IF{ "context isadmin" 
 _Hint_: Update the `aftertext` DEF template. Refiew the [System.IfStatements](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.IfStatements) carefully.
 
 #### 6. Remove the Edit, etc. links for a `Closed` note
-Show "You cannot change the content of a closed note." instead of the `Edit | Attach | Subscribe | = links if the note has status =Closed` unless the user is in the Admin group.
+Show "You cannot change the content of a closed note." instead of the `Edit | Attach | Subscribe |` links if the note has status `Closed` unless the user is in the Admin group.
 
-_Hint_: Create a separate template for `Open` and `Closed` notes. Add `section` the configuration of the !AutoTemplatePlugin to Mode: `rules, section, exist, type`. And  place the logig to select the template in the `NoteForm` See the documentation for [System.AutoTemplatePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.AutoTemplatePlugin), `mode=sction`
+_Hint_: Create a separate template for `Open` and `Closed` notes. Add `section` the configuration of the AutoTemplatePlugin to Mode: `rules, section, exist, type`. And  place the logic to select the template in the `NoteForm` See the documentation for [System.AutoTemplatePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.AutoTemplatePlugin), `mode=section`
 
 These modifications are shown in the SolNotePadApp if you want to see an example.
 

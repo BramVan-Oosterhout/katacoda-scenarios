@@ -1,5 +1,4 @@
 <!-- Scenario text goes here -->
-## A new VIEW template for the Note
 We are using the regular Foswiki skin (the `pattern` skin). The `pattern` skin displays many options that are marginal and distracting to the functioning of the Note application. In the following steps you will define a skin for the `NoteType` that leaves many of these distractions behind. The principles of this modification were presented in the previous scenario with the `TopicStub`.
 
 Remember that we are now changing the **presentation** of the topic when it is VIEWed. We are dealing with `TopicView` templates, not `TopicTemplates`. `TopicTemplates` contain default topic **content** at the time the topic is created. 

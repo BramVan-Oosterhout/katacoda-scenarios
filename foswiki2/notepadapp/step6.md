@@ -32,9 +32,9 @@ Save the topic.
 To add the `SeedWebHome` topic as part of the creation of the new web, you add some parameters to the `copy` operation:
 
 * `source - SeedWebHome => WebHome` will copy the seed as the real `WebHome` topic. Note &amp;gt; instead of >.
-    * `&lt;input type='hidden' name='source' value='SeedWebHome =&amp;gt; WebHome' /&gt;`{{copy}}
+    * `<input type='hidden' name='source' value='SeedWebHome =&gt; WebHome' />`{{copy}}
 * `onlynew - off` to allow repeated deployments to the same web
-    * `&lt;input type='hidden' name='onlynew' value='off' /&gt;`{{copy}}
+    * `<input type='hidden' name='onlynew' value='off' />`{{copy}}
 * and you can adjust the button text by repacing the `submit` with:
     * `%BUTTON{"%TRANSLATE{"Deploy"}%" type="submit" icon="fa-check"}%`{{copy}}
 
@@ -48,7 +48,7 @@ To make the home page specific for the Note pad application, you need toapply a 
 
 To apply the template to the `WebHome` page you can use the `rules` mode of the [System.AutoTemplatePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System.AutoTemplatePlugin). Define the `rule` in `WebPreferences` with:
 ```
-* Set VIEW_TEMPLATE_RULES =  WebHome => Applications.SolNotePadApp.NoteWebHomeView 
+* Set VIEW_TEMPLATE_RULES =  WebHome => Applications.NotePadApp.NoteWebHomeView 
 ```{{copy}}
 and save `WebPreferences`. Navigate to `WebHome` and you will see the template applied. To make this setting  part of the application, you create a `SeedWebPreferences` topic with the desired content in the application and add it to the list of topics to be deployed in `RenderDeployButton`.
 * Change: `value='SeedWebHome =&gt; WebHome, SeedWebPreferences =&gt; WebPreferences'`

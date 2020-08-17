@@ -26,7 +26,7 @@ Once the change is saved, edit your note previously created in the Sandbox with 
 ### Status
 On inspection of the [Applications.WikiTopicEditTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications.WikiTopicEditTemplate) you will have noticed that the rendering of the topic meta data is performed by `RENDERFOREDIT` as defined in the `topicmeta` template definition. The fields to be rendered are listed in the `editfields` template definition. Add the Status to that defininition `%TMPL:DEF{"editfields"}%TopicTitle, Status, Summary%TMPL:END%`{{copy}} in the =TestSkinNoteEditTemplate. Save the topic. 
 
-Now refresh the edit view of your note in the Sandbox. The `Status` field is displayed between the `Title` and the `Summary` as a dropdown. You can change it by modifying the definition of the Status field on the `NoteForm`. Change the Type from `select+values` to `radio+values`{{copy}}. Save the `NoteForm` and refresh the note in the Sandbox. The `Status` is displayed as an _Open_ and a _Close_ radio button.
+Now refresh the edit view of your note in the Sandbox. The `Status` field is displayed between the `Title` and the `Summary` as a dropdown. You can change it by modifying the definition of the Status field on the `NoteForm`. Change the _Type_ from `select+values` to `radio+values`{{copy}} and add `Open` to the _Default_ collumn. Save the `NoteForm` and refresh the note in the Sandbox. The `Status` is displayed as an _Open_ and a _Close_ radio button.
 
 ### Status - styling
 The `Status` radio buttons are displayed vertically. Screen real estate would be better used if the buttons were displayed next to each other. There is no option on render for edit to change the display. Inspecting the generated html, you will notice that the radio buttons are layed out in a table:
@@ -74,7 +74,7 @@ The edit template does not include the link to `UserNoteTypeStyle.css`. You need
 %TMPL:P{"styles:dynamic"}%%TMPL:END%
 ```{{copy}}
 
-After this addition, your note in the `Sandbox` will show the radio buttons spaced horizontally.
+After this addition, your note in the `Sandbox` will show the radio buttons spaced horizontally. (You may need to refresh your browser screen)
 
 
 
