@@ -1,8 +1,13 @@
 {
     "title": "Sandbox",
-    "description": "Unrelated experiments to practice \nLast update: Mon Aug 17 16:58:11 2020",
+    "description": "Unrelated experiments to practice \nLast update: Mon Sep 21 17:56:01 2020",
     "icon": "fa-katacoda",
     "courses": [
+      {
+        "course_id": "test-html2kcmd",
+        "title": "Html 2 Kcmd",
+        "description": "Translate html to Katacoda markdown"
+      }
       {
         "course_id": "hello-world",
         "title": "Hello world",

@@ -1,0 +1,44 @@
+{
+  "title": "Test Apache Install",
+  "description": "Installation and configuration",
+  "difficulty": "beginner",
+  "time": "20 minutes",
+  "details": {
+    "steps": [{
+      "title": "Step 1 - ...",
+      "text": "step01.md"
+    },{
+      "title": "Step 2 - ...",
+      "text": "step02.md"
+    },{
+      "title": "Step 3 - ...",
+      "text": "step03.md"
+    },{
+      "title": "Step 4 - ...",
+      "text": "step04.md"
+    },{
+      "title": "Step 5 - ",
+      "text": "step05.md"
+    },{
+      "title": "Step 6 - ",
+      "text": "step06.md"
+    ,{
+      "title": "Step 7 - ",
+      "text": "step07.md"
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal-iframe",
+    "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r\nRun your own commands here\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
