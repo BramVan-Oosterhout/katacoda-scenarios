@@ -7,7 +7,25 @@
     "steps": [{
       "title": "Step 1 - ...",
       "text": "step01.md"
-    }],
+    },{
+      "title": "Step 2 - ...",
+      "text": "step02.md"
+    },{
+      "title": "Step 3 - ...",
+      "text": "step03.md"
+    },{
+      "title": "Step 4 - ...",
+      "text": "step04.md"
+    },{
+      "title": "Step 5 - ",
+      "text": "step05.md"
+    },{
+      "title": "Step 6 - ",
+      "text": "step06.md"
+    ,{
+      "title": "Step 7 - ",
+      "text": "step07.md"
+    ],
     "intro": {
       "text": "intro.md",
       "credits": ""
