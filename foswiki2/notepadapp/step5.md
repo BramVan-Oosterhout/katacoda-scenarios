@@ -7,9 +7,9 @@
 
 ```{{copy}}
 
- Display the edit screen for the note in the [Sandbox.Note00000](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST].environments.katacoda.com/Sandbox/Note00000.html). Once the screen is displayed, add `&cover=test`{{copy}} to the url. You will notice that in addition to the title, the summary field is available for edit above the text box.
+ Display the edit screen for the note in the [Sandbox.Note00000](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/Note00000.html). Once the screen is displayed, add `&cover=test`{{copy}} to the url. You will notice that in addition to the title, the summary field is available for edit above the text box.
 
- When you inspect the skin edit template [Applications.WikiTopicEditTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST].environments.katacoda.com/Applications/WikiTopicEditTemplate.html) you will see that the first tab is defined in `firsttab::impl` rendering `topicmeta` and `textarea`. We will leave `textarea` alone. And we will change the rendering of `topicmeta` to include the three fields relevant to the note:
+ When you inspect the skin edit template [Applications.WikiTopicEditTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/WikiTopicEditTemplate.html) you will see that the first tab is defined in `firsttab::impl` rendering `topicmeta` and `textarea`. We will leave `textarea` alone. And we will change the rendering of `topicmeta` to include the three fields relevant to the note:
 
 * Title - Already a data entry field. Use this unchanged
 * Summary - Already a data entry field. Make it 2 lines high
@@ -17,7 +17,7 @@
 
 ### Summary	
 
- To change the `Summary` field, you can change the following attributes (See: [System.DataForm](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST].environments.katacoda.com/System/DataForm.html "Create this topic"):
+ To change the `Summary` field, you can change the following attributes (See: [System.DataForm](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/DataForm.html "Create this topic"):
 
 |Column|From|To|
 |---------|------|----|
@@ -28,7 +28,7 @@
 
 ### Status	
 
- On inspection of the [WikiTopicEditTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST].environments.katacoda.com/Applications/WikiTopicEditTemplate.html) you will have noticed that the rendering of the topic meta data is performed by `RENDERFOREDIT` as defined in the `topicmeta` template definition. The fields to be rendered are listed in the `editfields` template definition. Add the Status to that defininition `%TMPL:DEF{"editfields"}%TopicTitle, Status, Summary%TMPL:END%`{{copy}} in the =TestSkinNoteEditTemplate. Save the topic.
+ On inspection of the [WikiTopicEditTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/WikiTopicEditTemplate.html) you will have noticed that the rendering of the topic meta data is performed by `RENDERFOREDIT` as defined in the `topicmeta` template definition. The fields to be rendered are listed in the `editfields` template definition. Add the Status to that defininition `%TMPL:DEF{"editfields"}%TopicTitle, Status, Summary%TMPL:END%`{{copy}} in the =TestSkinNoteEditTemplate. Save the topic.
 
  Now refresh the edit view of your note in the Sandbox. The `Status` field is displayed between the `Title` and the `Summary` as a dropdown. You can change it by modifying the definition of the Status field on the `NoteForm`. Change the _Type_ from `select+values` to `radio+values={{copy}} and add =Open` to the _Default_ collumn. Save the `NoteForm` and refresh the note in the Sandbox. The `Status` is displayed as an _Open_ and a _Close_ radio button.
 
@@ -63,7 +63,7 @@
 
 ```
 
- You can display the the `Status` table flattened by adding the following to the `UserNoteTypeStyle.css` attached to `NoteType`. Edit the [Applications/NotePad.NoteType](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST].environments.katacoda.com/Applications/NotePad/NoteType.html "Create this topic") to include this to the style sheet:
+ You can display the the `Status` table flattened by adding the following to the `UserNoteTypeStyle.css` attached to `NoteType`. Edit the [Applications/NotePad.NoteType](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/NotePad/NoteType.html "Create this topic") to include this to the style sheet:
 ```
 
 div.natEditTopicInfo table table tr {
@@ -91,7 +91,7 @@ div.natEditTopicInfo table table tr {
 
  To compare you answers execute: `/tmp/answer step5`{{execute}}
 
- The complete template is in [TestSkinNoteEditTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST].environments.katacoda.com/Applications/SolNotePadApp/TestSkinNoteEditTemplate.html).
+ The complete template is in [TestSkinNoteEditTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/SolNotePadApp/TestSkinNoteEditTemplate.html).
 
  Check the answer in the Sandbox by creating a new note.
 

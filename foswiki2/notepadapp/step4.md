@@ -1,8 +1,8 @@
- Using styles and cascading style sheets (css) is a large topic, outside the scope of this tutorial. I will assume you are familiar with the basics and limit this tutorial to a mechanisms Foswiki offers to add styles to a page. You have already seen this in the previous step, where you removed the side bar from view by linking the styles in a stylesheet attached to [PatternSkinCssCookbookNoLeftBar](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST].environments.katacoda.com/System/PatternSkinCssCookbookNoLeftBar.html).
+ Using styles and cascading style sheets (css) is a large topic, outside the scope of this tutorial. I will assume you are familiar with the basics and limit this tutorial to a mechanisms Foswiki offers to add styles to a page. You have already seen this in the previous step, where you removed the side bar from view by linking the styles in a stylesheet attached to [PatternSkinCssCookbookNoLeftBar](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/PatternSkinCssCookbookNoLeftBar.html).
 
- You can use the same technique for user defined styles. First you decide where to attach the style sheet. Since it is associated with the [NoteType](NoteType.html "Create this topic"), it is logical to attach the style sheet there. Maintaining this kind of attachment is well supported by the [AttachContentPlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST].environments.katacoda.com/System/AttachContentPlugin.html). Call the style sheet `UserNoteTypeStyle`
+ You can use the same technique for user defined styles. First you decide where to attach the style sheet. Since it is associated with the [NoteType](NoteType.html "Create this topic"), it is logical to attach the style sheet there. Maintaining this kind of attachment is well supported by the [AttachContentPlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/AttachContentPlugin.html). Call the style sheet `UserNoteTypeStyle`
 
- Let's start with hiding the left bar as a user style. You can copy the content from the [PatternSkinCssCookbookNoLeftBar](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST].environments.katacoda.com/System/PatternSkinCssCookbookNoLeftBar.html). To create the `UserNoteTypeStyle` you add the following code to the bottom of the text area in the [NoteType](NoteType.html "Create this topic") topic:
+ Let's start with hiding the left bar as a user style. You can copy the content from the [PatternSkinCssCookbookNoLeftBar](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/PatternSkinCssCookbookNoLeftBar.html). To create the `UserNoteTypeStyle` you add the following code to the bottom of the text area in the [NoteType](NoteType.html "Create this topic") topic:
 ```
 
 %&lt;nop&gt;STARTATTACH{"UserNoteTypeStyle.css"
@@ -25,7 +25,7 @@
 
 ```{{copy}} Once you have saved the topic, you will see the attachment `UserNoteTypeStyle.css` listed.
 
- To use this style sheet instead of the `hideleftbar.css` attached to [PatternSkinCssCookbookNoLeftBar](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST].environments.katacoda.com/System/PatternSkinCssCookbookNoLeftBar.html) you need to change the link in the `TestSkinNoteViewTemplate` from
+ To use this style sheet instead of the `hideleftbar.css` attached to [PatternSkinCssCookbookNoLeftBar](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/PatternSkinCssCookbookNoLeftBar.html) you need to change the link in the `TestSkinNoteViewTemplate` from
 ```
 
 &lt;link rel='stylesheet' href='%PUBURLPATH%/%SYSTEMWEB%/PatternSkinCssCookbookNoLeftBar/hideleftbar.css' media='all' type='text/css' /&gt;
@@ -60,7 +60,7 @@
 
  To compare you answers execute: `/tmp/answer step4`{{execute}}
 
- The complete template is in [TestSkinNoteViewTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST].environments.katacoda.com/Applications/SolNotePadApp/TestSkinNoteViewTemplate.html).
+ The complete template is in [TestSkinNoteViewTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/SolNotePadApp/TestSkinNoteViewTemplate.html).
 
  Check the answer in the Sandbox by creating a new note.
 

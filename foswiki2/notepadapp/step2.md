@@ -4,8 +4,8 @@
 
  Before you proceed, reread:
 
-* the [SkinTemplates](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST].environments.katacoda.com/System/SkinTemplates.html) topic and pay special attention to the description of the template path.
-* the [AutoTemplatePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST].environments.katacoda.com/System/AutoTemplatePlugin.html) topic and note how the skin template topic name is formed with mode `exist`. Form at the end is removed and Skin and View are added. The skin template topic name for a Note with form [NoteForm](NoteForm.html "Create this topic") and skin &lt;cover&gt; is &lt;cover&gt;SkinNoteViewTemplate.
+* the [SkinTemplates](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/SkinTemplates.html) topic and pay special attention to the description of the template path.
+* the [AutoTemplatePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/AutoTemplatePlugin.html) topic and note how the skin template topic name is formed with mode `exist`. Form at the end is removed and Skin and View are added. The skin template topic name for a Note with form [NoteForm](NoteForm.html "Create this topic") and skin &lt;cover&gt; is &lt;cover&gt;SkinNoteViewTemplate.
 
  While you are developing the skin, it is convenient to use the COVER preference via the `?cover=` url parameter. When something goes wrong, you can get back to the default by not using the the url parameter. Use the cover name `test` and create a new `TopicView`: `TestSkinNoteViewTemplate`
 
@@ -28,7 +28,7 @@
 
 ```{{copy}}
 
- Go to [NotePadHome](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST].environments.katacoda.com/Sandbox/NotePadHome.html) topic, create a new note and save it. Now add `?cover=test` to the url and see the same topic rendered with the `TestSkinNoteViewTemplate`.
+ Go to [NotePadHome](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/NotePadHome.html) topic, create a new note and save it. Now add `?cover=test` to the url and see the same topic rendered with the `TestSkinNoteViewTemplate`.
 
  We want to be able to add comments to the note. But we don't need to edit the COMMENT macro as part of the topic text. We can add it by adding the COMMENT at the bottom of the text:
 ```
@@ -37,7 +37,7 @@
 %COMMENT{ type="above" }%
 %TMPL:END%
 
-```{{copy}} Check it out in the Sandbox. Refresh the Note you displayed previously or create a new one. Now that the COMMENT macro is embedded in the template, you can remove it from the [NoteTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST].environments.katacoda.com/Applications/NotePadApp/NoteTemplate.html) in the application. This change will not affect existing notes. You need to delete the COMMENT from the topic text. New Notes will be fine.
+```{{copy}} Check it out in the Sandbox. Refresh the Note you displayed previously or create a new one. Now that the COMMENT macro is embedded in the template, you can remove it from the [NoteTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/NotePadApp/NoteTemplate.html) in the application. This change will not affect existing notes. You need to delete the COMMENT from the topic text. New Notes will be fine.
 
  Edit, Attach, Subscribe and Print are useful. But we can remove History, Backlinks, wiki text and topic actions. At the top we don't need any distractions.
 
@@ -66,5 +66,5 @@
 
  Check your answer in the Sandbox by creating a new note from the [NotePadHome](NotePadHome.html "Create this topic") topic. The created note will have the default skin applied. Apply `?cover=test` to see the new skin.
 
- For the changes see: [Applications/SolNotePadApp.TestSkinNoteViewTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST].environments.katacoda.com/Applications/SolNotePadApp/TestSkinNoteViewTemplate.html)
+ For the changes see: [Applications/SolNotePadApp.TestSkinNoteViewTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/SolNotePadApp/TestSkinNoteViewTemplate.html)
 
