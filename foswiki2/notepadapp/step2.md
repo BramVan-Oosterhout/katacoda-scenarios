@@ -5,13 +5,13 @@
  Before you proceed, reread:
 
 * the [SkinTemplates](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/SkinTemplates) topic and pay special attention to the description of the template path.
-* the [AutoTemplatePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/AutoTemplatePlugin) topic and note how the skin template topic name is formed with mode `exist`. Form at the end is removed and Skin and View are added. The skin template topic name for a Note with form [NoteForm](/devwiki/bin/edit/KatacodaCourses/Foswiki2/NotePadApp/NoteForm?topicparent=KatacodaCourses/Foswiki2/NotePadApp.ScenarioStep02 "Create this topic") and skin &lt;cover&gt; is &lt;cover&gt;SkinNoteViewTemplate.
+* the [AutoTemplatePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/AutoTemplatePlugin) topic and note how the skin template topic name is formed with mode `exist`. Form at the end is removed and Skin and View are added. The skin template topic name for a Note with form `NoteForm` and skin &lt;cover&gt; is &lt;cover&gt;SkinNoteViewTemplate.
 
  While you are developing the skin, it is convenient to use the COVER preference via the `?cover=` url parameter. When something goes wrong, you can get back to the default by not using the the url parameter. Use the cover name `test` and create a new `TopicView`: `TestSkinNoteViewTemplate`
 
  Start with
 
-* the removal of the form display box at the bottom of the page (INCLUDE: [WikiTopicView](/devwiki/bin/edit/KatacodaCourses/Foswiki2/NotePadApp/WikiTopicView?topicparent=KatacodaCourses/Foswiki2/NotePadApp.ScenarioStep02 "Create this topic"))
+* the removal of the form display box at the bottom of the page (INCLUDE: `WikiTopicView`)
 * the display of the title at the head of the topic (DEF: beforetext )
 * the display of the summary underneath that (DEF: beforetext )
 * the removal of the version information (DEF: beforetext )
@@ -64,7 +64,7 @@
 
  See the answer in Sandbox/SolNotePadApp. Create a note and apply `?cover=test`.
 
- Check your answer in the Sandbox by creating a new note from the [NotePadHome](/devwiki/bin/edit/KatacodaCourses/Foswiki2/NotePadApp/NotePadHome?topicparent=KatacodaCourses/Foswiki2/NotePadApp.ScenarioStep02 "Create this topic") topic. The created note will have the default skin applied. Apply `?cover=test` to see the new skin.
+ Check your answer in the Sandbox by creating a new note from the `NotePadHome` topic. The created note will have the default skin applied. Apply `?cover=test` to see the new skin.
 
  For the changes see: [Applications/SolNotePadApp.TestSkinNoteViewTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/SolNotePadApp/TestSkinNoteViewTemplate)
 

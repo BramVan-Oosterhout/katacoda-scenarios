@@ -17,7 +17,7 @@
 
 ### Summary	
 
- To change the `Summary` field, you can change the following attributes (See: [System.DataForm](/devwiki/bin/edit/System/DataForm?topicparent=KatacodaCourses/Foswiki2/NotePadApp.ScenarioStep05 "Create this topic"):
+ To change the `Summary` field, you can change the following attributes (See: [System.DataForms](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/DataForms):
 
 |Column|From|To|
 |---------|------|----|
@@ -30,7 +30,7 @@
 
  On inspection of the [WikiTopicEditTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/WikiTopicEditTemplate) you will have noticed that the rendering of the topic meta data is performed by `RENDERFOREDIT` as defined in the `topicmeta` template definition. The fields to be rendered are listed in the `editfields` template definition. Add the Status to that defininition `%TMPL:DEF{"editfields"}%TopicTitle, Status, Summary%TMPL:END%`{{copy}} in the =TestSkinNoteEditTemplate. Save the topic.
 
- Now refresh the edit view of your note in the Sandbox. The `Status` field is displayed between the `Title` and the `Summary` as a dropdown. You can change it by modifying the definition of the Status field on the `NoteForm`. Change the _Type_ from `select+values` to `radio+values={{copy}} and add =Open` to the _Default_ collumn. Save the `NoteForm` and refresh the note in the Sandbox. The `Status` is displayed as an _Open_ and a _Close_ radio button.
+ Now refresh the edit view of your note in the Sandbox. The `Status` field is displayed between the `Title` and the `Summary` as a dropdown. You can change it by modifying the definition of the Status field on the `NoteForm`. Change the _Type_ from `select+values` to `radio+values`{{copy}} and add `Open` to the _Default_ collumn. Save the `NoteForm` and refresh the note in the Sandbox. The `Status` is displayed as an _Open_ and a _Close_ radio button.
 
 ### Status - styling	
 
@@ -63,7 +63,7 @@
 
 ```
 
- You can display the the `Status` table flattened by adding the following to the `UserNoteTypeStyle.css` attached to `NoteType`. Edit the [Applications/NotePad.NoteType](/devwiki/bin/edit/Applications/NotePad/NoteType?topicparent=KatacodaCourses/Foswiki2/NotePadApp.ScenarioStep05 "Create this topic") to include this to the style sheet:
+ You can display the the `Status` table flattened by adding the following to the `UserNoteTypeStyle.css` attached to `NoteType`. Edit the [Applications/NotePadApp.NoteType](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/NotePadApp/NoteType) to include this to the style sheet:
 ```
 
 div.natEditTopicInfo table table tr {

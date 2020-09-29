@@ -1,7 +1,7 @@
  You now have a working application, with a home page in the Sandbox web. There are sevaral approaches to creating Note pads for multiple purposes and multiple people:
 
-  1. Using tags - through the [System.TagMePlugin](/devwiki/bin/edit/System/TagMePlugin?topicparent=KatacodaCourses/Foswiki2/NotePadApp.ScenarioStep06 "Create this topic")
-  1. Using categories - through the [System.ClassificationPlugin](/devwiki/bin/edit/System/ClassificationPlugin?topicparent=KatacodaCourses/Foswiki2/NotePadApp.ScenarioStep06 "Create this topic")
+  1. Using tags - through the [System.TagMePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/TagMePlugin?topicparent=KatacodaCourses/Foswiki2/NotePadApp.ScenarioStep06 "Create this topic")
+  1. Using categories - through the [System.ClassificationPlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/ClassificationPlugin?topicparent=KatacodaCourses/Foswiki2/NotePadApp.ScenarioStep06 "Create this topic")
   1. Using webs - by creating a web for each personalised Note pad
 
  Each approach has its own merit. In this course we will use the latter. Creating webs does not introduce new concepts and is relatively straight forward. The approach is well supported by the [System.CopyContrib](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/CopyContrib) with `mode="application"`.
