@@ -1,10 +1,10 @@
  You now have a working application, with a home page in the Sandbox web. There are sevaral approaches to creating Note pads for multiple purposes and multiple people:
 
-  1. Using tags - through the [System.TagMePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/TagMePlugin.html "Create this topic")
-  1. Using categories - through the [System.ClassificationPlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/ClassificationPlugin.html "Create this topic")
+  1. Using tags - through the [System.TagMePlugin](/devwiki/bin/edit/System/TagMePlugin?topicparent=KatacodaCourses/Foswiki2/NotePadApp.ScenarioStep06 "Create this topic")
+  1. Using categories - through the [System.ClassificationPlugin](/devwiki/bin/edit/System/ClassificationPlugin?topicparent=KatacodaCourses/Foswiki2/NotePadApp.ScenarioStep06 "Create this topic")
   1. Using webs - by creating a web for each personalised Note pad
 
- Each approach has its own merit. In this course we will use the latter. Creating webs does not introduce new concepts and is relatively straight forward. The approach is well supported by the [System.CopyContrib](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/CopyContrib.html) with `mode="application"`.
+ Each approach has its own merit. In this course we will use the latter. Creating webs does not introduce new concepts and is relatively straight forward. The approach is well supported by the [System.CopyContrib](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/CopyContrib) with `mode="application"`.
 
 ### The Deploy button	
 
@@ -55,7 +55,7 @@
 
     * This removes the `COMMENT` box from the VIEW template
 
- To apply the template to the `WebHome` page you can use the `rules` mode of the [System.AutoTemplatePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/AutoTemplatePlugin.html). Define the `rule` in `WebPreferences` with:
+ To apply the template to the `WebHome` page you can use the `rules` mode of the [System.AutoTemplatePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/AutoTemplatePlugin). Define the `rule` in `WebPreferences` with:
 ```
 
    * Set VIEW_TEMPLATE_RULES =  WebHome =&gt; Applications.NotePadApp.NoteWebHomeView
@@ -80,7 +80,7 @@
 
  To compare you answers execute: `/tmp/answer step6`{{execute}}
 
- The complete template is in [Applications/SolNotePadApp/NoteViewTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/SolNotePadApp/NoteViewTemplate.html) and [Applications/SolNotePadApp/NoteEditTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/SolNotePadApp/NoteEditTemplate.html).
+ The complete template is in [Applications/SolNotePadApp/NoteViewTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/SolNotePadApp/NoteViewTemplate) and [Applications/SolNotePadApp/NoteEditTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/SolNotePadApp/NoteEditTemplate).
 
  Check the answer in the Sandbox by creating a new note.
 

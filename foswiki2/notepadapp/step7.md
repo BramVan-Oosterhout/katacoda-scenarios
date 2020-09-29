@@ -18,13 +18,13 @@ _Hint_: Update the `topbar` DEF template definition. Use IF\{ "context isadmin" 
 
 #### 5. Restrict the COMMENT box to notes with status `Open` or when the user is in the Admin group	
 
-_Hint_: Update the `aftertext` DEF template. Refiew the [System.IfStatements](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/IfStatements.html) carefully.
+_Hint_: Update the `aftertext` DEF template. Refiew the [System.IfStatements](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/IfStatements) carefully.
 
 #### 6. Remove the Edit, etc. links for a `Closed` note	
 
  Show "You cannot change the content of a closed note." instead of the `Edit | Attach | Subscribe |` links if the note has status `Closed` unless the user is in the Admin group.
 
-_Hint_: Create a separate template for `Open` and `Closed` notes. Add `section` the configuration of the AutoTemplatePlugin to Mode: `rules, section, exist, type`. And place the logic to select the template in the `NoteForm` See the documentation for [AutoTemplatePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/AutoTemplatePlugin.html), `mode=section`
+_Hint_: Create a separate template for `Open` and `Closed` notes. Add `section` the configuration of the AutoTemplatePlugin to Mode: `rules, section, exist, type`. And place the logic to select the template in the `NoteForm` See the documentation for [AutoTemplatePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/AutoTemplatePlugin), `mode=section`
 
  These modifications are shown in the SolNotePadApp if you want to see an example.
 
