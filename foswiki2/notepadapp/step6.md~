@@ -11,8 +11,8 @@
  To begin you create a new `TopicFunction`: `RenderDeployButton` in the NotePad application. we start with the basic functionality from the documentation:
 ```
 
-<form action='%SCRIPTURLPATH{"copy"}%/%WEB%/%TOPIC%' method='post'>
-  <input type='hidden' name='mode' value='application' />
+&lt;form action='%SCRIPTURLPATH{"copy"}%/%WEB%/%TOPIC%' method='post'&gt;
+  &lt;input type='hidden' name='mode' value='application' /&gt;
   &lt;input type='text' name='destination' size='80' value='Sandbox/Testapp1' /&gt;
   &lt;input type='submit' /&gt;
 &lt;/form&gt;
