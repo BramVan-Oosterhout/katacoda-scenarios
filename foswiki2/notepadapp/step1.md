@@ -1,3 +1,23 @@
+### Escaping less than:	
+
+```
+
+1 &amp;lt;
+
+2 &amp;amp;lt;
+
+3 &amp;amp;amp;lt;
+
+4 &amp;amp;amp;amp;lt;
+
+5 &amp;amp;amp;amp;amp;lt;
+
+6 &amp;amp;amp;amp;amp;amp;lt;
+
+```{{copy}}
+
+----
+
  Foswiki supports an automatic incrementing number to create unique topic names on `edit` and `save`. This is documented in the [CommandAndCGIScripts](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/CommandAndCGIScripts) documentation.
 
  The wiki workbench topic creator supports this mechanism through the `TopicNameTemplate` field on the data form. To use it, we need to define two fields on the form associated with the data form (`NoteForm`).
