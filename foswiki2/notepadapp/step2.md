@@ -21,7 +21,7 @@
 
 %TMPL:INCLUDE{"Applications.WikiTopicView"}%
 %TMPL:DEF{"beforetext"}%
-&lt;nop&gt;---+ %FORMFIELD{ "TopicTitle" }% &lt;span style="font-size: small"&gt;(test skin note view template)&lt;/span&gt;
+<nop>---+ %FORMFIELD{ "TopicTitle" }% <span style="font-size: small">(test skin note view template)</span>
 
 %FORMFIELD{ "Summary" }%
 %TMPL:END%

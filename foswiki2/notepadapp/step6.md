@@ -13,9 +13,9 @@
 
 <form action='%SCRIPTURLPATH{"copy"}%/%WEB%/%TOPIC%' method='post'>
   <input type='hidden' name='mode' value='application' />
-  &lt;input type='text' name='destination' size='80' value='Sandbox/Testapp1' /&gt;
-  &lt;input type='submit' /&gt;
-&lt;/form&gt;
+  <input type='text' name='destination' size='80' value='Sandbox/Testapp1' />
+  <input type='submit' />
+</form>
 
 ```{{copy}} Save the topic. Under the _Test_ header you find a text field with the target webname: `Sandbox.Testapp1` and a button: _Submit query_. Click the button and the `Sandbox.Testapp1` web is created. Check the _Index_ to verify the topics created. They are the default Foswiki topics, plus a copy of the `RenderDeployButton`. Try to repeat the button click and you will be told you cannot overwrite existing topics.
 
@@ -33,13 +33,13 @@
 
  To add the `SeedWebHome` topic as part of the creation of the new web, you add some parameters to the `copy` operation:
 
-  * `source - SeedWebHome `> WebHome` will copy the seed as the real =WebHome` topic. Note &amp;gt; instead of &gt;.
+  * `source - SeedWebHome <code>&gt; WebHome` will copy the seed as the real =WebHome topic. Note &amp;gt; instead of &gt;.
 
-    * ``{{copy}}
+    * `<input type='hidden' name='source' value='SeedWebHome =&gt; WebHome' />`{{copy}}
 
   * `onlynew - off` to allow repeated deployments to the same web
 
-    * ``{{copy}}
+    * `<input type='hidden' name='onlynew' value='off' />`{{copy}}
 
   * and you can adjust the button text by repacing the `submit` with:
 
@@ -58,12 +58,12 @@
  To apply the template to the `WebHome` page you can use the `rules` mode of the [System.AutoTemplatePlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/AutoTemplatePlugin). Define the `rule` in `WebPreferences` with:
 ```
 
-   * Set VIEW_TEMPLATE_RULES =  WebHome =&gt; Applications.NotePadApp.NoteWebHomeView
+   * Set VIEW_TEMPLATE_RULES =  WebHome => Applications.NotePadApp.NoteWebHomeView
 
 ```{{copy}} and save `WebPreferences`. Navigate to `WebHome` and you will see the template applied. To make this setting part of the application, you create a `SeedWebPreferences` topic with the desired content in the application and add it to the list of topics to be deployed in `RenderDeployButton`.
 
-  * Change: `value='SeedWebHome => WebHome, SeedWebPreferences => WebPreferences'`
-  * To: `value='SeedWebHome => WebHome, SeedWebPreferences => WebPreferences'`{{copy}}
+  * Change: `value='SeedWebHome =&gt; WebHome, SeedWebPreferences =&gt; WebPreferences'`
+  * To: `value='SeedWebHome =&gt; WebHome, SeedWebPreferences =&gt; WebPreferences'`{{copy}}
 
 ### Automatic application of the VIEW and EDIT template for a note	
 

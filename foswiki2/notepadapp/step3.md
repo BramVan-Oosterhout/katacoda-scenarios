@@ -7,11 +7,11 @@
  The left bar can be removed by clearing the definition of `sidebar`. But that leaves side effects due to the styling. The documentation [PatternSkinCustomization](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/PatternSkinCustomization#I_want_to_hide_the_side_bar) recommends to use a different style through setting the USERSTYLEURL. But that would affect all topics, not just the Notes. `grep -l "USERSTYLEURL" templates/*`{{execute}} shows USERSTYLEURL is used in `css.pattern.tmpl` (See: `less -N templates/css.pattern.tmpl `{{execute}}) and rendered in `styles:user_defined (line 25)`. `styles:user_defined` is rendered conditionally in `styles:screen (line 5)`. To remove the side bar you can add the `hideleftbar.css` style sheet in `styles:screen`. So instead of `Set USERSTYLEURL = %PUBURLPATH%/%SYSTEMWEB%/PatternSkinCssCookbookNoLeftBar/hideleftbar.css` we use:
 ```
 
-%TMPL:DEF{"styles:screen"}%%IF{ "$ FOSWIKI_LAYOUT_URL" then="&lt;link rel='stylesheet' href='%FOSWIKI_LAYOUT_URL%' media='all' type='text/css' /&gt;"}%
-%IF{ "$ FOSWIKI_STYLE_URL"  then="&lt;link rel='stylesheet' href='%FOSWIKI_STYLE_URL%' media='all' type='text/css' /&gt;"}%
-%IF{ "$ FOSWIKI_COLORS_URL" then="&lt;link rel='stylesheet' href='%FOSWIKI_COLORS_URL%' media='all' type='text/css' /&gt;"}%
+%TMPL:DEF{"styles:screen"}%%IF{ "$ FOSWIKI_LAYOUT_URL" then="<link rel='stylesheet' href='%FOSWIKI_LAYOUT_URL%' media='all' type='text/css' />"}%
+%IF{ "$ FOSWIKI_STYLE_URL"  then="<link rel='stylesheet' href='%FOSWIKI_STYLE_URL%' media='all' type='text/css' />"}%
+%IF{ "$ FOSWIKI_COLORS_URL" then="<link rel='stylesheet' href='%FOSWIKI_COLORS_URL%' media='all' type='text/css' />"}%
 %TMPL:P{"styles:custom_skin"}%%IF{ "$ USERLAYOUTURL or $ USERSTYLEURL or $ USERCOLORSURL" then="$percntTMPL:P{$quotstyles:user_defined$quot}$percnt"}%
-&lt;link rel='stylesheet' href='%PUBURLPATH%/%SYSTEMWEB%/PatternSkinCssCookbookNoLeftBar/hideleftbar.css' media='all' type='text/css' /&gt;
+<link rel='stylesheet' href='%PUBURLPATH%/%SYSTEMWEB%/PatternSkinCssCookbookNoLeftBar/hideleftbar.css' media='all' type='text/css' />
 %TMPL:P{"styles:dynamic"}%%TMPL:END%
 
 ```{{copy}}
@@ -19,14 +19,14 @@
  Without the left bar, the login links are no longer available. We can add the login links in the top bar by changing the definition of the `topbar (line 5)` template macro in `less -N templates/viewtopbar.pattern.tmpl`{{execute}}. The `login` controls are rendered in [WebLeftBarLogin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/WebLeftBarLogin) and we can use that code in our `topbar`
 ```
 
-%TMPL:DEF{"topbar"}%&lt;div class="patternLeftBarPersonal"&gt;
+%TMPL:DEF{"topbar"}%<div class="patternLeftBarPersonal">
 %IF{
   "context authenticated"
-  then="%JQICON{"%IF{"context isadmin" then="user_red" else="user"}%"}%%MAKETEXT{"Hi, [_1]" args="&lt;span class='foswikiUserName'&gt;[&lt;nop&gt;[%WIKIUSERNAME%][%SPACEOUT{%WIKINAME%}%]]&lt;/span&gt;"}%"
+  then="%JQICON{"%IF{"context isadmin" then="user_red" else="user"}%"}%%MAKETEXT{"Hi, [_1]" args="<span class='foswikiUserName'>[<nop>[%WIKIUSERNAME%][%SPACEOUT{%WIKINAME%}%]]</span>"}%"
 }%%IF{
   "$ LOGOUT != ''"
   then="%JQICON{"lock"}%$percntLOGOUT$percnt"
-  else="%IF{"{AdminUserWikiName}='%WIKINAME%'" then="%JQICON{"lock"}%[&lt;nop&gt;[%SCRIPTURLPATH{"view"}%/%BASEWEB%/%BASETOPIC%?logout=1][Logout]]"}%"
+  else="%IF{"{AdminUserWikiName}='%WIKINAME%'" then="%JQICON{"lock"}%[<nop>[%SCRIPTURLPATH{"view"}%/%BASEWEB%/%BASETOPIC%?logout=1][Logout]]"}%"
 }%%IF{
   "$ LOGIN != '' and not context authenticated"
   then="%JQICON{"key"}%$percntLOGIN$percnt %IF{
@@ -34,7 +34,7 @@
       then="%JQICON{"add"}%[[%SYSTEMWEB%.UserRegistration][%MAKETEXT{"Register"}%]]"
     }%"
 }%
-&lt;/div&gt;%TMPL:END%
+</div>%TMPL:END%
 
 ```{{copy}}
 

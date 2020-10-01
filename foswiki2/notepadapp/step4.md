@@ -5,7 +5,7 @@
  Let's start with hiding the left bar as a user style. You can copy the content from the [PatternSkinCssCookbookNoLeftBar](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/PatternSkinCssCookbookNoLeftBar). To create the `UserNoteTypeStyle` you add the following code to the bottom of the text area in the `NoteType` topic:
 ```
 
-%&lt;nop&gt;STARTATTACH{"UserNoteTypeStyle.css"
+%STARTATTACH{"UserNoteTypeStyle.css"
              comment="Stylesheet for the Notes in the NotePadApp."
              hidecontent="on"
 }%
@@ -21,21 +21,21 @@
  padding-left:2em; /*S6*/
 }
 /* end copy */
-%&lt;nop&gt;ENDATTACH%
+%ENDATTACH%
 
 ```{{copy}} Once you have saved the topic, you will see the attachment `UserNoteTypeStyle.css` listed.
 
  To use this style sheet instead of the `hideleftbar.css` attached to [PatternSkinCssCookbookNoLeftBar](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/PatternSkinCssCookbookNoLeftBar) you need to change the link in the `TestSkinNoteViewTemplate` from
 ```
 
-&lt;link rel='stylesheet' href='%PUBURLPATH%/%SYSTEMWEB%/PatternSkinCssCookbookNoLeftBar/hideleftbar.css' media='all' type='text/css' /&gt;
+<link rel='stylesheet' href='%PUBURLPATH%/%SYSTEMWEB%/PatternSkinCssCookbookNoLeftBar/hideleftbar.css' media='all' type='text/css' />
 
 ```
 
  to the link below. Note that you cannot use %WEB% for `Applications/NotePadApp`, because the skin template variables are expanded in the context of the rendered topic. This is not an INCLUDE.
 ```
 
-&lt;link rel='stylesheet' href='%PUBURLPATH%/Applications/NotePadApp/NoteType/UserNoteTypeStyle.css' media='all' type='text/css' /&gt;
+<link rel='stylesheet' href='%PUBURLPATH%/Applications/NotePadApp/NoteType/UserNoteTypeStyle.css' media='all' type='text/css' />
 
 ```{{copy}}
 
