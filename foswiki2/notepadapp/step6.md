@@ -33,13 +33,13 @@
 
  To add the `SeedWebHome` topic as part of the creation of the new web, you add some parameters to the `copy` operation:
 
-  * `source - SeedWebHome <code>&gt; WebHome` will copy the seed as the real =WebHome topic. Note &amp;gt; instead of &gt;.
+  * `source - SeedWebHome &#61;&gt; WebHome` will copy the seed as the real `WebHome` topic. Note &amp;gt; instead of &gt;.
 
-    * `<input type='hidden' name='source' value='SeedWebHome =&gt; WebHome' />`{{copy}}
+    * `&lt;input type='hidden' name='source' value='SeedWebHome =&gt; WebHome' /&gt;`{{copy}}
 
   * `onlynew - off` to allow repeated deployments to the same web
 
-    * `<input type='hidden' name='onlynew' value='off' />`{{copy}}
+    * `&lt;input type='hidden' name='onlynew' value='off' /&gt;`{{copy}}
 
   * and you can adjust the button text by repacing the `submit` with:
 

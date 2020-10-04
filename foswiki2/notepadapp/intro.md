@@ -6,7 +6,7 @@
 * Create a VIEW template for the Note
 * Create an EDIT template for the Note
 * Create a button to deploy the application to a web
-* Create a Home page for the `NotePadApp`
+* Create a Home page for the `NotePadApp` application
 * Have some exercises to put the icing on the cake
 
  At the end of this scenario you will have a complete application for your own use!
