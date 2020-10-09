@@ -1,4 +1,4 @@
- Foswiki supports an automatic incrementing number to create unique topic names on `edit` and `save`. This is documented in the [CommandAndCGIScripts](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/CommandAndCGIScripts) documentation.
+ Foswiki supports an automatic incrementing number to create unique topic names on `edit` and `save`. This is documented in the [CommandAndCGIScripts](http://cdlhttps://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/CommandAndCGIScripts) documentation.
 
  The wiki workbench topic creator supports this mechanism through the `TopicNameTemplate` field on the data form. To use it, we need to define two fields on the form associated with the data form (`NoteForm`).
 
@@ -10,14 +10,14 @@
 
 ```{{copy}}
 
- If all goes well, you can see the fields added to the meta data of the `NoteForm`: `less data/Applications/NotePadApp/NoteForm.txt`{{execute}}. The fields are not listed in the `DataForm` box, because they are not defined in the form definition table for the `DataForm` in [Applications.DataForm](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/DataForm)
+ If all goes well, you can see the fields added to the meta data of the `NoteForm`: `less data/Applications/NotePadApp/NoteForm.txt`{{execute}}. The fields are not listed in the `DataForm` box, because they are not defined in the form definition table for the `DataForm` in [Applications.DataForm](http://cdlhttps://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/DataForm)
 
  To see the result, create a topic `NotePadHome` in the Sandbox and include the `NotePadApp.NoteWebHome`
 ```
 %DBCALL{ "Applications/NotePadApp.NoteWebHome" TYPE="NoteType" }%
 ```{{copy}}
 
- Now you can use [NotePadHome](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/NotePadHome) to create notes in the Sandbox with the topic name of `NoteNNNNN`, where `NNNNN` is a number starting at `00000`.
+ Now you can use [NotePadHome](http://cdlhttps://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Sandbox/NotePadHome) to create notes in the Sandbox with the topic name of `NoteNNNNN`, where `NNNNN` is a number starting at `00000`.
 
  Whilst we are here, we can improve the Home page a little by defining the `TEXT` parameter in the `NoteType` application topic. Change it to: `TEXT="Create a new Note"`{{copy}}
 

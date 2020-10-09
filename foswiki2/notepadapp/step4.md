@@ -1,8 +1,8 @@
- Using styles and cascading style sheets (css) is a large topic, outside the scope of this tutorial. I will assume you are familiar with the basics and limit this tutorial to a mechanisms Foswiki offers to add styles to a page. You have already seen this in the previous step, where you removed the side bar from view by linking the styles in a stylesheet attached to [PatternSkinCssCookbookNoLeftBar](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/PatternSkinCssCookbookNoLeftBar).
+ Using styles and cascading style sheets (css) is a large topic, outside the scope of this tutorial. I will assume you are familiar with the basics and limit this tutorial to a mechanisms Foswiki offers to add styles to a page. You have already seen this in the previous step, where you removed the side bar from view by linking the styles in a stylesheet attached to [PatternSkinCssCookbookNoLeftBar](http://cdlhttps://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/PatternSkinCssCookbookNoLeftBar).
 
- You can use the same technique for user defined styles. First you decide where to attach the style sheet. Since it is associated with the `NoteType`, it is logical to attach the style sheet there. Maintaining this kind of attachment is well supported by the [AttachContentPlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/AttachContentPlugin). Call the style sheet `UserNoteTypeStyle`
+ You can use the same technique for user defined styles. First you decide where to attach the style sheet. Since it is associated with the `NoteType`, it is logical to attach the style sheet there. Maintaining this kind of attachment is well supported by the [AttachContentPlugin](http://cdlhttps://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/AttachContentPlugin). Call the style sheet `UserNoteTypeStyle`
 
- Let's start with hiding the left bar as a user style. You can copy the content from the [PatternSkinCssCookbookNoLeftBar](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/PatternSkinCssCookbookNoLeftBar). To create the `UserNoteTypeStyle` you add the following code to the bottom of the text area in the `NoteType` topic:
+ Let's start with hiding the left bar as a user style. You can copy the content from the [PatternSkinCssCookbookNoLeftBar](http://cdlhttps://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/PatternSkinCssCookbookNoLeftBar). To create the `UserNoteTypeStyle` you add the following code to the bottom of the text area in the `NoteType` topic:
 ```
 
 %STARTATTACH{"UserNoteTypeStyle.css"
@@ -25,7 +25,7 @@
 
 ```{{copy}} Once you have saved the topic, you will see the attachment `UserNoteTypeStyle.css` listed.
 
- To use this style sheet instead of the `hideleftbar.css` attached to [PatternSkinCssCookbookNoLeftBar](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/PatternSkinCssCookbookNoLeftBar) you need to change the link in the `TestSkinNoteViewTemplate` from
+ To use this style sheet instead of the `hideleftbar.css` attached to [PatternSkinCssCookbookNoLeftBar](http://cdlhttps://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/PatternSkinCssCookbookNoLeftBar) you need to change the link in the `TestSkinNoteViewTemplate` from
 ```
 
 <link rel='stylesheet' href='%PUBURLPATH%/%SYSTEMWEB%/PatternSkinCssCookbookNoLeftBar/hideleftbar.css' media='all' type='text/css' />
@@ -62,7 +62,7 @@
 
  To compare you answers execute: `/tmp/answer step4`{{execute}}
 
- The complete template is in [TestSkinNoteViewTemplate](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/SolNotePadApp/TestSkinNoteViewTemplate).
+ The complete template is in [TestSkinNoteViewTemplate](http://cdlhttps://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/Applications/SolNotePadApp/TestSkinNoteViewTemplate).
 
  Check the answer in the Sandbox by creating a new note.
 
