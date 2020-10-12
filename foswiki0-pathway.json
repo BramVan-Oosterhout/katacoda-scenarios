@@ -1,0 +1,17 @@
+{
+    "title": "Foswiki - Part 1",
+    "description": "An introduction. Webs, Macros, Meta data, Templates and Extensions.",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "course_id": "testFoswiki",
+        "title": "Installation",
+        "description": "Installing and configuring Foswiki under Apache."
+      },
+      {
+        "course_id": "dockerFoswiki",
+        "title": "Creating a Docker image for Katacoda/Apache/Foswiki",
+        "description": "Creating a configured image for Katacoda"
+      }
+     ]
+  }

@@ -1,0 +1,38 @@
+{
+  "title": "Docker Kc-Alpine-Foswiki ",
+  "description": "Building a Docker file to run foswiki under Apache in the Katacoda environment",
+  "difficulty": "beginner",
+  "time": "20 minutes",
+  "details": {
+   "assets": {
+      "host01": [
+
+              ]
+    },
+    "steps": [
+   {
+      "answer" : "step1-answer.md",
+      "title" : "Create an environment",
+      "text" : "step1.md"
+   }
+]
+,
+    "intro": {
+      "text": "intro.md",
+      "credits": "Bram van Oosterhout for the scenario"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r\nRun your own commands here\u001b[m\r\n",
+    "showdashboard": "1",
+    "dashboards": [ {"name": "Foswiki", "port": "80", "host": "host01"} ]
+
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

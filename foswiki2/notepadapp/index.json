@@ -14,27 +14,72 @@
                  { "file": "TopicAgent.pm", "target": "~/" }
               ]
     },
+    "steps": [
+   {
+      "text" : "step1.md",
+      "title" : "Create unique topic names for notes",
+      "answer" : "step1-answer.md"
+   },
+   {
+      "answer" : "step2-answer.md",
+      "text" : "step2.md",
+      "title" : "A VIEW template for the Note"
+   },
+   {
+      "text" : "step3.md",
+      "title" : "A VIEW template for the Note - cont...",
+      "answer" : "step3-answer.md"
+   },
+   {
+      "text" : "step4.md",
+      "title" : " A VIEW template for the Note - styles",
+      "answer" : "step4-answer.md"
+   },
+   {
+      "title" : "An EDIT template for the Note",
+      "text" : "step5.md",
+      "answer" : "step5-answer.md"
+   },
+   {
+      "answer" : "step6-answer.md",
+      "title" : "Develop a Deploy button and a Home page",
+      "text" : "step6.md"
+   },
+   {
+      "title" : "Exercises to refine the working of the application",
+      "text" : "step7.md",
+      "answer" : "step7-answer.md"
+   }
+]
+,
     "steps": [{
       "title": "Creating unique topic names",
-      "text": "step1.md"
+      "text": "step1.md",
+      "answer": "step1-answer.md"
     },{
       "title": "Creating a VIEW template",
-      "text": "step2.md"
+      "text": "step2.md",
+      "answer": "step2-answer.md"
     },{
       "title": "VIEW template - cont...",
-      "text": "step3.md"
+      "text": "step3.md",
+      "answer": "step3-answer.md"
     },{
       "title": "VIEW template - styles",
-      "text": "step4.md"
+      "text": "step4.md",
+      "answer": "step4-answer.md"
     },{
       "title": "Creating an EDIT template",
-      "text": "step5.md"
+      "text": "step5.md",
+      "answer": "step5-answer.md"
     },{
       "title": "Deployment and Home page",
-      "text": "step6.md"
+      "text": "step6.md",
+      "answer": "step6-answer.md"
     },{
       "title": "Exercises",
-      "text": "step7.md"
+      "text": "step7.md",
+      "answer": "step7-answer.md"
     }],
     "intro": {
       "text": "intro.md",
