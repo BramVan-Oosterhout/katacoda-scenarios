@@ -17,12 +17,11 @@ SET_ENV = cd ${MODULEDIR}/lib/Foswiki/Plugins/${MODULE}; export FOSWIKI_HOME=${F
 REST_ENV = export FOSWIKI_HOME=${FOSWIKI_HOME}; export FOSWIKI_LIBS=${FOSWIKI_LIBS}
 
 
-TOPICS = 'KatacodaCourses.Foswiki2.NotePadApp.ScenarioStep01,\
-	KatacodaCourses.Foswiki2.NotePadApp.ScenarioIntro,\
-	KatacodaCourses.Foswiki2.NotePadApp.ScenarioFinish'
+TOPICS = 'KatacodaCourses.Foswiki0.KcDockerAF.ScenarioStep01,\
+	KatacodaCourses.Foswiki0.KcDockerAF.ScenarioIntro,\
+	KatacodaCourses.Foswiki0.KcDockerAF.ScenarioFinish'
 	
 update:
-	cp ${ROOTDIR}/core/working/${PLUGIN}/markdown/test/* ${PRODDIR}/.
 	cd ${KATACODADIR}; make update
 
 test: 

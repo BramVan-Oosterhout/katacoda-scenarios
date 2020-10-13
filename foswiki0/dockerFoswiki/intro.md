@@ -1,13 +1,8 @@
- In scenario 2 we created a simple application to illustrate the use of the components of the wiki work bench. In this scenaro we will elaborate and create an application to create and maintain notes.
+ In this Scenario you will build a Docker image supporting an Apache/Foswiki installation for use in a Katacoda scenario.
 
- Like in the earlier scenario you will be asked to built the application. The starting point is the application previously developed. It is now displayed in the Applications list as `NotePadApp`. You will:
+ Some of the configurations need to be changed from the default, because of the Katacoda environment. Details will be explained as they are set up.
 
-* Use AUTOINC to create the topic name to avoid duplication
-* Create a VIEW template for the Note
-* Create an EDIT template for the Note
-* Create a button to deploy the application to a web
-* Create a Home page for the `NotePadApp` application
-* Have some exercises to put the icing on the cake
+ The Katacoda training environment is somewhat out of the ordinary. This setup installs Foswiki, listening at port 80 for the http protocol. Access is through the katacoda-services host, which is accessible with the https protocol. This leads to a mixed access scenario, which is by default not allowed in modern browsers. For Firefox you need to turn off all mixed content checking in [about:config](https://docs.sdl.com/LiveContent/content/en-US/SDL%20Web-v5/GUID-A96F0612-53DE-4E35-AE09-48D57146D6E4)
 
- At the end of this scenario you will have a complete application for your own use!
+**Please note** that you are `root` on the server. If you are not a user with root privileges, some commands will need to be \`sudo'ed\`.
 

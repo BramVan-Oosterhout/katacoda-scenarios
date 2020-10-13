@@ -5,7 +5,7 @@ PLUGIN = TutorialPlugin
 ROOTDIR = /home/bram/devfoswiki/
 PLUGINDIR = ${ROOTDIR}/${PLUGIN}
 KATACODADIR = /home/bram/programs/Katacoda
-PRODDIR = /home/bram/programs/Katacoda/katacoda-scenarios/foswiki2/notepadapp
+PRODDIR = /home/bram/programs/Katacoda/katacoda-scenarios/foswiki0/dockerFoswiki
 
 
 BINDIR = ${ROOTDIR}/core/bin
@@ -18,12 +18,6 @@ REST_ENV = export FOSWIKI_HOME=${FOSWIKI_HOME}; export FOSWIKI_LIBS=${FOSWIKI_LI
 
 
 TOPICS = 'KatacodaCourses.Foswiki2.NotePadApp.ScenarioStep01,\
-	KatacodaCourses.Foswiki2.NotePadApp.ScenarioStep02,\
-	KatacodaCourses.Foswiki2.NotePadApp.ScenarioStep03,\
-	KatacodaCourses.Foswiki2.NotePadApp.ScenarioStep04,\
-	KatacodaCourses.Foswiki2.NotePadApp.ScenarioStep05,\
-	KatacodaCourses.Foswiki2.NotePadApp.ScenarioStep06,\
-	KatacodaCourses.Foswiki2.NotePadApp.ScenarioStep07,\
 	KatacodaCourses.Foswiki2.NotePadApp.ScenarioIntro,\
 	KatacodaCourses.Foswiki2.NotePadApp.ScenarioFinish'
 	
@@ -37,6 +31,4 @@ test:
 install:
 	cd ${ROOTDIR}/core && ./pseudo-install.pl TutorialPlugin
 	
-prod:
-	cd ${BINDIR}; ./rest /TutorialPlugin/prepare topics=${TOPICS} outdir=${PRODDIR} user=admin
     
