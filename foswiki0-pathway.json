@@ -10,13 +10,13 @@
       },
       {
         "course_id": "dockerFoswiki",
-        "title": "Creating a Docker image for Katacoda/Apache/Foswiki",
-        "description": "Creating a configured image for Katacoda"
+        "title": "Docker, Apache and Foswiki",
+        "description": "Creating a Docker image for Katacoda/Apache/Foswiki"
       },
       {
         "course_id": "dockerFoswikiNginx",
-        "title": "Creating a Docker image for Katacoda/Apache/Foswiki",
-        "description": "Creating a configured image for Katacoda"
+        "title": "Docker, Nginx and Foswiki",
+        "description": "Creating a Docker image for Katacoda/Nginx/Foswiki"
       }
      ]
   }
