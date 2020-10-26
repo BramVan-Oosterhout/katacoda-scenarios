@@ -2,10 +2,10 @@
 
 |Purpose|Action|
 |for `ssl`|enable `httpd-ssl.conf`<br />
- enable mod\_ssl and mod\_socache\_shmcb.so|
+ enable `mod_ssl` and `mod_socache_shmcb.so`|
 |for logging|access to access.log <br />
  errors to `error.log`|
-|for Foswiki|incluse =foswiki.conf|
+|for Foswiki|include `foswiki.conf`|
 
 ```
 

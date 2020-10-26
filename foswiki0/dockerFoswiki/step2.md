@@ -1,4 +1,4 @@
- The installation of Foswiki retrieves the tar bal from the [foswiki.org](../../..) and unpacks it:
+ The installation of Foswiki retrieves the tar ball from the [foswiki.org](../../..) and unpacks it:
 ```
 
 WORKDIR /var/www
