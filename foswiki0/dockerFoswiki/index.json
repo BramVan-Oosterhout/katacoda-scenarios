@@ -14,24 +14,20 @@
     },
     "steps": [
    {
-      "title" : "Create an environment",
-      "answer" : "step1-answer.md",
-      "text" : "step1.md"
+      "text" : "step1.md",
+      "title" : "Create an environment"
    },
    {
       "title" : "Install and configure Foswiki",
-      "answer" : "step2-answer.md",
       "text" : "step2.md"
    },
    {
       "title" : "Configure apache for ssl",
-      "text" : "step3.md",
-      "answer" : "step3-answer.md"
+      "text" : "step3.md"
    },
    {
-      "answer" : "step4-answer.md",
-      "text" : "step4.md",
-      "title" : "Building, usina and saving the image"
+      "title" : "Building, usina and saving the image",
+      "text" : "step4.md"
    }
 ]
 ,
