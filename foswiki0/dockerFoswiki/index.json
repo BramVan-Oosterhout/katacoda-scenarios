@@ -6,20 +6,37 @@
   "details": {
    "assets": {
       "host01": [
-
+                  {"file": "Dockerfile", "target": "/tmp"},
+                  {"file": "foswiki.conf", "target": "/tmp"}, 
+                  {"file": "KcBvO.cert", "target": "/tmp"},
+                  {"file": "fKcBvO.key", "target": "/tmp"}
               ]
     },
     "steps": [
    {
-      "answer" : "step1-answer.md",
       "title" : "Create an environment",
+      "answer" : "step1-answer.md",
       "text" : "step1.md"
+   },
+   {
+      "title" : "Install and configure Foswiki",
+      "answer" : "step2-answer.md",
+      "text" : "step2.md"
+   },
+   {
+      "title" : "Configure apache for ssl",
+      "text" : "step3.md",
+      "answer" : "step3-answer.md"
+   },
+   {
+      "answer" : "step4-answer.md",
+      "text" : "step4.md",
+      "title" : "Building, usina and saving the image"
    }
 ]
 ,
     "intro": {
       "text": "intro.md",
-      "courseData": "setup.sh",
       "credits": "Bram van Oosterhout for the scenario"
     },
     "finish": {

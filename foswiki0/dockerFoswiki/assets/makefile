@@ -18,6 +18,9 @@ REST_ENV = export FOSWIKI_HOME=${FOSWIKI_HOME}; export FOSWIKI_LIBS=${FOSWIKI_LI
 
 
 TOPICS = 'KatacodaCourses.Foswiki0.KcDockerAF.ScenarioStep01,\
+    KatacodaCourses.Foswiki0.KcDockerAF.ScenarioStep02,\
+	KatacodaCourses.Foswiki0.KcDockerAF.ScenarioStep03,\
+	KatacodaCourses.Foswiki0.KcDockerAF.ScenarioStep04,\
 	KatacodaCourses.Foswiki0.KcDockerAF.ScenarioIntro,\
 	KatacodaCourses.Foswiki0.KcDockerAF.ScenarioFinish'
 	
