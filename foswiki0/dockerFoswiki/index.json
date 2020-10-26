@@ -9,13 +9,13 @@
                   {"file": "Dockerfile", "target": "/tmp"},
                   {"file": "foswiki.conf", "target": "/tmp"}, 
                   {"file": "KcBvO.crt", "target": "/tmp"},
-                  {"file": "fKcBvO.key", "target": "/tmp"}
+                  {"file": "KcBvO.key", "target": "/tmp"}
               ]
     },
     "steps": [
    {
-      "title" : "Create an environment",
-      "text" : "step1.md"
+      "text" : "step1.md",
+      "title" : "Create an environment"
    },
    {
       "title" : "Install and configure Foswiki",
@@ -26,8 +26,8 @@
       "text" : "step3.md"
    },
    {
-      "title" : "Building, usina and saving the image",
-      "text" : "step4.md"
+      "text" : "step4.md",
+      "title" : "Building, usina and saving the image"
    }
 ]
 ,
