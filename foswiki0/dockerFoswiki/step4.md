@@ -2,7 +2,7 @@
 
 ```
 
-docker build -t kcfoswiki .
+docker build -t kcfoswiki /tmp
 
 ```{{execute}}
 
@@ -13,7 +13,7 @@ docker run -d --name foswiki -p 443:443 kcfoswiki
 
 ```{{execute}}
 
- Run Fuswiki with [https://[](../../..)[HOST\_SUBDOMAIN]]-80-[[KATACODA\_HOST]].environments.katacoda.com/foswiki.
+ Run Foswiki with https://[[HOST\_SUBDOMAIN]]-80-[[KATACODA\_HOST]].environments.katacoda.com/foswiki.
 
 ### Answer	
 

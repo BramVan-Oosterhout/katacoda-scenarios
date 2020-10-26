@@ -6,28 +6,28 @@
   "details": {
    "assets": {
       "host01": [
-                  {"file": "Dockerfile", "target": "/tmp"},
-                  {"file": "foswiki.conf", "target": "/tmp"}, 
-                  {"file": "KcBvO.crt", "target": "/tmp"},
-                  {"file": "KcBvO.key", "target": "/tmp"}
+                  {"file": "Dockerfile", "target": "/root"},
+                  {"file": "foswiki.conf", "target": "/root"}, 
+                  {"file": "KcBvO.crt", "target": "/root"},
+                  {"file": "KcBvO.key", "target": "/root"}
               ]
     },
     "steps": [
    {
-      "text" : "step1.md",
-      "title" : "Create an environment"
+      "title" : "Create an environment",
+      "text" : "step1.md"
    },
    {
-      "title" : "Install and configure Foswiki",
-      "text" : "step2.md"
+      "text" : "step2.md",
+      "title" : "Install and configure Foswiki"
    },
    {
       "title" : "Configure apache for ssl",
       "text" : "step3.md"
    },
    {
-      "text" : "step4.md",
-      "title" : "Building, usina and saving the image"
+      "title" : "Building, usina and saving the image",
+      "text" : "step4.md"
    }
 ]
 ,

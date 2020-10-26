@@ -5,7 +5,8 @@ PLUGIN = TutorialPlugin
 ROOTDIR = /home/bram/devfoswiki/
 PLUGINDIR = ${ROOTDIR}/${PLUGIN}
 KATACODADIR = /home/bram/programs/Katacoda
-PRODDIR = /home/bram/programs/Katacoda/katacoda-scenarios/foswiki0/dockerFoswiki
+PRODDIR = ${KATACODADIR}/katacoda-scenarios/foswiki0/dockerFoswiki
+COLLATE = ${KATACODADIR}/collateAndDeploy.pl
 
 
 BINDIR = ${ROOTDIR}/core/bin
@@ -29,6 +30,8 @@ update:
 
 test: 
 	cd ${BINDIR}; ${REST_ENV}; ./rest /TutorialPlugin/prepare topics=${TOPICS} outdir=test user=admin
+collate:
+	${COLLATE}
     
 install:
 	cd ${ROOTDIR}/core && ./pseudo-install.pl TutorialPlugin
