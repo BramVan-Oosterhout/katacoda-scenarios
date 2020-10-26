@@ -1,6 +1,6 @@
  In this Scenario we will create a docker image for use in other scenarios. The Scenario will show you the steps, but it is not a Docker tutorial. You can find these at: [Katacoda](<https://www.katacoda.com/courses/docker>). The Docker site has plenty of [documentation](<https://docs.docker.com/>).
 
- After you have built the image you can start an instance in a container. The running container will accept requests through [https://[%nop%[HOST\_SUBDOMAIN]]-80-[%nop%[KATACODA\_HOST]].environments.katacoda.com/foswiki](https://[%nop%[HOST_SUBDOMAIN]]-80-[%nop%[KATACODA_HOST]].environments.katacoda.com/foswiki).
+ After you have built the image you can start an instance in a container. The running container will accept requests through [https://[](../../..)[HOST\_SUBDOMAIN]]-80-[[KATACODA\_HOST]].environments.katacoda.com/foswiki.
 
  We start the image from the [official image on Docker hub]([https://docs.docker.com/docker-hub/official\_images/](https://docs.docker.com/docker-hub/official_images/)):
 ```

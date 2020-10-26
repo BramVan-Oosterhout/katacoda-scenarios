@@ -13,7 +13,7 @@ docker run -d --name foswiki -p 443:443 kcfoswiki
 
 ```{{execute}}
 
- Run Fuswiki with [https://[%nop%[HOST\_SUBDOMAIN]]-80-[%nop%[KATACODA\_HOST]].environments.katacoda.com/foswiki](https://[%nop%[HOST_SUBDOMAIN]]-80-[%nop%[KATACODA_HOST]].environments.katacoda.com/foswiki).
+ Run Fuswiki with [https://[](../../..)[HOST\_SUBDOMAIN]]-80-[[KATACODA\_HOST]].environments.katacoda.com/foswiki.
 
 ### Answer	
 
