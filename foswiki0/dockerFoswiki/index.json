@@ -8,14 +8,14 @@
       "host01": [
                   {"file": "Dockerfile", "target": "/tmp"},
                   {"file": "foswiki.conf", "target": "/tmp"}, 
-                  {"file": "KcBvO.cert", "target": "/tmp"},
+                  {"file": "KcBvO.crt", "target": "/tmp"},
                   {"file": "fKcBvO.key", "target": "/tmp"}
               ]
     },
     "steps": [
    {
-      "text" : "step1.md",
-      "title" : "Create an environment"
+      "title" : "Create an environment",
+      "text" : "step1.md"
    },
    {
       "title" : "Install and configure Foswiki",
