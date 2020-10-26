@@ -9,7 +9,8 @@ RUN apk update && \
             perl-cgi perl-cgi-session \
             perl-crypt-passwdmd5 perl-error \
             perl-file-copy-recursive perl-json \
-            perl-html-tree perl-uri perl-algorithm-diff  && \
+            perl-html-tree perl-uri perl-algorithm-diff  \
+            perl-locale-maketext-lexicon perl-locale-msgfmt && \
     rm -rf /var/cache/apk/* && \
     mkdir /var/www && \
     mkdir /var/log/httpd
@@ -35,9 +36,9 @@ RUN tools/configure -save -noprompt && \
 WORKDIR /usr/local/apache2/conf
 
 # Configure the httpd server
-COPY /tmp/foswiki.conf extra/.
-COPY /tmp/KcBvO.crt server.crt
-COPY /tmp/KcBvO.key server.key
+COPY foswiki.conf extra/.
+COPY KcBvO.crt server.crt
+COPY KcBvO.key server.key
 RUN sed -i -e 's/^#\(Include .*httpd-ssl.conf\)/\1/' \
            -e 's/^#\(LoadModule .*mod_ssl.so\)/\1/' \
            -e 's/^#\(LoadModule .*mod_socache_shmcb.so\)/\1/' httpd.conf && \
