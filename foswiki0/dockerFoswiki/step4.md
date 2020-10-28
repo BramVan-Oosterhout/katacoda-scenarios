@@ -23,12 +23,12 @@ docker run -d --name foswiki -p 443:443 kcfoswiki
 
  You can save the image as build to Docker Hub if you have registered. You need to:
 
-  * login: `docker login -u bramvanoosterhout -p-password-stdin`{{execute}}
-  * find the `IMAGE-ID`: `docker images`{{execute}}
-  * tag the image: `docker tag &lt;INAGE-ID&gt; bramvanoosterhout/kcfoswiki:0.1`{{execute}}
-  * push the image: `docker push bramvanoosterhout/kcfoswiki`{{execute}}
+  * login: `docker login -u bramvanoosterhout --password-stdin`{{execute}}
+  * find the `IMAGE-ID`: `docker images | more`{{execute}}
+  * tag the image: `docker tag {IMAGE-ID} bramvanoosterhout/kcfoswiki:0.1`{{execute}}
+  * push the image: `docker push bramvanoosterhout/kcfoswiki:0.1`{{execute}}
 
- Once it is saved, you can use it anywhere with: `docker pull bramvanoosterhout/kcfoswiki`{{execute}}
+ Once it is saved, you can use it anywhere with: `docker pull bramvanoosterhout/kcfoswiki:0.1`{{execute}}
 
 ### Answer	
 
