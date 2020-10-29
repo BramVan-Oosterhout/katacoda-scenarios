@@ -24,5 +24,3 @@ RUN sed -i -e 's/^#\(Include .*httpd-ssl.conf\)/\1/' \
 
 ```
 
-### Answer	
-

@@ -47,5 +47,3 @@
 
  You can repeat the measurements yuo performed on the retrieval of System.WebHome. I took 5 measurements and got: 2384, 1537, 1598, 1553, 1541 ms. The first time the foswiki executable gets loaded: ps -f -C perl\{\{execute\}\} So we gained around 400 ms per retrieval on this platform.
 
-### Answer	
-

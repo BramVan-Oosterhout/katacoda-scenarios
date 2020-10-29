@@ -30,5 +30,3 @@ docker run -d --name foswiki -p 443:443 kcfoswiki
 
  Once it is saved, you can use it anywhere with: `docker pull bramvanoosterhout/kcfoswiki:0.1`{{execute}}
 
-### Answer	
-

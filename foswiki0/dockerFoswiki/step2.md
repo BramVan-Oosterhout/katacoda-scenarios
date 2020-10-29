@@ -26,5 +26,3 @@ RUN tools/configure -save -noprompt &amp;&amp; \
 
 ```
 
-### Answer	
-

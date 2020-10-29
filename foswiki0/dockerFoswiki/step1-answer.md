@@ -1,6 +1,12 @@
 
- To compare you answers execute: `/tmp/answer step1`{{execute}} and refresh your Foswiki page. New webs will appear in the left margin.
+ If you have completed this scenarion previously and saved the image at Docker Hub, you can use it now by executing:
 
- Use the `SolNotePad` web in the Sandbox to experiment.
+`docker pull bramvanoosterhout/kcfoswiki:0.1`{{execute}}
 
- Check your answers in the Applications/SolNotePadApp web.
+ Notice how much faster this is than building from the Dockerfile.
+
+ After you have pulled the image you can start an instance in a container.
+
+`docker run -d --name foswiki -p 443:443 kcfoswiki:0.1`{{execute}}
+
+ The running container will accept requests through https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki. User Id is `admin` and Password is `password`.
