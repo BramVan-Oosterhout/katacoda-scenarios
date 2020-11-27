@@ -10,7 +10,8 @@ RUN apk update && \
             perl-crypt-passwdmd5 perl-error \
             perl-file-copy-recursive perl-json \
             perl-html-tree perl-uri perl-algorithm-diff  \
-            perl-locale-maketext-lexicon perl-locale-msgfmt && \
+            perl-locale-maketext-lexicon perl-locale-msgfmt perl-locale-codes \
+            perl-lwp-protocol-https && \
     rm -rf /var/cache/apk/* && \
     mkdir /var/www && \
     mkdir /var/log/httpd

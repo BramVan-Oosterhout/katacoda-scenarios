@@ -30,7 +30,7 @@ update:
 	cd ${KATACODADIR}; make update
 
 test: 
-	cd ${BINDIR}; ${REST_ENV}; ./rest /TutorialPlugin/prepare topics=${TOPICS} outdir=test user=admin
+	cd ${BINDIR}; ${REST_ENV}; ./rest /TutorialPlugin/create publish=on translate=on deploy=on topics=${TOPICS} outdir=tutorialmd user=admin
 collate:
 	${COLLATE}
     
