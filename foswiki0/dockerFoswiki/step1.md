@@ -1,6 +1,6 @@
  In this Scenario we will create a docker image for use in other Scenarios. The Scenario will show you the steps, but it is not a Docker tutorial. You can find these at: [Katacoda](https://www.katacoda.com/courses/docker). The Docker site has plenty of [documentation](https://docs.docker.com/).
 
- You can view the build instructions in the Dockerfile in the root directory. Open in in the editor by clicking the file.
+ You can view the build instructions in the _Dockerfile_ called `Dockerfile.foswiki.base` in the root directory. Open in in the editor by clicking the file.
 
  We start the image from the [official image on Docker hub](https://docs.docker.com/docker-hub/official_images/):
 ```

@@ -1,19 +1,39 @@
- With the `Dockerfile` in place, you can build the image with
+ With a _Dockerfile_ in place, you can build the image with
 
 ```
 
-docker build -t kcfoswiki .
+docker build -t kcbase -f Dockerfile.foswiki.base .
+
+```{{execute}}
+
+ From this base image we can build varios configurations of foswiki. Let's start with the regulaar CGI one. We use the Dockerfile.foswiki.cgi starting from the `base` image:
+
+```
+
+FROM base
+
+WORKDIR /usr/local/apache2/conf
+
+# Configure the httpd server for foswiki
+COPY foswiki.cgi.conf extra/.
+RUN sed -i '/# Supplemental configuration/a Include conf/extra/foswiki.cgi.conf' /usr/local/apache2/conf/httpd.conf
+
+```
+
+```
+
+docker build -t foswiki-cgi -f Dockerfile.foswiki.cgi
 
 ```{{execute}}
 
  And start it with:
 ```
 
-docker run -d --name foswiki -p 443:443 kcfoswiki
+docker run -d --name foswiki -p 443:443 foswiki-cgi
 
 ```{{execute}}
 
- Run Foswiki with https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki.
+ Run Foswiki with https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/.
 
  You can make changes to the Dockerfile using the editor and rebuild the image. To use the updated image, you must:
 
