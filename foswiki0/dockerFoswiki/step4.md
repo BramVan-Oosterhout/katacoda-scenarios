@@ -22,7 +22,7 @@ RUN sed -i '/# Supplemental configuration/a Include conf/extra/foswiki.cgi.conf'
 
 ```
 
-docker build -t foswiki-cgi -f Dockerfile.foswiki.cgi
+docker build -t foswiki-cgi -f Dockerfile.foswiki.cgi .
 
 ```{{execute}}
 
@@ -33,7 +33,7 @@ docker run -d --name foswiki -p 443:443 foswiki-cgi
 
 ```{{execute}}
 
- Run Foswiki with https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/.
+ Run Foswiki with https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki
 
  You can make changes to the Dockerfile using the editor and rebuild the image. To use the updated image, you must:
 
