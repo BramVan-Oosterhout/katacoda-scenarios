@@ -1,0 +1,6 @@
+FROM foswiki-cgi
+
+# Install the PageOptimizerPlugin
+RUN cd /var/www/foswiki &&\
+    tools/extension_installer PageOptimizerPlugin -r -enable install
+

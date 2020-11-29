@@ -1,4 +1,4 @@
-FROM base
+FROM kcbase
 
 WORKDIR /usr/local/apache2/conf
 
