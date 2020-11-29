@@ -1,49 +1,23 @@
- Now that you have a working configuration, let's look at some performance measures. Firefox and IE both support a development environment, which includes a performance indicator. Press F12 and you will get a console at the bottom of your display. On the _Network_ tab, select HTML. On the right hand side is a panelThat shows duration of the interaction.
+ Performance is a concern for web sites that want to be seen. Slow responses tend to scare impatient people off. Foswiki has several plugins that will improve the performance of the installed and configured web site. In the following steps we will install some of them and measure the result.
 
- Access System.WebHome and record the download time. Today I took 5 readings and got: 1929, 2022, 1814, 1955 and 1824 ms. You can refresh to get another reading. Make sure the Firefox cache is disabled so you will measure rendering and download time. Not retrieval from cache.
+ In this step we introduce the measurement and set the base line.
 
- The performance can easily be improved by some additional implementations.
+ There are tools on the web that will masure the performance of any web site. You can search: "measuring web site response performance" for a list. [dotcom tools](../../..) is fine.
 
-## FastCGI	
+ Or you can use your browser and read the data from the console. If you do that, you should do more than one reading and be aware of how much data ( javascript, stylesheets, etc) are cahced locally.
 
- Instead of creating a new process for each request, FastCGI uses persistent processes to handle a series of requests. See: [Wikipedia](<https://en.wikipedia.org/wiki/FastCGI>).
+ Here are my result for the default page `Main.WebHome`, read with the URL %KATACODAURL%/foswiki.
 
-### Foswiki FastCGIEngineContrib	
+|#|html (ms)|total (ms)|
+|-|
+|1|1411|3400|
+|2|1778|3300|
+|3|1446|3100|
+|4|1528|3220|
+|5|1455|3360|
+|Avg|1523|3276|
 
- Foswiki supports FastCGI through the [FastCGIEngineContrib](<https://foswiki.org/Extensions/FastCGIEngineContrib>). FastCGIEngineContrib is installed with the Foswiki core installation. The executable foswiki.fcgi is in the bin directory: ls /var/www/foswiki/bin\{\{execute\}\}
+ Dotcom tools gives the first access as 13.7 seconds and average second visit as 1.2 seconds.
 
-### cpan libfcgi-perl	
-
- To use it, yuo may need to install the libcgi-perl module from cpan with: apt-get install libfcgi-perl\{\{execute\}\}
-
- The Katacoda environment has that module already installed.
-
-### Apache mod\_fcgid	
-
- mod\_fcgid is not installed with apache 2.4.18. So we need to install it with: apt-get install libapache2-mod-fcgid\{\{execute\}\} You get a message _which may or may not be relevant_
-
- apache2\_invoke: Enable module fcgid logger: socket /dev/log: Connection refused
-
-### Apache - Foswiki configuration	
-
- The configuration file is generated with the Foswiki Apache config generator at <https://foswiki.org/Support/ApacheConfigGenerator>. The generated file is supplied as foswiki.fcgi.conf. You can compare this configuration with the standard foswiki.conf with: diff /etc/apache2/conf-available/foswiki.conf foswiki.fcgi.conf\{\{execute\}\}
-
-  * The Alias declarations change the foswiki executable to the foswiki.fcgi executable.
-  * If mod\_fcgi is enabled, there are some control parameters set. They make sure that the continuous running process plays nicely in the environment.
-  * The Files declaration defines the foswiki.fcgi script as an fcgi daemon.
-
- Make the fcgi configuration available with mv foswiki.fcgi.conf /etc/apache2/conf-available/.\{\{execute\}\}
-
-### Activate the new configuration	
-
- Replace the foswiki.conf with the foswiki.fcgi.conf through:
-
-  * a2disconf foswiki\{\{execute\}\}
-  * a2enconf foswiki.fcgi\{\{execute\}\}
-
- and restart the apache server: service apache2 restart\{\{execute\}\}
-
-### Results	
-
- You can repeat the measurements yuo performed on the retrieval of System.WebHome. I took 5 measurements and got: 2384, 1537, 1598, 1553, 1541 ms. The first time the foswiki executable gets loaded: ps -f -C perl\{\{execute\}\} So we gained around 400 ms per retrieval on this platform.
+ It also suggests many improvements! Let's see what Foswiki provides.
 

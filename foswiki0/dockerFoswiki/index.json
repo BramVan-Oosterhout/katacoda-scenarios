@@ -29,11 +29,19 @@
    },
    {
       "text" : "step4.md",
-      "title" : "Building, using and saving the image"
+      "title" : "Cofiguring for Foswiki CGI"
    },
    {
-      "text" : "step5.md",
-      "title" : "Performance: FastCGI"
+      "title" : "Measuring performance",
+      "text" : "step5.md"
+   },
+   {
+      "text" : "step6.md",
+      "title" : "Using the PageOptimizerPlugin"
+   },
+   {
+      "title" : "Performance: FastCGI",
+      "text" : "step9.md"
    }
 ]
 ,
