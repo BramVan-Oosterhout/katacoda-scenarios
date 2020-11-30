@@ -8,6 +8,7 @@
       "host01": [
                   {"file": "Dockerfile.foswiki.base", "target": "/root"},
                   {"file": "Dockerfile.foswiki.cgi", "target": "/root"},
+                  {"file": "Dockerfile.foswiki.pageopt", "target": "/root"},
                   {"file": "foswiki.cgi.conf", "target": "/root"}, 
                   {"file": "KcBvO.crt", "target": "/root"},
                   {"file": "KcBvO.key", "target": "/root"}
@@ -15,25 +16,25 @@
     },
     "steps": [
    {
-      "answer" : "step1-answer.md",
+      "title" : "Create an environment",
       "text" : "step1.md",
-      "title" : "Create an environment"
+      "answer" : "step1-answer.md"
    },
    {
-      "title" : "Install and configure Foswiki",
-      "text" : "step2.md"
+      "text" : "step2.md",
+      "title" : "Install and configure Foswiki"
    },
    {
-      "text" : "step3.md",
-      "title" : "Configure apache for ssl"
+      "title" : "Configure apache for ssl",
+      "text" : "step3.md"
    },
    {
-      "text" : "step4.md",
-      "title" : "Cofiguring for Foswiki CGI"
+      "title" : "Cofiguring for Foswiki CGI",
+      "text" : "step4.md"
    },
    {
-      "title" : "Measuring performance",
-      "text" : "step5.md"
+      "text" : "step5.md",
+      "title" : "Measuring performance"
    },
    {
       "text" : "step6.md",

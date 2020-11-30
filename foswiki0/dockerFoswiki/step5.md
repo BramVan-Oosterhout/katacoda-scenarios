@@ -4,7 +4,7 @@
 
  There are tools on the web that will masure the performance of any web site. You can search: "measuring web site response performance" for a list. [dotcom tools](../../..) is fine.
 
- Or you can use your browser and read the data from the console. If you do that, you should do more than one reading and be aware of how much data ( javascript, stylesheets, etc) are cahced locally.
+ Or you can use your browser and read the data from the console. If you do that, you should do more than one reading and be aware of how much data ( javascript, stylesheets, etc) are cached locally.
 
  Here are my result for the default page `Main.WebHome`, read with the URL %KATACODAURL%/foswiki.
 

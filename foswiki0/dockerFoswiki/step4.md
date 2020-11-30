@@ -1,6 +1,6 @@
  With a _Dockerfile_ in place, you can build the image with
 
-`docker build -t kcbase -f Dockerfile.foswiki.base . `\{execute\}\}
+`docker build -t kcbase -f Dockerfile.foswiki.base . `{{execute}}
 
  From this base image we can build varios configurations of foswiki. Let's start with the regulaar CGI one. We use the Dockerfile.foswiki.cgi starting from the `base` image:
 

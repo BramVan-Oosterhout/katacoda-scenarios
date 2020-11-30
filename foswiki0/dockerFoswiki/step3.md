@@ -1,6 +1,7 @@
  To configure apache we need to:
 
 |Purpose|Action|
+|-|
 |for `ssl`|enable `httpd-ssl.conf`<br />
  enable `mod_ssl` and `mod_socache_shmcb.so`|
 |for logging|access to access.log <br />
