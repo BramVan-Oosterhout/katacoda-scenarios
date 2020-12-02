@@ -51,3 +51,14 @@ logger: socket /dev/log: Connection refused
 
  You can repeat the measurements yuo performed on the retrieval of System.WebHome. I took 5 measurements and got: 2384, 1537, 1598, 1553, 1541 ms. The first time the foswiki executable gets loaded: `ps -f -C perl`{{execute}} So we gained around 400 ms per retrieval on this platform.
 
+## Saving the docker image	
+
+ You can save the image as build to Docker Hub if you have registered. You need to:
+
+  * login: `docker login -u bramvanoosterhout --password-stdin`{{execute}}
+  * find the `IMAGE-ID`: `docker images | more`{{execute}}
+  * tag the image: `docker tag {IMAGE-ID} bramvanoosterhout/kcfoswiki:0.1`{{execute}}
+  * push the image: `docker push bramvanoosterhout/kcfoswiki:0.1`{{execute}}
+
+ Once it is saved, you can use it anywhere with: `docker pull bramvanoosterhout/kcfoswiki:0.1`{{execute}}
+

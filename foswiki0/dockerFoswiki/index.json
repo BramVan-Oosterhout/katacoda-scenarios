@@ -8,38 +8,40 @@
       "host01": [
                   {"file": "Dockerfile.foswiki.base", "target": "/root"},
                   {"file": "Dockerfile.foswiki.cgi", "target": "/root"},
+                  {"file": "Dockerfile.foswiki.cgi-gz", "target": "/root"},
                   {"file": "Dockerfile.foswiki.pageopt", "target": "/root"},
                   {"file": "Dockerfile.foswiki.deflate", "target": "/root"},
                   {"file": "foswiki.cgi.conf", "target": "/root"}, 
+                  {"file": "foswiki.cgi-gz.conf", "target": "/root"}, 
                   {"file": "KcBvO.crt", "target": "/root"},
                   {"file": "KcBvO.key", "target": "/root"}
               ]
     },
     "steps": [
    {
-      "title" : "Create an environment",
       "answer" : "step1-answer.md",
-      "text" : "step1.md"
+      "text" : "step1.md",
+      "title" : "Create an environment"
    },
    {
       "text" : "step2.md",
       "title" : "Install and configure Foswiki"
    },
    {
-      "text" : "step3.md",
-      "title" : "Configure apache for ssl"
+      "title" : "Configure apache for ssl",
+      "text" : "step3.md"
    },
    {
-      "text" : "step4.md",
-      "title" : "Configuring for Foswiki CGI"
+      "title" : "Configuring for Foswiki CGI",
+      "text" : "step4.md"
    },
    {
-      "title" : "Measuring performance",
-      "text" : "step5.md"
+      "text" : "step5a.md",
+      "title" : "Using the pre zipped css and js"
    },
    {
-      "text" : "step6.md",
-      "title" : "Using the PageOptimizerPlugin"
+      "title" : "Using the PageOptimizerPlugin",
+      "text" : "step6.md"
    },
    {
       "title" : "Compressing the apache output",
