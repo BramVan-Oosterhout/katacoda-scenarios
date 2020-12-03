@@ -23,5 +23,5 @@ sub imageExists{
 }
 
 sub containerRunning{
-   `docker container ls | grep regexp "\\b$_[0]\\b"`;
+   `docker container ls | grep --perl-regexp "\\b$_[0]\\b"`;
 }
