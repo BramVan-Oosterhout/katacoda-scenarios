@@ -14,13 +14,14 @@
                   {"file": "foswiki.cgi.conf", "target": "/root"}, 
                   {"file": "foswiki.cgi-gz.conf", "target": "/root"}, 
                   {"file": "KcBvO.crt", "target": "/root"},
-                  {"file": "KcBvO.key", "target": "/root"}
+                  {"file": "KcBvO.key", "target": "/root"},
+                  {"file": "start", "target": "/root", "chmod": "+x" }
               ]
     },
     "steps": [
    {
-      "text" : "step01.md",
       "title" : "Create an environment",
+      "text" : "step01.md",
       "answer" : "step01-answer.md"
    },
    {
@@ -28,28 +29,28 @@
       "text" : "step02.md"
    },
    {
-      "text" : "step03.md",
-      "title" : "Configure apache for ssl"
+      "title" : "Configure apache for ssl",
+      "text" : "step03.md"
    },
    {
-      "text" : "step04.md",
-      "title" : "Configuring for Foswiki CGI"
+      "title" : "Configuring for Foswiki CGI",
+      "text" : "step04.md"
    },
    {
-      "title" : "Measuring performance",
-      "text" : "step05.md"
+      "text" : "step05.md",
+      "title" : "Measuring performance"
    },
    {
-      "title" : "Using the pre zipped css and js",
-      "text" : "step06.md"
+      "text" : "step06.md",
+      "title" : "Using the pre zipped css and js"
    },
    {
-      "title" : "Using the PageOptimizerPlugin",
-      "text" : "step07.md"
+      "text" : "step07.md",
+      "title" : "Using the PageOptimizerPlugin"
    },
    {
-      "text" : "step08.md",
-      "title" : "Compressing the apache output"
+      "title" : "Compressing the apache output",
+      "text" : "step08.md"
    },
    {
       "text" : "step9.md",

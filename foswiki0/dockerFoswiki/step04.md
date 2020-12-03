@@ -26,7 +26,7 @@ RUN sed -i '/# Supplemental configuration/a Include conf/extra/foswiki.cgi.conf'
 
   * stop the running container: `docker stop foswiki`{{execute}}
   * remove the container: `docker rm foswiki`{{execute}}
-  * and then start the container again: `docker run -d --name foswiki -p 443:443 kcfoswiki`{{execute}}
+  * and then start the container again: `docker run -d --rm --name foswiki -p 443:443 kcfoswiki`{{execute}}
 
  You can save the image as build to Docker Hub if you have registered. You need to:
 

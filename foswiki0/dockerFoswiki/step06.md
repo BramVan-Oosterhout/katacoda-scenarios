@@ -10,7 +10,7 @@
 
  Make these configuration changes by:
 
-* building the new docker container from `Dockerfile.foswiki.cgi-gz`{{open}}: `docker build -t foswiki.cgi-gz -f Dockerfile.foswiki.cgi.gz .`{{execute}}
+* building the new docker container from `Dockerfile.foswiki.cgi-gz`{{open}}: `docker build -t foswiki.cgi-gz -f Dockerfile.foswiki.cgi-gz .`{{execute}}
 * stopping the running foswiki image: `docker stop foswiki`{{execute}}
 * starting a new image: `docker run -d --rm --name foswiki -p 443:443 foswiki-`{{execute}}
 
@@ -18,6 +18,6 @@
 
 ||Avg|Min|Max|
 |-|
-|1st|3.6|1.4|6.1|
-|2nd|1.3|.87|1.8|
+|1st|3.9|1.8|6.5|
+|2nd|1.8|1.2|2.1|
 

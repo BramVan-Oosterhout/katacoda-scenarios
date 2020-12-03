@@ -1,0 +1,27 @@
+#!/usr/bin/perl
+
+if ( imageExists( $ARGV[0] )) { print " exists!\n" }
+
+`docker build -t kcbase -f Dockerfile.foswiki.base .`
+   unless imageExists( 'kcbase' );
+
+startImage( $ARGV[0] );
+
+sub startImage {
+   my $buildCmd = sprintf( "docker build -t foswiki-%s -f Dockerfile.foswiki.%s .", $_[0], $_[0] );
+   print " ... building - $buildCmd\n";
+   `$buildCmd`
+       unless imageExists( "foswiki\-$_[0]" );
+       
+   `docker stop foswiki` if containerRunning( "foswiki" );
+       
+   `docker run -d --rm --name foswiki -p 443:443 foswiki-$_[0]`;
+}
+
+sub imageExists{
+   `docker image ls | grep --perl-regexp "\\b$_[0]\\b"`; 
+}
+
+sub containerRunning{
+   `docker container ls | grep regexp "\\b$_[0]\\b"`;
+}
