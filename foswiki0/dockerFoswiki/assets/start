@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-unless imageExists( 'kcbase' ) {
+unless ( imageExists( 'kcbase' ) ) {
    print " ... building - docker build -t kcbase -f Dockerfile.foswiki.base .\n";
    `docker build -t kcbase -f Dockerfile.foswiki.base .`
 }
