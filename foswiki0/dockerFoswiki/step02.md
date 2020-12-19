@@ -1,17 +1,8 @@
- The installation of Foswiki retrieves the tar ball from the [foswiki.org](../../..) and unpacks it:
-```
+ The installation of Foswiki retrieves the tar ball from the [foswiki.org](../../..) and unpacks it (line 19 - 25):
 
-WORKDIR /var/www
+ After installation the tar ball is removed (line 25).
 
-# Download and extract Foswiki
-RUN wget -O Foswiki-2.1.6.tgz https://github.com/foswiki/distro/releases/download/FoswikiRelease02x01x06/Foswiki-2.1.6.tgz &amp;&amp; \
-    tar -zxvf Foswiki-2.1.6.tgz &amp;&amp; \
-    mv Foswiki-2.1.6 foswiki &amp;&amp; \
-    rm Foswiki-2.1.6.tgz
-
-```
-
- Then we use `tools/configure` to configure Foswiki:
+ Then we use `tools/configure` to configure Foswiki from the command line (line 29 - 33):
 ```
 
 WORKDIR /var/www/foswiki
