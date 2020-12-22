@@ -14,7 +14,8 @@ sub startImage {
 
        
    `docker stop foswiki` if containerRunning( "foswiki" );
-       
+    
+    print " ... running - docker run -d --rm --name foswiki -p 443:443 foswiki-$_[0]\n";   
    `docker run -d --rm --name foswiki -p 443:443 foswiki-$_[0]`;
 }
 

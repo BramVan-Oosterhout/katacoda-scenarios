@@ -12,4 +12,4 @@ RUN cd /var/www/foswiki &&\
  
  
  
-#start the foswiki deamon   
+#start the foswiki deamon  (nginx only)

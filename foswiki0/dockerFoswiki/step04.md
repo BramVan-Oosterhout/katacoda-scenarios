@@ -2,7 +2,7 @@
 
 `docker build -t kcbase -f Dockerfile.foswiki.base . `{{execute}}
 
- From this base image we can build varios configurations of foswiki. Let's start with the regulaar CGI one. We use the Dockerfile.foswiki.cgi starting from the `base` image:
+ From this base image we can build varios configurations of foswiki. Let's start with the regular CGI one. We use the `Dockerfile.foswiki.cgi`{{open}} starting from the `base` image:
 
 ```
 
@@ -16,9 +16,9 @@ RUN sed -i '/# Supplemental configuration/a Include conf/extra/foswiki.cgi.conf'
 
 ```
 
-`docker build -t foswiki-cgi -f Dockerfile.foswiki.cgi . `{{execute}}
+`docker build -t foswiki-cgi -f Dockerfile.foswiki.cgi .`{{execute}}
 
- And start it with: `docker run -d --rm --name foswiki -p 443:443 foswiki-cgi `{{execute}}
+ And start it with: `docker run -d --rm --name foswiki -p 443:443 foswiki-cgi`{{execute}}
 
  Run Foswiki with https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki
 
