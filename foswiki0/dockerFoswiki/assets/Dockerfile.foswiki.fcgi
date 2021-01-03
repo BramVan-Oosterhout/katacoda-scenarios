@@ -9,7 +9,10 @@ RUN sed -i '/# Supplemental configuration/a Include conf/extra/foswiki.fcgi.conf
 
 RUN cd /var/www/foswiki &&\
     tools/extension_installer FastCGIEngineContrib -r -enable install
+
+WORKDIR /root 
+COPY docker-entrypoint.sh docker-entrypoint.sh
+
+CMD ["sh", "docker-entrypoint.sh"]
  
- 
- 
-#start the foswiki deamon  (nginx only)
+#start the foswiki daemon  (nginx only)

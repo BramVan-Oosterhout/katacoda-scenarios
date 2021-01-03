@@ -16,7 +16,7 @@
                   {"file": "foswiki.cgi-gz.conf", "target": "/root"}, 
                   {"file": "foswiki.cgi-deflate.conf", "target": "/root"}, 
                   {"file": "foswiki.fcgi.conf", "target": "/root"}, 
-                  {"file": "foswiki.fcgi.conf.sh", "target": "/root", "chmod": "+x" }, 
+                  {"file": "docker-entrypoint.sh", "target": "/root" }, 
                   {"file": "KcBvO.crt", "target": "/root"},
                   {"file": "KcBvO.key", "target": "/root"},
                   {"file": "start", "target": "/root", "chmod": "+x" }
@@ -24,21 +24,21 @@
     },
     "steps": [
    {
-      "answer" : "step01-answer.md",
       "title" : "Create an environment",
-      "text" : "step01.md"
+      "text" : "step01.md",
+      "answer" : "step01-answer.md"
    },
    {
-      "text" : "step02.md",
-      "title" : "Install and configure Foswiki"
+      "title" : "Install and configure Foswiki",
+      "text" : "step02.md"
    },
    {
       "text" : "step03.md",
       "title" : "Configure apache for ssl"
    },
    {
-      "text" : "step04.md",
-      "title" : "Configuring for Foswiki CGI"
+      "title" : "Configuring for Foswiki CGI",
+      "text" : "step04.md"
    },
    {
       "text" : "step05.md",
@@ -49,8 +49,8 @@
       "title" : "Using the pre zipped css and js"
    },
    {
-      "text" : "step07.md",
-      "title" : "Using the PageOptimizerPlugin"
+      "title" : "Using the PageOptimizerPlugin",
+      "text" : "step07.md"
    },
    {
       "text" : "step08.md",
