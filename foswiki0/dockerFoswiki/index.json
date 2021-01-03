@@ -16,6 +16,7 @@
                   {"file": "foswiki.cgi-gz.conf", "target": "/root"}, 
                   {"file": "foswiki.cgi-deflate.conf", "target": "/root"}, 
                   {"file": "foswiki.fcgi.conf", "target": "/root"}, 
+                  {"file": "foswiki.fcgi.conf.sh", "target": "/root", "chmod": "+x" }, 
                   {"file": "KcBvO.crt", "target": "/root"},
                   {"file": "KcBvO.key", "target": "/root"},
                   {"file": "start", "target": "/root", "chmod": "+x" }
@@ -23,9 +24,9 @@
     },
     "steps": [
    {
+      "answer" : "step01-answer.md",
       "title" : "Create an environment",
-      "text" : "step01.md",
-      "answer" : "step01-answer.md"
+      "text" : "step01.md"
    },
    {
       "text" : "step02.md",
@@ -36,16 +37,16 @@
       "title" : "Configure apache for ssl"
    },
    {
-      "title" : "Configuring for Foswiki CGI",
-      "text" : "step04.md"
+      "text" : "step04.md",
+      "title" : "Configuring for Foswiki CGI"
    },
    {
       "text" : "step05.md",
       "title" : "Measuring performance"
    },
    {
-      "title" : "Using the pre zipped css and js",
-      "text" : "step06.md"
+      "text" : "step06.md",
+      "title" : "Using the pre zipped css and js"
    },
    {
       "text" : "step07.md",
