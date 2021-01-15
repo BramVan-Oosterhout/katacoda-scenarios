@@ -1,6 +1,8 @@
 FROM kcbase
 
-RUN apk add apache-mod-fcgid perl-fcgi
+RUN apk update && \
+    apk upgrade && \
+    apk add apache-mod-fcgid perl-fcgi
 
 WORKDIR /usr/local/apache2/conf
 
@@ -15,6 +17,7 @@ WORKDIR /root
 COPY docker-entrypoint.sh docker-entrypoint.sh
 RUN chmod +x docker-entrypoint.sh
 
+EXPOSE 80 443
 CMD ./docker-entrypoint.sh
  
 #start the foswiki daemon  (nginx only)
