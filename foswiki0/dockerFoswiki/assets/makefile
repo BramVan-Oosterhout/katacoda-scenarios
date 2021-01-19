@@ -27,6 +27,7 @@ TOPICS = 'KatacodaCourses.Foswiki0.KcDockerAF.ScenarioStep01,\
     KatacodaCourses.Foswiki0.KcDockerAF.ScenarioStep07,\
     KatacodaCourses.Foswiki0.KcDockerAF.ScenarioStep08,\
     KatacodaCourses.Foswiki0.KcDockerAF.ScenarioStep09,\
+    KatacodaCourses.Foswiki0.KcDockerAF.ScenarioStep10,\
 	KatacodaCourses.Foswiki0.KcDockerAF.ScenarioIntro,\
 	KatacodaCourses.Foswiki0.KcDockerAF.ScenarioFinish'
 	
