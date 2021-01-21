@@ -19,22 +19,23 @@
                   {"file": "docker-entrypoint.sh", "target": "/root" }, 
                   {"file": "KcBvO.crt", "target": "/root"},
                   {"file": "KcBvO.key", "target": "/root"},
-                  {"file": "start", "target": "/root", "chmod": "+x" }
+                  {"file": "start", "target": "/root", "chmod": "+x" },
+                  {"file": "timings", "target": "/root", "chmod": "+x" }
               ]
     },
     "steps": [
    {
-      "answer" : "step01-answer.md",
       "title" : "Create an environment",
-      "text" : "step01.md"
+      "text" : "step01.md",
+      "answer" : "step01-answer.md"
    },
    {
-      "title" : "Install and configure Foswiki",
-      "text" : "step02.md"
+      "text" : "step02.md",
+      "title" : "Install and configure Foswiki"
    },
    {
-      "title" : "Configure apache for ssl",
-      "text" : "step03.md"
+      "text" : "step03.md",
+      "title" : "Configure apache for ssl"
    },
    {
       "text" : "step04.md",
@@ -45,12 +46,12 @@
       "title" : "Measuring performance"
    },
    {
-      "title" : "Using the pre zipped css and js",
-      "text" : "step06.md"
+      "text" : "step06.md",
+      "title" : "Using the pre zipped css and js"
    },
    {
-      "text" : "step07.md",
-      "title" : "Using the PageOptimizerPlugin"
+      "title" : "Using the PageOptimizerPlugin",
+      "text" : "step07.md"
    },
    {
       "title" : "Compressing the apache output",
@@ -61,8 +62,8 @@
       "text" : "step09.md"
    },
    {
-      "text" : "step10.md",
-      "title" : "Summary of the performance"
+      "title" : "Summary of the performance",
+      "text" : "step10.md"
    }
 ]
 ,
