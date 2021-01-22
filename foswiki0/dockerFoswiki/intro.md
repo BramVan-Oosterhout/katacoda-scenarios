@@ -1,6 +1,6 @@
  In this Scenario you will build a Docker image supporting an Apache/Foswiki installation for use in a Katacoda scenario.
 
- Once you have built the container you can run it. Since the Katacoda environment is already acontainer, you will be accessing your Foswiki as `https://[[katacoda ...com]]/foswiki`. In other words, the access methos uses ssl. You can access Foswiki using regular http on port 80.
+ Once you have built the container, you can run it. Since the Katacoda environment is already acontainer, you will be accessing your Foswiki as `https://[[katacoda ...com]]/foswiki`. In other words, the access methos uses ssl. You can access Foswiki using regular http on port 80.
 
  But that creates many side effects, because you are then using [Cross-Origin-Resource-Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS). The side effects are associated with Ajax requests and cookies and affect login and edit. The standards in this area (CORS) are still evolving (Nov 2020) and the work arounds rather awkward.
 

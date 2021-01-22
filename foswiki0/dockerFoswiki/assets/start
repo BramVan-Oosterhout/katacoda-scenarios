@@ -26,7 +26,7 @@ sub print_timing{
    my $command = 'wget -pq --no-check-certificate --delete-after https://localhost/foswiki';
    my $timing = '/usr/bin/time --quiet -f "%e" ';
    my $cmd = $timing . $command;
-   print qq( ... Timing - $cmd\n );
+#   print qq( ... Timing - $cmd\n );
    my $time0 = qx($cmd 2>&1 1>/dev/null);
    my $time1 = qx($cmd 2>&1 1>/dev/null);
    my $time2 = qx($cmd 2>&1 1>/dev/null);
