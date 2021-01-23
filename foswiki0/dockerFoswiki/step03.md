@@ -1,25 +1,14 @@
- To configure apache we need to:
+ To configure Apache we need to:
 
-|Purpose|Action|
+|Purpose|Action|Lines|
 |-|
-|for `ssl`|enable `httpd-ssl.conf`<br />
- enable `mod_ssl` and `mod_socache_shmcb.so`|
-|for logging|access to access.log <br />
- errors to `error.log`|
-|for Foswiki|include `foswiki.conf`|
+|for `ssl`|supply the security certificate and key <br />
+enable `httpd-ssl.conf`<br />
+ enable `mod_ssl` and `mod_socache_shmcb.so`|`Line 40 - 44`|
+|for logging|access to `access.log`<br />
+ errors to `error.log`|Line 45 - 46|
 
-```
+ For instructions on creating a self-signed security certificate see [Digital Ocean: How To Create a Self-Signed SSL Certificate for Apache](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-debian-10).
 
-WORKDIR /usr/local/apache2/conf
-
-# Configure the httpd server for ssl andlogging
-COPY KcBvO.crt server.crt
-COPY KcBvO.key server.key
-RUN sed -i -e 's/^#\(Include .*httpd-ssl.conf\)/\1/' \
-           -e 's/^#\(LoadModule .*mod_ssl.so\)/\1/' \
-           -e 's/^#\(LoadModule .*mod_socache_shmcb.so\)/\1/' httpd.conf &amp;&amp; \
-    sed -ri -e 's!^(\s*CustomLog)\s+\S+!\1 /var/log/httpd/access.log!g' \
-            -e 's!^(\s*ErrorLog)\s+\S+!\1 /var/log/httpd/error.log!g' "httpd.conf" &amp;&amp; \
-
-```
+ At this point we have the base for the 5 configurations we explore in this scenario. The nextsteps will create, run and explore the various configurations.
 
