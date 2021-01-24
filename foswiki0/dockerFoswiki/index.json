@@ -25,9 +25,9 @@
     },
     "steps": [
    {
-      "text" : "step01.md",
       "answer" : "step01-answer.md",
-      "title" : "Create an environment"
+      "title" : "Create an environment",
+      "text" : "step01.md"
    },
    {
       "text" : "step02.md",
@@ -46,18 +46,19 @@
       "text" : "step05.md"
    },
    {
-      "text" : "step06.md",
       "title" : "Using the pre zipped css and js",
-      "answer" : "step06-answer.md"
+      "answer" : "step06-answer.md",
+      "text" : "step06.md"
    },
    {
-      "title" : "Using the PageOptimizerPlugin",
       "answer" : "step07-answer.md",
+      "title" : "Using the PageOptimizerPlugin",
       "text" : "step07.md"
    },
    {
+      "text" : "step08.md",
       "title" : "Compressing the apache output",
-      "text" : "step08.md"
+      "answer" : "step08-answer.md"
    },
    {
       "text" : "step09.md",
