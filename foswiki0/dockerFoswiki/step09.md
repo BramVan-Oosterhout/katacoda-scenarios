@@ -1,4 +1,8 @@
+ The standard Apache Foswiki CGI configuration will start the `perl` interpreter for each page request received.This introduces some overhead. The overhead can be avoided by running a daemon that provides Foswiki services using the [FastCGI](http://cdlhttps://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/KatacodaCourses/Foswiki0/KcDockerAF/FastCGI?topicparent=KatacodaCourses/Foswiki0/KcDockerAF.ScenarioStep09 "Create this topic") protocol.
+
  Instead of creating a new process for each request, [FastCGI](http://cdlhttps://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/KatacodaCourses/Foswiki0/KcDockerAF/FastCGI?topicparent=KatacodaCourses/Foswiki0/KcDockerAF.ScenarioStep09 "Create this topic") uses persistent processes to handle a series of requests. See: [Wikipedia](https://en.wikipedia.org/wiki/FastCGI).
+
+ Apache mod\_fcgid provides this service It starts `foswiki.fcgi` as a daemon when the first request is received. Subsequent requests are handled by the already running daemon.
 
  The installation is done in `Dockerfile.foswiki.fcgi`{{open}}
 
@@ -16,26 +20,25 @@
 
 ### Apache - Foswiki configuration	
 
- The configuration file is generated with the Foswiki Apache config generator at <https://foswiki.org/Support/ApacheConfigGenerator>. The generated file is supplied as foswiki.fcgi.conf. You can compare this configuration with the standard foswiki.conf with: `diff /etc/apache2/conf-available/foswiki.conf foswiki.fcgi.conf`{{execute}}
+ The configuration file is generated with the Foswiki Apache config generator at <https://foswiki.org/Support/ApacheConfigGenerator>. Allow Symbolic Links and select the [FastCGI](http://cdlhttps://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/KatacodaCourses/Foswiki0/KcDockerAF/FastCGI?topicparent=KatacodaCourses/Foswiki0/KcDockerAF.ScenarioStep09 "Create this topic") runtime engine. Accept the defaults for he remaining options.
+
+ The generated file is supplied as foswiki.fcgi.conf. You can compare this configuration with the standard foswiki.conf with: `diff /etc/apache2/conf-available/foswiki.conf foswiki.fcgi.conf`{{execute}}
 
 * The Alias declarations change the foswiki executable to the `foswiki.fcgi` executable.
 * If mod\_fcgi is enabled, there are some control parameters set. They make sure that the continuous running process plays nicely in the environment.
 * The Files declaration defines the `foswiki.fcgi` script as an fcgi daemon.
 
- Make the fcgi configuration available in `line 7 - 11`
+ Make the fcgi configuration available in `line 7 - 11`.
 
-### Results	
+ Build the image with: `docker build -t foswiki-deflate -f Dockerfile.foswiki.fcgi . `{{execute}}
 
- You can repeat the measurements yuo performed on the retrieval of [System](http://cdlhttps://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/System/WebHome). I took 5 measurements and got: 2384, 1537, 1598, 1553, 1541 ms. The first time the foswiki executable gets loaded: `ps -f -C perl`{{execute}} So we gained around 400 ms per retrieval on this platform.
+ And start the container: `docker run -d --rm --name foswiki -p 443:443 foswiki-fcgi`{{execute}}
 
-## Saving the docker image	
+ The performance results for the `fcgi` configuration are in seconds. Baseline figures are in brackets. The performance scripts are repeated in the Solutions.
 
- You can save the image as build to Docker Hub if you have registered. You need to:
-
-* login: `docker login -u bramvanoosterhout --password-stdin`{{execute}}
-* find the `IMAGE-ID`: `docker images | more`{{execute}}
-* tag the image: `docker tag {IMAGE-ID} bramvanoosterhout/kcfoswiki:0.1`{{execute}}
-* push the image: `docker push bramvanoosterhout/kcfoswiki:0.1`{{execute}}
-
- Once it is saved, you can use it anywhere with: `docker pull bramvanoosterhout/kcfoswiki:0.1`{{execute}}
+|First|Second|Third|Url|
+|-|
+||||`localhost`|
+||||`katacoda host`|
+||||[Pingdom](https://tools.pingdom.com/#!/)|
 

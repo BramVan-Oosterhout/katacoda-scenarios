@@ -6,24 +6,24 @@
 
  REMOVE THE LOGLEVEL.
 
- Build the image with: `docker build -t foswiki-deflate dockerfile= -f %dockerfile% . `{{execute}} `docker build -t foswiki-deflate -f Dockerfile.foswiki.deflate .`{{execute}}
+ Build the image with: `docker build -t foswiki-deflate -f Dockerfile.foswiki.deflate . `{{execute}}
 
- And start the container: `docker run -d --rm --name foswiki -p 443:443 foswiki-deflate`{{execute}} `docker run -d --name foswiki -p 443:443 foswiki-deflate`{{execute}}
+ And start the container: `docker run -d --rm --name foswiki -p 443:443 foswiki-deflate`{{execute}}
 
  To demonstrate the effect you can use:
 
-* to retrieve the compressed page:
+  * to retrieve the compressed page:
 
-  * `wget --header="accept-encoding: gzip" --no-check-certificate --delete-after <a href="https://localhost/foswiki/Main/WebHome">https://localhost/foswiki/Main/WebHome</a>`\{\{exec\}\}
+    * `wget --header="accept-encoding: gzip" --no-check-certificate --delete-after <a href="https://localhost/foswiki/Main/WebHome">https://localhost/foswiki/Main/WebHome</a>`\{\{exec\}\}
 
-* and compare to the uncompressed page:
+  * and compare to the uncompressed page:
 
-  * `wget --no-check-certificate --delete-after <a href="https://localhost/foswiki/Main/WebHome">https://localhost/foswiki/Main/WebHome</a>`\{\{exec\}\}
+    * `wget --no-check-certificate --delete-after <a href="https://localhost/foswiki/Main/WebHome">https://localhost/foswiki/Main/WebHome</a>`\{\{exec\}\}
 
-* When you retrieve the external page you get:
+  * When you retrieve the external page you get:
 
-  * `wget --header="accept-encoding: gzip" --no-check-certificate --delete-after https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/Main/WebHome`\{\{exec\}\}
-  * Hey, this request did not receive a compressed page! Why would that be?
+    * `wget --header="accept-encoding: gzip" --no-check-certificate --delete-after https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/Main/WebHome`\{\{exec\}\}
+    * Hey, this request did not receive a compressed page! Why would that be?
 
  The performance results for the `deflate` configuration are in seconds. Baseline figures are in brackets. The performance scripts are repeated in the Solutions.
 
