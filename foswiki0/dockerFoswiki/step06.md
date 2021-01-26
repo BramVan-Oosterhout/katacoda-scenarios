@@ -2,7 +2,7 @@
 
  Foswiki is shipped with pre-compressed files out of the box. Since not all browsers treat these files reliably, the facility is not switched on by default. It can be easily configured in the Foswiki configuration file. A modified configuration file is provided in `foswiki.cgi-gz.conf`{{open}}.
 
- The changes can be seen with: `diff foswiki.cgi.conf foswiki.cgi-gz.conf`{{execute}}. Changes are in the `pub` directory::
+ The changes can be seen with: `diff foswiki.cgi.conf foswiki.cgi-gz.conf`{{execute}}. Changes are in the access to files in the `pub` directory::
 
 * Access to `.css` is redirected to `.css.gz`
 * Access to `.js` is redirected to `.js.gz`
@@ -14,7 +14,7 @@
 * stopping the running foswiki image: `docker stop foswiki`{{execute}}
 * starting a new image: `docker run -d --rm --name foswiki -p 443:443 foswiki-cgi-gz`{{execute}}
 
- The configuration provides the following performance results (The scripts are repeated in the Solutions).
+ The configuration provides the following performance results. Baseline figures are in the `CGI` collumn. (The scripts are repeated in the Solutions).
 
 |First|Second|Third|CGI|Url|
 |-|

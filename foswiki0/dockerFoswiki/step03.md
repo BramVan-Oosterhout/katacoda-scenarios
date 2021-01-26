@@ -4,9 +4,9 @@
 
 |Purpose|Action|Lines|
 |-|
-|for `ssl`|supply the security certificate and key <br />
-enable `httpd-ssl.conf`<br />
- enable `mod_ssl` and `mod_socache_shmcb.so`|`Line 40 - 44`|
+|for `ssl`|supply the security certificate and key|Line 40 - 41|
+||enable `httpd-ssl.conf`|Line 42 - 44|
+||enable `mod_ssl` and `mod_socache_shmcb.so`||
 |for logging|access to `access.log`<br />
  errors to `error.log`|Line 45 - 46|
 

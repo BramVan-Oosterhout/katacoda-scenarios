@@ -1,6 +1,5 @@
 
- The performance change is marginal because...<br />
- Have a look at the graphs provided by Pingdom. Most of the time in the response is spent Waiting for the file to be delivered. That does not depend on the content or size of the file.
+ The first access on localhost is 400ms longer than the ones that follow. The 400ms is the time taken by the starting of the `foswiki.fcgi` daemon.
 
 **For localhost:**
 

@@ -2,7 +2,7 @@
 
  In this step we introduce the measurement and set the base line.
 
- There are tools on the web that will measure the performance of any web site. You can search: "measuring web site response performance" for a list. In this Scenario we will use the [Pingdom](https://tools.pingdom.com/#!/) tool.
+ There are tools on the web that will measure the performance of any web site. You can search: "\_measuring web site response performance\_" for a list. In this Scenario we will use the [Pingdom](https://tools.pingdom.com/#!/) tool.
 
  However, for a first impression, you can use a simple command line script: <br />
 

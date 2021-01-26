@@ -25,9 +25,9 @@
     },
     "steps": [
    {
-      "answer" : "step01-answer.md",
       "title" : "Create an environment",
-      "text" : "step01.md"
+      "text" : "step01.md",
+      "answer" : "step01-answer.md"
    },
    {
       "text" : "step02.md",
@@ -38,22 +38,22 @@
       "text" : "step03.md"
    },
    {
-      "title" : "Configuring for Foswiki CGI",
-      "text" : "step04.md"
+      "text" : "step04.md",
+      "title" : "Configuring for Foswiki CGI"
    },
    {
       "title" : "Measuring performance",
       "text" : "step05.md"
    },
    {
-      "title" : "Using the pre zipped css and js",
       "answer" : "step06-answer.md",
+      "title" : "Using the pre zipped css and js",
       "text" : "step06.md"
    },
    {
       "answer" : "step07-answer.md",
-      "title" : "Using the PageOptimizerPlugin",
-      "text" : "step07.md"
+      "text" : "step07.md",
+      "title" : "Using the PageOptimizerPlugin"
    },
    {
       "text" : "step08.md",
@@ -61,12 +61,13 @@
       "answer" : "step08-answer.md"
    },
    {
-      "text" : "step09.md",
-      "title" : "Performance: FastCGI"
+      "answer" : "step09-answer.md",
+      "title" : "Performance: FastCGI",
+      "text" : "step09.md"
    },
    {
-      "title" : "Summary of the performance",
-      "text" : "step10.md"
+      "text" : "step10.md",
+      "title" : "Summary of the performance"
    }
 ]
 ,

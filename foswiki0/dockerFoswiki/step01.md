@@ -1,4 +1,4 @@
- In the follwing four steps we will create a Docker image for use in other Scenarios. We will show you the steps, butthist is not a Docker tutorial. You can find these at: [Katacoda Docker tutorials](https://www.katacoda.com/courses/docker). The Docker site has plenty of [documentation](https://docs.docker.com/).
+ In the follwing four steps we will create a Docker image for use in other Scenarios. We will show you the steps, but this is not a Docker tutorial. You can find these at: [Katacoda Docker tutorials](https://www.katacoda.com/courses/docker). The Docker site has plenty of [documentation](https://docs.docker.com/).
 
  You can view the build instructions in the _Dockerfile_ called `Dockerfile.foswiki.base`{{open}} in the root directory. Open the file in the editor.
 

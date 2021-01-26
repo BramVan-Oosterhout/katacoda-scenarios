@@ -8,9 +8,11 @@
 
  Build the image with `docker build -t foswiki-pageopt -f Dockerfile.foswiki.pageopt . `{{execute}}
 
+ Stop the running image: `docker stop foswiki`{{execute}}
+
  And start the container with: `docker run -d --rm --name foswiki -p 443:443 foswiki-pageopt`{{execute}}.
 
- Open Foswiki https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki and measure the performance of the `Main.WebHome` page. The measurement script are repeated in the Solutions. In my excercise I get (cgi base line in brackets):
+ Open Foswiki https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki and measure the performance of the `Main.WebHome` page. Baseline figures are in the `CGI` collumn. The measurement script are repeated in the Solutions.
 
 |First|Second|Third|CGI|Url|
 |-|
