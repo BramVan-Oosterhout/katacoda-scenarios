@@ -18,9 +18,9 @@
 
  For this Foswiki CGI configuration I get the following results in seconds.
 
-|First|Second|Third|Url|
+|First|Second|Third|Avg|Url|
 |-|
-||||`localhost`|
-||||`katacoda host`|
-||||[Pingdom](https://tools.pingdom.com/#!/)|
+|0.56|0.58|0.62|0.59|`localhost`|
+|2.30|2.25|2.26|2.27|`katacoda host`|
+|1.20|1.01|1.01|1.07|[Pingdom](https://tools.pingdom.com/#!/)|
 

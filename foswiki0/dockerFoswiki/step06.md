@@ -16,11 +16,11 @@
 
  The configuration provides the following performance results (The scripts are repeated in the Solutions).
 
-|First|Second|Third|Url|
+|First|Second|Third|CGI|Url|
 |-|
-||||`localhost`|
-||||`katacoda host`|
-||||[Pingdom](https://tools.pingdom.com/#!/)|
+|0.62|0.59|0.58|0.59|`localhost`|
+|2.16|2.13|2.22|2.27|`katacoda host`|
+|1.04|1.09|1.05|1.07|[Pingdom](https://tools.pingdom.com/#!/)|
 
  The results are disappointingly similar. Why would that be?
 

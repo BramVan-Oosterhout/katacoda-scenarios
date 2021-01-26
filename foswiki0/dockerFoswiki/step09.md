@@ -1,18 +1,18 @@
- The standard Apache Foswiki CGI configuration will start the `perl` interpreter for each page request received.This introduces some overhead. The overhead can be avoided by running a daemon that provides Foswiki services using the [FastCGI](http://cdlhttps://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/KatacodaCourses/Foswiki0/KcDockerAF/FastCGI?topicparent=KatacodaCourses/Foswiki0/KcDockerAF.ScenarioStep09 "Create this topic") protocol.
+ The standard Apache Foswiki CGI configuration will start the `perl` interpreter for each page request received.This introduces some overhead. The overhead can be avoided by running a daemon that provides Foswiki services using the `FastCGI` protocol.
 
- Instead of creating a new process for each request, [FastCGI](http://cdlhttps://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/KatacodaCourses/Foswiki0/KcDockerAF/FastCGI?topicparent=KatacodaCourses/Foswiki0/KcDockerAF.ScenarioStep09 "Create this topic") uses persistent processes to handle a series of requests. See: [Wikipedia](https://en.wikipedia.org/wiki/FastCGI).
+ Instead of creating a new process for each request, `FastCGI` uses persistent processes to handle a series of requests. See: [Wikipedia](https://en.wikipedia.org/wiki/FastCGI).
 
  Apache mod\_fcgid provides this service It starts `foswiki.fcgi` as a daemon when the first request is received. Subsequent requests are handled by the already running daemon.
 
  The installation is done in `Dockerfile.foswiki.fcgi`{{open}}
 
-### Foswiki [FastCGIEngineContrib](http://cdlhttps://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/KatacodaCourses/Foswiki0/KcDockerAF/FastCGIEngineContrib?topicparent=KatacodaCourses/Foswiki0/KcDockerAF.ScenarioStep09 "Create this topic")	
+### Foswiki `FastCGIEngineContrib`	
 
- Foswiki supports [FastCGI](http://cdlhttps://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/KatacodaCourses/Foswiki0/KcDockerAF/FastCGI?topicparent=KatacodaCourses/Foswiki0/KcDockerAF.ScenarioStep09 "Create this topic") through the [FastCGIEngineContrib](https://foswiki.org/Extensions/FastCGIEngineContrib). [FastCGIEngineContrib](http://cdlhttps://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/KatacodaCourses/Foswiki0/KcDockerAF/FastCGIEngineContrib?topicparent=KatacodaCourses/Foswiki0/KcDockerAF.ScenarioStep09 "Create this topic") is installed with the Foswiki core installation. The executable `foswiki.fcgi` is located in the `bin` directory: `ls /var/www/foswiki/bin`{{execute}}
+ Foswiki supports `FastCGI` through the [=FastCGIEngineContrib=](https://foswiki.org/Extensions/FastCGIEngineContrib). `FastCGIEngineContrib` is installed with the Foswiki core installation. The executable `foswiki.fcgi` is located in the `bin` directory: `ls /var/www/foswiki/bin`{{execute}}
 
 ### libfcgi-perl and apache mod\_fcgi	
 
- These modules are installed in `line 3 - 5`
+ These modules are installed in `line 3 - 5` in `Dockerfile.foswiki.fcgi`{{open}}
 
 ### Apache mod\_fcgid	
 
@@ -20,7 +20,7 @@
 
 ### Apache - Foswiki configuration	
 
- The configuration file is generated with the Foswiki Apache config generator at <https://foswiki.org/Support/ApacheConfigGenerator>. Allow Symbolic Links and select the [FastCGI](http://cdlhttps://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/KatacodaCourses/Foswiki0/KcDockerAF/FastCGI?topicparent=KatacodaCourses/Foswiki0/KcDockerAF.ScenarioStep09 "Create this topic") runtime engine. Accept the defaults for he remaining options.
+ The configuration file is generated with the Foswiki Apache config generator at <https://foswiki.org/Support/ApacheConfigGenerator>. Allow Symbolic Links and select the `FastCGI` runtime engine. Accept the defaults for he remaining options.
 
  The generated file is supplied as foswiki.fcgi.conf. You can compare this configuration with the standard foswiki.conf with: `diff /etc/apache2/conf-available/foswiki.conf foswiki.fcgi.conf`{{execute}}
 
@@ -36,9 +36,9 @@
 
  The performance results for the `fcgi` configuration are in seconds. Baseline figures are in brackets. The performance scripts are repeated in the Solutions.
 
-|First|Second|Third|Url|
+|First|Second|Third|CGI|Url|
 |-|
-||||`localhost`|
-||||`katacoda host`|
-||||[Pingdom](https://tools.pingdom.com/#!/)|
+|0.18|0.15|0.15|0.59|`localhost`|
+|2.05|1.91|1.95|2.27|`katacoda host`|
+|0.68|0.58|0.75|1.07|[Pingdom](https://tools.pingdom.com/#!/)|
 

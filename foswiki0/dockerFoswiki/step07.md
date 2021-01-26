@@ -12,11 +12,11 @@
 
  Open Foswiki https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki and measure the performance of the `Main.WebHome` page. The measurement script are repeated in the Solutions. In my excercise I get (cgi base line in brackets):
 
-|First|Second|Third|Url|
+|First|Second|Third|CGI|Url|
 |-|
-||||`localhost`|
-||||`katacoda host`|
-||||[Pingdom](https://tools.pingdom.com/#!/)|
+|0.66|0.64|0.83|0.59|`localhost`|
+|2.23|2.04|1.99|2.27|`katacoda host`|
+|0.97|1.49|1.05|1.07|[Pingdom](https://tools.pingdom.com/#!/)|
 
  The results are marginally different. Why would that be?
 

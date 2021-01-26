@@ -29,9 +29,9 @@
 
 |First|Second|Third|Url|
 |-|
-||||`localhost`|
-||||`katacoda host`|
-||||[Pingdom](https://tools.pingdom.com/#!/)|
+|0.59|0.63|0.57|0.59|`localhost`|
+|2.27|2.33|2.35|2.27|`katacoda host`|
+|1.12|1.12|0.99|1.07|[Pingdom](https://tools.pingdom.com/#!/)|
 
  As before, the differences appear marginal. Why would that be?
 
