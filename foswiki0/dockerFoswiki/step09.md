@@ -8,7 +8,7 @@
 
 ### Foswiki `FastCGIEngineContrib`	
 
- Foswiki supports `FastCGI` through the `<a href="https://foswiki.org/Extensions/FastCGIEngineContrib">FastCGIEngineContrib</a>`. `FastCGIEngineContrib` is installed with the Foswiki core installation. The executable `foswiki.fcgi` is located in the `bin` directory: `ls /var/www/foswiki/bin`{{execute}}
+ Foswiki supports `FastCGI` through the `<a href="https://foswiki.org/Extensions/FastCGIEngineContrib">FastCGIEngineContrib</a>`. `FastCGIEngineContrib` is installed with the Foswiki core installation. The executable `foswiki.fcgi` is located in the `bin` directory: `docker exec -it foswiki /bin/bash -c 'ls /var/www/foswiki'`{{execute}}
 
 ### libfcgi-perl and apache mod\_fcgi	
 

@@ -6,6 +6,8 @@
 
  Build the image with: `docker build -t foswiki-deflate -f Dockerfile.foswiki.cgi-deflate . `{{execute}}
 
+ Stop the running `foswiki` container: `docker stop foswiki`{{execute}}
+
  And start the container: `docker run -d --rm --name foswiki -p 443:443 foswiki-deflate`{{execute}}
 
  To demonstrate the effect you can use:
