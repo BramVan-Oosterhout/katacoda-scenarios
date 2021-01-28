@@ -1,11 +1,11 @@
-
+GITROOT=/home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios
 do: add commit push
 
 add:
-	git add *
+	cd ${GITROOT}; git add *
     
 commit:
-	git commit -m "updated by BvO" 
+	cd ${GITROOT}; git commit -m "updated by BvO" 
     
 push:
-	git push origin master
+	cd ${GITROOT}; git push origin master
