@@ -7,7 +7,7 @@ Start foswiki: https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.kata
 When you access your Foswiki installation for the first time you will land on a page that says: "Welcome to the Main web".
 Halfway down the page is a **Registration** link. Register yourself as a user
 (We'll use: Joe Blog, password: password. Email is not configured and not required)
-Once you are registerd, come back to [this page](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki)
+Once you are registered, come back to [this page](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki)
 
 There are some basic features to note:
 *   There is a banner at the top with a Jump and a Search box
