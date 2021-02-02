@@ -2,3 +2,11 @@ FROM timlegge/docker-foswiki
 COPY nginx.ssh.conf /etc/nginx/conf.d/default.conf
 COPY docker-foswiki.crt /etc/nginx/docker-foswiki.crt
 COPY docker-foswiki.key /etc/nginx/docker-foswiki.key
+COPY docker-entrypoint.sh docker-entrypoint.sh
+
+WORKDIR /var/www/foswiki
+
+#configure Foswiki
+RUN tools/configure -save -noprompt && \
+    tools/configure -save -set {DefaultUrlHost}='http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com' \
+                          -set {Password}='password'

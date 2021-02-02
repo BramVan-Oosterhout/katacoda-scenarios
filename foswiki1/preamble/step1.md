@@ -12,7 +12,7 @@ Throughout the tutorial you will see command line instructions like `ls`{{execut
 When you click these, the command will be executed in the terminal window.
 
 When you select the _Foswiki_ tab in the right hand panel after the configuration is complete,
-the Foswiki _Main.WebHome_ page will be displayed. Or you can open: https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki
+the Foswiki _Main.WebHome_ page will be displayed. Or you can open: https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com
 
 This tutorial has only one Foswiki user configured: _admin_ with password _password_.
 This is not suited for a permanent installation. Tutorial scenarios exist for a limited time only.
