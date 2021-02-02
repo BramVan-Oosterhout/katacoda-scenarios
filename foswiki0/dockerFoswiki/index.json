@@ -25,13 +25,13 @@
     },
     "steps": [
    {
-      "title" : "Create an environment",
+      "answer" : "step01-answer.md",
       "text" : "step01.md",
-      "answer" : "step01-answer.md"
+      "title" : "Create an environment"
    },
    {
-      "text" : "step02.md",
-      "title" : "Install and configure Foswiki"
+      "title" : "Install and configure Foswiki",
+      "text" : "step02.md"
    },
    {
       "title" : "Configure apache for ssl",
@@ -61,9 +61,9 @@
       "answer" : "step08-answer.md"
    },
    {
-      "answer" : "step09-answer.md",
+      "text" : "step09.md",
       "title" : "Performance: FastCGI",
-      "text" : "step09.md"
+      "answer" : "step09-answer.md"
    },
    {
       "text" : "step10.md",
@@ -83,7 +83,7 @@
     "uilayout": "editor-terminal",
     "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r\nRun your own commands here\u001b[m\r\n",
     "showdashboard": "1",
-    "dashboards": [ {"name": "Foswiki", "port": "80", "host": "host01"} ]
+    "dashboards": [ {"name": "Foswiki", "href": "https://HOST_SUBDOMAIN-80-KATACODA_HOST.environments.katacoda.com/foswiki"} ]
 
   },
   "backend": {
