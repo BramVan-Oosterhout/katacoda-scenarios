@@ -1,3 +1,10 @@
+Try the table command
+<table>
+<tr><td>1.1</td><td>1.2</td></tr>
+<tr><td>2.1</td><td>2.2</td></tr>
+<tr><td>3.1</td><td>3.2</td></tr>
+</table>
+
 <div class="foswikiPage">
 
 <span id="PageTop"></span>
