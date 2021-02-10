@@ -1,11 +1,11 @@
 {
-  "title": "Test Apache Install",
-  "description": "Installation and configuration",
+  "title": "Translating TML",
+  "description": "Examples of the translation from TML to Katacoda Markdown",
   "difficulty": "beginner",
   "time": "20 minutes",
   "details": {
     "steps": [{
-      "title": "Step 1 - ...",
+      "title": "Basic markup translated",
       "text": "step01.md"
     }],
     "intro": {
