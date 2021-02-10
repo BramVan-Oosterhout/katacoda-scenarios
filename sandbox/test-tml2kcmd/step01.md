@@ -41,6 +41,13 @@ _Italic text_
 '&gt;&gt;&gt;&gt;&gt;&gt; DEFINITION LIST<br />
 
  Sushi  Japan  Dim Sum  S.F.
+ 
+ >>>> HTML RENDERS AS
+ 
+<dl>
+<dt> Sushi </dt><dd> Japan 
+</dd> <dt> Dim Sum </dt><dd> S.F.
+</dd></dl> 
 
 '&gt;&gt;&gt;&gt;&gt;&gt; INDENTED TEXT<br />
 
