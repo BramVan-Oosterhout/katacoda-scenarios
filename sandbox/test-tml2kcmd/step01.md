@@ -1,3 +1,19 @@
+<style>
+.foswikiTable,
+.foswikiTable td {
+	border-color:#ccc;
+}
+.foswikiTable th {
+	background-color:#9be;
+	border-color:#ccc;
+}
+.foswikiTable th a:link,
+.foswikiTable th a:visited,
+.foswikiTable th a font {
+	color:#fff;
+}
+</style>
+
 '&gt;&gt;&gt;&gt;&gt; HEADERS<br />
 
 # Header 1	
@@ -41,13 +57,6 @@ _Italic text_
 '&gt;&gt;&gt;&gt;&gt;&gt; DEFINITION LIST<br />
 
  Sushi  Japan  Dim Sum  S.F.
- 
- >>>> HTML RENDERS AS
- 
-<dl>
-<dt> Sushi </dt><dd> Japan 
-</dd> <dt> Dim Sum </dt><dd> S.F.
-</dd></dl> 
 
 '&gt;&gt;&gt;&gt;&gt;&gt; INDENTED TEXT<br />
 
@@ -61,36 +70,36 @@ _Italic text_
 
 # Regular table	
 
-<table>
-<tr>
-<th> col1 </th>
-<th> col2 </th>
-<th> col3 </th>
+<table class="foswikiTable">
+<tr class="foswikiTableOdd foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
+<th class="foswikiTableCol0 foswikiFirstCol"> col1 </th>
+<th class="foswikiTableCol1"> col2 </th>
+<th class="foswikiTableCol2 foswikiLastCol"> col3 </th>
 </tr>
-<tr>
-<td> t1.1 </td>
-<td> t1.2 </td>
-<td> t1.3 </td>
+<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
+<td class="foswikiTableCol0 foswikiFirstCol"> t1.1 </td>
+<td class="foswikiTableCol1"> t1.2 </td>
+<td class="foswikiTableCol2 foswikiLastCol"> t1.3 </td>
 </tr>
-<tr>
-<td> t2.1 </td>
-<td> t2.2 </td>
-<td> t2.3 </td>
+<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">
+<td class="foswikiTableCol0 foswikiFirstCol foswikiLast"> t2.1 </td>
+<td class="foswikiTableCol1 foswikiLast"> t2.2 </td>
+<td class="foswikiTableCol2 foswikiLastCol foswikiLast"> t2.3 </td>
 </tr>
 </table>
 
 # headless table	
 
-<table>
-<tr>
-<td> t1.1 </td>
-<td> t1.2 </td>
-<td> t1.3 </td>
+<table class="foswikiTable">
+<tr class="foswikiTableOdd foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
+<td class="foswikiTableCol0 foswikiFirstCol"> t1.1 </td>
+<td class="foswikiTableCol1"> t1.2 </td>
+<td class="foswikiTableCol2 foswikiLastCol"> t1.3 </td>
 </tr>
-<tr>
-<td> t2.1 </td>
-<td> t2.2 </td>
-<td> t2.3 </td>
+<tr class="foswikiTableEven foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">
+<td class="foswikiTableCol0 foswikiFirstCol foswikiLast"> t2.1 </td>
+<td class="foswikiTableCol1 foswikiLast"> t2.2 </td>
+<td class="foswikiTableCol2 foswikiLastCol foswikiLast"> t2.3 </td>
 </tr>
 </table>
 
