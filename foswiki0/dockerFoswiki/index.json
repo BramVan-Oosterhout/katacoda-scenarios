@@ -25,45 +25,45 @@
     },
     "steps": [
    {
+      "title" : "Create an environment",
       "answer" : "step01-answer.md",
-      "text" : "step01.md",
-      "title" : "Create an environment"
+      "text" : "step01.md"
    },
    {
-      "text" : "step02.md",
-      "title" : "Install and configure Foswiki"
+      "title" : "Install and configure Foswiki",
+      "text" : "step02.md"
    },
    {
       "title" : "Configure apache for ssl",
       "text" : "step03.md"
    },
    {
-      "text" : "step04.md",
-      "title" : "Configuring for Foswiki CGI"
+      "title" : "Configuring for Foswiki CGI",
+      "text" : "step04.md"
    },
    {
       "title" : "Measuring performance",
       "text" : "step05.md"
    },
    {
-      "title" : "Using the pre zipped css and js",
       "text" : "step06.md",
+      "title" : "Using the pre zipped css and js",
       "answer" : "step06-answer.md"
    },
    {
-      "answer" : "step07-answer.md",
       "title" : "Using the PageOptimizerPlugin",
+      "answer" : "step07-answer.md",
       "text" : "step07.md"
    },
    {
       "text" : "step08.md",
-      "title" : "Compressing the apache output",
-      "answer" : "step08-answer.md"
+      "answer" : "step08-answer.md",
+      "title" : "Compressing the apache output"
    },
    {
-      "text" : "step09.md",
+      "answer" : "step09-answer.md",
       "title" : "Performance: FastCGI",
-      "answer" : "step09-answer.md"
+      "text" : "step09.md"
    },
    {
       "title" : "Summary of the performance",
@@ -83,10 +83,10 @@
     "uilayout": "editor-terminal",
     "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r\nRun your own commands here\u001b[m\r\n",
     "showdashboard": "1",
-    "dashboards": [ {"name": "Foswiki", "href": "https://\u0091[HOST_SUBDOMAIN]]-80-\u0091[KATACODA_HOST]].environments.katacoda.com/foswiki"} ]
+    "dashboards": [ {"name": "Foswiki", "href": "https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki"} ]
 
   },
   "backend": {
     "imageid": "ubuntu"
-  }
+  } 
 }
