@@ -1,3 +1,5 @@
+Performance is a concern for web sites that want to be seen. Slow responses tend to scare off impatient people. Apache and Foswiki support various configurations to improve the performance of the Foswiki site. Foswiki supports these options out of the box and with several plugins. In the following steps we will install some of them and measure the result.
+
 In this step we introduce the measurement and set the base line.
 
 There are tools on the web that will measure the performance of any web site. You can search: _measuring web site response performance_ for a list. In this Scenario we will use the [Pingdom](https://tools.pingdom.com) tool.
@@ -44,3 +46,4 @@ For this Foswiki CGI configuration I get the following results in seconds.
 </tr>
 </table>
 
+### Answer	{#Answer}

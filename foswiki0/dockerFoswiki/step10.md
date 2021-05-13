@@ -4,29 +4,29 @@ You can run Foswiki with https://[[HOST\_SUBDOMAIN]]-80-[[KATACODA\_HOST]].envir
 
 Copy the script to your own platform from `timings`{{open}}. The times on my home server are measured with this script. They are presented as: Timings: `first time`, `average over next 4 (standard deviation)`.
 
-### Standard cgi	
+### Standard cgi	{#Standard_cgi}
 
 `./start cgi`{{execute}} <br />
  Timings: 1100ms, 690ms (105)
 
-### Pre zipped css and javascript	
+### Pre zipped css and javascript	{#Pre_zipped_css_and_javascript}
 
 `./start cgi-gz`{{execute}} <br />
  Timings: 700ms, 685ms (82)
 
-### Using PageOptimizer	
+### Using PageOptimizer	{#Using_PageOptimizer}
 
 `./start pageopt`{{execute}} <br />
  Timings: 700ms, 700ms (105)
 
-### Deflated component	
+### Deflated component	{#Deflated_component}
 
 `./start cgi-deflate`{{execute}} <br />
  Timings: 870ms, 687ms (58)
 
-### Fast CGI	
+### Fast CGI	{#Fast_CGI}
 
 `./start fcgi`{{execute}} <br />
  Timings: 690ms, 682ms (101)
 
-### Answer	
+### Answer	{#Answer}

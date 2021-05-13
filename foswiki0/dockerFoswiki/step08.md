@@ -1,4 +1,4 @@
-`Main.WebHome` page, you will see that the the object size has a some bearing on the time to deliver the object to your browser. Apache can help by compressing the output file before transmission, thereby trading transmission time for processing time.
+When you inspect the Pingdom performance report for the `Main.WebHome` page, you will see that the the object size has a some bearing on the time to deliver the object to your browser. Apache can help by compressing the output file before transmission, thereby trading transmission time for processing time.
 
 Open `Dockerfile.foswiki.cgi-deflate`{{open}}. The module to use is `mod_deflate`. It is activated in `line 7`.
 
