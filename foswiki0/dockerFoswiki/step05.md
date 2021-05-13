@@ -46,4 +46,4 @@ For this Foswiki CGI configuration I get the following results in seconds.
 </tr>
 </table>
 
-### Answer	{#Answer}
+### Answer	

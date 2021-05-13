@@ -6,15 +6,15 @@ Apache `mod_fcgid` provides this service It starts `foswiki.fcgi` as a daemon wh
 
 The installation is done in `Dockerfile.foswiki.fcgi`{{open}}
 
-### Foswiki `FastCGIEngineContrib`	{#Foswiki_61FastCGIEngineContrib_61}
+### Foswiki `FastCGIEngineContrib`	
 
 Foswiki supports `FastCGI` through the [`FastCGIEngineContrib`](https://foswiki.org/Extensions/FastCGIEngineContrib). `FastCGIEngineContrib` is installed with the Foswiki core installation. The executable `foswiki.fcgi` is located in the `bin` directory: `docker exec -it foswiki /bin/bash -c 'ls /var/www/foswiki/bin'`{{execute}}
 
-### libfcgi-perl and apache mod\_fcgid	{#libfcgi_45perl_and_apache_mod_fcgid}
+### libfcgi-perl and apache mod\_fcgid	
 
 These modules are installed in `line 3 - 5` in `Dockerfile.foswiki.fcgi`{{open}} `mod_fcgid` is dependent on `perl-fcgi`
 
-### Apache - Foswiki configuration	{#Apache_45_Foswiki_configuration}
+### Apache - Foswiki configuration	
 
 The configuration file is generated with the Foswiki Apache config generator at <https://foswiki.org/Support/ApacheConfigGenerator>. Allow Symbolic Links and select the `FastCGI` runtime engine. Accept the defaults for he remaining options.
 

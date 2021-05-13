@@ -35,4 +35,4 @@ For instructions on creating a self-signed security certificate see [Digital Oce
 
 At this point we have the base for the 5 configurations we explore in this scenario. The next steps will create, run and explore the various configurations.
 
-### Answer	{#Answer}
+### Answer	
