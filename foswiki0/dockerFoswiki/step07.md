@@ -12,7 +12,7 @@ Stop the running image: `docker stop foswiki`{{execute}}
 
 And start the container with: `docker run -d --rm --name foswiki -p 443:443 foswiki-pageopt`{{execute}}.
 
-Open Foswiki https://[[HOST\_SUBDOMAIN]]-80-[[KATACODA\_HOST]].environments.katacoda.com/foswiki and measure the performance of the `Main.WebHome` page. Baseline figures are in the `CGI` column. The measurement script are repeated in the Solutions.
+Open Foswiki https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki and measure the performance of the `Main.WebHome` page. Baseline figures are in the `CGI` column. The measurement script are repeated in the Solutions.
 
 <table class="foswikiTable">
 <tr class="foswikiTableOdd foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">

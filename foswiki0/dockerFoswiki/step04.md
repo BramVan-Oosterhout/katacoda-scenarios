@@ -10,7 +10,7 @@ Build the Foswiki CGI image with `docker build -t foswiki-cgi -f Dockerfile.fosw
 
 And start the Foswiki container with: `docker run -d --rm --name foswiki -p 443:443 foswiki-cgi`{{execute}}
 
-Run Foswiki with https://[[HOST\_SUBDOMAIN]]-80-[[KATACODA\_HOST]].environments.katacoda.com/foswiki
+Run Foswiki with https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki
 
 You can make changes to the _Dockerfile_ using the editor and rebuild the image. To use the updated image, you must:
 * stop the running container: `docker stop foswiki`{{execute}}
