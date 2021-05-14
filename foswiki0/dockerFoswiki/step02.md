@@ -6,4 +6,3 @@ After installation the tar ball is removed (line 25).
 
 Then we use `tools/configure` to configure Foswiki from the command line (line 29 - 33). We need to create the `.htpasswd` file and ensure that the file protections are set correctly.
 
-### Answer	

@@ -29,4 +29,3 @@ Copy the script to your own platform from `timings`{{open}}. The times on my hom
 `./start fcgi`{{execute}} <br />
  Timings: 690ms, 682ms (101)
 
-### Answer	

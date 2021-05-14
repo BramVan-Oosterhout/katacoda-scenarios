@@ -18,4 +18,3 @@ You can make changes to the _Dockerfile_ using the editor and rebuild the image.
   * This is not required when you run the container with the `-rm` option
 * and then start the container again: `docker run -d --rm --name foswiki -p 443:443 foswiki-cgi`{{execute}}
 
-### Answer	
