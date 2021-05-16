@@ -25,25 +25,25 @@
     },
     "steps": [
    {
-      "answer" : "step01-answer.md",
       "text" : "step01.md",
-      "title" : "Create an environment"
+      "title" : "Create an environment",
+      "answer" : "step01-answer.md"
    },
    {
-      "text" : "step02.md",
-      "title" : "Install and configure Foswiki"
+      "title" : "Install and configure Foswiki",
+      "text" : "step02.md"
    },
    {
       "title" : "Configure apache for ssl",
       "text" : "step03.md"
    },
    {
-      "text" : "step04.md",
-      "title" : "Configuring for Foswiki CGI"
+      "title" : "Configuring for Foswiki CGI",
+      "text" : "step04.md"
    },
    {
-      "title" : "Measuring performance",
-      "text" : "step05.md"
+      "text" : "step05.md",
+      "title" : "Measuring performance"
    },
    {
       "text" : "step06.md",
@@ -51,9 +51,9 @@
       "answer" : "step06-answer.md"
    },
    {
+      "answer" : "step07-answer.md",
       "title" : "Using the PageOptimizerPlugin",
-      "text" : "step07.md",
-      "answer" : "step07-answer.md"
+      "text" : "step07.md"
    },
    {
       "title" : "Compressing the apache output",
@@ -61,13 +61,13 @@
       "answer" : "step08-answer.md"
    },
    {
-      "title" : "Performance: FastCGI",
+      "answer" : "step09-answer.md",
       "text" : "step09.md",
-      "answer" : "step09-answer.md"
+      "title" : "Performance: FastCGI"
    },
    {
-      "title" : "Summary of the performance",
-      "text" : "step10.md"
+      "text" : "step10.md",
+      "title" : "Summary of the performance"
    }
 ]
 ,
