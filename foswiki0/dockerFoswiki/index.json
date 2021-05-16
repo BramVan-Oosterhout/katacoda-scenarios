@@ -25,9 +25,9 @@
     },
     "steps": [
    {
-      "text" : "step01.md",
+      "answer" : "step01-answer.md",
       "title" : "Create an environment",
-      "answer" : "step01-answer.md"
+      "text" : "step01.md"
    },
    {
       "title" : "Install and configure Foswiki",
@@ -42,13 +42,13 @@
       "title" : "Configuring for Foswiki CGI"
    },
    {
-      "text" : "step05.md",
-      "title" : "Measuring performance"
+      "title" : "Measuring performance",
+      "text" : "step05.md"
    },
    {
-      "text" : "step06.md",
       "answer" : "step06-answer.md",
-      "title" : "Using the pre zipped css and js"
+      "title" : "Using the pre zipped css and js",
+      "text" : "step06.md"
    },
    {
       "answer" : "step07-answer.md",
@@ -66,8 +66,8 @@
       "answer" : "step09-answer.md"
    },
    {
-      "title" : "Summary of the performance",
-      "text" : "step10.md"
+      "text" : "step10.md",
+      "title" : "Summary of the performance"
    }
 ]
 ,
