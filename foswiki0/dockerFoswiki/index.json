@@ -26,8 +26,8 @@
     "steps": [
    {
       "answer" : "step01-answer.md",
-      "title" : "Create an environment",
-      "text" : "step01.md"
+      "text" : "step01.md",
+      "title" : "Create an environment"
    },
    {
       "title" : "Install and configure Foswiki",
@@ -51,14 +51,14 @@
       "text" : "step06.md"
    },
    {
-      "answer" : "step07-answer.md",
       "title" : "Using the PageOptimizerPlugin",
-      "text" : "step07.md"
+      "text" : "step07.md",
+      "answer" : "step07-answer.md"
    },
    {
       "title" : "Compressing the apache output",
-      "answer" : "step08-answer.md",
-      "text" : "step08.md"
+      "text" : "step08.md",
+      "answer" : "step08-answer.md"
    },
    {
       "text" : "step09.md",
