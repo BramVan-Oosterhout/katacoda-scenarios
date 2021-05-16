@@ -34,12 +34,12 @@
       "text" : "step02.md"
    },
    {
-      "text" : "step03.md",
-      "title" : "Configure apache for ssl"
+      "title" : "Configure apache for ssl",
+      "text" : "step03.md"
    },
    {
-      "title" : "Configuring for Foswiki CGI",
-      "text" : "step04.md"
+      "text" : "step04.md",
+      "title" : "Configuring for Foswiki CGI"
    },
    {
       "text" : "step05.md",
@@ -47,18 +47,18 @@
    },
    {
       "answer" : "step06-answer.md",
-      "text" : "step06.md",
-      "title" : "Using the pre zipped css and js"
+      "title" : "Using the pre zipped css and js",
+      "text" : "step06.md"
    },
    {
-      "title" : "Using the PageOptimizerPlugin",
       "answer" : "step07-answer.md",
-      "text" : "step07.md"
+      "text" : "step07.md",
+      "title" : "Using the PageOptimizerPlugin"
    },
    {
-      "title" : "Compressing the apache output",
       "answer" : "step08-answer.md",
-      "text" : "step08.md"
+      "text" : "step08.md",
+      "title" : "Compressing the apache output"
    },
    {
       "answer" : "step09-answer.md",
