@@ -10,7 +10,7 @@ Here is a `single back-ticked` string.
 
 And this string is 
 ```
-triple back-ticked fenced
+triple back-ticked
 ```
  string.
 
