@@ -18,16 +18,16 @@
       "title" : "First encounter"
    },
    {
-      "title" : "Topic, Jump, Search and Breadcrumb",
-      "text" : "step02.md"
+      "text" : "step02.md",
+      "title" : "Topic, Jump, Search and Breadcrumb"
    },
    {
-      "title" : "Toolbox, Index and Search",
-      "text" : "step03.md"
+      "text" : "step03.md",
+      "title" : "Toolbox, Index and Search"
    },
    {
-      "text" : "step04.md",
-      "title" : "Bottom navigation bar"
+      "title" : "Bottom navigation bar",
+      "text" : "step04.md"
    },
    {
       "text" : "step05.md",
