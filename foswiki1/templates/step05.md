@@ -1,0 +1,4 @@
+## _References_	
+
+* [SkinTemplates](/devwiki/bin/edit/NopHttps/HOST_SUBDOMAIN-80-KATACODA_HOST/environments/katacoda/com/foswiki/System/SkinTemplates?topicparent=KatacodaCourses/Foswiki1/Templates.ScenarioStep05 "Create this topic") for a description of template macros and their expansion. At the bottom of the page are tips for developing new templates and an overview of defaults.
+* [Skins](/devwiki/bin/edit/NopHttps/HOST_SUBDOMAIN-80-KATACODA_HOST/environments/katacoda/com/foswiki/System/Skins?topicparent=KatacodaCourses/Foswiki1/Templates.ScenarioStep05 "Create this topic") for a description how to define and customise a skin.
