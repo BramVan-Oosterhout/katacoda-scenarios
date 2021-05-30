@@ -1,6 +1,6 @@
 {
-  "title": "Scenario title",
-  "description": "What this scenario is about",
+  "title": "Introduction",
+  "description": "Overview of the UI",
   "difficulty": "beginner",
   "time": "20 minutes",
   "details": {
@@ -9,25 +9,26 @@
                  { "file": "Foswikicgi.dck", "target": "~/" },
                  { "file": "foswiki.cgi.conf", "target": "~/" },
                  { "file": "KcBvO.crt", "target": "~/" },
-                 { "file": "KcBvO.key", "target": "~/" }
+                 { "file": "KcBvO.key", "target": "~/" },
+                 { "file": "setup.sh", "target": "~/", "chmod": "+x" }
               ]
     },
     "steps": [
    {
-      "title" : "First encounter",
-      "text" : "step01.md"
+      "text" : "step01.md",
+      "title" : "First encounter"
    },
    {
-      "text" : "step02.md",
-      "title" : "Topic, Jump, Search and Breadcrumb"
+      "title" : "Topic, Jump, Search and Breadcrumb",
+      "text" : "step02.md"
    },
    {
       "title" : "Toolbox, Index and Search",
       "text" : "step03.md"
    },
    {
-      "text" : "step04.md",
-      "title" : "Bottom navigation bar"
+      "title" : "Bottom navigation bar",
+      "text" : "step04.md"
    },
    {
       "title" : "References",
@@ -44,7 +45,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-iframe",
+    "uilayout": "editor-terminal",
     "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r\nRun your own commands here\u001b[m\r\n",
     "showdashboard": "1",
     "dashboards": [ {"name": "Foswiki", "port": "80", "host": "host01"} ]
