@@ -22,7 +22,6 @@
 ,
     "intro": {
       "text": "intro.md",
-      "background": "setup.sh",
       "credits": "Credits: Bram van Oosterhout for the scenario"
     },
     "finish": {
