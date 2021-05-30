@@ -1,6 +1,6 @@
 #!/bin/bash
-docker build -t foswiki-nginx -f Dockerfile.nginx .
-docker run -d --rm --name foswiki -p 443:443 foswiki-nginx
+docker build -t foswiki -f Foswikicgi.dck .
+docker run -d --rm --name foswiki -p 443:443 foswiki
 exit
 # previous implementation ----
 apt-get update

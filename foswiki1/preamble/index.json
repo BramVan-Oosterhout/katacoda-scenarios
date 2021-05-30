@@ -1,5 +1,5 @@
 {
-  "title": "Scenario title",
+  "title": "Preamble",
   "description": "What this scenario is about",
   "difficulty": "beginner",
   "time": "20 minutes",
@@ -9,7 +9,8 @@
                  { "file": "Foswikicgi.dck", "target": "~/" },
                  { "file": "foswiki.cgi.conf", "target": "~/" },
                  { "file": "KcBvO.crt", "target": "~/" },
-                 { "file": "KcBvO.key", "target": "~/" }
+                 { "file": "KcBvO.key", "target": "~/" },
+                 { "file": "setup.sh", "target": "~/", "chmod": "+x" }
               ]
     },
     "steps": [
@@ -21,6 +22,7 @@
 ,
     "intro": {
       "text": "intro.md",
+      "background": "setup.sh",
       "credits": "Credits: Bram van Oosterhout for the scenario"
     },
     "finish": {
@@ -28,7 +30,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-iframe",
+    "uilayout": "editor-terminal",
     "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r\nRun your own commands here\u001b[m\r\n",
     "showdashboard": "1",
     "dashboards": [ {"name": "Foswiki", "port": "80", "host": "host01"} ]
