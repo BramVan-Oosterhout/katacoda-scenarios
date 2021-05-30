@@ -24,7 +24,7 @@ The _Notifications_ link navigates to the `WebNotifications` topic. The topic co
 
 ### The RSS feed	
 
-The _RSS feed_ link navigates to the [WebRss](/devwiki/bin/view/KatacodaCourses/Foswiki1/Introduction/WebRss) topic where you can subscribe to the feed.  I don't know how this works/what it does.  The topic is presented differently, because....???
+The _RSS feed_ link navigates to the WebRss topic where you can subscribe to the feed.  I don't know how this works/what it does.  The topic is presented differently, because....???
 
 ### The Preferences	
 
@@ -40,4 +40,4 @@ Topics in a Foswiki site are stored on disk in a directory structure. Out of the
 
 Webs are an important concept in Foswiki and a building stone for Foswiki Applications.
 
-Go back to the [[https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki]\[Main.Webhome]] page.
+Go back to the [Main.Webhome](/devwiki/bin/edit/NopHttps/HOST_SUBDOMAIN-80-KATACODA_HOST/environments/katacoda/com/Foswiki?topicparent=KatacodaCourses/Foswiki1/Introduction.ScenarioStep03 "Create this topic") page.

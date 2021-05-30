@@ -1,0 +1,287 @@
+>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/macros/finish.md
+That completes Scenario 3, an introduction to macros, their definition and use.
+You can navigate to any of the following scenarios from this page. Or click _Next Scenario_ and return to the tutorial home page.
+
+---++ Part 1 - Foswiki overview
+
+Scenario 1 - [[https://www.katacoda.com/bramvanoosterhout/courses/foswiki/introduction][Introduction]]
+Presents the operation of Foswiki out of the box as seen through the user interface.
+Although there is much functionality under the hood, the immediately visible capabilities are essentially the entry of text in topics
+and the searching across previously entered text.
+
+Scenario 2 - [[https://www.katacoda.com/bramvanoosterhout/courses/foswiki/webs][Webs]]
+Present the basic data management feature,
+the possibility to divide the wiki content in broad classifications: the web. Webs are a basic component in the maintenance and creation of applications.
+Webs, sub-webs and the relation between them are fundamental.
+
+Scenario 3 - [[https://www.katacoda.com/bramvanoosterhout/courses/foswiki/macros][Macros]]
+Presents the use of data definitions to control presentation and behaviour of Foswiki topics.
+Macros are the cornerstones of the functioning of Foswiki applications and this chapter presents the mechanisms used.
+
+Scenario 4 - [[https://www.katacoda.com/bramvanoosterhout/courses/foswiki/meta][Meta data]]
+Presents the implementation of structured data with each topic. This data is referred to as Meta data
+and can be entered and manipulated separate from the text content of the wiki topic.
+
+Scenario 5 - [[https://www.katacoda.com/bramvanoosterhout/courses/foswiki/templates][Templates]] 
+Presents templates. Foswiki templates define the format and presentation of the topic content.
+Templates support wholesale changes to the appearance of a Foswiki site.
+
+Scenario 6 - [[https://www.katacoda.com/bramvanoosterhout/courses/foswiki/extensions][Extensions]] 
+Presents the use of extensions and their interface with the topic content. There are hundreds of plugins shipped with Foswiki.
+This scenario demonstrates the basic syntax and functionality.
+
+Your Katacoda environment for this scenario has been removed!>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/macros/intro.md
+Welcome to your Katacoda Foswiki tutorial environment!
+
+Foswiki uses a simple syntax to influence the presentation of the text entered in the wiki.
+All words starting and ending with a percent (%) character are potential candidates for translation.
+For instance %TOPIC% is translated into the topic name. All Foswiki translation can be viewed as a text manipulation.
+Collectively these constructs are referred to as macros, but there are some semantic constructs that distinguish them as
+variables, preferences or macros.
+
+<div style="background-color: khaki; font-size: smaller">
+The Katacoda training environment is somewhat out of the ordinary. This setup installs Foswiki, listening at port 80 for the http protocol.
+Access is through the katacoda-services host, which is accessible with the https protocol.
+This leads to a mixed access scenario, which is by default not allowed in modern browsers.
+For Firefox  you need to turn off all mixed content checking in
+[[https://docs.sdl.com/LiveContent/content/en-US/SDL%20Web-v5/GUID-A96F0612-53DE-4E35-AE09-48D57146D6E4][about:config]]
+<p />
+*Please note* that you are <code>root</code>on the server.
+If you are not a user with root privileges, some commands will need to be <code>sudo'ed</code>.
+</div>
+
+>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/macros/step1.md
+
+Create a topic like: TestMacros in the Sandbox and experiment along with the text.
+
+---++ Variables
+Variables are defined by placing the following text in a topic:
+_(three spaces) * (one space) Set (variable name) = the value allocated to the variable_.
+The value of the variable can include TML, including other macros, as well as HTML. For example:
+<verbatim>
+   * Set JoeBlog = [[Main.JoeBlog][Joe Blog]] (administrator)
+<verbatim>
+defines the variable JoeBlog and when you write (%JoeBlog%) in the topic,
+the text will translate to (Joe Blog (administrator)).
+Variables can take any amount of content, like the results of a search.
+But variables are limited in scope to the topic where they are defined.
+Note that the variable definition is active, even in &lt;verbatim> ... &lt;/verbatim> tags.
+
+Variables can be defined multiple times in the same topic. However, all definitions are expanded at the time the topic is read from the disk.
+The last definition found will be the value available for use.
+>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/macros/step2-answer.md
+Run the following command and check the Sandbox.SolutionMacrosStep2 page.
+
+<code>tar xvzf /root/SolutionMacros.tgz -C /var/www/foswiki/data/Sandbox --wildcards SolutionMacrosStep2*`{{execute}}>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/macros/step2.md
+---++ Preferences
+Preferences are variables with a broader scope. Preferences are variables defined in a limited set of pre-specified topics:
+
+| *Topic* | *Scope* |
+|---------|---------|
+|System.DefaultPreferences |All topics in all webs can see the definitions provided in this topic. <br />This topic defines variables like: ATTACHFILESIZELIMIT, WIKILOGOALT, WEBCOPYRIGHT and many others.  This topic is recreated each time Foswiki is installed or upgraded. It defines all preferences necessary to make the installation fully functional out-of-the-box. User edits in this topic will be lost at the next upgrade. |
+|Main.SitePreferences |All topics in all webs can see the definitions provided in this topic. <br />On installation this topic defines a few variables relating to appearance, like: WIKITOOLNAME. And it _finalises_ some variables defined in System.DefaultPreferences, like : ATTACHFILESIZELIMIT. Finalisation makes the variable immutable in other topics. |
+|Main._wikiuserame_ |All topics the registered user has access to will have access to variables defined in the topic named the _wikiusername_. For me the topic name is JoeBlog. <br />The topic is created on registration without defining any variables. |
+|Web.WebPreferences |All topics in the web and its sub-webs can see the definitions in this topic. <br />There are a few variables defined in this topic when a web is created, like: WEBBGCOLOR and other parameters provided when the web is created. |
+|Subweb.WebPreferences |All topics in the sub-web and its sub-webs can see the definitions in this topic, but the parent web can not see them. <br />The same variables as for the web are defined when the sub-web is created. |
+| Web.AnyTopic |Variables defined in this topic are local to the topic. |
+
+You may inspect these pages in the browser.
+
+Foswiki preferences are by convention all uppercase. Variables can be defined with mixed case to avoid collisions.
+
+Conceptually the value of a variable used in the evaluation of a topic is taken from the nearest definition available. So:<br />
+ _Topic > Subweb.WebPreferences > Web.WebPreferences > Main.WikiUsername > Main.SitePreferences > System.DefaultPreferences_.
+
+Technically the situation is more complex and the implementation is top down. That way finalisation can be implemented.
+You can find more detail in the references at the end of this chapter.>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/macros/step3.md
+---++ Preferences and access control
+
+To experiment with permissions, you should register a user, say JoeBlog, password: password.
+
+Preferences play an important role in the access control of webs and topics.
+The preferences controlling access are of the form _permission context mode_.
+
+| *Permission* | *Context* | *Mode* |
+|--------------|-----------|--------|
+| ALLOW | TOPIC | VIEW |
+| DENY | WEB | CHANGE |
+|      | ROOT | RENAME |
+
+For instance if the preference <code>ALLOWROOTRENAME = TheAdmin, AnOtherUser</code>,
+then the users _TheAdmin_ and _AnOtherUser_ will be able to rename top level webs, regardless of the settings inside the web's _WebPreferences_
+
+The list of names following an access control preference setting can be a list of wiki user names, groups or a reference to all users by writing \*.
+Users are included in a group by listing their wiki name in the group topic.
+For instance, listing _JoeBlog_ in the  _Main.SomegroupnameGroup_ topic includes _JoeBlog_ in the _SomegroupnameGroup_.
+
+You can list the existing groups by searching in the Main for topics with the name ending in _Group_
+
+Foswiki allows access to a web or topic for a user if the wiki name of the user is listed in the _ALLOW..._ preference,
+regardless of the setting of the _DENY..._ preference.
+So the settings of <code>DENYTOPICVIEW = JoeBlog</code> in _Main.WebPreference_ together with
+the setting of  <code>ALLOWTOPICVIEW = JoeBlog</code> in the  topic _Main.WebTopicList_
+will give access to the _Main.WebTopicList_ topic to _JoeBlog_.
+
+If VIEW access is denied, CHANGE access is denied by default.
+For instance if _Main.WebTopiclist_ is protected by <code>ALLOWTOPICVIEW = JoeBlog</code>
+then _AnOtherUser_ will not be able to see or change it, unless _AnOtherUser_ is listed as <code>ALLOWTOPICCHANGE = AnOtherUser</code> >>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/macros/step4-answer.md
+Run the following command and check the Sandbox.SolutionMacrosStep4 page.
+
+<code>tar xvzf /root/SolutionMacros.tgz -C /var/www/foswiki/data/Sandbox --wildcards SolutionMacrosStep4*`{{execute}}>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/macros/step4.md
+---++ Macros
+Macros are the core of Foswiki's functionality and extensibility.
+They are syntactically like variables with parameters: _%<nop>MACRO{ parameter="value" ... }%_.
+The MACRO name can be all capitals (common for Foswiki defined macros) or mixed case if you choose to define your own.
+Their semantics are usually implemented in the internals of Foswiki or as extensions.
+There are hundreds of macros available in Foswiki and this course will cover a variety of them.
+The Foswiki documentation provides a full list in System.MacrosQuickReference.
+Below are some brief examples to demonstrate their power.
+
+---++ _SHOWPREFERENCE_
+_%SHOWPREFERENCE%_ will list all defined preferences __and where they are defined__. You can try this in the Sandbox.TestMacros topic.
+The macro takes one or more comma separated variable names to show. Try:
+<verbatim>
+%SHOWPREFERENCE{ "ATTACHFILESIZELIMIT,SKIN,UNDEFINED" }%
+<verbatim>{{copy}}
+
+---++ _DISPLAYTIME_
+_%DISPLAYTIME{ "format specification" }%_ presents the current time in a requested format.
+The default (_%DISPLAYTIME%_) expands to the current date and time.
+The format can be changed using format qualifiers like: _$day, $year, $minute_.
+Try:
+<verbatim>
+%DISPLAYTIME{ "$year$mo$day$hour$minute: The $day'st day of $month in the year $year" }%
+<verbatim>{{copy}}
+
+The _$formatqualifier_ token format is commonly used in macros to format the output.
+The tokens available are provided in the documentation of the macro. Jump to Main.VarDISPLAYTIME.
+>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/macros/step5-answer.md
+Run the following command and check the Sandbox.SolutionMacrosStep5 page.
+
+<code>tar xvzf /root/SolutionMacros.tgz -C /var/www/foswiki/data/Sandbox --wildcards SolutionMacrosStep5*`{{execute}}>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/macros/step5.md
+---++ _INCLUDE_
+The _INCLUDE_ macro includes (part of) a given topic in the current topic.
+The simplest form includes one topic in another: _%INCLUDE{ "targettopicname" }%_.
+It is made more functional by selecting part of a targettopic by using the _%STARTINCLUDE%_ and _%STOPINCLUDE%_ macros as markers
+in the target topic.
+Paste the following code into the Sandbox.TestMacros topic:
+<verbatim>
+(%INCLUDE{ "%TOPIC%" }%)
+---
+<verbatim>
+%STARTINCLUDE%
+Insert this text and expand the macro %DATE%.
+%STOPINCLUDE%
+</verbatim> 
+<verbatim>{{copy}}
+
+Notice that the markers _STARTINCLUDE_ and _STOPINCLUDE_ are removed.
+*BUT* the new line following the STARTINCLUDE and preceeding the STOPINCLUDE are visible in the rendered page.
+When you inspect the html source of the rendered page you see:
+
+<verbatim>
+(
+Insert this text and expand the macro 02 Mar 2016 - 05:33.
+)
+...
+<verbatim>
+The new line after the *(* shows as a space in the rendered page.
+
+INCLUDE recognises multiple parts in a topic called sections.
+Sections are marked in the topic to be included with _%STARTSECTION{ "sectionname" }%_ and _%ENDSECTION{ "sectionname" }%_.
+Paste the following in the Sandbox.TestMacros topic.
+
+<verbatim>
+%INCLUDE{ "%TOPIC%" section="ex2"}%
+---
+%INCLUDE{ "%TOPIC%" section="ex1"}%
+<verbatim>
+%STARTSECTION{ "ex1" }%
+---+++ The ICON macro
+*A list of the documented parameters for the ICON macro with an example*.
+   | *Parameter* | *Description* | *Default* |
+   | ="filename or icon name"= | requested icon | =else= |
+   | =default= | default icon to use if requested icon is not found | |
+   | =alt= | alt text to be added to the HTML img tag | |
+   | =quote= | allows you to control the quote used in the generated HTML | ="= |
+
+   * =%<nop>ICON{"flag-gray"}%= displays as %ICON{"flag-gray"}%
+%ENDSECTION{ "ex1" }%
+%STARTSECTION{ "ex2" }%
+---+++ The time is now %DISPLAYTIME%
+%ENDSECTION{ "ex2" }%
+</verbatim>
+<verbatim>{{copy}}
+
+INCLUDE takes user defined parameters.
+Where those parameters occur as variables in the included text, they are expanded to the value provided.
+Paste the following in the Sandbox.TestMacros topic:
+
+<verbatim>
+---+++ INCLUDE with user defined parameters
+%INCLUDE{ "%TOPIC%" section="ex3" theText="birthday" theName="Main.%USERNAME%" theDate="7 December"  }%
+---
+<verbatim>
+%STARTSECTION{ "ex3" }%
+The %theText% of %theName% is %theDate%.
+%ENDSECTION{ "ex3" }%
+</verbatim>
+<verbatim>{{copy}}
+>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/macros/step6-answer.md
+Run the following command and check the Sandbox.SolutionMacrosStep6 page.
+
+<code>tar xvzf /root/SolutionMacros.tgz -C /var/www/foswiki/data/Sandbox --wildcards SolutionMacrosStep6*`{{execute}}>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/macros/step6.md
+---++ _IF_
+When rendering a page it is common that the rendering varies depending on the exact content of the page or the context in which the page is rendered.
+The IF macro can do this. The syntax is: _IF{ "condition" then="then text" else="else text" }%_.
+Copy all of the following to Sandbox.TestMacros to see some examples
+<verbatim>
+<verbatim>
+%STARTSECTION{ "ex3" }%
+%IF{ "$theText='birthday'" then="%RED%" }%
+The %IF{ "defined theText"
+         then="%theText%"
+         else="holiday" }% of %theName% is %IF{ "$theText='birthday'" 
+                                                then="%theDate%"
+                                                else="anytime" }%.
+%IF{ "$theText='birthday'" then="%ENDCOLOR%" }%
+%ENDSECTION{ "ex3" }%
+</verbatim>
+---++++ theText="birthday"
+<verbatim>%INCLUDE{ "%TOPIC%" 
+              section="ex3" 
+              theText="birthday" 
+              theName="Main.%USERNAME%" 
+              theDate="7 December"
+}%</verbatim>
+is expanded to:
+%INCLUDE{ "%TOPIC%" 
+              section="ex3" 
+              theText="birthday" 
+              theName="Main.%USERNAME%" 
+              theDate="7 December" }%
+
+---++++ theText is undefined
+<verbatim>%INCLUDE{ "%TOPIC%" 
+             section="ex3" 
+             theName="Main.%USERNAME%" 
+             theDate="7 December" 
+}%</verbatim>
+becomes:
+%INCLUDE{ "%TOPIC%" 
+            section="ex3" 
+            theName="Main.%USERNAME%" 
+            theDate="7 December" }%
+<verbatim>
+
+The syntax of the _condition_ in the IF macro is unusual in that it uses (dollar) $variablename to refer to the macro value,
+rather than the usual %variablename%. Also note the use of single quotes around the comparison value.
+
+Ex3 also demonstrates a convenient feature of the macro specification. All text from _%MACRO{_ to _}%_ is replaced by the substitution result.
+There is no need to put all information on one line. As a consequence, the parameter list of the macro can be formatted for readability.>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/macros/step7.md
+---++ References
+   * [[http://foswiki.org/System/PreferenceSettings][PreferenceSettings]] - for a description of preferences and the hierarchy of their definition.
+   * [[http://foswiki.org/System/AccessControl][AccessControl]] - for a full description of access control, including the role of preferences
+   * [[http://foswiki.org/System/MacrosQuickReference][MacrosQuickReference]] - for a full list of predefined macros.
+   * [[http://foswiki.org/System/IfStatements][IfStatements]] - for exhaustive examples of the IF statement controls
+   * [[http://foswiki.org/System/Macros][Macros]] - for a description of the use of macros and the evaluation of preferences

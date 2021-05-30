@@ -37,7 +37,7 @@
 ,
     "intro": {
       "text": "intro.md",
-      "credits": "Tim Legge for the Foswiki docker image. Bram van Oosterhout for the scenario"
+      "credits": "Credits: Bram van Oosterhout for the scenario"
     },
     "finish": {
       "text": "finish.md"

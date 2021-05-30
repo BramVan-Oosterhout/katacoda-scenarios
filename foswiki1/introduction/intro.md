@@ -4,4 +4,4 @@ In this scenario you will get a quick tour around the Foswiki web interface. You
 
 Feel free to experiment. You cannot do any damage. Worst case you can restart the scenario!
 
-<div class="katacoda_tutorial" style="background-color: khaki">**Please note** that you are `root` on the server. If you are not a user with root privileges, some commands will need to be `sudo'ed`. </div>
+<div class="katacoda_tutorial" style="background-color: khaki">**Please note** that you are `root` on the server. If you are not a user with `root` privileges, some commands will need to be `sudo'ed`. </div>
