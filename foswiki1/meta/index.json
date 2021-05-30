@@ -1,6 +1,6 @@
 {
-  "title": "Scenario title",
-  "description": "What this scenario is about",
+  "title": "Foswiki meta data",
+  "description": "Fields and other meta data",
   "difficulty": "beginner",
   "time": "20 minutes",
   "details": {
@@ -9,7 +9,8 @@
                  { "file": "Foswikicgi.dck", "target": "~/" },
                  { "file": "foswiki.cgi.conf", "target": "~/" },
                  { "file": "KcBvO.crt", "target": "~/" },
-                 { "file": "KcBvO.key", "target": "~/" }
+                 { "file": "KcBvO.key", "target": "~/" },
+                 { "file": "setup.sh", "target": "~/", "chmod": "+x" }
               ]
     },
     "steps": [
@@ -19,8 +20,8 @@
       "title" : "Meta data"
    },
    {
-      "answer" : "step02-answer.md",
       "title" : "Forms and fields",
+      "answer" : "step02-answer.md",
       "text" : "step02.md"
    },
    {
@@ -38,7 +39,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-iframe",
+    "uilayout": "editor-terminal",
     "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r\nRun your own commands here\u001b[m\r\n",
     "showdashboard": "1",
     "dashboards": [ {"name": "Foswiki", "port": "80", "host": "host01"} ]
