@@ -14,4 +14,4 @@ Foswiki applications are collections of functionality that can be deployed to su
 
 In this part summarises the operation of Foswiki with functioning examples. It focusses on the major parts that make up the Foswiki infrastructure as an introduction to Foswiki applications. Part 2 knits these parts together in the context of the delivery of applications using the Foswiki infrastructure. It presents coherent examples, rather than the spot examples that illustrate the capabilities of a particular Foswiki feature.
 
-<div class="katacoda_tutorial" style="background-color: khaki">**Please note** that you are `root` on the server. If you are not a user with root privileges, some commands will need to be `sudo'ed`. </div>
+<div class="katacoda_tutorial" style="background-color: khaki">**Please note** that you are `root` on the server. If you are not a user with `root` privileges, some commands will need to be `sudo'ed`. </div>

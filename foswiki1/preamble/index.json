@@ -8,7 +8,7 @@
       "host01": [
                  { "file": "Foswikicgi.dck", "target": "~/" },
                  { "file": "foswiki.cgi.conf", "target": "~/" },
-                 { "file": "KcBvO.crt", "target": "~/"" },
+                 { "file": "KcBvO.crt", "target": "~/" },
                  { "file": "KcBvO.key", "target": "~/" }
               ]
     },
