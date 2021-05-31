@@ -15,13 +15,14 @@
     },
     "steps": [
    {
-      "title" : "How to use this scenario",
-      "text" : "step01.md"
+      "text" : "step01.md",
+      "title" : "How to use this scenario"
    }
 ]
 ,
     "intro": {
       "text": "intro.md",
+      "foreground": "setup.sh",
       "credits": "Credits: Bram van Oosterhout for the scenario"
     },
     "finish": {
