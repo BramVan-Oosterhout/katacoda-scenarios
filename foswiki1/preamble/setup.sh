@@ -1,5 +1,8 @@
 #!/bin/bash
-until [ -e KcBvO.crt && -e KcBvO.key && -e Foswikicgi.dck && -e foswiki.cgi.conf ] 
+until [[ -e KcBvO.crt \
+      && -e KcBvO.key \
+      && -e Foswikicgi.dck 
+      && -e foswiki.cgi.conf ]] 
 do
    echo -n "+"
    sleep 3
