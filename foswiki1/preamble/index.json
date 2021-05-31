@@ -6,7 +6,6 @@
   "details": {
    "assets": {
       "host01": [
-                 { "file": "setup.sh", "target": "~/", "chmod": "+x" },
                  { "file": "Foswikicgi.dck", "target": "~/" },
                  { "file": "foswiki.cgi.conf", "target": "~/" },
                  { "file": "KcBvO.crt", "target": "~/" },
