@@ -1,7 +1,7 @@
 #!/bin/bash
 {
 echo -n "Install/configure environment "
-while [ -e foswiki.conf ]
+until[ -e foswiki-running ]
 do
 echo -n "+"
 sleep 3
