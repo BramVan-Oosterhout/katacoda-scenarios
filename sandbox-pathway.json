@@ -32,6 +32,11 @@
         "course_id": "test-datatables",
         "title": "Data tables",
         "description": "checking data tables install"
+      },
+      {
+        "course_id": "build-push-docker-image",
+        "title": "Build nad push an image to DockerHub",
+        "description": "saving an image to DockerHub with make"
       }
      ]
   }
