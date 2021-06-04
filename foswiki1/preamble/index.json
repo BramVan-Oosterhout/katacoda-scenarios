@@ -12,9 +12,14 @@
                  { "file": "KcBvO.key", "target": "~/" }
               ]
     },
-    "steps": []
+"steps": [
+   {
+      "text" : "step01.md",
+      "title" : "How to use this scenario"
+   }
+]
 ,
-    "intro": {
+      "intro": {
       "text": "intro.md",
       "background": "setup.sh",
       "foreground": "wait.sh",
