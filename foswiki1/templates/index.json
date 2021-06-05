@@ -9,26 +9,25 @@
                  { "file": "Foswikicgi.dck", "target": "~/" },
                  { "file": "foswiki.cgi.conf", "target": "~/" },
                  { "file": "KcBvO.crt", "target": "~/" },
-                 { "file": "KcBvO.key", "target": "~/" },
-                 { "file": "setup.sh", "target": "~/", "chmod": "+x" }
+                 { "file": "KcBvO.key", "target": "~/" }
               ]
     },
-    "steps": [
+"steps": [
    {
       "title" : "Template directives",
       "text" : "step01.md"
    },
    {
-      "text" : "step02.md",
-      "title" : "Find a template"
+      "title" : "Find a template",
+      "text" : "step02.md"
    },
    {
-      "text" : "step03.md",
-      "title" : "Customise a skin"
+      "title" : "Customise a skin",
+      "text" : "step03.md"
    },
    {
-      "text" : "step04.md",
-      "title" : "Developing templates"
+      "title" : "Developing templates",
+      "text" : "step04.md"
    },
    {
       "title" : "References",
@@ -36,8 +35,10 @@
    }
 ]
 ,
-    "intro": {
+      "intro": {
       "text": "intro.md",
+      "background": "setup.sh",
+      "foreground": "wait.sh",
       "credits": "Credits: Bram van Oosterhout for the scenario"
     },
     "finish": {

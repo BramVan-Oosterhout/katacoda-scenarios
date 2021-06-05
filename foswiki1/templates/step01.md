@@ -54,5 +54,5 @@ and finally _htmlend_, which does not have a definition in the default template 
 The examples above are taken directly from the _foswiki.tmpl_ file in the _Foswikiroot/templates_ directory. They illustrate a few things:
 * Empty definitions are OK and do not emit anything. They are silently ignored.
 * Definitions can in turn have new \_\_ directives, which are potentially defined in another template file or topic.
-* Definitions can contain normal macros like: _30 May 2021 - 07:53, ScenarioStep01_ and so on.
+* Definitions can contain normal macros like: _05 Jun 2021 - 13:21, ScenarioStep01_ and so on.
 * As a guide, the display of content is defined in the _contentwrapper_.
