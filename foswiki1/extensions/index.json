@@ -3,31 +3,30 @@
   "description": "Foswiki extensions - examples",
   "difficulty": "beginner",
   "time": "20 minutes",
-  "details": {
+   "details": {
    "assets": {
       "host01": [
                  { "file": "Foswikicgi.dck", "target": "~/" },
                  { "file": "foswiki.cgi.conf", "target": "~/" },
                  { "file": "KcBvO.crt", "target": "~/" },
-                 { "file": "KcBvO.key", "target": "~/" },
-                 { "file": "setup.sh", "target": "~/", "chmod": "+x" }
+                 { "file": "KcBvO.key", "target": "~/" }
               ]
     },
-    "steps": [
+"steps": [
    {
-      "answer" : "step01-answer.md",
+      "text" : "step01.md",
       "title" : "Interface and Installation",
-      "text" : "step01.md"
+      "answer" : "step01-answer.md"
    },
    {
+      "text" : "step02.md",
       "title" : "Filter plugin",
-      "answer" : "step02-answer.md",
-      "text" : "step02.md"
+      "answer" : "step02-answer.md"
    },
    {
       "answer" : "step03-answer.md",
-      "title" : "Spreadsheet plugin",
-      "text" : "step03.md"
+      "text" : "step03.md",
+      "title" : "Spreadsheet plugin"
    },
    {
       "text" : "step04.md",
@@ -35,13 +34,15 @@
       "answer" : "step04-answer.md"
    },
    {
-      "title" : "References",
-      "text" : "step05.md"
+      "text" : "step05.md",
+      "title" : "References"
    }
 ]
 ,
-    "intro": {
+      "intro": {
       "text": "intro.md",
+      "background": "setup.sh",
+      "foreground": "wait.sh",
       "credits": "Credits: Bram van Oosterhout for the scenario"
     },
     "finish": {
