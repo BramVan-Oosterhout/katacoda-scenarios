@@ -9,30 +9,31 @@
                  { "file": "Foswikicgi.dck", "target": "~/" },
                  { "file": "foswiki.cgi.conf", "target": "~/" },
                  { "file": "KcBvO.crt", "target": "~/" },
-                 { "file": "KcBvO.key", "target": "~/" },
-                 { "file": "setup.sh", "target": "~/", "chmod": "+x" }
+                 { "file": "KcBvO.key", "target": "~/" }
               ]
     },
-    "steps": [
+"steps": [
    {
-      "answer" : "step01-answer.md",
       "text" : "step01.md",
+      "answer" : "step01-answer.md",
       "title" : "Meta data"
    },
    {
-      "title" : "Forms and fields",
       "answer" : "step02-answer.md",
+      "title" : "Forms and fields",
       "text" : "step02.md"
    },
    {
-      "title" : "References",
-      "text" : "step03.md"
+      "text" : "step03.md",
+      "title" : "References"
    }
 ]
 ,
-    "intro": {
+      "intro": {
       "text": "intro.md",
-      "credits": "Credit: Bram van Oosterhout for the scenario"
+      "background": "setup.sh",
+      "foreground": "wait.sh",
+      "credits": "Credits: Bram van Oosterhout for the scenario"
     },
     "finish": {
       "text": "finish.md"
