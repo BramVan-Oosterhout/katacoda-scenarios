@@ -9,11 +9,10 @@
                  { "file": "Foswikicgi.dck", "target": "~/" },
                  { "file": "foswiki.cgi.conf", "target": "~/" },
                  { "file": "KcBvO.crt", "target": "~/" },
-                 { "file": "KcBvO.key", "target": "~/" },
-                 { "file": "setup.sh", "target": "~/", "chmod": "+x" }
+                 { "file": "KcBvO.key", "target": "~/" }
               ]
     },
-    "steps": [
+"steps": [
    {
       "text" : "step01.md",
       "title" : "What are webs"
@@ -24,17 +23,19 @@
    },
    {
       "text" : "step03.md",
-      "answer" : "step03-answer.md",
-      "title" : "Exercise"
+      "title" : "Exercise",
+      "answer" : "step03-answer.md"
    },
    {
-      "text" : "step04.md",
-      "title" : "References"
+      "title" : "References",
+      "text" : "step04.md"
    }
 ]
- ,
-    "intro": {
+,
+      "intro": {
       "text": "intro.md",
+      "background": "setup.sh",
+      "foreground": "wait.sh",
       "credits": "Credits: Bram van Oosterhout for the scenario"
     },
     "finish": {
