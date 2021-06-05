@@ -14,21 +14,21 @@
     },
 "steps": [
    {
-      "text" : "step01.md",
-      "title" : "What are webs"
+      "title" : "What are webs",
+      "text" : "step01.md"
    },
    {
-      "title" : "Maintaining webs",
-      "text" : "step02.md"
+      "text" : "step02.md",
+      "title" : "Maintaining webs"
    },
    {
-      "text" : "step03.md",
+      "answer" : "step03-answer.md",
       "title" : "Exercise",
-      "answer" : "step03-answer.md"
+      "text" : "step03.md"
    },
    {
-      "title" : "References",
-      "text" : "step04.md"
+      "text" : "step04.md",
+      "title" : "References"
    }
 ]
 ,
