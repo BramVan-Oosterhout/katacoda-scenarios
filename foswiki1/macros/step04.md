@@ -90,7 +90,7 @@ Macros are the core of Foswiki's functionality and extensibility. They are synta
   * FINALPREFERENCES was defined in Main.SitePreferences
 * Set FORCENEWREVISIONCHECKBOX = ""
   * FORCENEWREVISIONCHECKBOX was defined in System.DefaultPreferences
-* Set FOSWIKISTRIKEONE = "d9bac0d6d80bc040df00f3e5425a8b75"
+* Set FOSWIKISTRIKEONE = "da53fe5d9283a296dc7500d8b036fe8c"
 * Set FOSWIKI\_COLORS\_URL = "%PUBURLPATH\{"colors.css" topic="%SYSTEMWEB%.PatternSkinTheme"\}%"
   * FOSWIKI\_COLORS\_URL was defined in System.DefaultPreferences
 * Set FOSWIKI\_LAYOUT\_URL = "%PUBURLPATH\{"layout.css" topic="%SYSTEMWEB%.PatternSkinTheme"\}%"
@@ -194,7 +194,7 @@ Macros are the core of Foswiki's functionality and extensibility. They are synta
   * SEARCHSTOPWORDS was defined in System.DefaultPreferences
 * Set SEARCHVARDEFAULTTYPE = "literal"
   * SEARCHVARDEFAULTTYPE was defined in System.DefaultPreferences
-* Set SESSIONID = "5cfb97f5596705276393935b7bc0d4a6"
+* Set SESSIONID = "4c8b9eb3eda6fae6debb0505b1968858"
 * Set SESSIONVAR = "FOSWIKISID"
 * Set SIGNATUREFORMAT = "-- %WIKIUSERNAME% - %DATE%"
   * SIGNATUREFORMAT was defined in System.DefaultPreferences
