@@ -15,16 +15,16 @@
     },
 "steps": [
    {
-      "title" : "What are webs",
-      "text" : "step01.md"
+      "text" : "step01.md",
+      "title" : "What are webs"
    },
    {
       "text" : "step02.md",
       "title" : "Maintaining webs"
    },
    {
-      "title" : "Exercise",
       "answer" : "step03-answer.md",
+      "title" : "Exercise",
       "text" : "step03.md"
    },
    {
