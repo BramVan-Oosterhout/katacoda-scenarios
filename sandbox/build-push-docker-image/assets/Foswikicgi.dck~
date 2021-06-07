@@ -6,7 +6,7 @@ WORKDIR /tmp
 
 RUN apk update && \
     apk upgrade && \
-    apk add perl bash \
+    apk add perl bash tar curl \
             perl-cgi perl-cgi-session \
             perl-crypt-passwdmd5 perl-error \
             perl-file-copy-recursive perl-json \
