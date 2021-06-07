@@ -22,4 +22,4 @@ The directories under the _data_ and _pub_ directories that contain the current 
 
 Webs can have sub-webs, which in turn can have further sub-webs. Each of the sub-webs is a sub-directory in the parent web and follows the same rules. Refererences from webs to subwebs and vice versa must be fully qualified. The qualification is a full pathname followed by a dot, followed by a topic name.
 
-You can explore the Foswiki installation through [Main.WebHome](/devwiki/bin/edit/NopHttps/HOST_SUBDOMAIN-80-KATACODA_HOST/environments/katacoda/com/foswiki/Main/WebHome?topicparent=KatacodaCourses/Foswiki1/Webs.ScenarioStep01 "Create this topic")
+You can explore the Foswiki installation through [Main.WebHome](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/Main.WebHome)
