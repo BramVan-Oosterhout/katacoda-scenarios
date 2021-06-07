@@ -1,2 +1,6 @@
 #!/bin/bash
-tar cvzf SolutionWebs.tgz -C ~/devfoswiki/core/data/KatacodaCourses/Foswiki1/Webs Solutions/*
+# Prepare the assets directory
+mydir=`pwd`
+pushd ~/devfoswiki/core/data/KatacodaCourses/Foswiki1/Webs
+tar cvzf $mydir/SolutionWebs.tgz --exclude='Web*' *
+popd

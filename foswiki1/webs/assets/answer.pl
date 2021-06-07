@@ -19,7 +19,7 @@ sub step3 {
   @command = qw(
     tar
          --wildcards
-         -xvzf /tmp/WorkbenchExample.tgz
+         -xvzf /tmp/SolutionWebs.tgz
          -C /var/www/foswiki/data/Sandbox
          Solutions*
   );
