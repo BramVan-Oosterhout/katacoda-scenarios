@@ -21,3 +21,5 @@ or to the storage of web content: **Content directories**
 The directories under the _data_ and _pub_ directories that contain the current versions of topics or attachments are the implementations of Foswiki **webs**. Webs are entities within the larger Foswiki data structure. Within a web, topics are hyperlinked with the topic name only. To hyperlink to a topic in another web, the topicname is qualified with the web name. Like _Main.TopicA_ instead of _TopicA_. Searches are restricted to a single web, unless specifically asked to cover multiple webs.
 
 Webs can have sub-webs, which in turn can have further sub-webs. Each of the sub-webs is a sub-directory in the parent web and follows the same rules. Refererences from webs to subwebs and vice versa must be fully qualified. The qualification is a full pathname followed by a dot, followed by a topic name.
+
+You can explore the Foswiki installation through [Main.WebHome](/devwiki/bin/edit/NopHttps/HOST_SUBDOMAIN-80-KATACODA_HOST/environments/katacoda/com/foswiki/Main/WebHome?topicparent=KatacodaCourses/Foswiki1/Webs.ScenarioStep01 "Create this topic")

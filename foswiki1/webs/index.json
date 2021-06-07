@@ -19,17 +19,17 @@
       "title" : "What are webs"
    },
    {
-      "text" : "step02.md",
-      "title" : "Maintaining webs"
+      "title" : "Maintaining webs",
+      "text" : "step02.md"
    },
    {
+      "text" : "step03.md",
       "answer" : "step03-answer.md",
-      "title" : "Exercise",
-      "text" : "step03.md"
+      "title" : "Exercise"
    },
    {
-      "title" : "References",
-      "text" : "step04.md"
+      "text" : "step04.md",
+      "title" : "References"
    }
 ]
 ,
