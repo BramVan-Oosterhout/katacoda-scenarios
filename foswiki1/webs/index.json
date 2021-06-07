@@ -7,6 +7,7 @@
    "assets": {
       "host01": [
                  { "file": "Foswikicgi.dck", "target": "~/" },
+                 { "file": "answer.pl", "target": "~/", "chmod": "+x" },
                  { "file": "foswiki.cgi.conf", "target": "~/" },
                  { "file": "KcBvO.crt", "target": "~/" },
                  { "file": "KcBvO.key", "target": "~/" }
@@ -18,17 +19,17 @@
       "text" : "step01.md"
    },
    {
-      "text" : "step02.md",
-      "title" : "Maintaining webs"
+      "title" : "Maintaining webs",
+      "text" : "step02.md"
    },
    {
+      "text" : "step03.md",
       "answer" : "step03-answer.md",
-      "title" : "Exercise",
-      "text" : "step03.md"
+      "title" : "Exercise"
    },
    {
-      "text" : "step04.md",
-      "title" : "References"
+      "title" : "References",
+      "text" : "step04.md"
    }
 ]
 ,
