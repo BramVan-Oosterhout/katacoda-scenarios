@@ -12,6 +12,8 @@
                   {"file": "Dockerfile.foswiki.pageopt", "target": "/root"},
                   {"file": "Dockerfile.foswiki.cgi-deflate", "target": "/root"},
                   {"file": "Dockerfile.foswiki.fcgi", "target": "/root"},
+                  {"file": "Foswikicgi.dck", "target": "/root"},
+                  {"file": "makefile", "target": "/root"},
                   {"file": "foswiki.cgi.conf", "target": "/root"}, 
                   {"file": "foswiki.cgi-gz.conf", "target": "/root"}, 
                   {"file": "foswiki.cgi-deflate.conf", "target": "/root"}, 
@@ -25,35 +27,35 @@
     },
     "steps": [
    {
+      "answer" : "step01-answer.md",
       "text" : "step01.md",
-      "title" : "Create an environment",
-      "answer" : "step01-answer.md"
+      "title" : "Create an environment"
    },
    {
-      "title" : "Install and configure Foswiki",
-      "text" : "step02.md"
+      "text" : "step02.md",
+      "title" : "Install and configure Foswiki"
    },
    {
-      "title" : "Configure apache for ssl",
-      "text" : "step03.md"
+      "text" : "step03.md",
+      "title" : "Configure apache for ssl"
    },
    {
       "title" : "Configuring for Foswiki CGI",
       "text" : "step04.md"
    },
    {
-      "text" : "step05.md",
-      "title" : "Measuring performance"
+      "title" : "Measuring performance",
+      "text" : "step05.md"
    },
    {
-      "text" : "step06.md",
       "title" : "Using the pre zipped css and js",
-      "answer" : "step06-answer.md"
+      "answer" : "step06-answer.md",
+      "text" : "step06.md"
    },
    {
-      "answer" : "step07-answer.md",
       "title" : "Using the PageOptimizerPlugin",
-      "text" : "step07.md"
+      "text" : "step07.md",
+      "answer" : "step07-answer.md"
    },
    {
       "title" : "Compressing the apache output",
@@ -61,13 +63,17 @@
       "answer" : "step08-answer.md"
    },
    {
+      "title" : "Performance: FastCGI",
       "answer" : "step09-answer.md",
-      "text" : "step09.md",
-      "title" : "Performance: FastCGI"
+      "text" : "step09.md"
    },
    {
       "text" : "step10.md",
       "title" : "Summary of the performance"
+   },
+   {
+      "title" : "Save an Apache Foswiki Docker image at DockerHub",
+      "text" : "step11.md"
    }
 ]
 ,

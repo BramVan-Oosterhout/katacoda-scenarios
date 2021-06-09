@@ -31,4 +31,4 @@ Once you have built the container, you can run it. Since the Katacoda environmen
 
 To avoid issues with [Cross-Origin-Resource-Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) in the Katacoda environment it is easier to configure the web server in the docker container to support the https protocol. The protocol requires an `ssl` certificate and for the course this is implemented through a [self-signed certificate](https://en.wikipedia.org/wiki/Self-signed_certificate). That reduces the number of work arounds and works reliably. So for the tutorial, you must start the container with port 443 (https) listening.
 
-<div class="katacoda_tutorial" style="background-color: khaki">**Please note** that you are `root` on the server. If you are not a user with root privileges, some commands will need to be \`sudo'ed\`. </div>
+<div class="katacoda_tutorial" style="background-color: khaki">**Please note** that you are `root` on the server. If you are not a user with `root` privileges, some commands will need to be `sudo'ed`. </div>
