@@ -12,11 +12,12 @@ sub step3 {
            -LJ
            --output-dir /tmp
            --output SolutionWebs.tgz
-           https://github.com/BramVan-Oosterhout/katacoda-scenarios/blob/master/foswiki/webs/assets/SolutionWebs.tgz?raw=true
+           https://github.com/BramVan-Oosterhout/katacoda-scenarios/blob/master/foswiki1/webs/assets/SolutionWebs.tgz?raw=true
   );
   $cmd = join( " ", @command ); `$cmd`; 
   
   @command = qw(
+    sudo -u daemon
     tar
          --wildcards
          -xvzf /tmp/SolutionWebs.tgz
