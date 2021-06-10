@@ -1,5 +1,5 @@
 #!/bin/bash
-until [[ -e answer.pl && -e webs,dck ]] 
+until [[ -e answer.pl && -e webs.dck ]] 
 do
    sleep 1
 done
