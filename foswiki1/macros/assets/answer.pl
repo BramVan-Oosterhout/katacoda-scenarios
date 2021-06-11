@@ -10,7 +10,15 @@ my %step = (
 ##          'test'  => \&test,
           );
 
-getSolution() unless ( -e '/tmp/SolutionMacros.tgz' );  
+getSolution() unless ( -e '/tmp/SolutionMacros.tgz' );
+
+if ( ! $ARGV[0] ) { print "Please provide the step as the first parameter: answer.pl stepx\n"; return }
+
+foreach my $request ( @ARGV ) {
+  if ( ! $step{$request} ) { print "No answer for $request\n" }
+  else { &{$step{$request}} }
+}
+
 
 sub step2 {
   my ($cmd, @command );
@@ -102,6 +110,19 @@ sub getSolution {
            --output SolutionMacros.tgz
            https://github.com/BramVan-Oosterhout/katacoda-scenarios/blob/master/foswiki1/macros/assets/SolutionMacros.tgz?raw=true
   );
-  $cmd = join( " ", @command ); `$cmd`; 
-  )
+  $cmd = join( " ", @command ); `$cmd`;
+  
+  @command = qw(
+    /bin/bash -c '
+    pushd /var/www/foswiki/bin ;
+    sudo -u daemon
+    ./manage
+         -action=createweb
+         -baseweb=_default
+         -newweb=Sandbox/Solutions
+         -webbgcolor=green
+         -websummary="Web for solutions" ;
+    popd'
+  );
+  $cmd = join( " ", @command ); `$cmd`;
 }

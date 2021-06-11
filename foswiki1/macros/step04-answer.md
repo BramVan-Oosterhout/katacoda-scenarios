@@ -35,7 +35,7 @@ Run the following command and check the %KREF\{ "Sandbox/Solutions.Step4" \}% pa
 * Set USERSTYLEURL = ""
   * USERSTYLEURL was defined in System.DefaultPreferences
 * Set VALIDATION = "1"
-* Set VALID\_ACTIONS = "HASH(0x364e40c)"
+* Set VALID\_ACTIONS = "HASH(0x3927968)"
 * Set VBAR = "&amp;#124;"
   * VBAR was defined in System.DefaultPreferences
 * Set WEB = "KatacodaCourses/Foswiki1/Macros"
@@ -85,7 +85,7 @@ Run the following command and check the %KREF\{ "Sandbox/Solutions.Step4" \}% pa
 
 ## _DISPLAYTIME_	
 
-_format specification_ presents the current time in a requested format. The default (_11 Jun 2021 - 06:24_) expands to the current date and time. The format can be changed using format qualifiers like: _$day, $year, $minute_. Try: ```
+_format specification_ presents the current time in a requested format. The default (_11 Jun 2021 - 07:45_) expands to the current date and time. The format can be changed using format qualifiers like: _$day, $year, $minute_. Try: ```
 %DISPLAYTIME{ "$year$mo$day$hour$minute: The $day'st day of $month in the year $year" }%
 ```{{copy}}
 
