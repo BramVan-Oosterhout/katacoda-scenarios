@@ -1,4 +1,4 @@
 
-Run the following command and check the Sandbox.SolutionMacrosStep5 page.
+Run the following command and check the [Sandbox/Solutions.Step5](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/Sandbox/Solutions.Step5) page.
 
-`tar xvzf /root/SolutionMacros.tgz -C /var/www/foswiki/data/Sandbox --wildcards SolutionMacrosStep5*`{{execute}}
+`/tmp/answer step5`{{execute}}

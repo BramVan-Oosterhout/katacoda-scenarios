@@ -1,7 +1,7 @@
 
-Run the following command and check the Sandbox.SolutionMacrosStep4 page.
+Run the following command and check the %KREF\{ "Sandbox/Solutions.Step4" \}% page.
 
-&lt;code&gt;tar xvzf /root/SolutionMacros.tgz -C /var/www/foswiki/data/Sandbox --wildcards SolutionMacrosStep4\*&lt;/code&gt;\{\{execute\}\}
+&lt;code&gt;/tmp/answer step4&lt;/code&gt;\{\{execute\}\}
 
 "
 * Set TOC\_HIDE\_IF\_INCLUDED = ""
@@ -35,7 +35,7 @@ Run the following command and check the Sandbox.SolutionMacrosStep4 page.
 * Set USERSTYLEURL = ""
   * USERSTYLEURL was defined in System.DefaultPreferences
 * Set VALIDATION = "1"
-* Set VALID\_ACTIONS = "HASH(0x361f34c)"
+* Set VALID\_ACTIONS = "HASH(0x364e40c)"
 * Set VBAR = "&amp;#124;"
   * VBAR was defined in System.DefaultPreferences
 * Set WEB = "KatacodaCourses/Foswiki1/Macros"
@@ -85,7 +85,7 @@ Run the following command and check the Sandbox.SolutionMacrosStep4 page.
 
 ## _DISPLAYTIME_	
 
-_format specification_ presents the current time in a requested format. The default (_05 Jun 2021 - 13:20_) expands to the current date and time. The format can be changed using format qualifiers like: _$day, $year, $minute_. Try: ```
+_format specification_ presents the current time in a requested format. The default (_11 Jun 2021 - 06:24_) expands to the current date and time. The format can be changed using format qualifiers like: _$day, $year, $minute_. Try: ```
 %DISPLAYTIME{ "$year$mo$day$hour$minute: The $day'st day of $month in the year $year" }%
 ```{{copy}}
 
@@ -93,6 +93,6 @@ The _$formatqualifier_ token format is commonly used in macros to format the out
 
 ### Answer	
 
-Run the following command and check the Sandbox.SolutionMacrosStep4 page.
+Run the following command and check the [Sandbox/Solutions.Step4](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/Sandbox/Solutions.Step4) page.
 
-`tar xvzf /root/SolutionMacros.tgz -C /var/www/foswiki/data/Sandbox --wildcards SolutionMacrosStep4*`{{execute}}
+`/tmp/answer step4`{{execute}}

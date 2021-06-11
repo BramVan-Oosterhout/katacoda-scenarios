@@ -57,7 +57,7 @@ Macros are the core of Foswiki's functionality and extensibility. They are synta
   * CHANGEPASSWORDDISABLEDMESSAGE was defined in System.DefaultPreferences
 * Set CLEAR = "&lt;span class='foswikiClear'&gt;&lt;/span&gt;"
   * CLEAR was defined in System.DefaultPreferences
-* Set CURRREV = "2"
+* Set CURRREV = "3"
 * Set DEFAULTPAGESIZE = "50"
   * DEFAULTPAGESIZE was defined in System.DefaultPreferences
 * Set DENYWEBCHANGE = "%USERSWEB%.WikiGuest"
@@ -90,13 +90,15 @@ Macros are the core of Foswiki's functionality and extensibility. They are synta
   * FINALPREFERENCES was defined in Main.SitePreferences
 * Set FORCENEWREVISIONCHECKBOX = ""
   * FORCENEWREVISIONCHECKBOX was defined in System.DefaultPreferences
-* Set FOSWIKISTRIKEONE = "da53fe5d9283a296dc7500d8b036fe8c"
+* Set FOSWIKISTRIKEONE = "659f883a380bba6cb41acc576e60303d"
 * Set FOSWIKI\_COLORS\_URL = "%PUBURLPATH\{"colors.css" topic="%SYSTEMWEB%.PatternSkinTheme"\}%"
   * FOSWIKI\_COLORS\_URL was defined in System.DefaultPreferences
 * Set FOSWIKI\_LAYOUT\_URL = "%PUBURLPATH\{"layout.css" topic="%SYSTEMWEB%.PatternSkinTheme"\}%"
   * FOSWIKI\_LAYOUT\_URL was defined in System.DefaultPreferences
 * Set FOSWIKI\_STYLE\_URL = "%PUBURLPATH\{"style.css" topic="%SYSTEMWEB%.PatternSkinTheme"\}%"
   * FOSWIKI\_STYLE\_URL was defined in System.DefaultPreferences
+* Set FREF = "[[https://foswiki.org/%web.%DEFAULT%]\[%DEFAULT%]]"
+  * FREF was defined in KatacodaCourses.WebPreferences
 * Set FWCOMPRESSED = ".compressed"
   * FWCOMPRESSED was defined in System.DefaultPreferences
 * Set FWSRC = ""
@@ -129,6 +131,8 @@ Macros are the core of Foswiki's functionality and extensibility. They are synta
   * INTROFOOTER was defined in KatacodaCourses.WebPreferences
 * Set KATACODAHOST = "&lt;nop&gt;https://&amp;#91;&amp;#91;HOST_SUBDOMAIN&amp;#93;&amp;#93;-80-&amp;#91;&amp;#91;KATACODA_HOST&amp;#93;&amp;#93;.environments.katacoda.com"
   * KATACODAHOST was defined in KatacodaCourses.WebPreferences
+* Set KREF = "&lt;a href="%KATACODAHOST%/foswiki/%DEFAULT%"&gt;%DEFAULT%&lt;/a&gt;"
+  * KREF was defined in KatacodaCourses.WebPreferences
 * Set LIME = "&lt;span class='foswikiLimeFG'&gt;"
   * LIME was defined in System.DefaultPreferences
 * Set LINKTOOLTIPINFO = "off"
@@ -143,7 +147,7 @@ Macros are the core of Foswiki's functionality and extensibility. They are synta
   * MAINWEB was defined in System.DefaultPreferences
 * Set MAROON = "&lt;span class='foswikiMaroonFG'&gt;"
   * MAROON was defined in System.DefaultPreferences
-* Set MAXREV = "2"
+* Set MAXREV = "3"
 * Set N = "&lt;img src="%ICONURLPATH\{new\}%" alt="NEW" title="NEW" width="30" height="16" /&gt;"
   * N was defined in System.DefaultPreferences
 * Set NAMEFILTER = "%QUERY\{"\{NameFilter\}"\}%"
@@ -194,7 +198,7 @@ Macros are the core of Foswiki's functionality and extensibility. They are synta
   * SEARCHSTOPWORDS was defined in System.DefaultPreferences
 * Set SEARCHVARDEFAULTTYPE = "literal"
   * SEARCHVARDEFAULTTYPE was defined in System.DefaultPreferences
-* Set SESSIONID = "4c8b9eb3eda6fae6debb0505b1968858"
+* Set SESSIONID = "3dc3125fdcae43de149d695f96c77f70"
 * Set SESSIONVAR = "FOSWIKISID"
 * Set SIGNATUREFORMAT = "-- %WIKIUSERNAME% - %DATE%"
   * SIGNATUREFORMAT was defined in System.DefaultPreferences
