@@ -7,6 +7,7 @@
    "assets": {
       "host01": [
                  { "file": "Foswikicgi.dck", "target": "~/" },
+                 { "file": "answer.pl", "target": "~/", "chmod": "+x" },
                  { "file": "foswiki.cgi.conf", "target": "~/" },
                  { "file": "KcBvO.crt", "target": "~/" },
                  { "file": "KcBvO.key", "target": "~/" }
@@ -18,8 +19,8 @@
       "text" : "step01.md"
    },
    {
-      "text" : "step02.md",
-      "title" : "Topic, Jump, Search and Breadcrumb"
+      "title" : "Topic, Jump, Search and Breadcrumb",
+      "text" : "step02.md"
    },
    {
       "text" : "step03.md",
@@ -30,8 +31,8 @@
       "title" : "Bottom navigation bar"
    },
    {
-      "title" : "References",
-      "text" : "step05.md"
+      "text" : "step05.md",
+      "title" : "References"
    }
 ]
 ,

@@ -40,4 +40,4 @@ Topics in a Foswiki site are stored on disk in a directory structure. Out of the
 
 Webs are an important concept in Foswiki and a building stone for Foswiki Applications.
 
-Go back to the [Main.Webhome](/devwiki/bin/edit/NopHttps/HOST_SUBDOMAIN-80-KATACODA_HOST/environments/katacoda/com/Foswiki?topicparent=KatacodaCourses/Foswiki1/Introduction.ScenarioStep03 "Create this topic") page.
+Go back to the [Main.Webhome](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/Main.Webhome) page.
