@@ -17,7 +17,7 @@ There are two additional meta properties that are related to user data. They are
 </tr>
 </table>
 
-By convention the form topic has a name ending with _Form_. When you search the System web for the topic title containing _Form_, you will find several topics. There are some examples in the [Sandbox.MetaDataStep2](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/Sandbox/MetaDataStep2) topic.
+By convention the form topic has a name ending with _Form_. When you search the System web for the topic title containing _Form_, you will find several topics. There are some examples in the [Sandbox/Exercises.Step2](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/Sandbox/Exercises.Step2) topic.
 
 At the bottom of the PreferencesPlugin debug display, you see the meta data in the topic, followed by the displayed form.
 
@@ -58,7 +58,7 @@ The content of the form topic _must_ contain a table that defines the fields of 
 </tr>
 </table>
 
-Take a look at the PackageForm form definition the topic linked in the [Sandbox.MetaDataStep2](https://https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/Sandbox/MetaDataStep2) topic. ```
+Take a look at the PackageForm form definition of the topic linked in the [Sandbox/Exercises.Step2](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/Sandbox/Exercises.Step2) topic. ```
 | *Name:* | *Type:* | *Size:* | *Values:* | *Tooltip message:* |
 | Author | text | 60 | | |
 | Version | text | 60 | | Numerical version number e.g. 1.2 |
