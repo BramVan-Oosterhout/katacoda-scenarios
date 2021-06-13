@@ -2,7 +2,7 @@
 
 Meta data is usually displayed in a form format and can be edited in that same format. The meta data for each topic (like Creation date, Author and so on) is collected in the topic _.txt_ file. You can see this by opening a topic with the _?raw=debug_ parameter, which displays the TML and meta data for the topic in a Foswiki formatted page.
 
-You find an example in [[https://[HOST_SUBDOMAIN](/devwiki/bin/edit/KatacodaCourses/Foswiki1/Meta/HOST_SUBDOMAIN?topicparent=KatacodaCourses/Foswiki1/Meta.ScenarioStep01 "Create this topic")-80-[KATACODA_HOST](/devwiki/bin/edit/KatacodaCourses/Foswiki1/Meta/KATACODA_HOST?topicparent=KatacodaCourses/Foswiki1/Meta.ScenarioStep01 "Create this topic").environments.katacoda.com/foswiki/Sandbox/MetaDataStep1]\[Sandbox.MetaDataStep1]]
+You find an example in <https://>[HOST_SUBDOMAIN](/devwiki/bin/edit/KatacodaCourses/Foswiki1/Meta/HOST_SUBDOMAIN?topicparent=KatacodaCourses/Foswiki1/Meta.ScenarioStep01 "Create this topic")-80-[KATACODA_HOST](/devwiki/bin/edit/KatacodaCourses/Foswiki1/Meta/KATACODA_HOST?topicparent=KatacodaCourses/Foswiki1/Meta.ScenarioStep01 "Create this topic").environments.katacoda.com/foswiki/Sandbox/MetaDataStep1&gt;Sandbox.MetaDataStep1
 
 Instead of _?raw=debug_ you can use _?raw=all_ url parameter to see the raw text of the topic in the browser window instead of inside a Foswiki formatted page..
 

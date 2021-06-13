@@ -8,6 +8,8 @@ my %step = (
 ##          'test'  => \&test,
           );
 
+my $solutionTgz = 'SolutionMeta.tgz'; ## Change this globally
+
 getSolution() unless ( -e '/tmp/SolutionMeta.tgz' );
 
 if ( ! $ARGV[0] ) { print "Please provide the step as the first parameter: answer.pl stepx\n"; return }
@@ -72,7 +74,7 @@ sub getSolution {
     curl
            -LJ
            --output-dir /tmp
-           --output SolutionMacros.tgz
+           --output SolutionMeta.tgz
            https://github.com/BramVan-Oosterhout/katacoda-scenarios/blob/master/foswiki1/meta/assets/SolutionMeta.tgz?raw=true
   );
   $cmd = join( " ", @command ); `$cmd`;
