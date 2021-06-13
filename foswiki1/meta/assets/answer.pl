@@ -3,6 +3,7 @@ use warnings;
 use strict;
 
 my %step = (
+            'execises' => \&exercises,
             'step1' => \&step1,
             'step2' => \&step2,
 ##          'test'  => \&test,
@@ -17,6 +18,22 @@ if ( ! $ARGV[0] ) { print "Please provide the step as the first parameter: answe
 foreach my $request ( @ARGV ) {
   if ( ! $step{$request} ) { print "No answer for $request\n" }
   else { &{$step{$request}} }
+}
+
+sub exercises {
+  my ($cmd, @command );
+  
+  @command = qw(
+    sudo -u daemon
+    tar
+         --wildcards
+         -xvzf /tmp/SolutionMeta.tgz
+         -C /var/www/foswiki/data/Sandbox
+         Exercises/*
+  );
+  $cmd = join( " ", @command ); `$cmd`; 
+
+  refresh( 'Sandbox' );
 }
 
 
