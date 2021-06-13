@@ -6,7 +6,8 @@
   "details": {
    "assets": {
       "host01": [
-                 { "file": "Foswikicgi.dck", "target": "~/" },
+                 { "file": "meta.dck", "target": "~/" },
+                 { "file": "answer.pl", "target": "~/", "chmod": "+x" },
                  { "file": "foswiki.cgi.conf", "target": "~/" },
                  { "file": "KcBvO.crt", "target": "~/" },
                  { "file": "KcBvO.key", "target": "~/" }
@@ -14,14 +15,14 @@
     },
 "steps": [
    {
-      "text" : "step01.md",
+      "title" : "Meta data",
       "answer" : "step01-answer.md",
-      "title" : "Meta data"
+      "text" : "step01.md"
    },
    {
+      "text" : "step02.md",
       "answer" : "step02-answer.md",
-      "title" : "Forms and fields",
-      "text" : "step02.md"
+      "title" : "Forms and fields"
    },
    {
       "text" : "step03.md",
