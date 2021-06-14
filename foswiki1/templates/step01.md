@@ -10,26 +10,22 @@ There are five template directives:
 <th class="foswikiTableCol1 foswikiLastCol"> Purpose </th>
 </tr>
 <tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
-<td class="foswikiTableCol0 foswikiFirstCol"> -------- </td>
-<td class="foswikiTableCol1 foswikiLastCol"> ----------- </td>
-</tr>
-<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">
 <td class="foswikiTableCol0 foswikiFirstCol">_P_</td>
 <td class="foswikiTableCol1 foswikiLastCol"> Places the string associated with the _identifier_ in the output stream. </td>
 </tr>
-<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
+<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">
 <td class="foswikiTableCol0 foswikiFirstCol">_DEF_</td>
 <td class="foswikiTableCol1 foswikiLastCol"> Defines a string of text of any form (html, TML and text) and associates that string with the _identifier_ . The string is terminated by the template macro: _%TMPL:END%_. </td>
 </tr>
-<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">
+<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
 <td class="foswikiTableCol0 foswikiFirstCol">_END_</td>
 <td class="foswikiTableCol1 foswikiLastCol"> Terminates the _%TMPL:DEF\{ "identifier" \}%_</td>
 </tr>
-<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
+<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">
 <td class="foswikiTableCol0 foswikiFirstCol">_INCLUDE_</td>
 <td class="foswikiTableCol1 foswikiLastCol"> Includes another template in the current template file. </td>
 </tr>
-<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">
+<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
 <td class="foswikiTableCol0 foswikiFirstCol foswikiLast">_&lt;nothing&gt;_</td>
 <td class="foswikiTableCol1 foswikiLastCol foswikiLast"> A special macro that is treated as a comment. All text inside _%\{_ and _\}%_ is ignored, including new lines </td>
 </tr>
