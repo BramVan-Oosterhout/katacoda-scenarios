@@ -1,6 +1,10 @@
 !#/bin/bash
 # Prepare the assets for the Foswiki Templates scenarios
 mydir=`pwd`
-pushd ~/foswiki/Foswiki-2.1.2/data/Sandbox
-tar cvzf $mydir/SolutionTemplates.tgz SolutionTemplates* MyskinSkinViewTemplate*
+pushd ~/devfoswiki/core/data/KatacodaCourses/Foswiki1/Templates
+tar cvzf $mydir/SolutionTemplates.tgz \
+       --exclude "*,pfv*" \
+       --exclude "Web*" \
+       --wildcards \
+       Exercises/*.txt Solutions/*.txt 
 popd

@@ -6,7 +6,8 @@
   "details": {
    "assets": {
       "host01": [
-                 { "file": "Foswikicgi.dck", "target": "~/" },
+                 { "file": "templates.dck", "target": "~/" },
+                 { "file": "answer.pl", "target": "~/", "chmod": "+x" },
                  { "file": "foswiki.cgi.conf", "target": "~/" },
                  { "file": "KcBvO.crt", "target": "~/" },
                  { "file": "KcBvO.key", "target": "~/" }
@@ -18,20 +19,21 @@
       "text" : "step01.md"
    },
    {
-      "title" : "Find a template",
-      "text" : "step02.md"
+      "text" : "step02.md",
+      "title" : "Find a template"
    },
    {
+      "answer" : "step03-answer.md",
       "title" : "Customise a skin",
       "text" : "step03.md"
    },
    {
-      "title" : "Developing templates",
-      "text" : "step04.md"
+      "text" : "step04.md",
+      "title" : "Developing templates"
    },
    {
-      "title" : "References",
-      "text" : "step05.md"
+      "text" : "step05.md",
+      "title" : "References"
    }
 ]
 ,

@@ -35,7 +35,7 @@ There are five template directives:
 </tr>
 </table>
 
-Template expansion starts from the first \_\_ directive encountered in the templates as they are expanded. In the default _view_ case that directive is in the included _templates/foswiki.tmpl_. Check it out with: `less -N /var/www/foswiki/templates/foswiki.tmpl`{{execute}}
+Template expansion starts from the first _%TMPL:P\{...\}%_ directive encountered in the templates as they are expanded. In the default _view_ case that directive is `%TMPL:P{"document"}%` in the included _templates/foswiki.tmpl_. Check it out with: `less -N /var/www/foswiki/templates/foswiki.tmpl`{{execute}}
 
 _document_ is defined as: `less -N -j 10 -p 'DEF\{"document"\}' /var/www/foswiki/templates/foswiki.tmpl`{{execute}}
 
@@ -53,6 +53,6 @@ and finally _htmlend_, which does not have a definition in the default template 
 
 The examples above are taken directly from the _foswiki.tmpl_ file in the _Foswikiroot/templates_ directory. They illustrate a few things:
 * Empty definitions are OK and do not emit anything. They are silently ignored.
-* Definitions can in turn have new \_\_ directives, which are potentially defined in another template file or topic.
-* Definitions can contain normal macros like: _05 Jun 2021 - 13:21, ScenarioStep01_ and so on.
+* Definitions can in turn have new _%TMPL:P\{...\}%_ directives, which are potentially defined in another template file or topic.
+* Definitions can contain normal macros like: _%GMTIME%, %TOPIC%_ and so on.
 * As a guide, the display of content is defined in the _contentwrapper_.
