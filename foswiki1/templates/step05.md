@@ -1,4 +1,4 @@
 ## _References_	
 
-* [SkinTemplates](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/SkinTemplates) for a description of template macros and their expansion. At the bottom of the page are tips for developing new templates and an overview of defaults.
-* [Skins](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/Skins) for a description how to define and customise a skin.
+* [System.SkinTemplates](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/System.SkinTemplates) for a description of template macros and their expansion. At the bottom of the page are tips for developing new templates and an overview of defaults.
+* [System.Skins](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/System.Skins) for a description how to define and customise a skin.

@@ -3,9 +3,8 @@ use warnings;
 use strict;
 
 my %step = (
-            'execises' => \&exercises,
-            'step1' => \&step1,
-            'step2' => \&step2,
+            'exercises' => \&exercises,
+            'step3' => \&step3,
 ##          'test'  => \&test,
           );
 
@@ -75,7 +74,7 @@ sub getAsset {
   
   my ( $cmd, @command );
     
-  @command = split /\s\n/, qq(
+  @command = split /[\s\n]+/, qq(
     curl
            -LJ
            --output-dir /tmp

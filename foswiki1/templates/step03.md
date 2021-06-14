@@ -8,18 +8,22 @@ As an exercise: remove the _Edit_ link from the bottom of the topic. You need to
 
 `./tracetmpl.pl /var/www/foswiki/templates/viewtopicactionbuttons.tmpl | less -N -j 10 -p '-- edit_topic_link --'`{{execute}}
 
-The directive can be redefined in a local _Sandbox.MyskinSkinViewTemplate_ with:
+The directive can be redefined in a local _Sandbox/Exercises.MyskinSkinViewTemplate_ with:
 
 ```
 %TMPL:INCLUDE{"view"}%
 %TMPL:DEF{"edit_topic_link"}%%TMPL:END%
 ```{{copy}}
 
-To activate the definition in a topic, you need to add ```
-   * Set SKIN = myskin, pattern
-```{{copy}} to the topic. To activate it for the whole the web, you need to paste the statement in _Sandbox.WebPreferences_
+To activate the definition in a topic, you need to add
 
-If you want to remove the separator as well, you need to change the definition of _action&amp;lowbar;activatable&amp;lowbar;edit&amp;lowbar;or&amp;lowbar;create_
+```
+   * Set SKIN = myskin, pattern
+```{{copy}}
+
+to the topic. To activate it for the whole the web, you need to paste the statement in _Sandbox/Exercises.WebPreferences_
+
+If you want to remove the separator as well, you need to change the definition of _action\_activatable\_edit\_or\_create_
 
 `./tracetmpl.pl /var/www/foswiki/templates/viewtopicactionbuttons.tmpl | less -N -j 10 -p '-- action_activatable_edit_or_create --'`{{execute}}
 
