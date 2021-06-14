@@ -6,10 +6,11 @@ You find an example in [Sandbox/Exercises.Step1](https://[[HOST_SUBDOMAIN]]-80-[
 
 Instead of _?raw=debug_ you can use _?raw=all_ url parameter to see the raw text of the topic in the browser window instead of inside a Foswiki formatted page..
 
-When you inspect the topic with either url parameter, you will see two extra lines at the top. They are the meta data associated with this topic: ```
-  %META:TOPICINFO{author="JoeBlog" comment="" date="1456896969" format="1.1" reprev="1" version="1"}%
-  %META:TOPICPARENT{name="WebHome"}%
-``` Meta data is recorded using the same syntax as a macro. The macro starts with _%META:_ followed by the meta data name (like: _TOPICINFO_), followed by the value(s) recorded with that item as _name="value"_ pairs.
+When you inspect the topic with either url parameter, you will see two extra lines at the top. They are the meta data associated with this topic, which you can also see by accessing the _.txt_ file:
+
+`grep %META data/Sandbox/Exercises/Step1.txt`{{execute}}
+
+Meta data is recorded using the same syntax as a macro. The macro starts with _%META:_ followed by the meta data name (like: _TOPICINFO_), followed by the value(s) recorded with that item as _name="value"_ pairs.
 
 The following is standard meta data added in the life cycle of a Foswiki topic:
 
