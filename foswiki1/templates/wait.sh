@@ -8,4 +8,5 @@ sleep 3
 done
 echo " done."
 } 2>/dev/null
+docker exec -it /root/answer exercises
 docker exec -it -w /var/www/foswiki foswiki /bin/bash

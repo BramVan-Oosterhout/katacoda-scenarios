@@ -15,25 +15,25 @@
     },
 "steps": [
    {
-      "text" : "step01.md",
-      "title" : "Template directives"
+      "title" : "Template directives",
+      "text" : "step01.md"
    },
    {
       "title" : "Find a template",
       "text" : "step02.md"
    },
    {
+      "text" : "step03.md",
       "answer" : "step03-answer.md",
-      "title" : "Customise a skin",
-      "text" : "step03.md"
+      "title" : "Customise a skin"
    },
    {
-      "text" : "step04.md",
-      "title" : "Developing templates"
+      "title" : "Developing templates",
+      "text" : "step04.md"
    },
    {
-      "title" : "References",
-      "text" : "step05.md"
+      "text" : "step05.md",
+      "title" : "References"
    }
 ]
 ,

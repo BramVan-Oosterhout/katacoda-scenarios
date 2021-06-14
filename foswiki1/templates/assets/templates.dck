@@ -2,6 +2,4 @@ FROM bramvanoosterhout/foswiki1
 COPY answer.pl /tmp/answer
 WORKDIR /var/www/foswiki/bin
 RUN apk add sudo less && \
-    sudo -u daemon ./manage -action=createweb -baseweb=_default -newweb=Sandbox/Exercises -webbgcolor=green -websummary="Web for exercises" && \
-    /root/answer.pl exercises
-    
+    sudo -u daemon ./manage -action=createweb -baseweb=_default -newweb=Sandbox/Exercises -webbgcolor=green -websummary="Web for exercises" 
