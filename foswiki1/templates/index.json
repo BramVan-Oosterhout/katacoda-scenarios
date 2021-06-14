@@ -15,8 +15,8 @@
     },
 "steps": [
    {
-      "title" : "Template directives",
-      "text" : "step01.md"
+      "text" : "step01.md",
+      "title" : "Template directives"
    },
    {
       "title" : "Find a template",
@@ -24,8 +24,8 @@
    },
    {
       "text" : "step03.md",
-      "answer" : "step03-answer.md",
-      "title" : "Customise a skin"
+      "title" : "Customise a skin",
+      "answer" : "step03-answer.md"
    },
    {
       "title" : "Developing templates",
