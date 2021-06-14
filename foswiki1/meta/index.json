@@ -15,18 +15,18 @@
     },
 "steps": [
    {
-      "answer" : "step01-answer.md",
+      "title" : "Meta data",
       "text" : "step01.md",
-      "title" : "Meta data"
+      "answer" : "step01-answer.md"
    },
    {
-      "answer" : "step02-answer.md",
       "text" : "step02.md",
-      "title" : "Forms and fields"
+      "title" : "Forms and fields",
+      "answer" : "step02-answer.md"
    },
    {
-      "title" : "References",
-      "text" : "step03.md"
+      "text" : "step03.md",
+      "title" : "References"
    }
 ]
 ,
