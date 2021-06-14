@@ -19,28 +19,28 @@
       "title" : "Variables"
    },
    {
-      "title" : "Preferences",
+      "text" : "step02.md",
       "answer" : "step02-answer.md",
-      "text" : "step02.md"
+      "title" : "Preferences"
    },
    {
       "text" : "step03.md",
       "title" : "Preferences and Access control"
    },
    {
+      "title" : "Macros",
       "answer" : "step04-answer.md",
-      "text" : "step04.md",
-      "title" : "Macros"
+      "text" : "step04.md"
    },
    {
-      "text" : "step05.md",
       "answer" : "step05-answer.md",
+      "text" : "step05.md",
       "title" : "INCLUDE"
    },
    {
+      "title" : "IF",
       "text" : "step06.md",
-      "answer" : "step06-answer.md",
-      "title" : "IF"
+      "answer" : "step06-answer.md"
    },
    {
       "title" : "References",

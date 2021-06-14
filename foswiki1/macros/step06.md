@@ -1,6 +1,8 @@
 ## _IF_	
 
-When rendering a page it is common that the rendering varies depending on the exact content of the page or the context in which the page is rendered. The IF macro can do this. The syntax is: _IF\{ "condition" then="then text" else="else text" \}%_. Copy all of the following to Sandbox.TestMacros to see some examples ```
+When rendering a page it is common that the rendering varies depending on the exact content of the page or the context in which the page is rendered. The IF macro can do this. The syntax is: _IF\{ "condition" then="then text" else="else text" \}%_. Copy all of the following to Sandbox.TestMacros to see some examples
+
+```
 &lt;verbatim&gt;
 %STARTSECTION{ "ex3" }%
 %IF{ "$theText='birthday'" then="%RED%" }%
@@ -25,6 +27,7 @@ is expanded to:
               theText="birthday"
               theName="Main.%USERNAME%"
               theDate="7 December" }%
+
 ---++++ theText is undefined
 &lt;verbatim&gt;%INCLUDE{ "%TOPIC%"
              section="ex3"

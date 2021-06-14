@@ -1,6 +1,8 @@
 ## _INCLUDE_	
 
-The _INCLUDE_ macro includes (part of) a given topic in the current topic. The simplest form includes one topic in another: _%INCLUDE\{ "targettopicname" \}%_. It is made more functional by selecting part of a targettopic by using the _%STARTINCLUDE%_ and _%STOPINCLUDE%_ macros as markers in the target topic. Paste the following code into the Sandbox.TestMacros topic: ```
+The _INCLUDE_ macro includes (part of) a given topic in the current topic. The simplest form includes one topic in another: _%INCLUDE\{ "targettopicname" \}%_. It is made more functional by selecting part of a targettopic by using the _%STARTINCLUDE%_ and _%STOPINCLUDE%_ macros as markers in the target topic. Paste the following code into the Sandbox.TestMacros topic:
+
+```
 (%INCLUDE{ "%TOPIC%" }%)
 ---
 &lt;verbatim&gt;
