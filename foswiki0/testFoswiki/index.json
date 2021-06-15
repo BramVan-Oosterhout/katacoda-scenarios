@@ -34,7 +34,6 @@
     }],
     "intro": {
       "text": "intro.md",
-      "courseData": "setup.sh",
       "credits": "Material by Bram van Oosterhout"
     },
     "finish": {
