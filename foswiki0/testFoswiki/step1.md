@@ -1,6 +1,8 @@
-## Check the environment.
+## Check and setup the environment.
 
 What is the host name? `hostname`{{execute}}
+
+Install Apache: `apt-get install apache2`{{execute}}
 
 Is the apache server running? `ps -C apache2`{{execute}}
 
