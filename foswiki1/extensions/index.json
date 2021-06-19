@@ -15,28 +15,28 @@
     },
 "steps": [
    {
+      "answer" : "step01-answer.md",
       "text" : "step01.md",
-      "title" : "Interface and Installation",
-      "answer" : "step01-answer.md"
+      "title" : "Interface and Installation"
    },
    {
-      "title" : "Filter plugin",
+      "answer" : "step02-answer.md",
       "text" : "step02.md",
-      "answer" : "step02-answer.md"
+      "title" : "Filter plugin"
    },
    {
-      "title" : "Spreadsheet plugin",
       "text" : "step03.md",
+      "title" : "Spreadsheet plugin",
       "answer" : "step03-answer.md"
    },
    {
-      "answer" : "step04-answer.md",
       "text" : "step04.md",
-      "title" : "Comment plugin"
+      "title" : "Comment plugin",
+      "answer" : "step04-answer.md"
    },
    {
-      "text" : "step05.md",
-      "title" : "References"
+      "title" : "References",
+      "text" : "step05.md"
    }
 ]
 ,
