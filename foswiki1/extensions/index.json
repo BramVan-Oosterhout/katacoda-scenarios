@@ -6,7 +6,8 @@
    "details": {
    "assets": {
       "host01": [
-                 { "file": "Foswikicgi.dck", "target": "~/" },
+                 { "file": "extensions.dck", "target": "~/" },
+                 { "file": "answer.pl", "target": "~/", "chmod": "+x" },
                  { "file": "foswiki.cgi.conf", "target": "~/" },
                  { "file": "KcBvO.crt", "target": "~/" },
                  { "file": "KcBvO.key", "target": "~/" }
@@ -19,19 +20,19 @@
       "answer" : "step01-answer.md"
    },
    {
-      "text" : "step02.md",
       "title" : "Filter plugin",
+      "text" : "step02.md",
       "answer" : "step02-answer.md"
    },
    {
-      "answer" : "step03-answer.md",
+      "title" : "Spreadsheet plugin",
       "text" : "step03.md",
-      "title" : "Spreadsheet plugin"
+      "answer" : "step03-answer.md"
    },
    {
+      "answer" : "step04-answer.md",
       "text" : "step04.md",
-      "title" : "Comment plugin",
-      "answer" : "step04-answer.md"
+      "title" : "Comment plugin"
    },
    {
       "text" : "step05.md",

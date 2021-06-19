@@ -8,5 +8,5 @@ sleep 3
 done
 echo " done."
 } 2>/dev/null
-docker exec -it foswiki /bin/bash -c '/root/answer exercises'
+docker exec -it foswiki /bin/bash -c '/tmp/answer exercises && chmod +x /tmp/tracetmpl.pl'
 docker exec -it -w /var/www/foswiki foswiki /bin/bash

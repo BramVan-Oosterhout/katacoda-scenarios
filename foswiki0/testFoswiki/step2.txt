@@ -1,0 +1,72 @@
+Foswiki requires some prerequisites for Ubuntu, Apache and perl.
+
+A complete list is provided in the  [[https://foswiki.org/System/InstallationGuide#SystemRequirements][Installation guide (system requirements)]]
+
+For Ubuntu there is a collection of libraries required. You can install each with the following commands:
+   * <code>apt-get update</code>{{execute}}
+   * <code>apt-get install libalgorithm-diff-perl</code>{{execute}}
+   * <code>apt-get install libarchive-tar-perl</code>{{execute}}
+   * <code>apt-get install libauthen-sasl-perl</code>{{execute}}
+   * <code>apt-get install libcgi-pm-perl</code>{{execute}}
+   * <code>apt-get install libcgi-session-perl</code>{{execute}}
+   * <code>apt-get install libcrypt-passwdmd5-perl</code>{{execute}}
+   * <code>apt-get install libdigest-sha-perl</code>{{execute}}
+   * <code>apt-get install libemail-address-perl</code>{{execute}}
+   * <code>apt-get install libemail-mime-perl</code>{{execute}}
+   * <code>apt-get install libencode-perl</code>{{execute}}
+   * <code>apt-get install liberror-perl</code>{{execute}}
+   * <code>apt-get install libfile-copy-recursive-perl</code>{{execute}}
+   * <code>apt-get install libhtml-parser-perl</code>{{execute}}
+   * <code>apt-get install libhtml-tree-perl</code>{{execute}}
+   * <code>apt-get install libio-socket-ip-perl</code>{{execute}}
+   * <code>apt-get install libio-socket-ssl-perl</code>{{execute}}
+   * <code>apt-get install libjson-perl</code>{{execute}}
+   * <code>apt-get install liblocale-maketext-perl</code>{{execute}}
+   * <code>apt-get install liblocale-maketext-lexicon-perl</code>{{execute}}
+   * <code>apt-get install liblocale-msgfmt-perl</code>{{execute}}
+   * <code>apt-get install libwww-perl</code>{{execute}}
+   * <code>apt-get install liblwp-protocol-https-perl</code>{{execute}}
+   * <code>apt-get install liburi-perl</code>{{execute}}
+   * <code>apt-get install libversion-perl</code>{{execute}}
+Some are already installed and up to date, some are new and require prerequisites as well.
+
+You can install all of them in one command with:
+<code>apt-get update; apt-get -y install libalgorithm-diff-perl libarchive-tar-perl libauthen-sasl-perl libcgi-pm-perl libcgi-session-perl libcrypt-passwdmd5-perl libdigest-sha-perl libemail-address-perl libemail-mime-perl libencode-perl liberror-perl libfile-copy-recursive-perl libhtml-parser-perl libhtml-tree-perl libio-socket-ip-perl libio-socket-ssl-perl libjson-perl liblocale-maketext-perl liblocale-maketext-lexicon-perl liblocale-msgfmt-perl libwww-perl liblwp-protocol-https-perl liburi-perl libversion-perl</code>{{execute}}
+
+The required apache prerequisites are installed with:
+   * <code>a2enmod rewrite</code>{{execute}}
+   * <code>a2enmod cgi</code>{{execute}}
+   * <code>a2enmod access_compat</code>{{execute}}
+
+And the cpan prerequisites are installed with:
+   * <code>cpan install Algorithm::Diff</code>{{execute}}
+   * <code>cpan install Archive::Tar</code>{{execute}}
+   * <code>cpan install Authen::SASL</code>{{execute}}
+   * <code>cpan install CGI</code>{{execute}}
+   * <code>cpan install CGI::Session</code>{{execute}}
+   * <code>cpan install Digest::SHA</code>{{execute}}
+   * <code>cpan install Email::Address</code>{{execute}}
+   * <code>cpan install Email::MIME</code>{{execute}}
+   * <code>cpan install Encode</code>{{execute}}
+   * <code>cpan install Error</code>{{execute}}
+   * <code>cpan install File::Copy::Recursive</code>{{execute}}
+   * <code>cpan install HTML::Parser</code>{{execute}}
+   * <code>cpan install HTML::Tree</code>{{execute}}
+   * <code>cpan install IO::Socket::IP</code>{{execute}}
+   * <code>cpan install IO::Socket::SSL</code>{{execute}}
+   * <code>cpan install Locale::Maketext</code>{{execute}}
+   * <code>cpan install Locale::Maketext::Lexicon</code>{{execute}}
+   * <code>cpan install Locale::Msgfmt</code>{{execute}}
+   * <code>cpan install LWP</code>{{execute}}
+   * <code>cpan install LWP::Protocol::https</code>{{execute}}
+   * <code>cpan install URI</code>{{execute}}
+   * <code>cpan install version</code>{{execute}}
+
+You can install all of them in one command with:
+<code>export PERL_MM_USE_DEFAULT=1; cpan -T install Algorithm::Diff Archive::Tar Authen::SASL CGI CGI::Session Digest::SHA Email::Address Email::MIME Encode Error File::Copy::Recursive HTML::Parser HTML::Tree IO::Socket::IP IO::Socket::SSL Locale::Maketext Locale::Maketext::Lexicon Locale::Msgfmt LWP LWP::Protocol::https URI version</code>{{execute}}
+
+---++ E-mail support
+Foswiki can send email to various destination when configured, if that is supported by the environment.
+
+The Katacoda environment does not readily support mailing to an external address, so we will not configure E-mail support.
+

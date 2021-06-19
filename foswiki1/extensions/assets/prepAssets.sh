@@ -1,6 +1,10 @@
-#!/bin/bash
-# Prepare the assets directory
+!#/bin/bash
+# Prepare the assets for the Foswiki Templates scenarios
 mydir=`pwd`
-pushd ~/foswiki/Foswiki-2.1.2/data/Sandbox
-tar cvzf $mydir/SolutionExtensions.tgz SolutionExtensions*
+pushd ~/devfoswiki/core/data/KatacodaCourses/Foswiki1/Extensions
+tar cvzf $mydir/SolutionExtensions.tgz \
+       --exclude "*,pfv*" \
+       --exclude "Web*" \
+       --wildcards \
+       Solutions/*.txt 
 popd
