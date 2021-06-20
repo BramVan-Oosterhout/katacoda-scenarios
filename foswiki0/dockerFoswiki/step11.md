@@ -2,9 +2,9 @@ Now that we have all the components for an Apache/Foswiki Docker image together,
 
 The `makefile`{{open}} attached to this scenario shows the steps.
 
-`build` will build the image from a Docker file. We use `Foswikicgi.dck` to create the `foswiki1` image.
+`build` will build the image from a Docker file. We use `foswiki1.dck` to create the `foswiki1` image.
 
-`docker build -t foswiki1 -f Foswikicgi.dck .`{{execute}}
+`docker build -t foswiki1 -f foswiki1.dck .`{{execute}}
 
 `tag` will create a name for the image under which it will be stored. I'll use =bramvanoosterhout/foswiki1:latest
 
@@ -20,7 +20,7 @@ The `makefile`{{open}} attached to this scenario shows the steps.
 
 All this is achieved by the command:
 
-`make IMAGE=foswiki1 DOCKERFILE=Foswikicgi.dck USER=bramvanoosterhout`{{execute}}
+`make IMAGE=foswiki1 DOCKERFILE=foswiki1.dck USER=bramvanoosterhout`{{execute}}
 
 You can provide your own files and names and save your own images at DockerHub using this `makefile`.
 

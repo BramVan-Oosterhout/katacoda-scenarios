@@ -6,7 +6,7 @@ WORKDIR /tmp
 
 RUN apk update && \
     apk upgrade && \
-    apk add perl bash tar curl tree sudo \
+    apk add perl bash tar curl tree sudo make perl-app-cpanminus \
             perl-cgi perl-cgi-session \
             perl-crypt-passwdmd5 perl-error \
             perl-file-copy-recursive perl-json \
@@ -14,6 +14,7 @@ RUN apk update && \
             perl-locale-maketext-lexicon perl-locale-msgfmt perl-locale-codes \
             perl-lwp-protocol-https && \
     rm -rf /var/cache/apk/* && \
+    ln -s /usr/bin/cpanm /usr/bin/cpan && \
     mkdir /var/www && \
     mkdir /var/log/httpd
     
