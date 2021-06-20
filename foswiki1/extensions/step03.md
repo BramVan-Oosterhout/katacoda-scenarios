@@ -1,6 +1,6 @@
 ## _SpreadsheetPlugin_	
 
-The Spreadsheet plugin provides the ability to perform arithmatic and some list manipulation in Foswiki. The manipulation can be performed within a table, thereby providing spreadsheet functionality. That can be useful in some applications. The plugin also provides for simple calculations through the _..._ macro. For example, the following construct returns a very crude wordcount for the WebHome topic. In the _Sandbox.ExtensionsStep3_ topic try:
+The Spreadsheet plugin provides the ability to perform arithmatic and some list manipulation in Foswiki. The manipulation can be performed within a table, thereby providing spreadsheet functionality. That can be useful in some applications. The plugin also provides for simple calculations through the _..._ macro. For example, the following construct returns a very crude wordcount for the WebHome topic. In the _Sandbox/Execises.Step3_ topic try:
 
 ```
 %CALCULATE{ "$COUNTSTR($SPLIT( $comma, %EXTRACT{

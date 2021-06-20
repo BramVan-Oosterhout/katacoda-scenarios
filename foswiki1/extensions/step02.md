@@ -5,11 +5,11 @@ _FilterPlugin_ provides text manipulation macros across _Foswiki_ topics. The do
 * _EXTRACT_ - supports the extraction of a list from a specified text
 * _SUBST_ - supports substitution is a chunk of text
 
-Use the configure page to install _FilterPlugin_ if you have not already done so..
+Use the configure page to install _FilterPlugin_ if you have not already done so.
 
 ## _The EXTRACT macro_	
 
-The _EXTRACT_ macro can extract text from a given text or topic. In _Sandbox.ExtensionsStep2_ try: ```
+The _EXTRACT_ macro can extract text from a given text or topic. In _Sandbox/Exercises.Step2_ try: ```
 %EXTRACT{
         text="The quick brown fox jumped over the lazy dog"
         pattern="(The|the)"
