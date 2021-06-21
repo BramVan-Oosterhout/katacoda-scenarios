@@ -3,12 +3,19 @@
 The Spreadsheet plugin provides the ability to perform arithmatic and some list manipulation in Foswiki. The manipulation can be performed within a table, thereby providing spreadsheet functionality. That can be useful in some applications. The plugin also provides for simple calculations through the _..._ macro. For example, the following construct returns a very crude wordcount for the WebHome topic. In the _Sandbox/Execises.Step3_ topic try:
 
 ```
-%CALCULATE{ "$COUNTSTR($SPLIT( $comma, %EXTRACT{
-                                          topic="System.WebHome"
-                                          pattern="(\w+)"
-                                          format="$1"
-                                          separator=","
-                                        }%),  )" }%
+%CALCULATE{
+    "$COUNTSTR(
+        $SPLIT(
+            $comma,
+            %EXTRACT{
+                  topic="System.WebHome"
+                  pattern="(\w+)"
+                  format="$1"
+                  separator=","
+                    }%
+             ),
+         )"
+}%
 ```{{copy}}
 
 This example also illustrates how nested macros are evaluated: Left to right, inside out.
@@ -20,22 +27,33 @@ This example also illustrates how nested macros are evaluated: Left to right, in
 A word of warning. Although this looks very much like a programming example, Foswiki is essentially a text processor. If you omit the comma after _\}%)_ the last parameter of COUNTSTR will be the last word returned by _EXTRACT_. Try:
 
 ```
-%CALCULATE{ "$COUNTSTR($SPLIT( $comma, %EXTRACT{
-                                          topic="System.WebHome"
-                                          pattern="(\w+)"
-                                          format="$1"
-                                          separator=","
-                                        }%)  )" }%
+%CALCULATE{
+    "$COUNTSTR(
+        $SPLIT(
+            $comma,
+            %EXTRACT{
+                topic="System.WebHome"
+                pattern="(\w+)"
+                format="$1"
+                separator=","
+                   }%
+            )
+    )"
+}%
 ```{{copy}}
 
 _COUNTSTR_ now takes the last element in the list as the string to count and counts the occurrences of that string in the remainder of the list. There are none!
 
 There are other ways of using _EXTRACT_ to achieve the same result. The following maps all words to a single character and returns the length of the string. ```
-%CALCULATE{ "$LENGTH( %EXTRACT{
-                                          topic="System.WebHome"
-                                          pattern="(\w+)"
-                                          format="A"
-                      }%)" }%
+%CALCULATE{
+    "$LENGTH(
+        %EXTRACT{
+            topic="System.WebHome"
+            pattern="(\w+)"
+            format="A"
+        }%
+    )"
+}%
 ```{{copy}}
 
 As an exercise: Use _EXTRACT_ and _CALCULATE_ to count:

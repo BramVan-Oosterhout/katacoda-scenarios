@@ -2,7 +2,7 @@
 
 The comment plugin provides a quick way to enter text in Foswiki, without going through an Edit/Save cycle. The simplest version of the use of the comment plugin is to add: ```
 %COMMENT%
-```{{copy}} to the TML in _Sandbox/Execises.Step4_ and after saving you are presented with a edit text box and an Add comment button.
+```{{copy}} to the TML in _Sandbox/Exercises.Step4_ and after saving you are presented with a edit text box and an Add comment button.
 
 The comment plugin is more versatile than that. Its presentation as well as its output is controlled through templates. For instance: ```
 %COMMENT{type="table" button="Add" target="Sandbox.TestCommentPlugin" }%

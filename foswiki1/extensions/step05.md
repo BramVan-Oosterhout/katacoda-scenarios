@@ -6,9 +6,9 @@ Refer to the documentation for details of the operation of the filter, spreadshe
 
 ## _References_	
 
-* [Contribs](https://https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/System/Contribs) for a description of Foswiki contributions
-* [InstalledPlugins](https://https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/System/InstalledPlugins) for the list of plugins installed on your site
-* [DevelopingPlugins](https://https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/System/DevelopingPlugins) for an introduction to the internals of plugins
-* [FilterPlugin](https://https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/System/FilterPlugin) for the full description of the filter plugin functionality.
-* [SpreadSheetPlugin](https://https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/System/SpreadSheetPlugin) for the full description of the spreadsheet plugin functionality.
-* [CommentPlugin](https://https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/System/CommentPlugin) for the full description of the comment plugin functionality.
+* [Contribs](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/Contribs) for a description of Foswiki contributions
+* [InstalledPlugins](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/InstalledPlugins) for the list of plugins installed on your site
+* [DevelopingPlugins](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/DevelopingPlugins) for an introduction to the internals of plugins
+* [FilterPlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/FilterPlugin) for the full description of the filter plugin functionality.
+* [SpreadSheetPlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/SpreadSheetPlugin) for the full description of the spreadsheet plugin functionality.
+* [CommentPlugin](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/CommentPlugin) for the full description of the comment plugin functionality.

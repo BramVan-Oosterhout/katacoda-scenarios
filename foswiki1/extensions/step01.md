@@ -6,7 +6,7 @@ As part of the server side message processing, macros are extracted from the top
 
 ## _Plugin installation_	
 
-Plugins can be installed by a user with _admin_ rights using the _Extensions_ section on the [configure](/devwiki/bin/edit/NopHttps/HOST_SUBDOMAIN-80-KATACODA_HOST/environments/katacoda/com/foswiki/bin/Configure?topicparent=KatacodaCourses/Foswiki1/Extensions.ScenarioStep01 "Create this topic") page. We will use _FilterPlugin_ in the next steps, so we need to install that.
+Plugins can be installed by a user with _admin_ rights using the _Extensions_ section on the [configure](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki//bin/configure) page. We will use _FilterPlugin_ in the next steps, so we need to install that.
 
 Select the _Install, update and remove_ tab in the section and search for the plugin you want to install. When the plugin is found, you need to select the plugin and click install. Foswiki will check if the plugin has dependencies on other plugins and if so, install those as well. Foswiki will warn if there are _cpan_ dependencies, but not install those. A record of the installation is kept here: `less -N /var/www/foswiki/working/logs/configure.log`{{execute}}
 
