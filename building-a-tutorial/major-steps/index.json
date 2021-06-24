@@ -14,16 +14,16 @@
     },
     "steps": [
    {
-      "text" : "step01.md",
-      "title" : "Create a basic scenario"
+      "title" : "Create a basic scenario",
+      "text" : "step01.md"
    },
    {
-      "title" : "Starting the image, ready for use",
-      "text" : "step02.md"
+      "text" : "step02.md",
+      "title" : "Starting the image, ready for use"
    },
    {
-      "text" : "step03.md",
-      "title" : "Waiting for the setup of the enviroment"
+      "title" : "Waiting for the setup of the enviroment",
+      "text" : "step03.md"
    },
    {
       "text" : "step04.md",
@@ -40,7 +40,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-iframe",
+    "uilayout": "editor-terminal",
     "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r\nRun your own commands here\u001b[m\r\n"
 },
   "backend": {
