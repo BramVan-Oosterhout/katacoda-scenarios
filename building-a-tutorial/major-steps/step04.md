@@ -1,6 +1,6 @@
 Now that we have the parts together, we can complete the initial scenario and deploy it to Katacoda.
 
-For the scenario we need to complete the `index.json>/code>{{open}} file. `
+For the scenario we need to complete the `index.json`{{open}} file.
 
 `setup.sh` is executed as a _background_ job for the `intro` step. And wait.sh as a _foreground_ job.
 

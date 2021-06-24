@@ -15,3 +15,6 @@ The following steps are required:
 * `mkdir assets`{{execute}}
 * `cd assets`{{execute}}
 * `cp ../../../example-course.dck .`{{execute}}
+* `git add*`{{execute}}
+* `git commit -m "Example course Release 0.1"`{{execute}}
+* `git push origin master`{{execute}} ... OOPS!!
