@@ -22,10 +22,11 @@
       "title" : "Starting the image, ready for use"
    },
    {
-      "title" : "Waiting for the setup of the enviroment",
-      "text" : "step03.md"
+      "text" : "step03.md",
+      "title" : "Waiting for the setup of the enviroment"
    },
    {
+      "answer" : "step04-answer.md",
       "text" : "step04.md",
       "title" : "Defining the scenario - index.json"
    }

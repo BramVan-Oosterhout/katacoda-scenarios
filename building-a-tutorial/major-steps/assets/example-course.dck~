@@ -1,6 +1,0 @@
-FROM bramvanoosterhout/foswiki1
-COPY answer.pl /tmp/answer
-WORKDIR /var/www/foswiki/bin
-RUN apk add sudo && \
-    sudo -u daemon ./manage -action=createweb -baseweb=_default -newweb=Sandbox/Exercises -webbgcolor=green -websummary="Web for exercises" 
-    
