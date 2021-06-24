@@ -9,8 +9,9 @@
                  { "file": "wait.sh", "target": "~/", "chmod": "+x" },
                  { "file": "setup.sh", "target": "~/", "chmod": "+x" },
                  { "file": "example-course.dck", "target": "~/" },
-                 { "file": "index.json", "target": "~/" }
-              ]
+                 { "file": "index.json", "target": "~/" },
+                 { "file": "example-course-pathway.json", "target": "~/" }
+             ]
     },
     "steps": [
    {
@@ -26,9 +27,9 @@
       "title" : "Waiting for the setup of the enviroment"
    },
    {
-      "answer" : "step04-answer.md",
+      "title" : "Defining the scenario - index.json",
       "text" : "step04.md",
-      "title" : "Defining the scenario - index.json"
+      "answer" : "step04-answer.md"
    }
 ]
 ,

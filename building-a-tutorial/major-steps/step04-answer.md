@@ -10,8 +10,8 @@ The following steps are required:
 * `cp ../../setup.sh .`{{execute}}
 * `cp ../../wait.sh .`{{execute}}
 * `echo "## Introduction" > intro.md`{{execute}}
-* `echo "## Step 1" > intro.md`{{execute}}
+* `echo "## Step 1" > step01.md`{{execute}}
 * `echo "You finished this scenario" > finish.md`{{execute}}
-* ,code&gt;mkdir assets\{\{execute\}\}
+* `mkdir assets`{{execute}}
 * `cd assets`{{execute}}
 * `cp ../../../example-course.dck .`{{execute}}

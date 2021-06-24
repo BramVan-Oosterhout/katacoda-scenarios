@@ -6,32 +6,13 @@
   "details": {
    "assets": {
       "host01": [
-                 { "file": "webs.dck", "target": "~/" },
-                 { "file": "answer.pl", "target": "~/", "chmod": "+x" },
-                 { "file": "foswiki.cgi.conf", "target": "~/" },
-                 { "file": "KcBvO.crt", "target": "~/" },
-                 { "file": "KcBvO.key", "target": "~/" }
-              ]
+                 { "file": "example-course.dck", "target": "~/" }              ]
     },
 "steps": [
    {
       "title" : "What are webs",
       "text" : "step01.md"
-   },
-   {
-      "text" : "step02.md",
-      "title" : "Maintaining webs"
-   },
-   {
-      "answer" : "step03-answer.md",
-      "title" : "Exercise",
-      "text" : "step03.md"
-   },
-   {
-      "title" : "References",
-      "text" : "step04.md"
-   }
-]
+   }]
 ,
       "intro": {
       "text": "intro.md",
