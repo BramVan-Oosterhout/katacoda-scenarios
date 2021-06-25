@@ -15,8 +15,8 @@
     },
     "steps": [
    {
-      "title" : "Create a basic scenario",
-      "text" : "step01.md"
+      "text" : "step01.md",
+      "title" : "Create a basic scenario"
    },
    {
       "title" : "Starting the image, ready for use",
@@ -28,12 +28,12 @@
    },
    {
       "text" : "step04.md",
-      "title" : "Defining the scenario - index.json",
-      "answer" : "step04-answer.md"
+      "answer" : "step04-answer.md",
+      "title" : "Defining the scenario - index.json"
    },
    {
-      "title" : "A github excursion",
-      "text" : "step05.md"
+      "text" : "step05.md",
+      "title" : "A github excursion"
    }
 ]
 ,

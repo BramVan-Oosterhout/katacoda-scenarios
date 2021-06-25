@@ -2,7 +2,7 @@ In this step we use the GitHub CLI to configure GitHub. Ref: <https://www.sitepo
 
 Install `gh`: `./install-gh`{{execute}}
 
-* `cd ~/example-course`{{execute}}
+* `cd ~/example-scenarios`{{execute}}
 * `gh auth login`{{execute}}
 * `gh repo create --public`{{execute}}
 
