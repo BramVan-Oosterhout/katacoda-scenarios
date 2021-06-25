@@ -3,6 +3,8 @@ The following steps are required:
 * `mkdir example-scenarios`{{execute}}
 * `cd example-scenarios`{{execute}}
 * `git init`{{execute}}
+* `git config --global user.email bram@van-oosterhout.org`\{execute\}\}
+* `git config --global user.name "Bram van Oosterhout"`\{execute\}\}
 * `mkdir example-course`{{execute}}
 * `cp ../example-course-pathway.json .`{{execute}}
 * `cd example-course`{{execute}}
