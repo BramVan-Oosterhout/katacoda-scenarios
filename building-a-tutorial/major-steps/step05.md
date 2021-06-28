@@ -1,5 +1,15 @@
 In this step we use the GitHub CLI to configure GitHub. Ref: <https://www.sitepoint.com/github-cli/#>
 
+To access GitHub remotely, you will need a access token for your account. You only need one access token for all your activities in this course. You can reuse the access token when you rerun this scenario. The scenario requires the following rights: _repo_, _admin:org_ and _admin:public\_key_. You can generate your access token here: <https://github.com/settings/tokens>. Keep it in a safe place.
+
+We also need to identify this course to GitHub. We will use ssh. The instructions are here: <https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh>
+
+* Generate: `ssh-keygen -t ed25519 -C "root@host01"`{{execute}}
+* Start agent: `eval "$(ssh-agent -s)"`{{execute}}
+* Add key: `ssh-add ~/.ssh/id_ed25519`{{execute}}
+* Paste key: `cat id_ed25519.pub`{{execute}}
+* Test: `ssh -T git@github.com`{{execute}}
+
 Install `gh`: `./install-gh`{{execute}}
 
 * `cd ~/example-scenarios`{{execute}}
@@ -9,46 +19,4 @@ Install `gh`: `./install-gh`{{execute}}
 Add a webhook to ... for the repo at
 
 * `git push origin master`{{execute}}
-
-### Notes	
-
-```
-curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list &gt; /dev/null
-sudo apt update
-sudo apt install gh
-```
-
-Use `gh auth login`{{execute}} and follow the prompts ```
-$ gh auth login
-? What account do you want to log into? GitHub.com
-? What is your preferred protocol for Git operations? SSH
-? Upload your SSH public key to your GitHub account? Skip &lt; &lt; &lt; PROBABLY NOT!!!
-? How would you like to authenticate GitHub CLI? Paste an authentication token
-Tip: you can generate a Personal Access Token here https://github.com/settings/tokens
-The minimum required scopes are 'repo', 'read:org', 'admin:public_key'.
-? Paste your authentication token: ****************************************
-- gh config set -h github.com git_protocol ssh
-✓ Configured git protocol
-✓ Logged in as BramVan-Oosterhout
-$
-```
-
-```
-$ git config --global user.email bram@van-oosterhout.org
-$ git config --global user.name "Bram van Oosterhout"
-```
-
-```
-$ gh repo create --public
-? Repository name example-scenarios
-? Repository description Example only - DELETE ME
-? This will add an "origin" git remote to your local repository. Continue? Yes
-✓ Created repository BramVan-Oosterhout/example-scenarios on GitHub
-Warning: Permanently added 'github.com,140.82.121.3' (RSA) to the list of known hosts.
-ERROR: We're doing an SSH key audit.
-Reason: unverified automatically (private key found in a public repository)
-Please visit https://github.com/ttripp/gitops-tutorial/settings/keys/32175876
-to approve this key so we know it's safe.
-```
 
