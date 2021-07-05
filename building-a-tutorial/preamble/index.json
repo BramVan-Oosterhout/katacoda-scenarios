@@ -6,9 +6,7 @@
   "details": {
    "assets": {
       "host01": [
-                 { "file": "wait.sh", "target": "~/", "chmod": "+x" },
-                 { "file": "answer", "target": "~/", "chmod": "+x" },
-                 { "file": "WorkbenchExample.tgz", "target": "~/" }
+
               ]
     },
     "steps": [
@@ -17,12 +15,12 @@
       "title" : "Starting the git repository"
    },
    {
-      "title" : "Setting up the course",
-      "text" : "step02.md"
+      "text" : "step02.md",
+      "title" : "Setting up the course"
    },
    {
-      "title" : "Mocking up the scenario",
-      "text" : "step03.md"
+      "text" : "step03.md",
+      "title" : "Mocking up the scenario"
    }
 ]
 ,
@@ -37,7 +35,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-iframe",
+    "uilayout": "editor-terminal",
     "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r\nRun your own commands here\u001b[m\r\n",
     "showdashboard": "1",
     "dashboards": [ {"name": "Foswiki", "port": "80", "host": "host01"} ]
