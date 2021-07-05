@@ -1,0 +1,38 @@
+---++ Exercise
+
+For this exercise you need to be an administrator. Log in with username *admin* and password *password*.
+
+Create a subweb  of the Sandbox web called: Exercise1
+
+In Sandbox/Exercise1: create 2 topics (TopicA and TopicB). TopicA contains a link to TopicB. And TopicB contains a link to TopicA
+
+Inspect the directory structure with: <code>tree /var/www/foswiki/data/Sandbox | less</code>{{execute}}
+
+In Sandbox/Exercise1: create 2 sub webs (Subweb1 and Subweb2).
+
+In Sandbox/Exercise1/Subweb2 Create TopicSW2.
+   * TopicSW2 contains a link to TopicSW1 in Sandbox/Example1/Subweb1
+   * TopicSW2 contains a link to TopicA in Sandbox.Example1
+
+If things don't quite work the way you expect them to, use the editor in _Wiki Text_ mode.   
+   
+You can create more webs and links as you please.---++ Solution
+
+Use _ManagingWebs_ to create the Sandbox/WebsStep3, Sandbox/WebsStep3/Subweb1 and Sandbox/WebsStep3/Subweb2 webs.
+
+Navigate to the Sandbox/WebsStep3 web and use _Create new topic_ to create TopicA.
+
+In TopicA enter: Link to TopicB. Save the topic.
+
+In the saved TopicA, click on the TopicB link. TopicB is created.
+
+In TopicB enter: Link to Topic A. Save the topic.
+
+Navigate to Sandbox/WebsStep3/Subweb2 and use _Create new topic_ to create TopicSW2.
+
+In TopicSW2 create a link to Sandbox/WebsStep3/TopicA
+
+To see the solution run the following command and refresh the browser:
+`/root/SolutionWebs.sh</code>{{execute}}
+
+You find the SolutionWebsStep3 sub-web in the Sandbox.

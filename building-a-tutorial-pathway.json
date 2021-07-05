@@ -1,0 +1,17 @@
+{
+    "title": "Building a tutorial",
+    "description": "Building a tutorial for a web application.",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "course_id": "preamble",
+        "title": "Preamble",
+        "description": "Setting up a scenario structure."
+      },
+      {
+        "course_id": "major-steps",
+        "title": "Major steps in building a tutorial",
+        "description": "Building a tutorial for a web application."
+      }
+     ]
+  }

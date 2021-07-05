@@ -1,0 +1,1 @@
+You've completed your first test Katacoda scenario!

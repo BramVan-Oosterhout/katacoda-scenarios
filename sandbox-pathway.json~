@@ -1,0 +1,42 @@
+{
+    "title": "Sandbox",
+    "description": "Unrelated experiments to practice \nLast update: Wed Oct 28 13:04:06 2020",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "course_id": "test-tml2kcmd",
+        "title": "TML 2 Kcmd",
+        "description": "Translate TML to Katacoda markdown"
+      },
+      {
+        "course_id": "hello-world",
+        "title": "Hello world",
+        "description": "Just a test to get my feet wet"
+      },
+      {
+        "course_id": "test-scenario",
+        "title": "Test scenario",
+        "description": "A test to see how scenarios hang together"
+      },
+      {
+        "course_id": "test-ubuntu",
+        "title": "Ubuntu",
+        "description": "Establishing a Ubuntu enviroment"
+      },
+      {
+        "course_id": "testApache",
+        "title": "Apache",
+        "description": "Setting up apache 2"
+      },
+      {
+        "course_id": "test-datatables",
+        "title": "Data tables",
+        "description": "checking data tables install"
+      },
+      {
+        "course_id": "build-push-docker-image",
+        "title": "Build nad push an image to DockerHub",
+        "description": "saving an image to DockerHub with make"
+      }
+     ]
+  }

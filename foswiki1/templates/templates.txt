@@ -1,0 +1,194 @@
+>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/templates/finish.md
+That completes Scenario 5, Templates.
+You can navigate to any of the following scenarios from this page. Or click _Next Scenario_ and return to the tutorial home page.
+
+---++ Part 1 - Foswiki overview
+
+Scenario 1 - [[https://www.katacoda.com/bramvanoosterhout/courses/foswiki/introduction][Introduction]]
+Presents the operation of Foswiki out of the box as seen through the user interface.
+Although there is much functionality under the hood, the immediately visible capabilities are essentially the entry of text in topics
+and the searching across previously entered text.
+
+Scenario 2 - [[https://www.katacoda.com/bramvanoosterhout/courses/foswiki/webs][Webs]]
+Present the basic data management feature,
+the possibility to divide the wiki content in broad classifications: the web. Webs are a basic component in the maintenance and creation of applications.
+Webs, sub-webs and the relation between them are fundamental.
+
+Scenario 3 - [[https://www.katacoda.com/bramvanoosterhout/courses/foswiki/macros][Macros]]
+Presents the use of data definitions to control presentation and behaviour of Foswiki topics.
+Macros are the cornerstones of the functioning of Foswiki applications and this chapter presents the mechanisms used.
+
+Scenario 4 - [[https://www.katacoda.com/bramvanoosterhout/courses/foswiki/meta][Meta data]]
+Presents the implementation of structured data with each topic. This data is referred to as Meta data
+and can be entered and manipulated separate from the text content of the wiki topic.
+
+Scenario 5 - [[https://www.katacoda.com/bramvanoosterhout/courses/foswiki/templates][Templates]] 
+Presents templates. Foswiki templates define the format and presentation of the topic content.
+Templates support wholesale changes to the appearance of a Foswiki site.
+
+Scenario 6 - [[https://www.katacoda.com/bramvanoosterhout/courses/foswiki/extensions][Extensions]] 
+Presents the use of extensions and their interface with the topic content. There are hundreds of plugins shipped with Foswiki.
+This scenario demonstrates the basic syntax and functionality.
+
+Your Katacoda environment for this scenario has been removed!>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/templates/intro.md
+Welcome to your Katacoda Foswiki environment!
+
+Foswiki topic text is presented in the browser inside a container that is referred to as: the skin.
+The skin is defined through a collection of files and topics that contain a mixture of html, TML, and macros.
+These files and topics are referred to as template files and template topics, templates for short.
+
+In this scenario we will explore the template mechanism supported by Foswiki.
+
+<div style="background-color: khaki; font-size: smaller">
+The Katacoda training environment is somewhat out of the ordinary. This setup installs Foswiki, listening at port 80 for the http protocol.
+Access is through the katacoda-services host, which is accessible with the https protocol.
+This leads to a mixed access scenario, which is by default not allowed in modern browsers.
+For Firefox  you need to turn off all mixed content checking in
+[[https://docs.sdl.com/LiveContent/content/en-US/SDL%20Web-v5/GUID-A96F0612-53DE-4E35-AE09-48D57146D6E4][about:config]]
+<p />
+*Please note* that you are <code>root</code>on the server.
+If you are not a user with root privileges, some commands will need to be <code>sudo'ed</code>.
+</div>
+>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/templates/step1.md
+---++ _Template directives_
+In the context of a template, Foswiki expands a handful of special macros that are similar to meta data.
+These macros are called template directives. Template directives all have the form _%TMPL:directive{"identifier"}%_.
+
+There are five template directives:
+
+| *Name* | *Purpose* |
+|--------|-----------|
+| _P_      |Places the string associated with the _identifier_ in the output stream. | 
+| _DEF_ |Defines a string of text of any form (html, TML  and text) and associates that string with the _identifier_ .  The string is terminated by  the template macro: _%TMPL:END%_. |
+| _END_ |Terminates the _%TMPL:DEF{ "identifier" }%_ |
+| _INCLUDE_ |Includes another template in the current template file. |
+| _&lt;nothing>_ |A special macro that is treated as a comment. All text inside _%{_ and _}%_ is ignored, including new lines |
+
+Template expansion starts from the first _%TMPL:P{...}%_ directive encountered in the templates as they are expanded.
+In the default _view_ case that directive is `%TMPL:P{"document"}%` in the included _templates/foswiki.tmpl_.
+Check it out with:
+<code>less -N /var/www/foswiki/templates/foswiki.tmpl</code>{{execute}}
+
+_document_ is defined as:
+<code>less -N -j 10 -p 'DEF\{"document"\}' /var/www/foswiki/templates/foswiki.tmpl</code>{{execute}}
+
+You can see the structure of the html page reflected in the macros that are evaluated. First the _htmldoctype_ is emitted which is defined as:
+<code>less -N -j 10 -p 'DEF\{"htmldoctype"\}' /var/www/foswiki/templates/foswiki.tmpl</code>{{execute}}
+
+This is followed by the _htmlstart_, which is not defined in the default set of templates.
+The expansion of undefined templates is quietly skipped.  Then _head_ is emitted, defined as:
+<code>less -N -j 10 -p 'DEF\{"head"\}' /var/www/foswiki/templates/foswiki.tmpl</code>{{execute}}
+
+Next comes _bodystart_,  defined as:
+<code>less -N -j 10 -p 'DEF\{"bodystart"\}' /var/www/foswiki/templates/foswiki.tmpl</code>{{execute}}
+
+Followed by _main_ defined as:
+<code>less -N -j 10 -p 'DEF\{"main"\}' /var/www/foswiki/templates/foswiki.tmpl</code>{{execute}}
+
+then _bodyend_:
+<code>less -N -j 10 -p 'DEF\{"bodyend"\}' /var/www/foswiki/templates/foswiki.tmpl</code>{{execute}}
+
+and finally _htmlend_, which does not have a definition in the default template files.
+
+The examples above are taken directly from the _foswiki.tmpl_ file in the _Foswikiroot/templates_ directory. They illustrate a few things:
+   * Empty definitions are OK and do not emit anything. They are silently ignored.
+   * Definitions can in turn have new _%TMPL:P{...}%_ directives, which are potentially defined in another template file or topic.
+   * Definitions can contain normal macros like: _%GMTIME%, %TOPIC%_ and so on. 
+   * As a guide, the display of content is defined in the _contentwrapper_. 
+
+
+>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/templates/step2.md
+---++ _To find a template_ 
+What template is used is in the first instance defined by the skin defined by the _SKIN_ preference.
+There is an extensive naming and location scheme for templates which is roughly (for details see the documentation):
+
+1.   check whether the template occurs as a file in the _Foswikiroot/templates_ directory (Set in _configure_ through _{TemplatePath}_
+1.   check whether the template occurs as a topic in the current web 
+1.   check whether the template occurs as a topic in the System web
+
+The __first__ occurrence of the template is used. 
+
+The name of the template is derived from the context as: 
+   * `<script(view|edit)> . <skin> . tmpl</code> for filenames. Example: _view.pattern.tmpl_ 
+   * `<skin> . Skin . <script(view|edit)> . Template</code> for topic names. Example: _PatternSkinViewTemplate_. 
+      *  <skin> may be undefined, in which case the names become: _view.tmpl_ for the file and _ViewTemplate_ for the topic. 
+
+Template processing starts with a particular template file.
+If the _SKIN_ preference is not set (<code>SKIN =` ), that would be _view.tmpl_ in the _Foswikiroot/templates_ directory for viewing a topic.
+And _edit.tmpl_ for editing a topic.
+   * <code>less /var/www/foswiki/templates/view.tmpl</code>{{execute}}
+The first line in _view.tmpl_ is  `%TMPL:INCLUDE{"foswiki"}%` which ends with the line `%TMPL:P{"document"}%`
+thereby starting the emission of the html.
+
+The _SKIN_ preference can be a list of skins like: <code>SKIN = natedit, pattern</code>.
+In that case the name of the template in the scheme above will first be tried with _natedit_ and if that file and topic is not found,
+the search continues with _pattern_
+   * <code>less /var/www/foswiki/templates/view.pattern.tmpl</code>{{execute}}
+   * <code>less /var/www/foswiki/templates/edit.natedit.tmpl</code>{{execute}}
+
+The set of templates in the _Foswikiroot/templates_ directory is complete and consistent for the operation of Foswiki.
+The presentation achieved with these templates is considered plain and various skins are available as contributions on the Foswiki website.
+Foswiki is shipped with the _pattern_ skin when installed out-of-the-box.
+
+Templates are processed conceptually in two passes.  The first pass creates all the definitions.
+Template definitions can be repeated between template files. When this occurs, the __last__ definition will be the one applied.
+>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/templates/step3-answer.md
+Run the following command and check the Sandbox.SolutionMetaDataStep1 page.
+
+<code>tar xvzf /root/SolutionTemplates.tgz -C /var/www/foswiki/data/Sandbox --wildcards SolutionTemplatesStep3* MyskinSkinViewTemplate*`{{execute}}>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/templates/step3.md
+---++ _Customising a skin with templates_
+The definition and customisation of a skin is well documented. Customisation requires an entry point in the template file hierarchy.
+This is most conveniently achieved by adding the name of your skin to the _SKIN_ preference like: <code>SKIN = myskin, pattern</code>.
+This will ask Foswiki to look for:
+   * _view.myskin.tmpl_ or _edit.myskin.tmpl_ in the _Foswikiroot/templates_ directory
+   * _MyskinSkinViewTemplate_ or _MyskinSkinEditTemplate_ in the current web or the _System_ web
+
+As an exercise: remove the remove the _Edit_ link from the bottom of the topic.
+You need to override the definition of the _edit&lowbar;topic&lowbar;link_ directive.
+That directive is defined in the _viewtopicactionbuttons.tmpl_ file
+`./tracetmpl.pl /var/www/foswiki/templates/viewtopicactionbuttons.tmpl | less -N -j 10 -p '-- edit_topic_link --'`{{execute}}
+
+The directive can be redefined in a local _Sandbox.MyskinSkinViewTemplate_ with:
+
+<verbatim>
+%TMPL:INCLUDE{"view"}% 
+%TMPL:DEF{"edit_topic_link"}%%TMPL:END% 
+<verbatim>{{copy}}
+
+To activate the definition in a topic, you need to add
+<verbatim>
+   * Set SKIN = myskin, pattern
+<verbatim>{{copy}}
+to the topic. To activate it for the whole the web, you need to paste the statement in _Sandbox.WebPreferences_
+
+If you want to remove the separator as well, you need to change the definition of _action&lowbar;activatable&lowbar;edit&lowbar;or&lowbar;create_
+`./tracetmpl.pl /var/www/foswiki/templates/viewtopicactionbuttons.tmpl | less -N -j 10 -p '-- action_activatable_edit_or_create --'`{{execute}}
+
+>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/templates/step4.md
+---++ _Developing templates_
+The references will help you further if you want to understand and develop templates.
+Templates can be daunting to unravel and understand.
+The following _perl_ script (_tracetmpl.pl_) can help you to get a summary of a template file.
+<code>less -N tracetmpl.pl</code>{{execute}}
+
+Run the script with a template file name as the parameter and you will see that most templates are full of definitions
+and very few first level active directives. For instance:
+`./tracetmpl.pl /var/www/foswiki/templates/edit.tmpl |less</code>{{execute}}
+shows only one include statement. The rest are definitions.
+<verbatim>
+---------- ACTIONS ----------
+%TMPL:INCLUDE{"foswiki"}%
+<verbatim>
+
+A more active version of this mechanism is documented in the _System.SkinTemplates_ topic under Debugging.
+The module handling the template expansion has a trace mode. Change the TRACE constant value in _lib/Foswiki/Templates.pm_  from 0 to 1.
+<code>less -N -j 10 -p 'TRACE => ' /var/www/foswiki/lib/Foswiki/Templates.pm</code>{{execute}}
+and the directivename responsible for each part of the generated html will be included in the html.
+Use _View>Source_ in your browser and you will see comments like this in the source:
+<verbatim>
+<!--directivename--> emitted html <!--/directivename-->
+<verbatim>
+This setting will lead to some mangled html and the display will be affected.>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/templates/step5.md
+---++ _References_
+   * [[https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/System/SkinTemplates][SkinTemplates]] for a description of template macros and their expansion. At the bottom of the page are tips for developing new templates and an overview of defaults.
+   * [[https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/System/Skins][Skins]] for a description how to define and customise a skin.

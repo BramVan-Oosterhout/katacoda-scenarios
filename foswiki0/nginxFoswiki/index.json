@@ -1,0 +1,35 @@
+{
+  "title": "Developing a Nginx/Foswiki Docker image",
+  "description": "Creating and running the image",
+  "difficulty": "beginner",
+  "time": "20 minutes",
+  "details": {
+   "assets": {
+      "host01": [
+                 { "file": "nginx-foswiki.dkr", "target": "~/" }
+              ]
+    },
+    "steps": [{
+      "title": "Creating the container",
+      "text": "step1.md"
+    }],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "setup.sh",
+      "credits": "Credits: Bram van Oosterhout for the scenario"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r\nRun your own commands here\u001b[m\r\n",
+    "showdashboard": "1",
+    "dashboards": [ {"name": "Foswiki", "href": "https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com"} ]
+
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

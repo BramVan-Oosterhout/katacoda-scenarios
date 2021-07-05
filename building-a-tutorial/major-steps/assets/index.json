@@ -1,0 +1,37 @@
+{
+  "title": "Webs",
+  "description": "Creating and using webs",
+  "difficulty": "beginner",
+  "time": "20 minutes",
+  "details": {
+   "assets": {
+      "host01": [
+                 { "file": "example-course.dck", "target": "~/" }              ]
+    },
+"steps": [
+   {
+      "title" : "What are webs",
+      "text" : "step01.md"
+   }]
+,
+      "intro": {
+      "text": "intro.md",
+      "background": "setup.sh",
+      "foreground": "wait.sh",
+      "credits": "Credits: Bram van Oosterhout for the scenario"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r\nRun your own commands here\u001b[m\r\n",
+    "showdashboard": "1",
+    "dashboards": [ {"name": "Foswiki", "port": "80", "host": "host01"} ]
+
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

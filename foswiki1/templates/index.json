@@ -1,0 +1,60 @@
+{
+  "title": "Templates",
+  "description": "Constructing and using templates",
+  "difficulty": "beginner",
+  "time": "20 minutes",
+  "details": {
+   "assets": {
+      "host01": [
+                 { "file": "templates.dck", "target": "~/" },
+                 { "file": "answer.pl", "target": "~/", "chmod": "+x" },
+                 { "file": "foswiki.cgi.conf", "target": "~/" },
+                 { "file": "KcBvO.crt", "target": "~/" },
+                 { "file": "KcBvO.key", "target": "~/" }
+              ]
+    },
+"steps": [
+   {
+      "title" : "Template directives",
+      "text" : "step01.md"
+   },
+   {
+      "title" : "Find a template",
+      "text" : "step02.md"
+   },
+   {
+      "title" : "Customise a skin",
+      "answer" : "step03-answer.md",
+      "text" : "step03.md"
+   },
+   {
+      "title" : "Developing templates",
+      "text" : "step04.md"
+   },
+   {
+      "text" : "step05.md",
+      "title" : "References"
+   }
+]
+,
+      "intro": {
+      "text": "intro.md",
+      "background": "setup.sh",
+      "foreground": "wait.sh",
+      "credits": "Credits: Bram van Oosterhout for the scenario"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r\nRun your own commands here\u001b[m\r\n",
+    "showdashboard": "1",
+    "dashboards": [ {"name": "Foswiki", "port": "80", "host": "host01"} ]
+
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

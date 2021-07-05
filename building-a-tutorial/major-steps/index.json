@@ -1,0 +1,56 @@
+{
+  "title": "Creating a Course",
+  "description": "Creating an course for a web application",
+  "difficulty": "intermediate",
+  "time": "20 minutes",
+  "details": {
+   "assets": {
+      "host01": [
+                 { "file": "wait.sh", "target": "~/", "chmod": "+x" },
+                 { "file": "setup.sh", "target": "~/", "chmod": "+x" },
+                 { "file": "install-gh", "target": "~/", "chmod": "+x" },
+                 { "file": "example-course.dck", "target": "~/" },
+                 { "file": "index.json", "target": "~/" },
+                 { "file": "example-course-pathway.json", "target": "~/" }
+             ]
+    },
+    "steps": [
+   {
+      "title" : "Create a basic scenario",
+      "text" : "step01.md"
+   },
+   {
+      "title" : "Starting the image, ready for use",
+      "text" : "step02.md"
+   },
+   {
+      "title" : "Waiting for the setup of the enviroment",
+      "text" : "step03.md"
+   },
+   {
+      "text" : "step04.md",
+      "title" : "Defining the scenario - index.json",
+      "answer" : "step04-answer.md"
+   },
+   {
+      "title" : "A github excursion",
+      "text" : "step05.md"
+   }
+]
+,
+    "intro": {
+      "text": "intro.md",
+      "credits": "Credits: Bram van Oosterhout for the scenario"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r\nRun your own commands here\u001b[m\r\n"
+},
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

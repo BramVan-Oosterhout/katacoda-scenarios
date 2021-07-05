@@ -1,0 +1,270 @@
+>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/extensions/finish.md
+That completes Scenario 6, an introduction to to the Foswiki extensions.
+You can navigate to any of the following scenarios from this page. Or click _Next Scenario_ and return to the tutorial home page.
+
+---++ Part 1 - Foswiki overview
+
+Scenario 1 - [[https://www.katacoda.com/bramvanoosterhout/courses/foswiki/introduction][Introduction]]
+Presents the operation of Foswiki out of the box as seen through the user interface.
+Although there is much functionality under the hood, the immediately visible capabilities are essentially the entry of text in topics
+and the searching across previously entered text.
+
+Scenario 2 - [[https://www.katacoda.com/bramvanoosterhout/courses/foswiki/webs][Webs]]
+Present the basic data management feature,
+the possibility to divide the wiki content in broad classifications: the web. Webs are a basic component in the maintenance and creation of applications.
+Webs, sub-webs and the relation between them are fundamental.
+
+Scenario 3 - [[https://www.katacoda.com/bramvanoosterhout/courses/foswiki/macros][Macros]]
+Presents the use of data definitions to control presentation and behaviour of Foswiki topics.
+Macros are the cornerstones of the functioning of Foswiki applications and this chapter presents the mechanisms used.
+
+Scenario 4 - [[https://www.katacoda.com/bramvanoosterhout/courses/foswiki/meta][Meta data]]
+Presents the implementation of structured data with each topic. This data is referred to as Meta data
+and can be entered and manipulated separate from the text content of the wiki topic.
+
+Scenario 5 - [[https://www.katacoda.com/bramvanoosterhout/courses/foswiki/templates][Templates]] 
+Presents templates. Foswiki templates define the format and presentation of the topic content.
+Templates support wholesale changes to the appearance of a Foswiki site.
+
+Scenario 6 - [[https://www.katacoda.com/bramvanoosterhout/courses/foswiki/extensions][Extensions]] 
+Presents the use of extensions and their interface with the topic content. There are hundreds of plugins shipped with Foswiki.
+This scenario demonstrates the basic syntax and functionality.
+
+Your Katacoda environment for this scenario has been removed!>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/extensions/intro.md
+---++ Extensions
+
+Welcome to your Katacoda Foswiki environment!
+
+The Foswiki architecture consists of core functionality and is augmented by extensions. Extensions come in three major flavours:
+   * Skins - this are extensions that are implemented using the skin template files and topics discussed in the previous chapter
+   * Plugins - interact with the with the core functionality, using the Foswiki API, and are invoked through Foswiki macros
+   * Contributions - Contribs for short. This are collections of topics and perl scripts that are broader in scope than the plugin
+
+This chapter presents an introduction to plugins.
+
+<div style="background-color: khaki; font-size: smaller" >
+The Katacoda training environment is somewhat out of the ordinary. This setup installs Foswiki, listening at port 80 for the http protocol.
+Access is through the katacoda-services host, which is accessible with the https protocol.
+This leads to a mixed access scenario, which is by default not allowed in modern browsers.
+For Firefox  you need to turn off all mixed content checking in
+[[https://docs.sdl.com/LiveContent/content/en-US/SDL%20Web-v5/GUID-A96F0612-53DE-4E35-AE09-48D57146D6E4][about:config]]
+<p />
+*Please note* that you are <code>root</code> on the server in the training scenarios.
+If you are not a user with root privileges on your own system, some commands will need to be <code>sudo'ed</code>.
+</div>
+>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/extensions/step1-answer.md
+
+---++ _Install FilterPlugin_.
+----
+   * Open the _configure_ page from the _System.InstalledPlugins_ topic.
+   * Select  _Extensions_ from the menu
+   * Select the _Install, Update or Remove extensions_ tab
+   * Search for _FilterPlugin_
+   * Select _FilterPlugin_ and click _Install_
+   * Note the _Text::Unidecode_ dependency
+   * Close all pop-ups
+   * Click _Save 2 changes_ (at the top right of the _configure_ page)
+   * Install _Text::Unidecode_ from the command line <code>cpan install Text::Unidecode</code>{{execute}}
+
+That completes the installation. Check System.InstalledPlugins.
+>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/extensions/step1.md
+---++ _The plugin interface_
+Foswiki capabilities are implemented as a collection of perl programs and modules that are executed on the server hardware
+using a web server program to manage all incoming and outgoing messages.
+The browser creates the messages sent to the web server and, on return, renders the html in the message received from the web server.
+On the server, the main executable receives a message, processes it and returns a message. 
+
+As part of the server side message processing, macros are extracted from the topic text and replaced by the expanded results.
+Foswiki has implemented a mechanism whereby modules can "register" to perform the processing for particular macros.
+These extensions are called plugins and can be downloaded from the Foswiki web site. The _System.InstalledPlugins_ topic lists the currently installed plugins. 
+
+---++ _Plugin installation_
+Plugins can be installed by a user with _admin_ rights using the _Extensions_ section on the 
+[[https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/bin/configure][configure]] page.
+We will use _FilterPlugin_ in the next steps, so we need to install that.
+
+Select the _Install, update and remove_ tab in the section and search for the plugin you want to install.
+When the plugin is found, you need to select the plugin and click install.
+Foswiki will check if the plugin has dependencies on other plugins and if so, install those as well.
+Foswiki will warn if there are _cpan_ dependencies, but not install those.
+A record of the installation is kept here: <code>less -N /var/www/foswiki/working/logs/configure.log</code>{{execute}}
+
+These logs include the observed dependency information. Check the logs and install all missing dependencies, before you use the plugin.
+
+There are hundreds of plugins provided with Foswiki, and it is worthwhile to cast your eye over the list
+on _foswiki.org_ in the [[https://foswiki.org/Extensions][Extensions]] web
+as they provide solutions for many common and not so common applications.
+In this section I will touch on a handful of common use plugins to illustrate the diversity and depth of functionality available. 
+
+
+
+>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/extensions/step2-answer.md
+Copy the answer topic to the Sandbox web: <code>tar xvzf SolutionExtensions.tgz --wildcards -C /var/www/foswiki/data/Sandbox/ SolutionExtensionsStep2*`{{execute}}
+and inspect solution page:
+
+   * [[http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/Sandbox/SolutionExtentensionsStep2][Sandbox.SolutionExtentensionsStep2]]>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/extensions/step2.md
+---++ _FilterPlugin_
+_FilterPlugin_ provides text manipulation macros across _Foswiki_ topics. The documentation is at _System.FilterPlugin_
+The text manipulation can create lists fron topics with specific formatted output. There are three formatting macros:
+   * _FORMATLIST_ - supports extensive transformation from one format to another
+   * _EXTRACT_ - supports the extraction of a list from a specified text
+   * _SUBST_ - supports substitution is a chunk of text
+
+Use the configure page to install _FilterPlugin_ if you have not already done so..
+
+---++ _The EXTRACT macro_
+The _EXTRACT_ macro can extract text from a given text or topic. In _Sandbox.ExtensionsStep2_ try:
+<verbatim>
+%EXTRACT{
+        text="The quick brown fox jumped over the lazy dog"
+        pattern="(The|the)"
+        format="$1"
+        separator="~~~"
+}%
+<verbatim>{{copy}}
+This example selects the stings _The_ or _the_ from the text and formats the output as a list  separated by three _~_.
+
+Or a more realistic example:
+<verbatim>
+%EXTRACT{
+        topic="System.WebHome"
+        pattern="([^\n]*)"
+        format="$1"
+        separator="~~~"
+}%
+<verbatim>{{copy}}
+
+This example selects each line from _System.WebHome_ (all text except the new line) and formats the text as each line separated by three _~_.
+
+This example illustrates how the _EXTRACT_ macro can include the wiki text from a topic and flatten it,
+thereby making the topic text available for further manipulation by other macros. We will see an example when we visit the _SpreadsheetPlugin_.
+
+        
+>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/extensions/step3-answer.md
+Copy the answer topic to the Sandbox web: <code>tar xvzf SolutionExtensions.tgz --wildcards -C /var/www/foswiki/data/Sandbox/ SolutionExtensionsStep3*`{{execute}}
+and inspect solution page:
+
+   * [[http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/Sandbox/SolutionExtentensionsStep3][Sandbox.SolutionExtentensionsStep3]]>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/extensions/step3.md
+---++ _SpreadsheetPlugin_
+The Spreadsheet plugin provides the ability to perform arithmatic and some list manipulation in Foswiki.
+The manipulation can be performed within a table, thereby providing spreadsheet functionality.
+That can be useful in some applications. The plugin also provides for simple calculations through the _%CALCULATE{ ... }%_ macro.
+For example, the following construct returns a very crude wordcount for the WebHome topic. In the _Sandbox.ExtensionsStep3_ topic try:
+
+<verbatim>
+%CALCULATE{ "$COUNTSTR($SPLIT( $comma, %EXTRACT{ 
+                                          topic="System.WebHome" 
+                                          pattern="(\w+)" 
+                                          format="$1"  
+                                          separator=","
+                                        }%),  )" }%
+<verbatim>{{copy}}
+
+This example also illustrates how nested macros are evaluated: Left to right, inside out. 
+1.   As Foswiki scans the statement it first evaluates _%EXTRACT{ ... }%_.
+     The _%EXTRACT{ ... }%_ will be replaced by the text of the _WebHome_ topicsplit into words by the _(\w+)_ pattern.
+2.   Next Foswiki finds the _}%_ associated with the _%CALCULATE{_ macro and passes the parameters
+     _$COUNTSTR($SPLIT( $comma, WebHome&#95;word&#95;list),  )_ to the spreadsheet plugin
+3.   The spreadsheet plugin parses the parameters and completes the _SPLIT_ of the WebHome&#95;topic&#95;text into individual list items separated by a comma.
+     The _SPLIT_ is done using a comma ($comma) as the boundary between items.
+4.   The resulting list is passed to _COUNTSTR_, which counts the items in the list since the last parameter (the string text to count) is not specified
+
+A word of warning. Although this looks very much like a programming example, Foswiki is essentially a text processor.
+If you omit the comma after _}%)_ the last parameter of COUNTSTR will be the last word returned by _EXTRACT_. Try:
+
+<verbatim>
+%CALCULATE{ "$COUNTSTR($SPLIT( $comma, %EXTRACT{ 
+                                          topic="System.WebHome" 
+                                          pattern="(\w+)" 
+                                          format="$1"  
+                                          separator=","
+                                        }%)  )" }%
+<verbatim>{{copy}}
+
+_COUNTSTR_ now takes the last element in the list as the string to count and counts the occurrences of that string in the remainder of the list.
+There are none!
+
+There are other ways of using _EXTRACT_ to achieve the same result. The following maps all words to a single character and returns the length of the string.
+<verbatim>
+%CALCULATE{ "$LENGTH( %EXTRACT{ 
+                                          topic="System.WebHome" 
+                                          pattern="(\w+)" 
+                                          format="A"  
+                      }%)" }%
+<verbatim>{{copy}}
+
+As an exercise: Use _EXTRACT_ and _CALCULATE_ to count:
+   * the number of characters in a topic
+   * the number of non-blank characters ina topic
+   * the number of lines in a topic
+>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/extensions/step4-answer.md
+Copy the answer topic to the Sandbox web: <code>tar xvzf SolutionExtensions.tgz --wildcards -C /var/www/foswiki/data/Sandbox/ SolutionExtensionsStep4*`{{execute}}
+and inspect solution page:
+
+   * [[http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/Sandbox/SolutionExtentensionsStep4][Sandbox.SolutionExtentensionsStep4]]>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/extensions/step4.md
+---++ _CommentPlugin_
+The comment plugin provides a quick way to enter text in Foswiki, without going through an Edit/Save cycle. The simplest version of the use of the comment plugin is to add:
+<verbatim>
+%COMMENT%
+<verbatim>{{copy}}
+to the TML in Sandbox.ExtenstionsStep3 and after saving you are presented with a edit text box and an Add comment button.
+
+The comment plugin is more versatile than that. Its presentation as well as its output is controlled through templates. For instance:
+<verbatim>
+%COMMENT{type="table" button="Add" target="Sandbox.TestCommentPlugin" }%
+<verbatim>{{copy}}
+will add the comment as a wiki table entry in the _Sandbox.TestCommentPlugin_.
+
+
+The comment plugin uses the _comment.tmpl_ template file, which contains one line:
+`%TMPL:INCLUDE{CommentPlugin}%`
+The plugin looks for the _CommentPluginTemplate_ topic in the current web and, if not found, in the System web
+to define the presentation of the input (the PROMPT box) and the output.
+Different from the expansion of skin templates reads the template and emits text for every TMPL:P directive,
+the comment plugin starts the text generation with a specific definition.  
+
+For a particular _type_ the comment plugin will 
+   * use the _PROMPT:type_ directive definition (_%TMPL:DEF{PROMPT:type}%_) to generate the input panel for the comment to replace the _%COMMENT{ ... }%_ macro
+   * use the _OUTPUT:type_ directive definition (_%TMPL:DEF{OUTPUT:type}%_) to generate the text to be inserted in the requested location
+
+The default entries in _System.CommentPluginTemplate_ are:
+ 
+*the PROMPT directive*
+<code>less -N -j 10 -p 'DEF\{PROMPT:table\}' /var/www/foswiki/data/System/CommentPluginTemplate.txt</code>{{execute}}
+
+
+*the OUTPUT directive*
+<code>less -N -j 10 -p 'DEF\{OUTPUT:table\}' /var/www/foswiki/data/System/CommentPluginTemplate.txt</code>{{execute}}
+
+Some observations on the templates:
+   * The _TMPL:DEF_ directives (like: _%TMPL:DEF{PROMPT:table}%_) do not quote the identyfier as in the skin templates we saw previously.
+    The quoted syntax (like: _%TMPL:DEF{ "PROMPT:table" }%_ works, and is preferred for consistency.
+   * The _PROMPT_ directive is a html form, presented in a TML table. It has _&lt;label>_ and _&lt;input>_ tags.
+      *  The _PROMPT_ directive does not define _&lt;form>&lt;/form>_ enclosing tags. These are automatically generated around the _PROMPT_.
+   * The _DISABLED_ macro will expand to <code>disabled="disabled"</code> in the preview context
+   * Macros are expanded in the _PROMPT_ templates, as they are in skin templates
+   * The parameters are expanded in the template. For instance: <code>button="Add"</code> will expand _%button|Add entry%_ to _Add_
+      *  if the button parameter is not provided _%button|Add entry%_ will expand to  _Add entry_
+   * User defined parameters will be expanded in the template. For instance: <code>myparameter="myvalue"</code> will expand _%myparameter|mydefault%_ to _myvalue_
+      *  and _%myparameter|%_ to _myvalue_, but _%myparameter%_ will not expand and display as _%myparameter%_
+      *  This construct for expanding parameters and default values is limited to the comment plugin templates.
+   * The _OUTPUT_ directive supports a _POS:location_ macro to identify where the generated text is to be inserted in the target topic.
+      *  _location_ can be _TOP_ or _BOTTOM_ related to the target topic. Or _BEFORE_ or _AFTER_ related to the _%COMMENT{ ... }%_ macro.
+      *  The actual insertion is handled by the plugin code.
+   * Only a limited set of macros are expanded in the output template at the time the comment is made.
+    The remainder will be inserted in the comment and expanded when the comment is viewed.
+>>> /home/bram/devfoswiki/core/working/TutorialPlugin/tutorialmd/katacoda-scenarios/foswiki1/extensions/step5.md
+---++ _Conclusion_
+This summary illustrates how plugins use the standard Foswiki mechanisms to their own ends.
+They define internally how expansion of variables is arranged, how defaults are defined and handled and what macros are accepted as directives for the plugin behaviour.
+The summary only scratches the surface and you should carefully read the documentation for each plugin you plan to use. 
+
+Refer to the documentation for details of the operation of the filter, spreadsheet and comment plugin.
+---
+---++ _References_
+   * [[https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/System/Contribs][Contribs]] for a description of Foswiki contributions
+   * [[https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/System/InstalledPlugins][InstalledPlugins]] for the list of plugins installed on your site
+   * [[https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/System/DevelopingPlugins][DevelopingPlugins]] for an introduction to the internals of plugins
+   * [[https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/System/FilterPlugin][FilterPlugin]] for the full description of the filter plugin functionality.
+   * [[https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/System/SpreadSheetPlugin][SpreadSheetPlugin]] for the full description of the spreadsheet plugin functionality.
+   * [[https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki/System/CommentPlugin][CommentPlugin]] for the full description of the comment plugin functionality.

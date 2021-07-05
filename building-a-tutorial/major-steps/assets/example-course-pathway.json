@@ -1,0 +1,12 @@
+{
+    "title": "Example course",
+    "description": "Example for the Building a tutorial scenario.",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "course_id": "major-steps",
+        "title": "A web applicationweb-app",
+        "description": "A web application."
+      }
+     ]
+  }
