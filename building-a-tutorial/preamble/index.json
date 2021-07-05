@@ -19,19 +19,21 @@
       "text" : "step02.md"
    },
    {
-      "text" : "step03.md",
-      "title" : "Mocking up the scenario"
+      "title" : "Mocking up the scenario",
+      "text" : "step03.md"
    },
    {
-      "title" : "Setting up GitHub",
-      "text" : "step04.md"
+      "text" : "step04.md",
+      "title" : "Setting up GitHub"
+   },
+   {
+      "text" : "step05.md",
+      "title" : "Register with Katacoda and deploy the course"
    }
 ]
 ,
     "intro": {
       "text": "intro.md",
-      "courseData": "setup.sh",
-      "code": "timer.sh",
       "credits": "Tim Legge for the Foswiki docker image. Bram van Oosterhout for the scenario"
     },
     "finish": {
