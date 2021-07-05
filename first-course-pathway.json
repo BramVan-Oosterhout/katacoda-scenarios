@@ -1,0 +1,13 @@
+{
+    "title": "First course",
+    "description": "Building a course.",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "course_id": "example",
+        "title": "Example scenario",
+        "description": "Example scenario for experimentation."
+      }
+     ]
+  }
+EOF
