@@ -15,20 +15,20 @@
       "title" : "Starting the git repository"
    },
    {
-      "title" : "Setting up the course",
-      "text" : "step02.md"
+      "text" : "step02.md",
+      "title" : "Setting up the course"
    },
    {
       "text" : "step03.md",
       "title" : "Mocking up the scenario"
    },
    {
-      "title" : "Setting up GitHub",
-      "text" : "step04.md"
+      "text" : "step04.md",
+      "title" : "Setting up GitHub"
    },
    {
-      "title" : "Register with Katacoda and deploy the course",
-      "text" : "step05.md"
+      "text" : "step05.md",
+      "title" : "Register with Katacoda and deploy the course"
    }
 ]
 ,
