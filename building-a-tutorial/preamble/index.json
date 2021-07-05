@@ -15,12 +15,16 @@
       "title" : "Starting the git repository"
    },
    {
-      "text" : "step02.md",
-      "title" : "Setting up the course"
+      "title" : "Setting up the course",
+      "text" : "step02.md"
    },
    {
       "text" : "step03.md",
       "title" : "Mocking up the scenario"
+   },
+   {
+      "title" : "Setting up GitHub",
+      "text" : "step04.md"
    }
 ]
 ,
