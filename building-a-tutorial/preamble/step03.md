@@ -4,15 +4,17 @@ The scenario components are stored in the =example directory:
 
 For the example we develope an intro, a step and a finish:
 
-`echo "Introduction to this scenario" first-course/example/intro.md`{{execute}}
+`echo "Introduction to this scenario" > first-course/example/intro.md`{{execute}}
 
-`echo "The first step to learning" first-course/example/step01.md`{{execute}}
+`echo "The first step to learning" > first-course/example/step01.md`{{execute}}
 
-`echo "You have successfully completed this scenario!" first-course/example/finish.md`{{execute}}
+`echo "You have successfully completed this scenario!" > first-course/example/finish.md`{{execute}}
 
 And as an example of an asset add:
 
-`echo "An example asset" first-course/example/assets/example.asset`{{execute}}
+`mkdir first-course/example/assets`{{execute}}
+
+`echo "An example asset" > first-course/example/assets/example.asset`{{execute}}
 
 All this needs to be tied together with an index:
 
