@@ -11,8 +11,8 @@
     },
     "steps": [
    {
-      "text" : "step01.md",
-      "title" : "Starting the git repository"
+      "title" : "Starting the git repository",
+      "text" : "step01.md"
    },
    {
       "title" : "Setting up the course",
@@ -23,12 +23,12 @@
       "text" : "step03.md"
    },
    {
-      "text" : "step04.md",
-      "title" : "Setting up GitHub"
+      "title" : "Setting up GitHub",
+      "text" : "step04.md"
    },
    {
-      "title" : "Register with Katacoda and deploy the course",
-      "text" : "step05.md"
+      "text" : "step05.md",
+      "title" : "Register with Katacoda and deploy the course"
    }
 ]
 ,

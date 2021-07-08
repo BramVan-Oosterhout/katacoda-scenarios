@@ -5,7 +5,7 @@ Create a course directory and a course description:
 `mkdir first-course`{{execute}}
 
 ```
-cat &lt;&lt;EOF &gt; first-course-pathway.json
+cat <<EOF > first-course-pathway.json
 {
     "title": "First course",
     "description": "Building a course.",

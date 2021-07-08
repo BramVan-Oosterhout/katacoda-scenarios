@@ -19,7 +19,7 @@ And as an example of an asset add:
 All this needs to be tied together with an index:
 
 ```
-cat &lt;&lt;EOF &gt; first-course/example/index.json
+cat <<EOF > first-course/example/index.json
 {
   "title": "Example scenario",
   "description": "This is an example scenario",
