@@ -12,7 +12,9 @@ Once you are registered, you can create new repositories by navigating to `Your 
 
 Configure your local repository to link to the GitHub repository you just created with:
 
-`git remote add origin https://github.com/BramVan-Oosterhout/my-exercise.git`{{execute}}
+`git remote add origin https://github.com/NewUser/my-exercise.git`{{copy}}
+
+Paste the command to the command line and change `NewUser` to your account.
 
 Add, commit and push the local repository to GitHub.
 

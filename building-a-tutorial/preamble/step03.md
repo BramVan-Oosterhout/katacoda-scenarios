@@ -56,6 +56,7 @@ Run your own commands here\u001b[m\r
     "imageid": "ubuntu"
   }
 }
+EOF
 ```{{execute}}
 
 I made some choices in this scenario:

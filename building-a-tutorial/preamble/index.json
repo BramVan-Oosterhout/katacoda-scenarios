@@ -19,12 +19,12 @@
       "text" : "step02.md"
    },
    {
-      "title" : "Mocking up the scenario",
-      "text" : "step03.md"
+      "text" : "step03.md",
+      "title" : "Mocking up the scenario"
    },
    {
-      "title" : "Setting up GitHub",
-      "text" : "step04.md"
+      "text" : "step04.md",
+      "title" : "Setting up GitHub"
    },
    {
       "text" : "step05.md",
@@ -34,7 +34,7 @@
 ,
     "intro": {
       "text": "intro.md",
-      "credits": "Tim Legge for the Foswiki docker image. Bram van Oosterhout for the scenario"
+      "credits": "Credits: Bram van Oosterhout for the scenario"
     },
     "finish": {
       "text": "finish.md"
