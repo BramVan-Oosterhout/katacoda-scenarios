@@ -1,6 +1,7 @@
 To deploy the course material developed in the previous step, you need to push the repository to a Github repository and provide a webhook from that repository to Katacoda. Below are the mojor steps, with references to the GitHub documentation needed to proceed. Some detail are provided in the Solution section for this step.
 
-* Register with GitHub \* <https://github.com/join>
+* Register with GitHub
+  * <https://github.com/join>
 * Create a _personal access token_ for your GitHub account
   * <https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token>
 * Set up access from your server account to your GitHub account with ssh
@@ -40,5 +41,6 @@ Install `gh`: `~/install-gh`{{execute}}
 
 Add a webhook to ... for the repo at
 
+* `git remote add origin ssh://git@github.com/BramVan-Oosterhout/example-scenarios.git`{{execute}}
 * `git push origin master`{{execute}}
 

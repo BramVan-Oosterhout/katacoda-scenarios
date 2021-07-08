@@ -1,12 +1,8 @@
 To get started with Katacoda, it is most convenient to have a basic course with one scenario up and running.
 
-Follow the instructions in <https://www.katacoda.com/profile/create-first-scenario/cli>
+In this course we build on the example scenario created in the preamble and go beyond that point to introduces the major steps in creating a more complex Katacoda scenario.
 
-In this course we go beyond that point and introduces the major steps in creating a Katacoda scenario.
-
-The scenario takes you through the creation of the components required for a tutorial covering the use of a web application.
-
-The scenario goes beyond the technical structure of the Katacoda environment and presents some approaches that are productive when the course covers a larger application.
+The scenario takes you through the creation of the components required for a tutorial covering the use of a web application, and presents some approaches that are productive when the course covers a larger application.
 
 The following development steps are presented:
 1. Prepare the image. assets/...dck

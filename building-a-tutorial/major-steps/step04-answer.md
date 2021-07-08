@@ -1,22 +1,14 @@
 
 The following steps are required:
-* `mkdir example-scenarios`{{execute}}
-* `cd example-scenarios`{{execute}}
-* `git init`{{execute}}
-* `git config --global user.email bram@van-oosterhout.org`{{execute}}
-* `git config --global user.name "Bram van Oosterhout"`{{execute}}
-* `mkdir example-course`{{execute}}
-* `cp ../example-course-pathway.json .`{{execute}}
-* `cd example-course`{{execute}}
-* `cp ../../index.json .`{{execute}}
-* `cp ../../setup.sh .`{{execute}}
-* `cp ../../wait.sh .`{{execute}}
-* `echo "## Introduction" > intro.md`{{execute}}
-* `echo "## Step 1" > step01.md`{{execute}}
-* `echo "You finished this scenario" > finish.md`{{execute}}
-* `mkdir assets`{{execute}}
-* `cd assets`{{execute}}
-* `cp ../../../example-course.dck .`{{execute}}
-* `git add *`{{execute}}
-* `git commit -m "Example course Release 0.1"`{{execute}}
-* `git push origin master`{{execute}} ... OOPS!!
+* navigate to the course directory
+  * `cd ~/katacoda-tutorial`{{execute}}
+* `setup.sh` and `wait.sh`
+  * `cp ../setup.sh first-course/example/.`{{execute}}
+  * `sed -i '21 1 \ \ \ \ \ \ "background": "setup.sh",' first-course/example/index.json`{{execute}}
+  * `cp ../wait.sh first-course/example/.`{{execute}}
+  * `sed -i '21 i \ \ \ \ \ \ "foreground": "wait.sh",' first-course/example/index.json`{{execute}}
+* `example-course.dck`
+  * `cp ../example-course.dck first-course/example/assets/.`{{execute}}
+  * `sed -i '9 i \ \ \ \ \ \ { "file": "example-course.dck", "target": "~/" },' first-course/example/index.json`{{execute}}
+
+**Note:** The _foreground_ and _background_ scripts associated with the steps are not assets. The are expected in the scenario directory.
