@@ -1,0 +1,36 @@
+{
+  "title": "Example scenario",
+  "description": "This is an example scenario",
+  "difficulty": "beginner",
+  "time": "5 minutes",
+  "details": {
+   "assets": {
+      "host01": [
+                 { "file": "example.asset", "target": "~/" }
+             ]
+    },
+    "steps": [
+   {
+      "title" : "Create a basic scenario",
+      "text" : "step01.md"
+   }
+]
+,
+    "intro": {
+      "text": "intro.md",
+      "credits": "Credits: New User for the scenario"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r
+Run your own commands here\u001b[m\r
+"
+},
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
