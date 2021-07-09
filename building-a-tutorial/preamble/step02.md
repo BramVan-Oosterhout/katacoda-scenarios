@@ -13,7 +13,7 @@ cat <<EOF > first-course-pathway.json
     "courses": [
       {
         "course_id": "example",
-        "title": "Example scenario",
+        "title": "Example scenario. Delete me after use",
         "description": "Example scenario for experimentation."
       }
      ]

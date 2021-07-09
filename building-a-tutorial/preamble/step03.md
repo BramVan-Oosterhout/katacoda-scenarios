@@ -48,9 +48,7 @@ cat <<EOF > first-course/example/index.json
   },
   "environment": {
     "uilayout": "editor-terminal",
-    "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r
-Run your own commands here\u001b[m\r
-"
+    "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r\nRun your own commands here\u001b[m\r\n"
 },
   "backend": {
     "imageid": "ubuntu"
