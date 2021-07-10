@@ -6,6 +6,7 @@
   "details": {
    "assets": {
       "host01": [
+      { "file": "example-course.dck", "target": "~/" },
                  { "file": "example.asset", "target": "~/" }
              ]
     },
@@ -18,6 +19,8 @@
 ,
     "intro": {
       "text": "intro.md",
+      "foreground": "wait.sh",
+      "background": "setup.sh",
       "credits": "Credits: New User for the scenario"
     },
     "finish": {
