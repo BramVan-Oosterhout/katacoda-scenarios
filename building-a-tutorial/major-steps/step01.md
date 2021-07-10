@@ -6,7 +6,7 @@ At this point you have a course/scenario running. It has an intro, a step and a 
 <th class="foswikiTableCol1 foswikiLastCol"> For the scenario </th>
 </tr>
 <tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
-<td class="foswikiTableCol0 foswikiFirstCol"> course-pathway.json </td>
+<td class="foswikiTableCol0 foswikiFirstCol"> first-course-pathway.json </td>
 <td class="foswikiTableCol1 foswikiLastCol"> index.json </td>
 </tr>
 <tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">
@@ -31,7 +31,9 @@ It is possible to build the environment by scripting the creation and run it as 
 
 The Dockerfile used to create the image for this scenario (`foswiki1`) can be inspected at <https://www.katacoda.com/bramvanoosterhout/courses/foswiki0/dockerfoswiki>. The creation of the image and the storage at DockerHub are explained in step11.
 
-The image can start as just enough for the job at hand. Adaptations can be made through additional Docker build files of the form: ```
+The image can start as just enough for the job at hand. `echo "FROM bramvanoosterhout/foswiki1" > katacoda-tutorial/first-course/example/assets/first-course.dck` ((execute\}\}
+
+Adaptations can be made through additional Docker build files of the form: ```
 FROM bramvanoosterhout/foswiki1
 RUN apk add tree
 .... other docker command to modify the image
