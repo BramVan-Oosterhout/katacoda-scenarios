@@ -15,21 +15,21 @@
       "title" : "Create a basic scenario"
    },
    {
-      "title" : "Starting the image, ready for use",
-      "text" : "step02.md"
+      "text" : "step02.md",
+      "title" : "Starting the image, ready for use"
    },
    {
-      "title" : "Waiting for the setup of the enviroment",
-      "text" : "step03.md"
+      "text" : "step03.md",
+      "title" : "Waiting for the setup of the enviroment"
    },
    {
-      "answer" : "step04-answer.md",
+      "title" : "Defining the scenario - index.json",
       "text" : "step04.md",
-      "title" : "Defining the scenario - index.json"
+      "answer" : "step04-answer.md"
    },
    {
-      "title" : "A github excursion",
-      "text" : "step05.md"
+      "text" : "step05.md",
+      "title" : "A github excursion"
    }
 ]
 ,

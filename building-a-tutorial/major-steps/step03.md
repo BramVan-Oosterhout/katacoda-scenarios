@@ -14,7 +14,7 @@ echo " done."
 } 2>/dev/null
 docker exec -it -w /var/www/foswiki foswiki /bin/bash
 EOF
-```
+```{{execute}}
 
 `wait.sh` starts with an `until` to wait until the `foswiki-running` file exists.
 
