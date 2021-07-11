@@ -1,4 +1,6 @@
-To demonstrate the running web application, you need to start it. This is done easily with a few docker commands: ```
+To demonstrate the running web application, you need to start it. This is done easily with a few docker commands:
+
+```
 docker build -t foswiki -f example-course.dck .
 docker run -d --rm --name foswiki -p 80:80 foswiki
 ```
