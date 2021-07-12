@@ -14,7 +14,7 @@
     "steps": [
    {
       "title" : "Create a basic scenario",
-      "foreground": "/tmp/answer.pl",
+      "foreground": "answer.pl",
       "text" : "step01.md"
    }
 ]
