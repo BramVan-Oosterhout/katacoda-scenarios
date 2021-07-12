@@ -12,23 +12,22 @@ Here is a simple answer.pl:
 
 ```
 cat << EOF > ~/katacoda-tutorial/first-course/example/assets/answer.pl
-!#/usr/bin/perl
-my %steps = ( step01 => &amp;step01 );
+#!/usr/bin/perl
+my %steps = ( step01 => \&amp;step01 );
 &amp;{$steps{$ARGV[0]}};
 sub step01 {
-  print Hello from step01
-";
+  print "Hello from step01\n";
 }
 EOF
 ```{{execute}}
 
 `answer.pl` is copied to /tmp on intialisation of the scenario:
 
-`sed -i '9  i \ \ \ \ \ \ { "file": "answer.pl", "target": "/tmp" },' first-course/example/index.json`{{execute}}
+`sed -i '/host01/ a \ \ \ \ \ \ { "file": "answer.pl", "target": "/tmp", "chmod": "+x" },' first-course/example/index.json`{{execute}}
 
 And then executed as a _foreground_ activity when entering `step01`
 
-`sed -i '15 i \ \ \ \ \ \ { "foreground": "/tmp/answer.pl step01" },' first-course/example/index.json`{{execute}}
+`sed -i '/Create a basic scenario/ a \ \ \ \ \ \ "foreground": "/tmp/answer.pl step01",' first-course/example/index.json`{{execute}}
 
 There is an example answer.pl included in the assets and the next steps in this scenario will inlcude particular activities as part of our example scenario.
 
