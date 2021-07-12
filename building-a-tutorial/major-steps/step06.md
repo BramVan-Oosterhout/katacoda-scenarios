@@ -13,8 +13,8 @@ Here is a simple answer.pl:
 ```
 cat << EOF > ~/katacoda-tutorial/first-course/example/assets/answer.pl
 #!/usr/bin/perl
-my %steps = ( step01 => \&amp;step01 );
-&amp;{$steps{$ARGV[0]}};
+my %steps = ( step01 => \&step01 );
+&{\$steps{\$ARGV[0]}};
 sub step01 {
   print "Hello from step01\n";
 }
