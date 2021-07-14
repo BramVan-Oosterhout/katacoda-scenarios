@@ -10,3 +10,4 @@ echo " done."
 } 2>/dev/null
 docker exec -it -w /var/www/foswiki foswiki /bin/bash
 
+

@@ -1,6 +1,3 @@
 #!/bin/bash
-until [[ -e /tmp/answer.pl ]]
-do
-  sleep 1
-done
+until [[ -e /tmp/answer.pl ]] ; do sleep 1; done
 /tmp/answer.pl step01
