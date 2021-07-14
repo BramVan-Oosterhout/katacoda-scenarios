@@ -6,10 +6,7 @@
   "details": {
    "assets": {
       "host01": [
-<<<<<<< HEAD
       { "file": "solutions.tgz", "target": "/tmp" },
-=======
->>>>>>> 2ca68aab6e93f72e886b2aaef702c2b4d50a4646
       { "file": "answer.pl", "target": "/tmp", "chmod": "+x" },
       { "file": "example-course.dck", "target": "~/" },
                  { "file": "example.asset", "target": "~/" }
