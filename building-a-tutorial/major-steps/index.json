@@ -6,7 +6,11 @@
   "details": {
    "assets": {
       "host01": [
-                 { "file": "katacoda-tutorial.tgz", "target": "/tmp/" }
+                 { "file": "katacoda-tutorial.tgz", "target": "/tmp/" },
+                 { "file": "example-step02.md", "target": "/tmp" },
+                 { "file": "example-step02-answer.md", "target": "/tmp" },
+                 { "file": "example-solutions.tgz", "target": "/tmp" },
+                 { "file": "example-answer.pl", "target": "/tmp" },
              ]
     },
     "steps": [
@@ -19,8 +23,8 @@
       "title" : "Starting the image, ready for use"
    },
    {
-      "title" : "Waiting for the setup of the enviroment",
-      "text" : "step03.md"
+      "text" : "step03.md",
+      "title" : "Waiting for the setup of the enviroment"
    },
    {
       "title" : "Defining the scenario - index.json",
@@ -28,12 +32,17 @@
       "text" : "step04.md"
    },
    {
-      "text" : "step05.md",
-      "title" : "A github excursion"
+      "title" : "A github excursion",
+      "text" : "step05.md"
    },
    {
-      "text" : "step06.md",
-      "title" : "the answer script"
+      "title" : "the answer script",
+      "text" : "step06.md"
+   },
+   {
+      "answer" : "step07-answer.md",
+      "title" : "Using the answer script",
+      "text" : "step07.md"
    }
 ]
 ,

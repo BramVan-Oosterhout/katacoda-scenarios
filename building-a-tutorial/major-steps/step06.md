@@ -4,9 +4,9 @@ As the development of the scenario progresses you may need to
 * extend the web site to show a particular feature
 * present a complete answer as the result of a task
 
-These actions can all be scripted and executed as a _foreground_ or _backgound_ task in the step. Orthe script can be executed by the student, running it on the command line.
+These actions can all be scripted and executed as a _foreground_ or _backgound_ task in the step. Or the script can be executed by the student, running it on the command line.
 
-In my experience, I found that these scripts proliferate and become difficult to maintain in sync as the course development progresses, I have over time come to create a single script (in `perl`). Although shell scripts can do many of the tasks, I find the syntax of a higher level languae easier to understand and maintain. The script takes one (or more) parameters (usually a step number) and executes a single routine for each parameter. The script is included as an asset and is copied to `/tmp`. The script runs as `/tmp/answer.pl step5`.
+In my experience these scripts proliferate and become difficult to maintain in sync as course development progresses, I have over time come to create a single script (in `perl`). Although shell scripts can do many of the tasks, I find the syntax of a higher level languae easier to understand and maintain. The script takes one (or more) parameters (usually a step number) and executes a single routine for each parameter. The script is included as an asset and is copied to `/tmp`. The script runs as `/tmp/answer.pl step5`.
 
 Here is a simple answer.pl:
 
@@ -25,9 +25,16 @@ EOF
 
 `sed -i '/host01/ a \ \ \ \ \ \ { "file": "answer.pl", "target": "/tmp", "chmod": "+x" },' first-course/example/index.json`{{execute}}
 
-And then executed as a _foreground_ activity when entering `step01`
+_foreground_ and _background_ scripts must be shell scripts. So we create:
 
-`sed -i '/Create a basic scenario/ a \ \ \ \ \ \ "foreground": "/tmp/answer.pl step01",' first-course/example/index.json`{{execute}}
+```
+cat <<EOF > first-course/example/step01-foreground.sh
+until [[ -e /tmp/answer.pl ]] ; do sleep 1; done
+/tmp/answer.pl step01
+EOF
+```{{execute}}
 
-There is an example answer.pl included in the assets and the next steps in this scenario will inlcude particular activities as part of our example scenario.
+Executed as a _foreground_ activity when entering `step01`:
+
+`sed -i '/Create a basic scenario/ a \ \ \ \ \ \ "foreground": "step01-foreground.sh",' first-course/example/index.json`{{execute}}
 
