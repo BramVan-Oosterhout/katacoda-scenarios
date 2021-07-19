@@ -1,4 +1,4 @@
-In this step you will set up the structure of the scenario for other courses. You will find more elaborate exaples later and elsewhere. Here we are only concerned with the components.
+In this step you will set up the structure of the scenario for other courses. You will find more elaborate examples later and elsewhere. Here we are only concerned with the components.
 
 Create a course directory and a course description:
 
@@ -22,8 +22,8 @@ EOF
 ```{{execute}}
 
 There are two phrases that are not free text in `first-course-pathway.json`:
-* _the filename:_ `first-course-pathway.json`
-  * must be: the directory name `first-course` with exetension `-pathway.json`
-* _the course\_id:_ `example`
+* the _filename_: `first-course-pathway.json`
+  * must be: the directory name `first-course` with extension `-pathway.json`
+* the _course\_id_: `example`
   * must match the directory name of the scenario
 

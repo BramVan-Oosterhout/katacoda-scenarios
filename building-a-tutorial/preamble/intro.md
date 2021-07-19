@@ -9,7 +9,7 @@ This scenario summarises the introductions and sets up the environment for exper
 There are four parts to this scenario:
 1. Setting up a git repository for the scenario
 1. Creating the scenario
-1. Configuring GitHub nad Katacoda
+1. Configuring GitHub and Katacoda
 1. Deploying the scenario to GitHub/Katacoda
 
 References will provide more extensive examples.

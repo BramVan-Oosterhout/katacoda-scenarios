@@ -5,7 +5,11 @@ _FilterPlugin_ provides text manipulation macros across _Foswiki_ topics. The do
 * _EXTRACT_ - supports the extraction of a list from a specified text
 * _SUBST_ - supports substitution is a chunk of text
 
-Use the configure page to install _FilterPlugin_ if you have not already done so.
+Install _FilterPlugin_ and dependency _Text::Unicode_
+
+`tools/extension_installer FilerPlugin -r install`{{execute}}
+
+`cpan install Text::Unicode`{{execute}}
 
 ## _The EXTRACT macro_	
 

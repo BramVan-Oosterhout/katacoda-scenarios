@@ -1,12 +1,14 @@
-The scenario components are stored in the =example directory:
+The scenario components are stored in the `example` directory:
 
 `mkdir first-course/example`{{execute}}
 
-For the example we develope an intro, a step and a finish:
+For the example we develope an intro, a step, an answer and a finish:
 
 `echo "Introduction to this scenario" > first-course/example/intro.md`{{execute}}
 
 `echo "The first step to learning" > first-course/example/step01.md`{{execute}}
+
+`echo 'https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/foswiki' > katacoda-tutorial/first-course/example/step01-answer`{{execute}}
 
 `echo "You have successfully completed this scenario!" > first-course/example/finish.md`{{execute}}
 
@@ -34,7 +36,8 @@ cat <<EOF > first-course/example/index.json
     "steps": [
    {
       "title" : "Create a basic scenario",
-      "text" : "step01.md"
+      "text" : "step01.md",
+      "answer": "step01-answer.md"
    }
 ]
 ,

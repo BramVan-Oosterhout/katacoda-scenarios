@@ -3,7 +3,7 @@ use warnings;
 use strict;
 
 my %step = (
-            'step3' => \&step2,
+            'step2' => \&step2,
             'step3' => \&step3,
             'step4' => \&step4,
 ##          'test'  => \&test,
