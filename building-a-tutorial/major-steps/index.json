@@ -3,13 +3,9 @@
   "description": "Creating an course for a web application",
   "difficulty": "intermediate",
   "time": "20 minutes",
-"files": [
-    "config.sh"
-],
   "details": {
    "assets": {
       "host01": [
-                 { "file": "katacoda-tutorial.tgz", "target": "/tmp/" },
                  { "file": "example-step02.md", "target": "/tmp" },
                  { "file": "example-step02-answer.md", "target": "/tmp" },
                  { "file": "example-solutions.tgz", "target": "/tmp" },
@@ -19,25 +15,25 @@
     "steps": [
    {
       "text" : "step01.md",
-      "answer" : "step01-answer.md",
-      "title" : "Create a basic scenario"
+      "title" : "Create a basic scenario",
+      "answer" : "step01-answer.md"
    },
    {
-      "text" : "step02.md",
-      "title" : "Starting the image, ready for use"
+      "title" : "Starting the image, ready for use",
+      "text" : "step02.md"
    },
    {
-      "text" : "step03.md",
-      "title" : "Waiting for the setup of the enviroment"
+      "title" : "Waiting for the setup of the enviroment",
+      "text" : "step03.md"
    },
    {
-      "title" : "Defining the scenario - index.json",
       "answer" : "step04-answer.md",
+      "title" : "Defining the scenario - index.json",
       "text" : "step04.md"
    },
    {
-      "text" : "step05.md",
-      "title" : "A github excursion"
+      "title" : "A github excursion",
+      "text" : "step05.md"
    },
    {
       "title" : "the answer script",
@@ -45,8 +41,8 @@
    },
    {
       "title" : "Using the answer script",
-      "answer" : "step07-answer.md",
-      "text" : "step07.md"
+      "text" : "step07.md",
+      "answer" : "step07-answer.md"
    }
 ]
 ,
