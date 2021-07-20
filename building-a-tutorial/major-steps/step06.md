@@ -16,7 +16,7 @@ cat << EOF > ~/katacoda-tutorial/first-course/example/assets/answer.pl
 my %steps = ( step01 => \&step01 );
 &{\$steps{\$ARGV[0]}};
 sub step01 {
-  print "Hello from step01\n";
+  print "Hello from answer.pl - step01\n";
 }
 EOF
 ```{{execute}}
