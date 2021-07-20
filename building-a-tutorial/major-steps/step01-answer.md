@@ -5,7 +5,7 @@ Alternatives to using the scenario created in the Preamble.
 
 Login to GitHub with your credentials and navigate to `BramVan-Oosterhout/my-example`. Click the _Fork_ button. GitHub creates a copy of `my-example` under your user name. Continue by cloning this repo.
 
-`git clone <https://github.com/YourUserName/my-example.git> katacoda-tutorial`{{copy}}
+`git clone <https://github.com/YourUserName/my-exercise.git> katacoda-tutorial`{{copy}}
 
 ----
 
