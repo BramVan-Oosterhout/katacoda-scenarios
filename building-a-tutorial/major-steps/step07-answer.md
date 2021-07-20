@@ -22,8 +22,6 @@
 
 `sed -i '/host01/ a \ \ \ \ \ \ { "file": "solutions.tgz", "target": "/tmp" },' first-course/example/index.json`{{execute}}
 
-**create the example/assets/answer.pl and add to the assets in example/index.json**
+**replace the example/assets/answer.pl and add to the assets in example/index.json**
 
 `cp /tmp/example-answer.pl first-course/example/assets/answer.pl`{{execute}}
-
-`sed -i '/host01/ a \ \ \ \ \ \ { "file": "answer.pl", "target": "/tmp" },' first-course/example/index.json`{{execute}}

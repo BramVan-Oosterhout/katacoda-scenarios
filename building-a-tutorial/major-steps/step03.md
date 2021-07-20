@@ -1,7 +1,7 @@
 We can show the course participant that the environment set up is in progress by running a script in the foreground that waits for the completion of the setup. This is implemented in `wait.sh`{{open}}.
 
 ```
-echo <<EOF > katacoda-tutorial/first-course/example/wait.sh
+cat <<EOF > katacoda-tutorial/first-course/example/wait.sh
 #!/bin/bash
 {
 echo -n "Install/configure environment "

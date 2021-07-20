@@ -1,6 +1,6 @@
 To get started with Katacoda, it is most convenient to have a basic course with one scenario up and running.
 
-In this course we build on the example scenario created in the preamble and go beyond that point to introduces the major steps in creating a more complex Katacoda scenario.
+In this course we build on the example scenario created in the Preamble and go beyond that point to introduces the major steps in creating a more complex Katacoda scenario.
 
 The scenario takes you through the creation of the components required for a tutorial covering the use of a web application, and presents some approaches that are productive when the course covers a larger application.
 
