@@ -6,7 +6,6 @@
   "details": {
    "assets": {
       "host01": [
-                 { "file": "config.sh", "target": "~/", "chmod": "+x" },
                  { "file": "example-step02.md", "target": "/tmp" },
                  { "file": "example-step02-answer.md", "target": "/tmp" },
                  { "file": "example-solutions.tgz", "target": "/tmp" },
@@ -15,13 +14,13 @@
     },
     "steps": [
    {
-      "title" : "Create a basic scenario",
       "text" : "step01.md",
-      "answer" : "step01-answer.md"
+      "answer" : "step01-answer.md",
+      "title" : "Create a basic scenario"
    },
    {
-      "title" : "Starting the image, ready for use",
-      "text" : "step02.md"
+      "text" : "step02.md",
+      "title" : "Starting the image, ready for use"
    },
    {
       "text" : "step03.md",
@@ -37,8 +36,8 @@
       "title" : "A github excursion"
    },
    {
-      "text" : "step06.md",
-      "title" : "the answer script"
+      "title" : "the answer script",
+      "text" : "step06.md"
    },
    {
       "answer" : "step07-answer.md",

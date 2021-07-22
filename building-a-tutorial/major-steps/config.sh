@@ -10,7 +10,7 @@ pat=""                          # Your GitHub personal access token
 # configure the git repository
 #
 git config --global user.name "$name"
-git config --clobal user.email "$email"
+git config --global user.email "$email"
 #
 # Configure the credential helper so you can push without credentials
 #
@@ -18,7 +18,7 @@ git config --global credential.helper store
 #
 # Clone your repositry from the Preamble
 #
-git clone http://$gituser:$pat@git.com/$gituser/my-example.git katacoda-tutorial
+git clone https://$gituser:$pat@github.com/$gituser/my-exercise.git katacoda-tutorial
 #
 # Commands to reset the repo
 #
