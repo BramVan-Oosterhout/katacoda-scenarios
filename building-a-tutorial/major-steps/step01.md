@@ -1,12 +1,4 @@
-Get the scenario you built in the Preamble to this course from GitHub. Copy this command to the terminal window and and change `YourUserName` to reflect your user name.
-
-`git clone <https://github.com/YourUserName/my-exercise.git> katacoda-tutorial`{{copy}}
-
-You are on a brand new server so you need some configuration:
-
-`git config --global user.email "bram@van-oosterhout.org"`{{copy}}
-
-`git config --global user.name "Bram van Oosterhout"` \{\{copy\}
+Get the scenario you built in the Preamble to this course from GitHub. Open `config.sh`{{open}} and add your details. Configure the environment with: `./config.sh`{{execute}}
 
 You can list the files with: `tree`{{execute}} and view the content in the editor pane.
 
