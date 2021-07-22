@@ -6,6 +6,7 @@
   "details": {
    "assets": {
       "host01": [
+                 { "file": "config.sh", "target": "~/", "chmod": "+x" },
                  { "file": "example-step02.md", "target": "/tmp" },
                  { "file": "example-step02-answer.md", "target": "/tmp" },
                  { "file": "example-solutions.tgz", "target": "/tmp" },
@@ -14,21 +15,21 @@
     },
     "steps": [
    {
-      "text" : "step01.md",
       "title" : "Create a basic scenario",
+      "text" : "step01.md",
       "answer" : "step01-answer.md"
    },
    {
-      "text" : "step02.md",
-      "title" : "Starting the image, ready for use"
+      "title" : "Starting the image, ready for use",
+      "text" : "step02.md"
    },
    {
-      "title" : "Waiting for the setup of the enviroment",
-      "text" : "step03.md"
+      "text" : "step03.md",
+      "title" : "Waiting for the setup of the enviroment"
    },
    {
-      "text" : "step04.md",
       "answer" : "step04-answer.md",
+      "text" : "step04.md",
       "title" : "Defining the scenario - index.json"
    },
    {
@@ -36,13 +37,13 @@
       "title" : "A github excursion"
    },
    {
-      "title" : "the answer script",
-      "text" : "step06.md"
+      "text" : "step06.md",
+      "title" : "the answer script"
    },
    {
+      "answer" : "step07-answer.md",
       "text" : "step07.md",
-      "title" : "Using the answer script",
-      "answer" : "step07-answer.md"
+      "title" : "Using the answer script"
    }
 ]
 ,
@@ -54,6 +55,9 @@
       "text": "finish.md"
     }
   },
+  "files": [
+      "config.sh"
+  ],
   "environment": {
     "uilayout": "editor-terminal",
     "uimessage1": "\u001b[32mYour Interactive  Bash Ubuntu Terminal.\r\nRun your own commands here\u001b[m\r\n"

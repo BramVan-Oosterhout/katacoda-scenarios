@@ -9,6 +9,24 @@ Login to GitHub with your credentials and navigate to `BramVan-Oosterhout/my-exa
 
 ----
 
+### Config, clone and reset	
+
+```
+name="Bram van Oosterhout"
+email="bram@van-oosterhout.org"
+gituser="BramVan-Oosterhout"
+pat=""
+
+git config --global user.name "$name"
+git config --clobal user.email "$email"
+git config --global credential.helper store
+
+git clone http://$gituser:$pat@git.com/$gituser/my-example.git katacoda-tutorial
+
+git log --oneline
+git reset <sha1>
+```
+
  sub step01 \{ git clone git://github.com/BramVan-Oosterhout/my-exercise.git katacoda-tutorial; chdir katacoda-tutorial; if ( -e 'first-course/example/assets/first-course.dck' ) \{ my $startingPoint = getStartingPoint(); git checkout -f $startingPoint; git symbolic-ref HEAD refs/heads/master; git commit -m "reverted to starting point of the exercise"; git push origin master; \} \}
 
  sub getStartingPoint\{ my @revList = split " ", git rev-list --all --pretty=oneline --abbrev-commit;
