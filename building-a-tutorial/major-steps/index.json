@@ -15,22 +15,22 @@
     },
     "steps": [
    {
-      "title" : "Create a basic scenario",
+      "answer" : "step01-answer.md",
       "text" : "step01.md",
-      "answer" : "step01-answer.md"
+      "title" : "Create a basic scenario"
    },
    {
-      "text" : "step02.md",
-      "title" : "Starting the image, ready for use"
+      "title" : "Starting the image, ready for use",
+      "text" : "step02.md"
    },
    {
-      "text" : "step03.md",
-      "title" : "Waiting for the setup of the enviroment"
+      "title" : "Waiting for the setup of the enviroment",
+      "text" : "step03.md"
    },
    {
       "title" : "Defining the scenario - index.json",
-      "text" : "step04.md",
-      "answer" : "step04-answer.md"
+      "answer" : "step04-answer.md",
+      "text" : "step04.md"
    },
    {
       "text" : "step05.md",
@@ -41,9 +41,9 @@
       "title" : "the answer script"
    },
    {
-      "text" : "step07.md",
       "title" : "Using the answer script",
-      "answer" : "step07-answer.md"
+      "answer" : "step07-answer.md",
+      "text" : "step07.md"
    }
 ]
 ,

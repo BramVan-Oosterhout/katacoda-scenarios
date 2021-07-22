@@ -1,11 +1,21 @@
 
 Alternatives to using the scenario created in the Preamble.
 
-#### Fork `my-example` from _BramVan-Oosterhout_	
+**Fork `my-example` from _BramVan-Oosterhout_ **
 
-Login to GitHub with your credentials and navigate to `BramVan-Oosterhout/my-example`. Click the _Fork_ button. GitHub creates a copy of `my-example` under your user name. Continue by cloning this repo.
+Login to GitHub with your credentials and navigate to `BramVan-Oosterhout/my-example`. Click the _Fork_ button. GitHub creates a copy of `my-example` under your user name. Continue by cloning this repo. Now add your credentials to `config.sh` \{open\}\} and configure with: `./config.sh`{{execute}}
 
-`git clone <https://github.com/YourUserName/my-exercise.git> katacoda-tutorial`{{copy}}
+**Resetting your GitHub repo**
+
+If you have completed some of this scenario before, there are more commits in the cloned repo. These will create issues when repeating the scenario. You can remove these commits with:
+
+`git log --oneline`{{execute}}. This will show the commit you want to go back to ('my first commit')
+
+`git reset --hard hash`{{execute}}. Use the hash shown by the log.
+
+`git push origin master`{{execute}}
+
+Now you can repeat the scenario as presented.
 
 ----
 
@@ -15,40 +25,4 @@ Login to GitHub with your credentials and navigate to `BramVan-Oosterhout/my-exa
 name="Bram van Oosterhout"
 email="bram@van-oosterhout.org"
 gituser="BramVan-Oosterhout"
-pat=""
-
-git config --global user.name "$name"
-git config --clobal user.email "$email"
-git config --global credential.helper store
-
-git clone http://$gituser:$pat@git.com/$gituser/my-example.git katacoda-tutorial
-
-git log --oneline
-git reset <sha1>
-```
-
- sub step01 \{ git clone git://github.com/BramVan-Oosterhout/my-exercise.git katacoda-tutorial; chdir katacoda-tutorial; if ( -e 'first-course/example/assets/first-course.dck' ) \{ my $startingPoint = getStartingPoint(); git checkout -f $startingPoint; git symbolic-ref HEAD refs/heads/master; git commit -m "reverted to starting point of the exercise"; git push origin master; \} \}
-
- sub getStartingPoint\{ my @revList = split " ", git rev-list --all --pretty=oneline --abbrev-commit;
-
- foreach my $rev (@revList )\{ $rev =~ m!\\A(\\w\{7\})\\s(.\*)\\Z!; return $1 if $2 eq 'my first commit'; \} \}
-
-```
-userid: BramVan-Oosterhout
-repo: my-exercise
-pat: your Personal Access Token here
-```
-
-```
-sub gitConfig{
-  my & $gitConfigFile ) = @_;
-  open $cfg, "<" $gitConfigFile || die "Cannot open $gitCofigFile: $!
-";
-  my %config = ();
-  while( <$cfg> ) {
-    chop;
-    my ( $key, $value ) = ( $_ =~ m!\A\s*(.*?):\s+(.*)\Z!;
-    $config{$key} = $value;
-  }
-}
 ```
