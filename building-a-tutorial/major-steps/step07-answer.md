@@ -30,6 +30,6 @@
 
 `git add *`{{execute}}
 
-`git commit -m "web exercise 0.2"`{{execute}}
+`git commit -m "web exercise 0.3"`{{execute}}
 
 `git push origin master`{{execute}}

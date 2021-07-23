@@ -4,7 +4,7 @@ use strict;
 
 my %step = (
             'step01' => \&step01,
-            'step2' => \&step2,
+            'step02' => \&step02,
             'step3' => \&step3,
             'step4' => \&step4,
 ##          'test'  => \&test,
@@ -44,7 +44,7 @@ sub step01 {
   print "Hello from answer.pl - step01\n";
 }
 
-sub step2 {
+sub step02 {
   my ($cmd, @command );
   
   @command = qw(

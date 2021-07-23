@@ -7,7 +7,7 @@ _FilterPlugin_ provides text manipulation macros across _Foswiki_ topics. The do
 
 Install _FilterPlugin_ and dependency _Text::Unicode_
 
-`tools/extension_installer FilerPlugin -r install`{{execute}}
+`sudo -u daemon tools/extension_installer FilterPlugin -r install`{{execute}}
 
 `cpan install Text::Unicode`{{execute}}
 
