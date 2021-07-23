@@ -8,5 +8,5 @@ Create a new step in the `example` scenario. The step demonstrates the behaviour
 1. create the example/assets/solutions.tgz file and add to the assets in example/index.json
 1. create the example/assets/answer.pl and add to the assets in example/index.json
 
-The content of each of these files is available in /tmp for this course.
+The content of each of these files is available (as example-_filename_)in /tmp for this course.
 

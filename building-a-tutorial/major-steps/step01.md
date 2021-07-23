@@ -35,7 +35,7 @@ It is possible to build the environment by scripting the creation and run it as 
 
 The Dockerfile used to create the image for this scenario (`foswiki1`) can be inspected at <https://www.katacoda.com/bramvanoosterhout/courses/foswiki0/dockerfoswiki>. The creation of the image and the storage at DockerHub are explained in step11.
 
-The image can start as just enough for the job at hand. `echo "FROM bramvanoosterhout/foswiki1" > katacoda-tutorial/first-course/example/assets/first-course.dck`{{execute}}
+The image can start as just enough for the job at hand. `echo "FROM bramvanoosterhout/foswiki1" > ~/katacoda-tutorial/first-course/example/assets/first-course.dck`{{execute}}
 
 Adaptations can be made through additional Docker build files of the form: ```
 FROM bramvanoosterhout/foswiki1

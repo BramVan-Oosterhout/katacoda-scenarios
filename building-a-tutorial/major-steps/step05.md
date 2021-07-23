@@ -6,13 +6,8 @@ To deploy the course material developed in the previous step, you need to:
 * And push the repository to GitHub
   * `git push origin master`{{execute}}
 
-If you have worked through this scenario before, your GitHub repo may be out of sync with the local repo. You will get a message like: _error: failed to push some refs_ and _hint: (e.g., 'git pull ...')_. This is easily resolved:
+Now (if your webhook is installed) you can view for your updated scenario in Katacoda!
 
-* Do the pull
-  * `git pull origin master`{{execute}}
-* Resolve the reported merge _CONFLICT_ by editing the reported file(s)
-  * like: _CONFLICT (add/add): Merge conflict in first-course/example/wait.sh_
-* Repeat the steps above (`add`, `commit` and `push`)
-
-Now wait for your updated scenario in Katacoda!
+<div style="background-color: yellow">**Note:** If you have worked through this scenario before, your GitHub repo may be out of sync with the local repo. You will get a message like: _error: failed to push some refs_ and _hint: (e.g., 'git pull ...')_. This is easily resolved.
+ Go back to step1 and follow the instructions in the Solution under _Resetting your GitHub repo_. </div>
 
