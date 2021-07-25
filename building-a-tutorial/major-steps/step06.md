@@ -6,17 +6,17 @@ As the development of the scenario progresses you may need to
 
 These actions can all be scripted and executed as a _foreground_ or _backgound_ task in the step. Or the script can be executed by the student, running it on the command line.
 
-In my experience these scripts proliferate and become difficult to maintain in sync as course development progresses, I have over time come to create a single script (in `perl`). Although shell scripts can do many of the tasks, I find the syntax of a higher level languae easier to understand and maintain. The script takes one (or more) parameters (usually a step number) and executes a single routine for each parameter. The script is included as an asset and is copied to `/tmp`. The script runs as `/tmp/answer.pl step01`.
+In my experience these scripts proliferate and become difficult to maintain in sync as course development progresses, I have over time come to create a single script (in `perl`). Although shell scripts can do many of the tasks, I find the syntax of a higher level languae easier to understand and maintain. The script takes one (or more) parameters (usually a step number) and executes a single routine for each parameter. The script is included as an asset and is copied to `/tmp`. The script runs as `/tmp/answer.pl step1`.
 
 Here is a simple answer.pl:
 
 ```
 cat << EOF > ~/katacoda-tutorial/first-course/example/assets/answer.pl
 #!/usr/bin/perl
-my %steps = ( step01 => \&step01 );
+my %steps = ( step1 => \&step1 );
 &{\$steps{\$ARGV[0]}};
-sub step01 {
-  print "Hello from answer.pl - step01\n";
+sub step1 {
+  print "Hello from answer.pl - step1 running on hostname\n";
 }
 EOF
 ```{{execute}}
@@ -37,6 +37,10 @@ EOF
 Executed as a _foreground_ activity when entering `step01`:
 
 `sed -i '/Create a basic scenario/ a \ \ \ \ \ \ "foreground": "step01-foreground.sh",' ~/katacoda-tutorial/first-course/example/index.json`{{execute}}
+
+The student can also execute `answer.pl` on the command line.
+
+`echo "/tmp/answer.pl step1{{execute}}" >> ~/katacoda-tutorial/first-course/example/step01.md`{{execute}}
 
 `add`, `commit`, and `push` the new files and inspect the new scenario.
 

@@ -1,12 +1,33 @@
-We can use the answer script to present larger examples of activities on demand. For example:
+If you attempted `/tmp/answer.pl step1`{{execute}} in the `my-example` course, you would have noticed that the file did not exist. The `foswiki` image is running as a separate host from the course itself. If you exit `foswiki1` with `exit`{{execute}}, you can successfully execute the command.
 
-Create a new step in the `example` scenario. The step demonstrates the behaviour of the Foswiki Filter plugin.
+To run `answer.pl` inside the `foswiki` image, you must make it available. There are many ways to achive this. For this course we will create a copy inside the image:
 
-1. insert step02 in example/index.json
-1. create the content of example/step02.md
-  * install Filter plugin, demostrate it's use, show the solution
-1. create the example/assets/solutions.tgz file and add to the assets in example/index.json
-1. create the example/assets/answer.pl and add to the assets in example/index.json
+`echo "COPY /tmp/answer.pl /tmp/answer.pl" >> ~/katacoda-tutorial/first-course/example/assets/first-course.dck`{{execute}}
 
-The content of each of these files is available (as example-_filename_)in /tmp for this course.
+To see how this works, you can add some commands to step01.md
+
+```
+cat <<EOF > >> ~/katacoda-tutorial/first-course/example/step01.md
+Exit the =foswiki1= image:
+   * =exit= {{execute}}
+
+Run =answer.pl= and take note of the host.
+   * =/tmp/answer,pl step1= {{execute}}
+
+Re-enter =foswiki=
+   * docker exec -it foswiki /bin/bash= {{exec}}
+
+Run =answer.pl= again and take note of the host.
+   * =/tmp/answer,pl step1= {{execute}}
+
+EOF
+```{{execute}}
+
+`answer.pl` for this course provides the `add`, `commit` and `push` as a package:
+
+`/tmp/answer.pl step7`{{execute}}
+
+Check the updated course now
+
+-- Main.BramVanOosterhout - 25 Jul 2021
 
