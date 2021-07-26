@@ -10,4 +10,8 @@ The following steps are required:
 
 Close and re-open `~/katacoda-tutorial/first-course/example/index.json`{{open}} to see the results.
 
+Close and re-open `/katacoda-tutorial/first-course/example/index.json`{{open}} to see the results.
+
+Close and re-open `katacoda-tutorial/first-course/example/index.json`{{open}} to see the results.
+
 **Note:** The _foreground_ and _background_ scripts associated with the steps are not assets. The are expected in the scenario directory.

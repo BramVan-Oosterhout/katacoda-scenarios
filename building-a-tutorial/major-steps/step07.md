@@ -1,4 +1,4 @@
-If you attempted `/tmp/answer.pl step1`{{execute}} in the `my-example` course, you would have noticed that the file did not exist. The `foswiki` image is running as a separate host from the course itself. If you exit `foswiki1` with `exit`{{execute}}, you can successfully execute the command.
+If you attempted `/tmp/answer.pl step1` in the `my-example` course, you would have noticed that the file did not exist. The `foswiki` image is running as a separate host from the course itself. If you exit `foswiki1` with `exit`, you can successfully execute the command.
 
 To run `answer.pl` inside the `foswiki` image, you must make it available. There are many ways to achive this. For this course we will create a copy inside the image:
 
@@ -7,7 +7,7 @@ To run `answer.pl` inside the `foswiki` image, you must make it available. There
 To see how this works, you can add some commands to step01.md
 
 ```
-cat <<EOF > >> ~/katacoda-tutorial/first-course/example/step01.md
+cat <EOF >> ~/katacoda-tutorial/first-course/example/step01.md
 Exit the =foswiki1= image:
    * =exit= {{execute}}
 
@@ -28,6 +28,4 @@ EOF
 `/tmp/answer.pl step7`{{execute}}
 
 Check the updated course now
-
--- Main.BramVanOosterhout - 25 Jul 2021
 
