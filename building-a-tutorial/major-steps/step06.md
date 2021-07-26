@@ -16,7 +16,7 @@ cat << EOF > ~/katacoda-tutorial/first-course/example/assets/answer.pl
 my %steps = ( step1 => \&step1 );
 &{\$steps{\$ARGV[0]}};
 sub step1 {
-  print "Hello from answer.pl - step1 running on hostname\n";
+  print "Hello from answer.pl - step1 running on ",\hostname\,\n";
 }
 EOF
 ```{{execute}}
@@ -30,7 +30,7 @@ _foreground_ and _background_ scripts must be shell scripts. So we create:
 ```
 cat <<EOF > ~/katacoda-tutorial/first-course/example/step01-foreground.sh
 until [[ -e /tmp/answer.pl ]] ; do sleep 1; done
-/tmp/answer.pl step01
+/tmp/answer.pl step1
 EOF
 ```{{execute}}
 
@@ -40,7 +40,7 @@ Executed as a _foreground_ activity when entering `step01`:
 
 The student can also execute `answer.pl` on the command line.
 
-`echo "/tmp/answer.pl step1{{execute}}" >> ~/katacoda-tutorial/first-course/example/step01.md`{{execute}}
+`echo "\/tmp/answer.pl step1\{{execute}}" >> ~/katacoda-tutorial/first-course/example/step01.md`{{execute}}
 
 `add`, `commit`, and `push` the new files and inspect the new scenario.
 

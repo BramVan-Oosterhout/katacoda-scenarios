@@ -3,8 +3,8 @@ use warnings;
 use strict;
 
 my %step = (
-            'step01' => \&step01,
-            'step02' => \&step02,
+            'step1' => \&step1,
+            'step2' => \&step2,
             'step3' => \&step3,
             'step4' => \&step4,
 ##          'test'  => \&test,
@@ -40,11 +40,11 @@ sub exercises {
   refresh( 'Sandbox' );
 }
 
-sub step01 {
-  print "Hello from answer.pl - step01\n";
+sub step1 {
+  print "Hello from answer.pl - step01",`hostname`,"\n";
 }
 
-sub step02 {
+sub step2 {
   my ($cmd, @command );
   
   @command = qw(

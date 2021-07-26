@@ -7,18 +7,18 @@ To run `answer.pl` inside the `foswiki` image, you must make it available. There
 To see how this works, you can add some commands to step01.md
 
 ```
-cat <EOF >> ~/katacoda-tutorial/first-course/example/step01.md
+cat <<EOF >> ~/katacoda-tutorial/first-course/example/step01.md
 Exit the =foswiki1= image:
    * =exit= {{execute}}
 
 Run =answer.pl= and take note of the host.
-   * =/tmp/answer,pl step1= {{execute}}
+   * =/tmp/answer.pl step1= {{execute}}
 
 Re-enter =foswiki=
    * docker exec -it foswiki /bin/bash= {{exec}}
 
 Run =answer.pl= again and take note of the host.
-   * =/tmp/answer,pl step1= {{execute}}
+   * =/tmp/answer.pl step1= {{execute}}
 
 EOF
 ```{{execute}}
