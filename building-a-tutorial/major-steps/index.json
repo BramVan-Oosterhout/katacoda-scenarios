@@ -16,9 +16,9 @@
     },
     "steps": [
    {
-      "text" : "step01.md",
+      "answer" : "step01-answer.md",
       "title" : "Create a basic scenario",
-      "answer" : "step01-answer.md"
+      "text" : "step01.md"
    },
    {
       "text" : "step02.md",
@@ -29,17 +29,17 @@
       "text" : "step03.md"
    },
    {
-      "text" : "step04.md",
       "answer" : "step04-answer.md",
+      "text" : "step04.md",
       "title" : "Defining the scenario - index.json"
    },
    {
-      "title" : "A github excursion",
-      "text" : "step05.md"
+      "text" : "step05.md",
+      "title" : "A github excursion"
    },
    {
-      "title" : "the answer script",
-      "text" : "step06.md"
+      "text" : "step06.md",
+      "title" : "the answer script"
    },
    {
       "text" : "step07.md",
@@ -47,8 +47,8 @@
    },
    {
       "title" : "Using the answer script",
-      "answer" : "step08-answer.md",
-      "text" : "step08.md"
+      "text" : "step08.md",
+      "answer" : "step08-answer.md"
    }
 ]
 ,
