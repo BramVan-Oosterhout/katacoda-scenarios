@@ -10,7 +10,7 @@ exit{{execute}}
 # double escaped backticks
 \\exit\\{{execute}
 # html escaped backticks
-&#96;exit&#96;{{execute}
+`exit`{{execute}
 EOF
 ```
 
