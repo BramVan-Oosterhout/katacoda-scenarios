@@ -4,6 +4,7 @@ use strict;
 
 my %step = (
             'step7' => \&step7,
+            'step8' => \&step8,
 ##          'test'  => \&test,
           );
 
@@ -16,8 +17,15 @@ foreach my $request ( @ARGV ) {
 
 
 sub step7 {
-   `git add *`;
-   `git commit -m "step7"`;
-   `git push origin master`;
+   addCommitPush( "step7" )
 }
 
+sub step8 {
+   addCommitPush( "step8" )
+}
+
+sub addCommitPush {
+   `git add *`;
+   `git commit -m "Building a tutorial - Major steps: $_[0]"`;
+   `git push origin master`;
+}

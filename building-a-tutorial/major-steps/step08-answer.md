@@ -26,10 +26,6 @@
 
 `cp /tmp/example-answer.pl ~/katacoda-tutorial/first-course/example/assets/answer.pl`{{execute}}
 
-\* add, commit and push\*
+**add, commit and push**
 
-`git add *`{{execute}}
-
-`git commit -m "web exercise 0.3"`{{execute}}
-
-`git push origin master`{{execute}}
+`/tmp/answer.pl step8`{{execute}}
