@@ -16,8 +16,8 @@
     },
     "steps": [
    {
-      "text" : "step01.md",
       "answer" : "step01-answer.md",
+      "text" : "step01.md",
       "title" : "Create a basic scenario"
    },
    {
@@ -38,16 +38,16 @@
       "title" : "A github excursion"
    },
    {
-      "title" : "the answer script",
-      "text" : "step06.md"
+      "text" : "step06.md",
+      "title" : "the answer script"
    },
    {
-      "title" : "Inside and outside",
-      "text" : "step07.md"
+      "text" : "step07.md",
+      "title" : "Inside and outside"
    },
    {
-      "text" : "step08.md",
       "answer" : "step08-answer.md",
+      "text" : "step08.md",
       "title" : "Using the answer script"
    }
 ]
