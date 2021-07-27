@@ -4,3 +4,4 @@ my %steps = ( step1 => \&step1 );
 sub step1 {
   print "Hello from answer.pl - step1 running on ",`hostname`,\n";
 }
+EOF
