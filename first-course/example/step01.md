@@ -1,14 +1,14 @@
 The first step to learning
-`/tmp/answer.pl step1`{{execute}}
+\nNo answer for step1{{execute}}
 Exit the =foswiki1= image:
-`exit`
+{{execute}}
 
 Run =answer.pl= and take note of the host.
-`/tmp/answer.pl step1`
+No answer for step1{{execute}}
 
 Re-enter =foswiki=
-`docker exec -it foswiki /bin/bash`
+{{exec}}
 
 Run =answer.pl= again and take note of the host.
-`/tmp/answer.pl step1`
+No answer for step1{{execute}}
 
