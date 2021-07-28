@@ -1,5 +1,5 @@
 
-**Add step02 to example/index.json**
+**Add step02 to `katacoda-tutorial/first-course/example/index.json`{{open}}**
 
 ```
 ,

@@ -1,21 +1,3 @@
-**Tests to include a backtick**
-
-```
-cat <<EOF >> ~/katacoda-tutorial/first-course/example/step01.md
-Exit the =foswiki1= image:
-# backticks
-exit{{execute}}
-# escaped backticks
-\exit\{{execute}}
-# double escaped backticks
-\\exit\\{{execute}
-# html escaped backticks
-`exit`{{execute}
-EOF
-```
-
-**End tests**
-
 Get the scenario you built in the Preamble to this course from GitHub. Open `config.sh`{{open}} and add your details. Configure the environment with: `./config.sh`{{execute}}
 
 You can list the files with: `tree`{{execute}} and view the content in the editor pane.
