@@ -11,7 +11,7 @@ In my experience these scripts proliferate and become difficult to maintain in s
 Here is a simple answer.pl:
 
 ```
-cat << EOF > ~/katacoda-tutorial/first-course/example/assets/answer.pl
+cat << "EOF" > ~/katacoda-tutorial/first-course/example/assets/answer.pl
 #!/usr/bin/perl
 my %steps = ( step1 => \&step1 );
 &{\$steps{\$ARGV[0]}};
@@ -28,7 +28,7 @@ EOF
 _foreground_ and _background_ scripts must be shell scripts. So we create:
 
 ```
-cat <<EOF > ~/katacoda-tutorial/first-course/example/step01-foreground.sh
+   cat << "EOF" > ~/katacoda-tutorial/first-course/example/step01-foreground.sh
 until [[ -e /tmp/answer.pl ]] ; do sleep 1; done
 /tmp/answer.pl step1
 EOF

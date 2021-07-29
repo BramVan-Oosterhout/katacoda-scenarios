@@ -21,17 +21,17 @@
       "text" : "step01.md"
    },
    {
-      "text" : "step02.md",
-      "title" : "Starting the image, ready for use"
+      "title" : "Starting the image, ready for use",
+      "text" : "step02.md"
    },
    {
-      "title" : "Waiting for the setup of the enviroment",
-      "text" : "step03.md"
+      "text" : "step03.md",
+      "title" : "Waiting for the setup of the enviroment"
    },
    {
-      "text" : "step04.md",
+      "answer" : "step04-answer.md",
       "title" : "Defining the scenario - index.json",
-      "answer" : "step04-answer.md"
+      "text" : "step04.md"
    },
    {
       "text" : "step05.md",
@@ -46,9 +46,9 @@
       "title" : "Inside and outside"
    },
    {
-      "text" : "step08.md",
       "answer" : "step08-answer.md",
-      "title" : "Using the answer script"
+      "title" : "Using the answer script",
+      "text" : "step08.md"
    }
 ]
 ,
