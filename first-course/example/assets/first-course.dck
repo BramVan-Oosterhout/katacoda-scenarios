@@ -1,2 +1,1 @@
 FROM bramvanoosterhout/foswiki1
-COPY /tmp/answer.pl /tmp/answer.pl
