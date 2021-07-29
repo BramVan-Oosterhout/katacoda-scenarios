@@ -6,5 +6,5 @@ For the scenario we need to complete the `katacoda-tutorial/first-course/example
 
 * Add `setup.sh` and execute it as a _background_ job to the `intro` step
 * Add `wait.sh` and execute it as a _foreground_ job to the `intro` step
-* Add `example-course.dck` to the assets and include it in the asset list
+* Add `first-course.dck` to the assets and include it in the asset list
 

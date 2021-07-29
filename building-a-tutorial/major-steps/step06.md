@@ -51,7 +51,7 @@ EOF
 
 `git add *`{{execute}}
 
-`git commit -m "web exercise 0.2"`{{execute}}
+`git commit -m "Building a tutorial - Major steps: step6"`{{execute}}
 
 `git push origin master`{{execute}}
 

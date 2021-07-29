@@ -24,7 +24,7 @@ cat <<"EOF" >> ~/katacoda-tutorial/first-course/example/step01.md
 EOF
 ```{{execute}}
 
-`answer.pl` for this course provides the `add`, `commit` and `push` as a package:
+`answer.pl` for this course provides the `add`, `commit` and `push` as a package for this step:
 
 `/tmp/answer.pl step7`{{execute}}
 

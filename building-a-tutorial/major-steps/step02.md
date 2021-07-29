@@ -1,7 +1,7 @@
 To demonstrate the running web application, you need to start it. This is done easily with a few docker commands:
 
 ```
-docker build -t foswiki -f example-course.dck .
+docker build -t foswiki -f first-course.dck .
 docker run -d --rm --name foswiki -p 80:80 foswiki
 ```
 
@@ -10,11 +10,11 @@ Scripting this is slightly more complated, since the `first-course.dck` file is 
 ```
 cat << "EOF" > ~/katacoda-tutorial/first-course/example/setup.sh
 #!/bin/bash
-until [[ -e example-course.dck ]]
+until [[ -e first-course.dck ]]
 do
    sleep 1
 done
-docker build -t foswiki -f example-course.dck .
+docker build -t foswiki -f first-course.dck .
 docker run -d --rm --name foswiki -p 80:80 foswiki
 touch foswiki-running
 EOF

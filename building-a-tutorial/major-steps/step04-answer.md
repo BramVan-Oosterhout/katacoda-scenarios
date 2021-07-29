@@ -6,7 +6,7 @@ The following steps are required:
   * `sed -i '/intro.md/ a \ \ \ \ \ \ "background": "setup.sh",' ~/katacoda-tutorial/first-course/example/index.json`{{execute}}
   * `sed -i '/intro.md/ a \ \ \ \ \ \ "foreground": "wait.sh",' ~/katacoda-tutorial/first-course/example/index.json`{{execute}}
 * `first-course.dck`
-  * `sed -i '/host01/ a \ \ \ \ \ \ { "file": "example-course.dck", "target": "~/" },' ~/katacoda-tutorial/first-course/example/index.json`{{execute}}
+  * `sed -i '/host01/ a \ \ \ \ \ \ { "file": "first-course.dck", "target": "~/" },' ~/katacoda-tutorial/first-course/example/index.json`{{execute}}
 
 Close and re-open `katacoda-tutorial/first-course/example/index.json`{{open}} to see the results.
 
