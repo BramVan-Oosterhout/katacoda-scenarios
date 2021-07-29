@@ -7,7 +7,7 @@
    "assets": {
       "host01": [
       { "file": "answer.pl", "target": "/tmp", "chmod": "+x" },
-      { "file": "example-course.dck", "target": "~/" },
+      { "file": "first-course.dck", "target": "~/" },
                  { "file": "example.asset", "target": "~/" }
              ]
     },
