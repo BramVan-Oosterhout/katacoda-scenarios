@@ -8,6 +8,7 @@ To see how this works, you can add some commands to step01.md
 
 ```
 cat <<"EOF" >> ~/katacoda-tutorial/first-course/example/step01.md
+
 # Exit the foswiki image:
 `exit`{{execute}}
 
@@ -15,7 +16,7 @@ cat <<"EOF" >> ~/katacoda-tutorial/first-course/example/step01.md
 `/tmp/answer.pl step1`{{execute}}
 
 # Re-enter foswiki
-`docker exec -it foswiki /bin/bash`{{exec}}
+`docker exec -it foswiki /bin/bash`{{execute}}
 
 # Run answer.pl again and take note of the host.
 `/tmp/answer.pl step1`{{execute}}
