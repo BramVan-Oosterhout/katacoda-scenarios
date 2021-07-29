@@ -6,8 +6,6 @@
   "details": {
    "assets": {
       "host01": [
-      { "file": "solutions.tgz", "target": "/tmp" },
-      { "file": "answer.pl", "target": "/tmp", "chmod": "+x" },
       { "file": "example-course.dck", "target": "~/" },
                  { "file": "example.asset", "target": "~/" }
              ]
@@ -15,13 +13,7 @@
     "steps": [
    {
       "title" : "Create a basic scenario",
-      "foreground": "step01-foreground.sh",
       "text" : "step01.md"
-   },
-   {
-      "title" : "Installing and using Filter plugin",
-      "text" : "step02.md",
-      "answer": "step02-answer.md"
    }
 ]
 ,
