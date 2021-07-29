@@ -40,9 +40,14 @@ Executed as a _foreground_ activity when entering `step01`:
 
 The student can also execute `answer.pl` on the command line.
 
-`cat << "EOF" >> ~/katacoda-tutorial/first-course/example/step01.md`{{execute}}
+```
+cat << "EOF" >> ~/katacoda-tutorial/first-course/example/step01.md
 
-\`/tmp/answer.pl step1\`{{execute}} EOF `add`, `commit`, and `push` the new files and inspect the new scenario.
+`/tmp/answer.pl step1`{{execute}}
+EOF
+```{{execute}}
+
+`add`, `commit`, and `push` the new files and inspect the new scenario.
 
 `git add *`{{execute}}
 
