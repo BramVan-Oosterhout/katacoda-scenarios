@@ -14,7 +14,7 @@ Here is a simple answer.pl:
 cat << "EOF" > ~/katacoda-tutorial/first-course/example/assets/answer.pl
 #!/usr/bin/perl
 my %steps = ( step1 => \&step1 );
-&{\$steps{\$ARGV[0]}};
+&{$steps{$ARGV[0]}};
 sub step1 {
   print "Hello from answer.pl - step1 running on ",`hostname`,"\n";
 }
@@ -40,9 +40,9 @@ Executed as a _foreground_ activity when entering `step01`:
 
 The student can also execute `answer.pl` on the command line.
 
-``echo "\n`/tmp/answer.pl step1`{{execute}}" >> ~/katacoda-tutorial/first-course/example/step01.md``{{execute}}
+`cat << "EOF" >> ~/katacoda-tutorial/first-course/example/step01.md`{{execute}}
 
-`add`, `commit`, and `push` the new files and inspect the new scenario.
+\`/tmp/answer.pl step1\`{{execute}} EOF `add`, `commit`, and `push` the new files and inspect the new scenario.
 
 `git add *`{{execute}}
 
