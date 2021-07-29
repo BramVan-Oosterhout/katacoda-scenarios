@@ -1,8 +1,7 @@
 The first step to learning
-\nNo answer for step1{{execute}}
-\nNo answer for step1{{execute}}
-\n`/tmp/answer.pl step1`{{execute}}
-\n`/tmp/answer.pl step1`{{execut echo COPY /tmp/answer.pl /tmp/answer.pl >> ~/katacoda-tutorial/first-course/example/assets/first-course.dcke}}
+git add *
+git commit -m "web exercise 0.2"
+git push origin master
 # Exit the foswiki image:
 `exit`{{execute}}
 
