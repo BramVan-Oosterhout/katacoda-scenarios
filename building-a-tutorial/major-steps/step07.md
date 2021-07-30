@@ -1,12 +1,8 @@
 If you attempted `/tmp/answer.pl step1` in the `my-example` course, you would have noticed that the file did not exist. The `foswiki` image is running as a separate host from the course itself. If you exit `foswiki1` with `exit`, you can successfully execute the command.
 
-To run `answer.pl` inside the `foswiki` image, you must make it available. There are many ways to achive this. For this course we will create a copy inside the image:
+To run `answer.pl` inside the `foswiki` image, you must make it available. There are many ways to achive this. For this course we will use the docker command line interface:
 
-`echo "COPY answer.pl /tmp/answer.pl" >> ~/katacoda-tutorial/first-course/example/assets/first-course.dck`{{execute}}
-
-And we mustplace `answer.pl` in the context of the `docker build`. That means we need a second copy:
-
-`sed -i '/host01/ a \ \ \ \ \ \ { "file": "answer.pl", "target": "./", "chmod": "+x" },' ~/katacoda-tutorial/first-course/example/index.json`{{execute}}
+`docker cp /tmp/answer.pl foswiki:/tmp/answer.pl`{{execute}}
 
 To see how this works, you can add some commands to step01.md
 
