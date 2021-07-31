@@ -2,7 +2,7 @@ If you attempted `/tmp/answer.pl step1` in the `my-example` course, you would ha
 
 To run `answer.pl` inside the `foswiki` image, you must make it available. There are many ways to achive this. For this course we will use the docker command line interface:
 
-`docker cp /tmp/answer.pl foswiki:/tmp/answer.pl`{{execute}}
+`docker cp /tmp/answer.pl foswiki:/tmp/answer.pl`
 
 To see how this works, you can add some commands to step01.md
 
@@ -11,6 +11,9 @@ cat <<"EOF" >> ~/katacoda-tutorial/first-course/example/step01.md
 
 # Exit the foswiki image:
 `exit`{{execute}}
+
+# Copy answer.pl to the container
+`docker cp /tmp/answer.pl foswiki:/tmp/answer.pl`{{execute}}
 
 # Run answer.pl and take note of the host.
 `/tmp/answer.pl step1`{{execute}}
