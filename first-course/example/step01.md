@@ -5,6 +5,9 @@ The first step to learning
 # Exit the foswiki image:
 `exit`{{execute}}
 
+# Copy answer.pl to the container
+`docker cp /tmp/answer.pl foswiki:/tmp/answer.pl`{{execute}}
+
 # Run answer.pl and take note of the host.
 `/tmp/answer.pl step1`{{execute}}
 
