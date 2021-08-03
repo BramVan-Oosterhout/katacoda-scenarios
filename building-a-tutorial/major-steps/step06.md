@@ -21,7 +21,7 @@ sub step1 {
 EOF
 ```{{execute}}
 
-`answer.pl` is copied to /tmp on intialisation of the scenario:
+`answer.pl` is copied to /tmp on initialisation of the scenario:
 
 `sed -i '/host01/ a \ \ \ \ \ \ { "file": "answer.pl", "target": "/tmp", "chmod": "+x" },' ~/katacoda-tutorial/first-course/example/index.json`{{execute}}
 

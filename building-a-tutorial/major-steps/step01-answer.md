@@ -20,3 +20,5 @@ If you have completed some of this scenario before, there are more commits in th
 `git push -f origin master`{{execute}}
 
 Now you can repeat the scenario as presented.
+
+<div style="background-color: khaki">**Note:** Beware the `reset --hard`. It deletes files from your local git repository. And the `push -f` will delete those files from the remote repository as well. It's what you want here. But it is a solution to a very specific problem. Beware!! </div>

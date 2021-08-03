@@ -4,6 +4,10 @@ You can list the files with: `tree`{{execute}} and view the content in the edito
 
 If you did not built the starting scenario in the Preamble to this course, and don't want to do that, check out alternatives in the Solutions.
 
+If you are repeating this scenario, there will be additional commits in your repository. You must remove those with:
+
+`git reset --hard v1.0`{{execute}} followed by `git push -f origin master`{{execute}}
+
 At this point you have a course/scenario running. It has an intro, a step and a finish. You have the following components:
 
 <table class="foswikiTable">

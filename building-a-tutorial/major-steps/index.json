@@ -17,21 +17,21 @@
     "steps": [
    {
       "answer" : "step01-answer.md",
-      "title" : "Create a basic scenario",
-      "text" : "step01.md"
+      "text" : "step01.md",
+      "title" : "Create a basic scenario"
    },
    {
-      "title" : "Starting the image, ready for use",
-      "text" : "step02.md"
+      "text" : "step02.md",
+      "title" : "Starting the image, ready for use"
    },
    {
-      "text" : "step03.md",
-      "title" : "Waiting for the setup of the enviroment"
+      "title" : "Waiting for the setup of the enviroment",
+      "text" : "step03.md"
    },
    {
+      "answer" : "step04-answer.md",
       "text" : "step04.md",
-      "title" : "Defining the scenario - index.json",
-      "answer" : "step04-answer.md"
+      "title" : "Defining the scenario - index.json"
    },
    {
       "title" : "A github excursion",
@@ -42,12 +42,12 @@
       "text" : "step06.md"
    },
    {
-      "title" : "Inside and outside",
-      "text" : "step07.md"
+      "text" : "step07.md",
+      "title" : "Inside and outside"
    },
    {
-      "text" : "step08.md",
       "title" : "Using the answer script",
+      "text" : "step08.md",
       "answer" : "step08-answer.md"
    }
 ]

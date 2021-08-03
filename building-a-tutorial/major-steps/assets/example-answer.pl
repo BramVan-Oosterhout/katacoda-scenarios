@@ -41,7 +41,7 @@ sub exercises {
 }
 
 sub step1 {
-  print "Hello from answer.pl - step01",`hostname`,"\n";
+  print "Hello from answer.pl - step01 running on ",`hostname`,"\n";
 }
 
 sub step2 {
